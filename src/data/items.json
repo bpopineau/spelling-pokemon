@@ -1,0 +1,5384 @@
+[
+  {
+    "id": 0,
+    "name": {
+      "english": "None"
+    }
+  },
+  {
+    "name": {
+      "english": "Master Ball"
+    },
+    "id": 1
+  },
+  {
+    "id": 2,
+    "name": {
+      "english": "Ultra Ball"
+    }
+  },
+  {
+    "id": 3,
+    "name": {
+      "english": "Great Ball"
+    }
+  },
+  {
+    "id": 4,
+    "name": {
+      "english": "Poké Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Safari Ball"
+    },
+    "id": 5
+  },
+  {
+    "name": {
+      "english": "Net Ball"
+    },
+    "id": 6
+  },
+  {
+    "id": 7,
+    "name": {
+      "english": "Dive Ball"
+    }
+  },
+  {
+    "id": 8,
+    "name": {
+      "english": "Nest Ball"
+    }
+  },
+  {
+    "id": 9,
+    "name": {
+      "english": "Repeat Ball"
+    }
+  },
+  {
+    "id": 10,
+    "name": {
+      "english": "Timer Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Luxury Ball"
+    },
+    "id": 11
+  },
+  {
+    "name": {
+      "english": "Premier Ball"
+    },
+    "id": 12
+  },
+  {
+    "name": {
+      "english": "Dusk Ball"
+    },
+    "id": 13
+  },
+  {
+    "name": {
+      "english": "Heal Ball"
+    },
+    "id": 14
+  },
+  {
+    "id": 15,
+    "name": {
+      "english": "Quick Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Cherish Ball"
+    },
+    "id": 16
+  },
+  {
+    "id": 17,
+    "name": {
+      "english": "Potion"
+    }
+  },
+  {
+    "name": {
+      "english": "Antidote"
+    },
+    "id": 18
+  },
+  {
+    "id": 19,
+    "name": {
+      "english": "Burn Heal"
+    }
+  },
+  {
+    "id": 20,
+    "name": {
+      "english": "Ice Heal"
+    }
+  },
+  {
+    "id": 21,
+    "name": {
+      "english": "Awakening"
+    }
+  },
+  {
+    "name": {
+      "english": "Paralyze Heal"
+    },
+    "id": 22
+  },
+  {
+    "name": {
+      "english": "Full Restore"
+    },
+    "id": 23
+  },
+  {
+    "id": 24,
+    "name": {
+      "english": "Max Potion"
+    }
+  },
+  {
+    "id": 25,
+    "name": {
+      "english": "Hyper Potion"
+    }
+  },
+  {
+    "name": {
+      "english": "Super Potion"
+    },
+    "id": 26
+  },
+  {
+    "name": {
+      "english": "Full Heal"
+    },
+    "id": 27
+  },
+  {
+    "id": 28,
+    "name": {
+      "english": "Revive"
+    }
+  },
+  {
+    "id": 29,
+    "name": {
+      "english": "Max Revive"
+    }
+  },
+  {
+    "id": 30,
+    "name": {
+      "english": "Fresh Water"
+    }
+  },
+  {
+    "name": {
+      "english": "Soda Pop"
+    },
+    "id": 31
+  },
+  {
+    "id": 32,
+    "name": {
+      "english": "Lemonade"
+    }
+  },
+  {
+    "id": 33,
+    "name": {
+      "english": "Moomoo Milk"
+    }
+  },
+  {
+    "id": 34,
+    "name": {
+      "english": "Energy Powder"
+    }
+  },
+  {
+    "id": 35,
+    "name": {
+      "english": "Energy Root"
+    }
+  },
+  {
+    "name": {
+      "english": "Heal Powder"
+    },
+    "id": 36
+  },
+  {
+    "name": {
+      "english": "Revival Herb"
+    },
+    "id": 37
+  },
+  {
+    "id": 38,
+    "name": {
+      "english": "Ether"
+    }
+  },
+  {
+    "id": 39,
+    "name": {
+      "english": "Max Ether"
+    }
+  },
+  {
+    "name": {
+      "english": "Elixir"
+    },
+    "id": 40
+  },
+  {
+    "id": 41,
+    "name": {
+      "english": "Max Elixir"
+    }
+  },
+  {
+    "id": 42,
+    "name": {
+      "english": "Lava Cookie"
+    }
+  },
+  {
+    "name": {
+      "english": "Berry Juice"
+    },
+    "id": 43
+  },
+  {
+    "id": 44,
+    "name": {
+      "english": "Sacred Ash"
+    }
+  },
+  {
+    "name": {
+      "english": "HP Up"
+    },
+    "id": 45
+  },
+  {
+    "name": {
+      "english": "Protein"
+    },
+    "id": 46
+  },
+  {
+    "name": {
+      "english": "Iron"
+    },
+    "id": 47
+  },
+  {
+    "name": {
+      "english": "Carbos"
+    },
+    "id": 48
+  },
+  {
+    "name": {
+      "english": "Calcium"
+    },
+    "id": 49
+  },
+  {
+    "id": 50,
+    "name": {
+      "english": "Rare Candy"
+    }
+  },
+  {
+    "id": 51,
+    "name": {
+      "english": "PP Up"
+    }
+  },
+  {
+    "name": {
+      "english": "Zinc"
+    },
+    "id": 52
+  },
+  {
+    "name": {
+      "english": "PP Max"
+    },
+    "id": 53
+  },
+  {
+    "name": {
+      "english": "Old Gateau"
+    },
+    "id": 54
+  },
+  {
+    "name": {
+      "english": "Guard Spec."
+    },
+    "id": 55
+  },
+  {
+    "id": 56,
+    "name": {
+      "english": "Dire Hit"
+    }
+  },
+  {
+    "id": 57,
+    "name": {
+      "english": "X Attack"
+    }
+  },
+  {
+    "name": {
+      "english": "X Defense"
+    },
+    "id": 58
+  },
+  {
+    "id": 59,
+    "name": {
+      "english": "X Speed"
+    }
+  },
+  {
+    "name": {
+      "english": "X Accuracy"
+    },
+    "id": 60
+  },
+  {
+    "name": {
+      "english": "X Sp. Atk"
+    },
+    "id": 61
+  },
+  {
+    "id": 62,
+    "name": {
+      "english": "X Sp. Def"
+    }
+  },
+  {
+    "id": 63,
+    "name": {
+      "english": "Poké Doll"
+    }
+  },
+  {
+    "name": {
+      "english": "Fluffy Tail"
+    },
+    "id": 64
+  },
+  {
+    "name": {
+      "english": "Blue Flute"
+    },
+    "id": 65
+  },
+  {
+    "id": 66,
+    "name": {
+      "english": "Yellow Flute"
+    }
+  },
+  {
+    "name": {
+      "english": "Red Flute"
+    },
+    "id": 67
+  },
+  {
+    "id": 68,
+    "name": {
+      "english": "Black Flute"
+    }
+  },
+  {
+    "name": {
+      "english": "White Flute"
+    },
+    "id": 69
+  },
+  {
+    "id": 70,
+    "name": {
+      "english": "Shoal Salt"
+    }
+  },
+  {
+    "id": 71,
+    "name": {
+      "english": "Shoal Shell"
+    }
+  },
+  {
+    "name": {
+      "english": "Red Shard"
+    },
+    "id": 72
+  },
+  {
+    "name": {
+      "english": "Blue Shard"
+    },
+    "id": 73
+  },
+  {
+    "name": {
+      "english": "Yellow Shard"
+    },
+    "id": 74
+  },
+  {
+    "name": {
+      "english": "Green Shard"
+    },
+    "id": 75
+  },
+  {
+    "id": 76,
+    "name": {
+      "english": "Super Repel"
+    }
+  },
+  {
+    "name": {
+      "english": "Max Repel"
+    },
+    "id": 77
+  },
+  {
+    "id": 78,
+    "name": {
+      "english": "Escape Rope"
+    }
+  },
+  {
+    "name": {
+      "english": "Repel"
+    },
+    "id": 79
+  },
+  {
+    "name": {
+      "english": "Sun Stone"
+    },
+    "id": 80
+  },
+  {
+    "name": {
+      "english": "Moon Stone"
+    },
+    "id": 81
+  },
+  {
+    "id": 82,
+    "name": {
+      "english": "Fire Stone"
+    }
+  },
+  {
+    "name": {
+      "english": "Thunder Stone"
+    },
+    "id": 83
+  },
+  {
+    "name": {
+      "english": "Water Stone"
+    },
+    "id": 84
+  },
+  {
+    "id": 85,
+    "name": {
+      "english": "Leaf Stone"
+    }
+  },
+  {
+    "id": 86,
+    "name": {
+      "english": "Tiny Mushroom"
+    }
+  },
+  {
+    "name": {
+      "english": "Big Mushroom"
+    },
+    "id": 87
+  },
+  {
+    "id": 88,
+    "name": {
+      "english": "Pearl"
+    }
+  },
+  {
+    "name": {
+      "english": "Big Pearl"
+    },
+    "id": 89
+  },
+  {
+    "id": 90,
+    "name": {
+      "english": "Stardust"
+    }
+  },
+  {
+    "id": 91,
+    "name": {
+      "english": "Star Piece"
+    }
+  },
+  {
+    "name": {
+      "english": "Nugget"
+    },
+    "id": 92
+  },
+  {
+    "id": 93,
+    "name": {
+      "english": "Heart Scale"
+    }
+  },
+  {
+    "id": 94,
+    "name": {
+      "english": "Honey"
+    }
+  },
+  {
+    "id": 95,
+    "name": {
+      "english": "Growth Mulch"
+    }
+  },
+  {
+    "name": {
+      "english": "Damp Mulch"
+    },
+    "id": 96
+  },
+  {
+    "id": 97,
+    "name": {
+      "english": "Stable Mulch"
+    }
+  },
+  {
+    "id": 98,
+    "name": {
+      "english": "Gooey Mulch"
+    }
+  },
+  {
+    "id": 99,
+    "name": {
+      "english": "Root Fossil"
+    }
+  },
+  {
+    "name": {
+      "english": "Claw Fossil"
+    },
+    "id": 100
+  },
+  {
+    "id": 101,
+    "name": {
+      "english": "Helix Fossil"
+    }
+  },
+  {
+    "name": {
+      "english": "Dome Fossil"
+    },
+    "id": 102
+  },
+  {
+    "name": {
+      "english": "Old Amber"
+    },
+    "id": 103
+  },
+  {
+    "id": 104,
+    "name": {
+      "english": "Armor Fossil"
+    }
+  },
+  {
+    "name": {
+      "english": "Skull Fossil"
+    },
+    "id": 105
+  },
+  {
+    "name": {
+      "english": "Rare Bone"
+    },
+    "id": 106
+  },
+  {
+    "name": {
+      "english": "Shiny Stone"
+    },
+    "id": 107
+  },
+  {
+    "id": 108,
+    "name": {
+      "english": "Dusk Stone"
+    }
+  },
+  {
+    "id": 109,
+    "name": {
+      "english": "Dawn Stone"
+    }
+  },
+  {
+    "id": 110,
+    "name": {
+      "english": "Oval Stone"
+    }
+  },
+  {
+    "id": 111,
+    "name": {
+      "english": "Odd Keystone"
+    }
+  },
+  {
+    "name": {
+      "english": "Griseous Orb"
+    },
+    "id": 112
+  },
+  {
+    "id": 116,
+    "name": {
+      "english": "Douse Drive"
+    }
+  },
+  {
+    "name": {
+      "english": "Shock Drive"
+    },
+    "id": 117
+  },
+  {
+    "id": 118,
+    "name": {
+      "english": "Burn Drive"
+    }
+  },
+  {
+    "id": 119,
+    "name": {
+      "english": "Chill Drive"
+    }
+  },
+  {
+    "name": {
+      "english": "Sweet Heart"
+    },
+    "id": 134
+  },
+  {
+    "name": {
+      "english": "Adamant Orb"
+    },
+    "id": 135
+  },
+  {
+    "id": 136,
+    "name": {
+      "english": "Lustrous Orb"
+    }
+  },
+  {
+    "id": 137,
+    "name": {
+      "english": "Greet Mail"
+    }
+  },
+  {
+    "id": 138,
+    "name": {
+      "english": "Favored Mail"
+    }
+  },
+  {
+    "id": 139,
+    "name": {
+      "english": "RSVP Mail"
+    }
+  },
+  {
+    "id": 140,
+    "name": {
+      "english": "Thanks Mail"
+    }
+  },
+  {
+    "id": 141,
+    "name": {
+      "english": "Inquiry Mail"
+    }
+  },
+  {
+    "id": 142,
+    "name": {
+      "english": "Like Mail"
+    }
+  },
+  {
+    "id": 143,
+    "name": {
+      "english": "Reply Mail"
+    }
+  },
+  {
+    "name": {
+      "english": "Bridge Mail S"
+    },
+    "id": 144
+  },
+  {
+    "name": {
+      "english": "Bridge Mail D"
+    },
+    "id": 145
+  },
+  {
+    "name": {
+      "english": "Bridge Mail T"
+    },
+    "id": 146
+  },
+  {
+    "id": 147,
+    "name": {
+      "english": "Bridge Mail V"
+    }
+  },
+  {
+    "name": {
+      "english": "Bridge Mail M"
+    },
+    "id": 148
+  },
+  {
+    "name": {
+      "english": "Cheri Berry"
+    },
+    "id": 149
+  },
+  {
+    "name": {
+      "english": "Chesto Berry"
+    },
+    "id": 150
+  },
+  {
+    "name": {
+      "english": "Pecha Berry"
+    },
+    "id": 151
+  },
+  {
+    "name": {
+      "english": "Rawst Berry"
+    },
+    "id": 152
+  },
+  {
+    "id": 153,
+    "name": {
+      "english": "Aspear Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Leppa Berry"
+    },
+    "id": 154
+  },
+  {
+    "id": 155,
+    "name": {
+      "english": "Oran Berry"
+    }
+  },
+  {
+    "id": 156,
+    "name": {
+      "english": "Persim Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Lum Berry"
+    },
+    "id": 157
+  },
+  {
+    "name": {
+      "english": "Sitrus Berry"
+    },
+    "id": 158
+  },
+  {
+    "name": {
+      "english": "Figy Berry"
+    },
+    "id": 159
+  },
+  {
+    "id": 160,
+    "name": {
+      "english": "Wiki Berry"
+    }
+  },
+  {
+    "id": 161,
+    "name": {
+      "english": "Mago Berry"
+    }
+  },
+  {
+    "id": 162,
+    "name": {
+      "english": "Aguav Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Iapapa Berry"
+    },
+    "id": 163
+  },
+  {
+    "id": 164,
+    "name": {
+      "english": "Razz Berry"
+    }
+  },
+  {
+    "id": 165,
+    "name": {
+      "english": "Bluk Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Nanab Berry"
+    },
+    "id": 166
+  },
+  {
+    "id": 167,
+    "name": {
+      "english": "Wepear Berry"
+    }
+  },
+  {
+    "id": 168,
+    "name": {
+      "english": "Pinap Berry"
+    }
+  },
+  {
+    "id": 169,
+    "name": {
+      "english": "Pomeg Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Kelpsy Berry"
+    },
+    "id": 170
+  },
+  {
+    "id": 171,
+    "name": {
+      "english": "Qualot Berry"
+    }
+  },
+  {
+    "id": 172,
+    "name": {
+      "english": "Hondew Berry"
+    }
+  },
+  {
+    "id": 173,
+    "name": {
+      "english": "Grepa Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Tamato Berry"
+    },
+    "id": 174
+  },
+  {
+    "name": {
+      "english": "Cornn Berry"
+    },
+    "id": 175
+  },
+  {
+    "id": 176,
+    "name": {
+      "english": "Magost Berry"
+    }
+  },
+  {
+    "id": 177,
+    "name": {
+      "english": "Rabuta Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Nomel Berry"
+    },
+    "id": 178
+  },
+  {
+    "id": 179,
+    "name": {
+      "english": "Spelon Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Pamtre Berry"
+    },
+    "id": 180
+  },
+  {
+    "name": {
+      "english": "Watmel Berry"
+    },
+    "id": 181
+  },
+  {
+    "id": 182,
+    "name": {
+      "english": "Durin Berry"
+    }
+  },
+  {
+    "id": 183,
+    "name": {
+      "english": "Belue Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Occa Berry"
+    },
+    "id": 184
+  },
+  {
+    "id": 185,
+    "name": {
+      "english": "Passho Berry"
+    }
+  },
+  {
+    "id": 186,
+    "name": {
+      "english": "Wacan Berry"
+    }
+  },
+  {
+    "id": 187,
+    "name": {
+      "english": "Rindo Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Yache Berry"
+    },
+    "id": 188
+  },
+  {
+    "id": 189,
+    "name": {
+      "english": "Chople Berry"
+    }
+  },
+  {
+    "id": 190,
+    "name": {
+      "english": "Kebia Berry"
+    }
+  },
+  {
+    "id": 191,
+    "name": {
+      "english": "Shuca Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Coba Berry"
+    },
+    "id": 192
+  },
+  {
+    "id": 193,
+    "name": {
+      "english": "Payapa Berry"
+    }
+  },
+  {
+    "id": 194,
+    "name": {
+      "english": "Tanga Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Charti Berry"
+    },
+    "id": 195
+  },
+  {
+    "id": 196,
+    "name": {
+      "english": "Kasib Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Haban Berry"
+    },
+    "id": 197
+  },
+  {
+    "name": {
+      "english": "Colbur Berry"
+    },
+    "id": 198
+  },
+  {
+    "id": 199,
+    "name": {
+      "english": "Babiri Berry"
+    }
+  },
+  {
+    "id": 200,
+    "name": {
+      "english": "Chilan Berry"
+    }
+  },
+  {
+    "id": 201,
+    "name": {
+      "english": "Liechi Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Ganlon Berry"
+    },
+    "id": 202
+  },
+  {
+    "name": {
+      "english": "Salac Berry"
+    },
+    "id": 203
+  },
+  {
+    "id": 204,
+    "name": {
+      "english": "Petaya Berry"
+    }
+  },
+  {
+    "id": 205,
+    "name": {
+      "english": "Apicot Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Lansat Berry"
+    },
+    "id": 206
+  },
+  {
+    "name": {
+      "english": "Starf Berry"
+    },
+    "id": 207
+  },
+  {
+    "id": 208,
+    "name": {
+      "english": "Enigma Berry"
+    }
+  },
+  {
+    "name": {
+      "english": "Micle Berry"
+    },
+    "id": 209
+  },
+  {
+    "id": 210,
+    "name": {
+      "english": "Custap Berry"
+    }
+  },
+  {
+    "id": 211,
+    "name": {
+      "english": "Jaboca Berry"
+    }
+  },
+  {
+    "id": 212,
+    "name": {
+      "english": "Rowap Berry"
+    }
+  },
+  {
+    "id": 213,
+    "name": {
+      "english": "Bright Powder"
+    }
+  },
+  {
+    "id": 214,
+    "name": {
+      "english": "White Herb"
+    }
+  },
+  {
+    "name": {
+      "english": "Macho Brace"
+    },
+    "id": 215
+  },
+  {
+    "id": 216,
+    "name": {
+      "english": "Exp. Share"
+    }
+  },
+  {
+    "id": 217,
+    "name": {
+      "english": "Quick Claw"
+    }
+  },
+  {
+    "name": {
+      "english": "Soothe Bell"
+    },
+    "id": 218
+  },
+  {
+    "name": {
+      "english": "Mental Herb"
+    },
+    "id": 219
+  },
+  {
+    "id": 220,
+    "name": {
+      "english": "Choice Band"
+    }
+  },
+  {
+    "id": 221,
+    "name": {
+      "english": "King's Rock"
+    }
+  },
+  {
+    "name": {
+      "english": "Silver Powder"
+    },
+    "id": 222
+  },
+  {
+    "id": 223,
+    "name": {
+      "english": "Amulet Coin"
+    }
+  },
+  {
+    "name": {
+      "english": "Cleanse Tag"
+    },
+    "id": 224
+  },
+  {
+    "name": {
+      "english": "Soul Dew"
+    },
+    "id": 225
+  },
+  {
+    "id": 226,
+    "name": {
+      "english": "Deep Sea Tooth"
+    }
+  },
+  {
+    "name": {
+      "english": "Deep Sea Scale"
+    },
+    "id": 227
+  },
+  {
+    "name": {
+      "english": "Smoke Ball"
+    },
+    "id": 228
+  },
+  {
+    "id": 229,
+    "name": {
+      "english": "Everstone"
+    }
+  },
+  {
+    "id": 230,
+    "name": {
+      "english": "Focus Band"
+    }
+  },
+  {
+    "id": 231,
+    "name": {
+      "english": "Lucky Egg"
+    }
+  },
+  {
+    "id": 232,
+    "name": {
+      "english": "Scope Lens"
+    }
+  },
+  {
+    "id": 233,
+    "name": {
+      "english": "Metal Coat"
+    }
+  },
+  {
+    "id": 234,
+    "name": {
+      "english": "Leftovers"
+    }
+  },
+  {
+    "name": {
+      "english": "Dragon Scale"
+    },
+    "id": 235
+  },
+  {
+    "name": {
+      "english": "Light Ball"
+    },
+    "id": 236
+  },
+  {
+    "id": 237,
+    "name": {
+      "english": "Soft Sand"
+    }
+  },
+  {
+    "id": 238,
+    "name": {
+      "english": "Hard Stone"
+    }
+  },
+  {
+    "name": {
+      "english": "Miracle Seed"
+    },
+    "id": 239
+  },
+  {
+    "id": 240,
+    "name": {
+      "english": "Black Glasses"
+    }
+  },
+  {
+    "id": 241,
+    "name": {
+      "english": "Black Belt"
+    }
+  },
+  {
+    "name": {
+      "english": "Magnet"
+    },
+    "id": 242
+  },
+  {
+    "id": 243,
+    "name": {
+      "english": "Mystic Water"
+    }
+  },
+  {
+    "id": 244,
+    "name": {
+      "english": "Sharp Beak"
+    }
+  },
+  {
+    "name": {
+      "english": "Poison Barb"
+    },
+    "id": 245
+  },
+  {
+    "id": 246,
+    "name": {
+      "english": "Never-Melt Ice"
+    }
+  },
+  {
+    "name": {
+      "english": "Spell Tag"
+    },
+    "id": 247
+  },
+  {
+    "name": {
+      "english": "Twisted Spoon"
+    },
+    "id": 248
+  },
+  {
+    "name": {
+      "english": "Charcoal"
+    },
+    "id": 249
+  },
+  {
+    "id": 250,
+    "name": {
+      "english": "Dragon Fang"
+    }
+  },
+  {
+    "name": {
+      "english": "Silk Scarf"
+    },
+    "id": 251
+  },
+  {
+    "id": 252,
+    "name": {
+      "english": "Up-Grade"
+    }
+  },
+  {
+    "id": 253,
+    "name": {
+      "english": "Shell Bell"
+    }
+  },
+  {
+    "name": {
+      "english": "Sea Incense"
+    },
+    "id": 254
+  },
+  {
+    "id": 255,
+    "name": {
+      "english": "Lax Incense"
+    }
+  },
+  {
+    "id": 256,
+    "name": {
+      "english": "Lucky Punch"
+    }
+  },
+  {
+    "name": {
+      "english": "Metal Powder"
+    },
+    "id": 257
+  },
+  {
+    "id": 258,
+    "name": {
+      "english": "Thick Club"
+    }
+  },
+  {
+    "name": {
+      "english": "Stick"
+    },
+    "id": 259
+  },
+  {
+    "id": 260,
+    "name": {
+      "english": "Red Scarf"
+    }
+  },
+  {
+    "name": {
+      "english": "Blue Scarf"
+    },
+    "id": 261
+  },
+  {
+    "name": {
+      "english": "Pink Scarf"
+    },
+    "id": 262
+  },
+  {
+    "id": 263,
+    "name": {
+      "english": "Green Scarf"
+    }
+  },
+  {
+    "name": {
+      "english": "Yellow Scarf"
+    },
+    "id": 264
+  },
+  {
+    "id": 265,
+    "name": {
+      "english": "Wide Lens"
+    }
+  },
+  {
+    "name": {
+      "english": "Muscle Band"
+    },
+    "id": 266
+  },
+  {
+    "id": 267,
+    "name": {
+      "english": "Wise Glasses"
+    }
+  },
+  {
+    "name": {
+      "english": "Expert Belt"
+    },
+    "id": 268
+  },
+  {
+    "name": {
+      "english": "Light Clay"
+    },
+    "id": 269
+  },
+  {
+    "name": {
+      "english": "Life Orb"
+    },
+    "id": 270
+  },
+  {
+    "id": 271,
+    "name": {
+      "english": "Power Herb"
+    }
+  },
+  {
+    "id": 272,
+    "name": {
+      "english": "Toxic Orb"
+    }
+  },
+  {
+    "name": {
+      "english": "Flame Orb"
+    },
+    "id": 273
+  },
+  {
+    "name": {
+      "english": "Quick Powder"
+    },
+    "id": 274
+  },
+  {
+    "id": 275,
+    "name": {
+      "english": "Focus Sash"
+    }
+  },
+  {
+    "name": {
+      "english": "Zoom Lens"
+    },
+    "id": 276
+  },
+  {
+    "id": 277,
+    "name": {
+      "english": "Metronome"
+    }
+  },
+  {
+    "id": 278,
+    "name": {
+      "english": "Iron Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Lagging Tail"
+    },
+    "id": 279
+  },
+  {
+    "id": 280,
+    "name": {
+      "english": "Destiny Knot"
+    }
+  },
+  {
+    "id": 281,
+    "name": {
+      "english": "Black Sludge"
+    }
+  },
+  {
+    "name": {
+      "english": "Icy Rock"
+    },
+    "id": 282
+  },
+  {
+    "id": 283,
+    "name": {
+      "english": "Smooth Rock"
+    }
+  },
+  {
+    "name": {
+      "english": "Heat Rock"
+    },
+    "id": 284
+  },
+  {
+    "id": 285,
+    "name": {
+      "english": "Damp Rock"
+    }
+  },
+  {
+    "name": {
+      "english": "Grip Claw"
+    },
+    "id": 286
+  },
+  {
+    "id": 287,
+    "name": {
+      "english": "Choice Scarf"
+    }
+  },
+  {
+    "name": {
+      "english": "Sticky Barb"
+    },
+    "id": 288
+  },
+  {
+    "name": {
+      "english": "Power Bracer"
+    },
+    "id": 289
+  },
+  {
+    "name": {
+      "english": "Power Belt"
+    },
+    "id": 290
+  },
+  {
+    "name": {
+      "english": "Power Lens"
+    },
+    "id": 291
+  },
+  {
+    "id": 292,
+    "name": {
+      "english": "Power Band"
+    }
+  },
+  {
+    "id": 293,
+    "name": {
+      "english": "Power Anklet"
+    }
+  },
+  {
+    "id": 294,
+    "name": {
+      "english": "Power Weight"
+    }
+  },
+  {
+    "id": 295,
+    "name": {
+      "english": "Shed Shell"
+    }
+  },
+  {
+    "name": {
+      "english": "Big Root"
+    },
+    "id": 296
+  },
+  {
+    "id": 297,
+    "name": {
+      "english": "Choice Specs"
+    }
+  },
+  {
+    "id": 298,
+    "name": {
+      "english": "Flame Plate"
+    }
+  },
+  {
+    "id": 299,
+    "name": {
+      "english": "Splash Plate"
+    }
+  },
+  {
+    "name": {
+      "english": "Zap Plate"
+    },
+    "id": 300
+  },
+  {
+    "id": 301,
+    "name": {
+      "english": "Meadow Plate"
+    }
+  },
+  {
+    "id": 302,
+    "name": {
+      "english": "Icicle Plate"
+    }
+  },
+  {
+    "name": {
+      "english": "Fist Plate"
+    },
+    "id": 303
+  },
+  {
+    "name": {
+      "english": "Toxic Plate"
+    },
+    "id": 304
+  },
+  {
+    "name": {
+      "english": "Earth Plate"
+    },
+    "id": 305
+  },
+  {
+    "name": {
+      "english": "Sky Plate"
+    },
+    "id": 306
+  },
+  {
+    "name": {
+      "english": "Mind Plate"
+    },
+    "id": 307
+  },
+  {
+    "id": 308,
+    "name": {
+      "english": "Insect Plate"
+    }
+  },
+  {
+    "name": {
+      "english": "Stone Plate"
+    },
+    "id": 309
+  },
+  {
+    "name": {
+      "english": "Spooky Plate"
+    },
+    "id": 310
+  },
+  {
+    "name": {
+      "english": "Draco Plate"
+    },
+    "id": 311
+  },
+  {
+    "name": {
+      "english": "Dread Plate"
+    },
+    "id": 312
+  },
+  {
+    "name": {
+      "english": "Iron Plate"
+    },
+    "id": 313
+  },
+  {
+    "id": 314,
+    "name": {
+      "english": "Odd Incense"
+    }
+  },
+  {
+    "name": {
+      "english": "Rock Incense"
+    },
+    "id": 315
+  },
+  {
+    "name": {
+      "english": "Full Incense"
+    },
+    "id": 316
+  },
+  {
+    "name": {
+      "english": "Wave Incense"
+    },
+    "id": 317
+  },
+  {
+    "name": {
+      "english": "Rose Incense"
+    },
+    "id": 318
+  },
+  {
+    "id": 319,
+    "name": {
+      "english": "Luck Incense"
+    }
+  },
+  {
+    "name": {
+      "english": "Pure Incense"
+    },
+    "id": 320
+  },
+  {
+    "id": 321,
+    "name": {
+      "english": "Protector"
+    }
+  },
+  {
+    "name": {
+      "english": "Electirizer"
+    },
+    "id": 322
+  },
+  {
+    "name": {
+      "english": "Magmarizer"
+    },
+    "id": 323
+  },
+  {
+    "name": {
+      "english": "Dubious Disc"
+    },
+    "id": 324
+  },
+  {
+    "name": {
+      "english": "Reaper Cloth"
+    },
+    "id": 325
+  },
+  {
+    "id": 326,
+    "name": {
+      "english": "Razor Claw"
+    }
+  },
+  {
+    "id": 327,
+    "name": {
+      "english": "Razor Fang"
+    }
+  },
+  {
+    "name": {
+      "english": "TM01"
+    },
+    "id": 328
+  },
+  {
+    "name": {
+      "english": "TM02"
+    },
+    "id": 329
+  },
+  {
+    "id": 330,
+    "name": {
+      "english": "TM03"
+    }
+  },
+  {
+    "name": {
+      "english": "TM04"
+    },
+    "id": 331
+  },
+  {
+    "id": 332,
+    "name": {
+      "english": "TM05"
+    }
+  },
+  {
+    "id": 333,
+    "name": {
+      "english": "TM06"
+    }
+  },
+  {
+    "name": {
+      "english": "TM07"
+    },
+    "id": 334
+  },
+  {
+    "name": {
+      "english": "TM08"
+    },
+    "id": 335
+  },
+  {
+    "id": 336,
+    "name": {
+      "english": "TM09"
+    }
+  },
+  {
+    "name": {
+      "english": "TM10"
+    },
+    "id": 337
+  },
+  {
+    "name": {
+      "english": "TM11"
+    },
+    "id": 338
+  },
+  {
+    "name": {
+      "english": "TM12"
+    },
+    "id": 339
+  },
+  {
+    "name": {
+      "english": "TM13"
+    },
+    "id": 340
+  },
+  {
+    "name": {
+      "english": "TM14"
+    },
+    "id": 341
+  },
+  {
+    "name": {
+      "english": "TM15"
+    },
+    "id": 342
+  },
+  {
+    "name": {
+      "english": "TM16"
+    },
+    "id": 343
+  },
+  {
+    "name": {
+      "english": "TM17"
+    },
+    "id": 344
+  },
+  {
+    "id": 345,
+    "name": {
+      "english": "TM18"
+    }
+  },
+  {
+    "id": 346,
+    "name": {
+      "english": "TM19"
+    }
+  },
+  {
+    "id": 347,
+    "name": {
+      "english": "TM20"
+    }
+  },
+  {
+    "name": {
+      "english": "TM21"
+    },
+    "id": 348
+  },
+  {
+    "id": 349,
+    "name": {
+      "english": "TM22"
+    }
+  },
+  {
+    "id": 350,
+    "name": {
+      "english": "TM23"
+    }
+  },
+  {
+    "id": 351,
+    "name": {
+      "english": "TM24"
+    }
+  },
+  {
+    "name": {
+      "english": "TM25"
+    },
+    "id": 352
+  },
+  {
+    "id": 353,
+    "name": {
+      "english": "TM26"
+    }
+  },
+  {
+    "name": {
+      "english": "TM27"
+    },
+    "id": 354
+  },
+  {
+    "id": 355,
+    "name": {
+      "english": "TM28"
+    }
+  },
+  {
+    "id": 356,
+    "name": {
+      "english": "TM29"
+    }
+  },
+  {
+    "name": {
+      "english": "TM30"
+    },
+    "id": 357
+  },
+  {
+    "id": 358,
+    "name": {
+      "english": "TM31"
+    }
+  },
+  {
+    "name": {
+      "english": "TM32"
+    },
+    "id": 359
+  },
+  {
+    "name": {
+      "english": "TM33"
+    },
+    "id": 360
+  },
+  {
+    "name": {
+      "english": "TM34"
+    },
+    "id": 361
+  },
+  {
+    "id": 362,
+    "name": {
+      "english": "TM35"
+    }
+  },
+  {
+    "id": 363,
+    "name": {
+      "english": "TM36"
+    }
+  },
+  {
+    "name": {
+      "english": "TM37"
+    },
+    "id": 364
+  },
+  {
+    "id": 365,
+    "name": {
+      "english": "TM38"
+    }
+  },
+  {
+    "name": {
+      "english": "TM39"
+    },
+    "id": 366
+  },
+  {
+    "name": {
+      "english": "TM40"
+    },
+    "id": 367
+  },
+  {
+    "id": 368,
+    "name": {
+      "english": "TM41"
+    }
+  },
+  {
+    "name": {
+      "english": "TM42"
+    },
+    "id": 369
+  },
+  {
+    "id": 370,
+    "name": {
+      "english": "TM43"
+    }
+  },
+  {
+    "id": 371,
+    "name": {
+      "english": "TM44"
+    }
+  },
+  {
+    "name": {
+      "english": "TM45"
+    },
+    "id": 372
+  },
+  {
+    "name": {
+      "english": "TM46"
+    },
+    "id": 373
+  },
+  {
+    "id": 374,
+    "name": {
+      "english": "TM47"
+    }
+  },
+  {
+    "name": {
+      "english": "TM48"
+    },
+    "id": 375
+  },
+  {
+    "id": 376,
+    "name": {
+      "english": "TM49"
+    }
+  },
+  {
+    "name": {
+      "english": "TM50"
+    },
+    "id": 377
+  },
+  {
+    "name": {
+      "english": "TM51"
+    },
+    "id": 378
+  },
+  {
+    "id": 379,
+    "name": {
+      "english": "TM52"
+    }
+  },
+  {
+    "id": 380,
+    "name": {
+      "english": "TM53"
+    }
+  },
+  {
+    "name": {
+      "english": "TM54"
+    },
+    "id": 381
+  },
+  {
+    "id": 382,
+    "name": {
+      "english": "TM55"
+    }
+  },
+  {
+    "name": {
+      "english": "TM56"
+    },
+    "id": 383
+  },
+  {
+    "name": {
+      "english": "TM57"
+    },
+    "id": 384
+  },
+  {
+    "id": 385,
+    "name": {
+      "english": "TM58"
+    }
+  },
+  {
+    "name": {
+      "english": "TM59"
+    },
+    "id": 386
+  },
+  {
+    "id": 387,
+    "name": {
+      "english": "TM60"
+    }
+  },
+  {
+    "id": 388,
+    "name": {
+      "english": "TM61"
+    }
+  },
+  {
+    "name": {
+      "english": "TM62"
+    },
+    "id": 389
+  },
+  {
+    "name": {
+      "english": "TM63"
+    },
+    "id": 390
+  },
+  {
+    "name": {
+      "english": "TM64"
+    },
+    "id": 391
+  },
+  {
+    "name": {
+      "english": "TM65"
+    },
+    "id": 392
+  },
+  {
+    "id": 393,
+    "name": {
+      "english": "TM66"
+    }
+  },
+  {
+    "name": {
+      "english": "TM67"
+    },
+    "id": 394
+  },
+  {
+    "id": 395,
+    "name": {
+      "english": "TM68"
+    }
+  },
+  {
+    "name": {
+      "english": "TM69"
+    },
+    "id": 396
+  },
+  {
+    "name": {
+      "english": "TM70"
+    },
+    "id": 397
+  },
+  {
+    "name": {
+      "english": "TM71"
+    },
+    "id": 398
+  },
+  {
+    "id": 399,
+    "name": {
+      "english": "TM72"
+    }
+  },
+  {
+    "id": 400,
+    "name": {
+      "english": "TM73"
+    }
+  },
+  {
+    "name": {
+      "english": "TM74"
+    },
+    "id": 401
+  },
+  {
+    "id": 402,
+    "name": {
+      "english": "TM75"
+    }
+  },
+  {
+    "id": 403,
+    "name": {
+      "english": "TM76"
+    }
+  },
+  {
+    "id": 404,
+    "name": {
+      "english": "TM77"
+    }
+  },
+  {
+    "name": {
+      "english": "TM78"
+    },
+    "id": 405
+  },
+  {
+    "id": 406,
+    "name": {
+      "english": "TM79"
+    }
+  },
+  {
+    "name": {
+      "english": "TM80"
+    },
+    "id": 407
+  },
+  {
+    "id": 408,
+    "name": {
+      "english": "TM81"
+    }
+  },
+  {
+    "name": {
+      "english": "TM82"
+    },
+    "id": 409
+  },
+  {
+    "id": 410,
+    "name": {
+      "english": "TM83"
+    }
+  },
+  {
+    "name": {
+      "english": "TM84"
+    },
+    "id": 411
+  },
+  {
+    "id": 412,
+    "name": {
+      "english": "TM85"
+    }
+  },
+  {
+    "name": {
+      "english": "TM86"
+    },
+    "id": 413
+  },
+  {
+    "id": 414,
+    "name": {
+      "english": "TM87"
+    }
+  },
+  {
+    "id": 415,
+    "name": {
+      "english": "TM88"
+    }
+  },
+  {
+    "id": 416,
+    "name": {
+      "english": "TM89"
+    }
+  },
+  {
+    "name": {
+      "english": "TM90"
+    },
+    "id": 417
+  },
+  {
+    "name": {
+      "english": "TM91"
+    },
+    "id": 418
+  },
+  {
+    "name": {
+      "english": "TM92"
+    },
+    "id": 419
+  },
+  {
+    "name": {
+      "english": "HM01"
+    },
+    "id": 420
+  },
+  {
+    "name": {
+      "english": "HM02"
+    },
+    "id": 421
+  },
+  {
+    "name": {
+      "english": "HM03"
+    },
+    "id": 422
+  },
+  {
+    "name": {
+      "english": "HM04"
+    },
+    "id": 423
+  },
+  {
+    "name": {
+      "english": "HM05"
+    },
+    "id": 424
+  },
+  {
+    "name": {
+      "english": "HM06"
+    },
+    "id": 425
+  },
+  {
+    "name": {
+      "english": "Explorer Kit"
+    },
+    "id": 428
+  },
+  {
+    "id": 429,
+    "name": {
+      "english": "Loot Sack"
+    }
+  },
+  {
+    "id": 430,
+    "name": {
+      "english": "Rule Book"
+    }
+  },
+  {
+    "name": {
+      "english": "Poké Radar"
+    },
+    "id": 431
+  },
+  {
+    "id": 432,
+    "name": {
+      "english": "Point Card"
+    }
+  },
+  {
+    "id": 433,
+    "name": {
+      "english": "Journal"
+    }
+  },
+  {
+    "name": {
+      "english": "Seal Case"
+    },
+    "id": 434
+  },
+  {
+    "id": 435,
+    "name": {
+      "english": "Fashion Case"
+    }
+  },
+  {
+    "id": 436,
+    "name": {
+      "english": "Seal Bag"
+    }
+  },
+  {
+    "id": 437,
+    "name": {
+      "english": "Pal Pad"
+    }
+  },
+  {
+    "id": 438,
+    "name": {
+      "english": "Works Key"
+    }
+  },
+  {
+    "id": 439,
+    "name": {
+      "english": "Old Charm"
+    }
+  },
+  {
+    "id": 440,
+    "name": {
+      "english": "Galactic Key"
+    }
+  },
+  {
+    "id": 441,
+    "name": {
+      "english": "Red Chain"
+    }
+  },
+  {
+    "id": 442,
+    "name": {
+      "english": "Town Map"
+    }
+  },
+  {
+    "id": 443,
+    "name": {
+      "english": "Vs. Seeker"
+    }
+  },
+  {
+    "name": {
+      "english": "Coin Case"
+    },
+    "id": 444
+  },
+  {
+    "name": {
+      "english": "Old Rod"
+    },
+    "id": 445
+  },
+  {
+    "id": 446,
+    "name": {
+      "english": "Good Rod"
+    }
+  },
+  {
+    "id": 447,
+    "name": {
+      "english": "Super Rod"
+    }
+  },
+  {
+    "id": 448,
+    "name": {
+      "english": "Sprayduck"
+    }
+  },
+  {
+    "id": 449,
+    "name": {
+      "english": "Poffin Case"
+    }
+  },
+  {
+    "id": 450,
+    "name": {
+      "english": "Bike"
+    }
+  },
+  {
+    "name": {
+      "english": "Suite Key"
+    },
+    "id": 451
+  },
+  {
+    "name": {
+      "english": "Oak's Letter"
+    },
+    "id": 452
+  },
+  {
+    "id": 453,
+    "name": {
+      "english": "Lunar Wing"
+    }
+  },
+  {
+    "id": 454,
+    "name": {
+      "english": "Member Card"
+    }
+  },
+  {
+    "id": 455,
+    "name": {
+      "english": "Azure Flute"
+    }
+  },
+  {
+    "id": 456,
+    "name": {
+      "english": "S.S. Ticket"
+    }
+  },
+  {
+    "name": {
+      "english": "Contest Pass"
+    },
+    "id": 457
+  },
+  {
+    "id": 458,
+    "name": {
+      "english": "Magma Stone"
+    }
+  },
+  {
+    "name": {
+      "english": "Parcel"
+    },
+    "id": 459
+  },
+  {
+    "name": {
+      "english": "Coupon 1"
+    },
+    "id": 460
+  },
+  {
+    "id": 461,
+    "name": {
+      "english": "Coupon 2"
+    }
+  },
+  {
+    "id": 462,
+    "name": {
+      "english": "Coupon 3"
+    }
+  },
+  {
+    "id": 463,
+    "name": {
+      "english": "Storage Key"
+    }
+  },
+  {
+    "name": {
+      "english": "Secret Potion"
+    },
+    "id": 464
+  },
+  {
+    "id": 465,
+    "name": {
+      "english": "Vs. Recorder"
+    }
+  },
+  {
+    "name": {
+      "english": "Gracidea"
+    },
+    "id": 466
+  },
+  {
+    "id": 467,
+    "name": {
+      "english": "Secret Key"
+    }
+  },
+  {
+    "name": {
+      "english": "Apricorn Box"
+    },
+    "id": 468
+  },
+  {
+    "name": {
+      "english": "Unown Report"
+    },
+    "id": 469
+  },
+  {
+    "id": 470,
+    "name": {
+      "english": "Berry Pots"
+    }
+  },
+  {
+    "name": {
+      "english": "Dowsing Machine"
+    },
+    "id": 471
+  },
+  {
+    "name": {
+      "english": "Blue Card"
+    },
+    "id": 472
+  },
+  {
+    "name": {
+      "english": "Slowpoke Tail"
+    },
+    "id": 473
+  },
+  {
+    "id": 474,
+    "name": {
+      "english": "Clear Bell"
+    }
+  },
+  {
+    "id": 475,
+    "name": {
+      "english": "Card Key"
+    }
+  },
+  {
+    "id": 476,
+    "name": {
+      "english": "Basement Key"
+    }
+  },
+  {
+    "name": {
+      "english": "Squirt Bottle"
+    },
+    "id": 477
+  },
+  {
+    "id": 478,
+    "name": {
+      "english": "Red Scale"
+    }
+  },
+  {
+    "name": {
+      "english": "Lost Item"
+    },
+    "id": 479
+  },
+  {
+    "name": {
+      "english": "Pass"
+    },
+    "id": 480
+  },
+  {
+    "id": 481,
+    "name": {
+      "english": "Machine Part"
+    }
+  },
+  {
+    "name": {
+      "english": "Silver Wing"
+    },
+    "id": 482
+  },
+  {
+    "id": 483,
+    "name": {
+      "english": "Rainbow Wing"
+    }
+  },
+  {
+    "id": 484,
+    "name": {
+      "english": "Mystery Egg"
+    }
+  },
+  {
+    "id": 485,
+    "name": {
+      "english": "Red Apricorn"
+    }
+  },
+  {
+    "id": 486,
+    "name": {
+      "english": "Blue Apricorn"
+    }
+  },
+  {
+    "name": {
+      "english": "Yellow Apricorn"
+    },
+    "id": 487
+  },
+  {
+    "id": 488,
+    "name": {
+      "english": "Green Apricorn"
+    }
+  },
+  {
+    "name": {
+      "english": "Pink Apricorn"
+    },
+    "id": 489
+  },
+  {
+    "name": {
+      "english": "White Apricorn"
+    },
+    "id": 490
+  },
+  {
+    "name": {
+      "english": "Black Apricorn"
+    },
+    "id": 491
+  },
+  {
+    "id": 492,
+    "name": {
+      "english": "Fast Ball"
+    }
+  },
+  {
+    "id": 493,
+    "name": {
+      "english": "Level Ball"
+    }
+  },
+  {
+    "id": 494,
+    "name": {
+      "english": "Lure Ball"
+    }
+  },
+  {
+    "id": 495,
+    "name": {
+      "english": "Heavy Ball"
+    }
+  },
+  {
+    "id": 496,
+    "name": {
+      "english": "Love Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Friend Ball"
+    },
+    "id": 497
+  },
+  {
+    "name": {
+      "english": "Moon Ball"
+    },
+    "id": 498
+  },
+  {
+    "id": 499,
+    "name": {
+      "english": "Sport Ball"
+    }
+  },
+  {
+    "id": 500,
+    "name": {
+      "english": "Park Ball"
+    }
+  },
+  {
+    "name": {
+      "english": "Photo Album"
+    },
+    "id": 501
+  },
+  {
+    "name": {
+      "english": "GB Sounds"
+    },
+    "id": 502
+  },
+  {
+    "name": {
+      "english": "Tidal Bell"
+    },
+    "id": 503
+  },
+  {
+    "name": {
+      "english": "Rage Candy Bar"
+    },
+    "id": 504
+  },
+  {
+    "id": 505,
+    "name": {
+      "english": "Data Card 01"
+    }
+  },
+  {
+    "id": 506,
+    "name": {
+      "english": "Data Card 02"
+    }
+  },
+  {
+    "id": 507,
+    "name": {
+      "english": "Data Card 03"
+    }
+  },
+  {
+    "id": 508,
+    "name": {
+      "english": "Data Card 04"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 05"
+    },
+    "id": 509
+  },
+  {
+    "id": 510,
+    "name": {
+      "english": "Data Card 06"
+    }
+  },
+  {
+    "id": 511,
+    "name": {
+      "english": "Data Card 07"
+    }
+  },
+  {
+    "id": 512,
+    "name": {
+      "english": "Data Card 08"
+    }
+  },
+  {
+    "id": 513,
+    "name": {
+      "english": "Data Card 09"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 10"
+    },
+    "id": 514
+  },
+  {
+    "id": 515,
+    "name": {
+      "english": "Data Card 11"
+    }
+  },
+  {
+    "id": 516,
+    "name": {
+      "english": "Data Card 12"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 13"
+    },
+    "id": 517
+  },
+  {
+    "id": 518,
+    "name": {
+      "english": "Data Card 14"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 15"
+    },
+    "id": 519
+  },
+  {
+    "name": {
+      "english": "Data Card 16"
+    },
+    "id": 520
+  },
+  {
+    "name": {
+      "english": "Data Card 17"
+    },
+    "id": 521
+  },
+  {
+    "name": {
+      "english": "Data Card 18"
+    },
+    "id": 522
+  },
+  {
+    "id": 523,
+    "name": {
+      "english": "Data Card 19"
+    }
+  },
+  {
+    "id": 524,
+    "name": {
+      "english": "Data Card 20"
+    }
+  },
+  {
+    "id": 525,
+    "name": {
+      "english": "Data Card 21"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 22"
+    },
+    "id": 526
+  },
+  {
+    "id": 527,
+    "name": {
+      "english": "Data Card 23"
+    }
+  },
+  {
+    "id": 528,
+    "name": {
+      "english": "Data Card 24"
+    }
+  },
+  {
+    "id": 529,
+    "name": {
+      "english": "Data Card 25"
+    }
+  },
+  {
+    "name": {
+      "english": "Data Card 26"
+    },
+    "id": 530
+  },
+  {
+    "id": 531,
+    "name": {
+      "english": "Data Card 27"
+    }
+  },
+  {
+    "name": {
+      "english": "Jade Orb"
+    },
+    "id": 532
+  },
+  {
+    "id": 533,
+    "name": {
+      "english": "Lock Capsule"
+    }
+  },
+  {
+    "name": {
+      "english": "Red Orb"
+    },
+    "id": 534
+  },
+  {
+    "name": {
+      "english": "Blue Orb"
+    },
+    "id": 535
+  },
+  {
+    "id": 536,
+    "name": {
+      "english": "Enigma Stone"
+    }
+  },
+  {
+    "id": 537,
+    "name": {
+      "english": "Prism Scale"
+    }
+  },
+  {
+    "id": 538,
+    "name": {
+      "english": "Eviolite"
+    }
+  },
+  {
+    "name": {
+      "english": "Float Stone"
+    },
+    "id": 539
+  },
+  {
+    "id": 540,
+    "name": {
+      "english": "Rocky Helmet"
+    }
+  },
+  {
+    "id": 541,
+    "name": {
+      "english": "Air Balloon"
+    }
+  },
+  {
+    "name": {
+      "english": "Red Card"
+    },
+    "id": 542
+  },
+  {
+    "name": {
+      "english": "Ring Target"
+    },
+    "id": 543
+  },
+  {
+    "id": 544,
+    "name": {
+      "english": "Binding Band"
+    }
+  },
+  {
+    "name": {
+      "english": "Absorb Bulb"
+    },
+    "id": 545
+  },
+  {
+    "name": {
+      "english": "Cell Battery"
+    },
+    "id": 546
+  },
+  {
+    "name": {
+      "english": "Eject Button"
+    },
+    "id": 547
+  },
+  {
+    "name": {
+      "english": "Fire Gem"
+    },
+    "id": 548
+  },
+  {
+    "id": 549,
+    "name": {
+      "english": "Water Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Electric Gem"
+    },
+    "id": 550
+  },
+  {
+    "id": 551,
+    "name": {
+      "english": "Grass Gem"
+    }
+  },
+  {
+    "id": 552,
+    "name": {
+      "english": "Ice Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Fighting Gem"
+    },
+    "id": 553
+  },
+  {
+    "id": 554,
+    "name": {
+      "english": "Poison Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Ground Gem"
+    },
+    "id": 555
+  },
+  {
+    "name": {
+      "english": "Flying Gem"
+    },
+    "id": 556
+  },
+  {
+    "id": 557,
+    "name": {
+      "english": "Psychic Gem"
+    }
+  },
+  {
+    "id": 558,
+    "name": {
+      "english": "Bug Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Rock Gem"
+    },
+    "id": 559
+  },
+  {
+    "name": {
+      "english": "Ghost Gem"
+    },
+    "id": 560
+  },
+  {
+    "id": 561,
+    "name": {
+      "english": "Dragon Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Dark Gem"
+    },
+    "id": 562
+  },
+  {
+    "id": 563,
+    "name": {
+      "english": "Steel Gem"
+    }
+  },
+  {
+    "id": 564,
+    "name": {
+      "english": "Normal Gem"
+    }
+  },
+  {
+    "id": 565,
+    "name": {
+      "english": "Health Wing"
+    }
+  },
+  {
+    "name": {
+      "english": "Muscle Wing"
+    },
+    "id": 566
+  },
+  {
+    "name": {
+      "english": "Resist Wing"
+    },
+    "id": 567
+  },
+  {
+    "id": 568,
+    "name": {
+      "english": "Genius Wing"
+    }
+  },
+  {
+    "name": {
+      "english": "Clever Wing"
+    },
+    "id": 569
+  },
+  {
+    "id": 570,
+    "name": {
+      "english": "Swift Wing"
+    }
+  },
+  {
+    "name": {
+      "english": "Pretty Wing"
+    },
+    "id": 571
+  },
+  {
+    "id": 572,
+    "name": {
+      "english": "Cover Fossil"
+    }
+  },
+  {
+    "name": {
+      "english": "Plume Fossil"
+    },
+    "id": 573
+  },
+  {
+    "id": 574,
+    "name": {
+      "english": "Liberty Pass"
+    }
+  },
+  {
+    "id": 575,
+    "name": {
+      "english": "Pass Orb"
+    }
+  },
+  {
+    "id": 576,
+    "name": {
+      "english": "Dream Ball"
+    }
+  },
+  {
+    "id": 577,
+    "name": {
+      "english": "Poké Toy"
+    }
+  },
+  {
+    "id": 578,
+    "name": {
+      "english": "Prop Case"
+    }
+  },
+  {
+    "id": 579,
+    "name": {
+      "english": "Dragon Skull"
+    }
+  },
+  {
+    "name": {
+      "english": "Balm Mushroom"
+    },
+    "id": 580
+  },
+  {
+    "name": {
+      "english": "Big Nugget"
+    },
+    "id": 581
+  },
+  {
+    "name": {
+      "english": "Pearl String"
+    },
+    "id": 582
+  },
+  {
+    "id": 583,
+    "name": {
+      "english": "Comet Shard"
+    }
+  },
+  {
+    "name": {
+      "english": "Relic Copper"
+    },
+    "id": 584
+  },
+  {
+    "id": 585,
+    "name": {
+      "english": "Relic Silver"
+    }
+  },
+  {
+    "name": {
+      "english": "Relic Gold"
+    },
+    "id": 586
+  },
+  {
+    "name": {
+      "english": "Relic Vase"
+    },
+    "id": 587
+  },
+  {
+    "name": {
+      "english": "Relic Band"
+    },
+    "id": 588
+  },
+  {
+    "id": 589,
+    "name": {
+      "english": "Relic Statue"
+    }
+  },
+  {
+    "name": {
+      "english": "Relic Crown"
+    },
+    "id": 590
+  },
+  {
+    "id": 591,
+    "name": {
+      "english": "Casteliacone"
+    }
+  },
+  {
+    "name": {
+      "english": "Dire Hit 2"
+    },
+    "id": 592
+  },
+  {
+    "name": {
+      "english": "X Speed 2"
+    },
+    "id": 593
+  },
+  {
+    "name": {
+      "english": "X Sp. Atk 2"
+    },
+    "id": 594
+  },
+  {
+    "id": 595,
+    "name": {
+      "english": "X Sp. Def 2"
+    }
+  },
+  {
+    "id": 596,
+    "name": {
+      "english": "X Defense 2"
+    }
+  },
+  {
+    "name": {
+      "english": "X Attack 2"
+    },
+    "id": 597
+  },
+  {
+    "name": {
+      "english": "X Accuracy 2"
+    },
+    "id": 598
+  },
+  {
+    "name": {
+      "english": "X Speed 3"
+    },
+    "id": 599
+  },
+  {
+    "name": {
+      "english": "X Sp. Atk 3"
+    },
+    "id": 600
+  },
+  {
+    "id": 601,
+    "name": {
+      "english": "X Sp. Def 3"
+    }
+  },
+  {
+    "name": {
+      "english": "X Defense 3"
+    },
+    "id": 602
+  },
+  {
+    "name": {
+      "english": "X Attack 3"
+    },
+    "id": 603
+  },
+  {
+    "name": {
+      "english": "X Accuracy 3"
+    },
+    "id": 604
+  },
+  {
+    "id": 605,
+    "name": {
+      "english": "X Speed 6"
+    }
+  },
+  {
+    "name": {
+      "english": "X Sp. Atk 6"
+    },
+    "id": 606
+  },
+  {
+    "id": 607,
+    "name": {
+      "english": "X Sp. Def 6"
+    }
+  },
+  {
+    "id": 608,
+    "name": {
+      "english": "X Defense 6"
+    }
+  },
+  {
+    "name": {
+      "english": "X Attack 6"
+    },
+    "id": 609
+  },
+  {
+    "id": 610,
+    "name": {
+      "english": "X Accuracy 6"
+    }
+  },
+  {
+    "name": {
+      "english": "Ability Urge"
+    },
+    "id": 611
+  },
+  {
+    "name": {
+      "english": "Item Drop"
+    },
+    "id": 612
+  },
+  {
+    "name": {
+      "english": "Item Urge"
+    },
+    "id": 613
+  },
+  {
+    "name": {
+      "english": "Reset Urge"
+    },
+    "id": 614
+  },
+  {
+    "id": 615,
+    "name": {
+      "english": "Dire Hit 3"
+    }
+  },
+  {
+    "id": 616,
+    "name": {
+      "english": "Light Stone"
+    }
+  },
+  {
+    "name": {
+      "english": "Dark Stone"
+    },
+    "id": 617
+  },
+  {
+    "name": {
+      "english": "TM93"
+    },
+    "id": 618
+  },
+  {
+    "id": 619,
+    "name": {
+      "english": "TM94"
+    }
+  },
+  {
+    "name": {
+      "english": "TM95"
+    },
+    "id": 620
+  },
+  {
+    "id": 621,
+    "name": {
+      "english": "Xtransceiver"
+    }
+  },
+  {
+    "name": {
+      "english": "Gram 1"
+    },
+    "id": 623
+  },
+  {
+    "id": 624,
+    "name": {
+      "english": "Gram 2"
+    }
+  },
+  {
+    "name": {
+      "english": "Gram 3"
+    },
+    "id": 625
+  },
+  {
+    "name": {
+      "english": "Xtransceiver"
+    },
+    "id": 626
+  },
+  {
+    "id": 627,
+    "name": {
+      "english": "Medal Box"
+    }
+  },
+  {
+    "name": {
+      "english": "DNA Splicers"
+    },
+    "id": 628
+  },
+  {
+    "name": {
+      "english": "DNA Splicers"
+    },
+    "id": 629
+  },
+  {
+    "id": 630,
+    "name": {
+      "english": "Permit"
+    }
+  },
+  {
+    "name": {
+      "english": "Oval Charm"
+    },
+    "id": 631
+  },
+  {
+    "id": 632,
+    "name": {
+      "english": "Shiny Charm"
+    }
+  },
+  {
+    "name": {
+      "english": "Plasma Card"
+    },
+    "id": 633
+  },
+  {
+    "id": 634,
+    "name": {
+      "english": "Grubby Hanky"
+    }
+  },
+  {
+    "name": {
+      "english": "Colress Machine"
+    },
+    "id": 635
+  },
+  {
+    "name": {
+      "english": "Dropped Item"
+    },
+    "id": 636
+  },
+  {
+    "name": {
+      "english": "Dropped Item"
+    },
+    "id": 637
+  },
+  {
+    "id": 638,
+    "name": {
+      "english": "Reveal Glass"
+    }
+  },
+  {
+    "name": {
+      "english": "Weakness Policy"
+    },
+    "id": 639
+  },
+  {
+    "name": {
+      "english": "Assault Vest"
+    },
+    "id": 640
+  },
+  {
+    "id": 641,
+    "name": {
+      "english": "Holo Caster"
+    }
+  },
+  {
+    "id": 642,
+    "name": {
+      "english": "Prof's Letter"
+    }
+  },
+  {
+    "id": 643,
+    "name": {
+      "english": "Roller Skates"
+    }
+  },
+  {
+    "id": 644,
+    "name": {
+      "english": "Pixie Plate"
+    }
+  },
+  {
+    "name": {
+      "english": "Ability Capsule"
+    },
+    "id": 645
+  },
+  {
+    "id": 646,
+    "name": {
+      "english": "Whipped Dream"
+    }
+  },
+  {
+    "id": 647,
+    "name": {
+      "english": "Sachet"
+    }
+  },
+  {
+    "name": {
+      "english": "Luminous Moss"
+    },
+    "id": 648
+  },
+  {
+    "name": {
+      "english": "Snowball"
+    },
+    "id": 649
+  },
+  {
+    "name": {
+      "english": "Safety Goggles"
+    },
+    "id": 650
+  },
+  {
+    "name": {
+      "english": "Poké Flute"
+    },
+    "id": 651
+  },
+  {
+    "id": 652,
+    "name": {
+      "english": "Rich Mulch"
+    }
+  },
+  {
+    "id": 653,
+    "name": {
+      "english": "Surprise Mulch"
+    }
+  },
+  {
+    "id": 654,
+    "name": {
+      "english": "Boost Mulch"
+    }
+  },
+  {
+    "name": {
+      "english": "Amaze Mulch"
+    },
+    "id": 655
+  },
+  {
+    "name": {
+      "english": "Gengarite"
+    },
+    "id": 656
+  },
+  {
+    "id": 657,
+    "name": {
+      "english": "Gardevoirite"
+    }
+  },
+  {
+    "id": 658,
+    "name": {
+      "english": "Ampharosite"
+    }
+  },
+  {
+    "id": 659,
+    "name": {
+      "english": "Venusaurite"
+    }
+  },
+  {
+    "name": {
+      "english": "Charizardite X"
+    },
+    "id": 660
+  },
+  {
+    "name": {
+      "english": "Blastoisinite"
+    },
+    "id": 661
+  },
+  {
+    "id": 662,
+    "name": {
+      "english": "Mewtwonite X"
+    }
+  },
+  {
+    "name": {
+      "english": "Mewtwonite Y"
+    },
+    "id": 663
+  },
+  {
+    "name": {
+      "english": "Blazikenite"
+    },
+    "id": 664
+  },
+  {
+    "id": 665,
+    "name": {
+      "english": "Medichamite"
+    }
+  },
+  {
+    "id": 666,
+    "name": {
+      "english": "Houndoominite"
+    }
+  },
+  {
+    "id": 667,
+    "name": {
+      "english": "Aggronite"
+    }
+  },
+  {
+    "id": 668,
+    "name": {
+      "english": "Banettite"
+    }
+  },
+  {
+    "id": 669,
+    "name": {
+      "english": "Tyranitarite"
+    }
+  },
+  {
+    "id": 670,
+    "name": {
+      "english": "Scizorite"
+    }
+  },
+  {
+    "id": 671,
+    "name": {
+      "english": "Pinsirite"
+    }
+  },
+  {
+    "name": {
+      "english": "Aerodactylite"
+    },
+    "id": 672
+  },
+  {
+    "id": 673,
+    "name": {
+      "english": "Lucarionite"
+    }
+  },
+  {
+    "id": 674,
+    "name": {
+      "english": "Abomasite"
+    }
+  },
+  {
+    "id": 675,
+    "name": {
+      "english": "Kangaskhanite"
+    }
+  },
+  {
+    "name": {
+      "english": "Gyaradosite"
+    },
+    "id": 676
+  },
+  {
+    "name": {
+      "english": "Absolite"
+    },
+    "id": 677
+  },
+  {
+    "id": 678,
+    "name": {
+      "english": "Charizardite Y"
+    }
+  },
+  {
+    "id": 679,
+    "name": {
+      "english": "Alakazite"
+    }
+  },
+  {
+    "name": {
+      "english": "Heracronite"
+    },
+    "id": 680
+  },
+  {
+    "id": 681,
+    "name": {
+      "english": "Mawilite"
+    }
+  },
+  {
+    "name": {
+      "english": "Manectite"
+    },
+    "id": 682
+  },
+  {
+    "id": 683,
+    "name": {
+      "english": "Garchompite"
+    }
+  },
+  {
+    "name": {
+      "english": "Latiasite"
+    },
+    "id": 684
+  },
+  {
+    "name": {
+      "english": "Latiosite"
+    },
+    "id": 685
+  },
+  {
+    "name": {
+      "english": "Roseli Berry"
+    },
+    "id": 686
+  },
+  {
+    "name": {
+      "english": "Kee Berry"
+    },
+    "id": 687
+  },
+  {
+    "id": 688,
+    "name": {
+      "english": "Maranga Berry"
+    }
+  },
+  {
+    "id": 689,
+    "name": {
+      "english": "Sprinklotad"
+    }
+  },
+  {
+    "name": {
+      "english": "TM96"
+    },
+    "id": 690
+  },
+  {
+    "id": 691,
+    "name": {
+      "english": "TM97"
+    }
+  },
+  {
+    "name": {
+      "english": "TM98"
+    },
+    "id": 692
+  },
+  {
+    "id": 693,
+    "name": {
+      "english": "TM99"
+    }
+  },
+  {
+    "id": 694,
+    "name": {
+      "english": "TM100"
+    }
+  },
+  {
+    "name": {
+      "english": "Power Plant Pass"
+    },
+    "id": 695
+  },
+  {
+    "name": {
+      "english": "Mega Ring"
+    },
+    "id": 696
+  },
+  {
+    "name": {
+      "english": "Intriguing Stone"
+    },
+    "id": 697
+  },
+  {
+    "id": 698,
+    "name": {
+      "english": "Common Stone"
+    }
+  },
+  {
+    "name": {
+      "english": "Discount Coupon"
+    },
+    "id": 699
+  },
+  {
+    "id": 700,
+    "name": {
+      "english": "Elevator Key"
+    }
+  },
+  {
+    "id": 701,
+    "name": {
+      "english": "TMV Pass"
+    }
+  },
+  {
+    "id": 702,
+    "name": {
+      "english": "Honor of Kalos"
+    }
+  },
+  {
+    "id": 703,
+    "name": {
+      "english": "Adventure Rules"
+    }
+  },
+  {
+    "name": {
+      "english": "Strange Souvenir"
+    },
+    "id": 704
+  },
+  {
+    "name": {
+      "english": "Lens Case"
+    },
+    "id": 705
+  },
+  {
+    "id": 706,
+    "name": {
+      "english": "Makeup Bag"
+    }
+  },
+  {
+    "id": 707,
+    "name": {
+      "english": "Travel Trunk"
+    }
+  },
+  {
+    "name": {
+      "english": "Lumiose Galette"
+    },
+    "id": 708
+  },
+  {
+    "name": {
+      "english": "Shalour Sable"
+    },
+    "id": 709
+  },
+  {
+    "id": 710,
+    "name": {
+      "english": "Jaw Fossil"
+    }
+  },
+  {
+    "name": {
+      "english": "Sail Fossil"
+    },
+    "id": 711
+  },
+  {
+    "id": 712,
+    "name": {
+      "english": "Looker Ticket"
+    }
+  },
+  {
+    "name": {
+      "english": "Bicycle"
+    },
+    "id": 713
+  },
+  {
+    "name": {
+      "english": "Holo Caster"
+    },
+    "id": 714
+  },
+  {
+    "id": 715,
+    "name": {
+      "english": "Fairy Gem"
+    }
+  },
+  {
+    "name": {
+      "english": "Mega Charm"
+    },
+    "id": 716
+  },
+  {
+    "name": {
+      "english": "Mega Glove"
+    },
+    "id": 717
+  },
+  {
+    "id": 718,
+    "name": {
+      "english": "Mach Bike"
+    }
+  },
+  {
+    "name": {
+      "english": "Acro Bike"
+    },
+    "id": 719
+  },
+  {
+    "name": {
+      "english": "Wailmer Pail"
+    },
+    "id": 720
+  },
+  {
+    "id": 721,
+    "name": {
+      "english": "Devon Parts"
+    }
+  },
+  {
+    "id": 722,
+    "name": {
+      "english": "Soot Sack"
+    }
+  },
+  {
+    "id": 723,
+    "name": {
+      "english": "Basement Key"
+    }
+  },
+  {
+    "id": 724,
+    "name": {
+      "english": "Pokéblock Kit"
+    }
+  },
+  {
+    "name": {
+      "english": "Letter"
+    },
+    "id": 725
+  },
+  {
+    "name": {
+      "english": "Eon Ticket"
+    },
+    "id": 726
+  },
+  {
+    "id": 727,
+    "name": {
+      "english": "Scanner"
+    }
+  },
+  {
+    "name": {
+      "english": "Go-Goggles"
+    },
+    "id": 728
+  },
+  {
+    "id": 729,
+    "name": {
+      "english": "Meteorite"
+    }
+  },
+  {
+    "id": 730,
+    "name": {
+      "english": "Key to Room 1"
+    }
+  },
+  {
+    "name": {
+      "english": "Key to Room 2"
+    },
+    "id": 731
+  },
+  {
+    "id": 732,
+    "name": {
+      "english": "Key to Room 4"
+    }
+  },
+  {
+    "id": 733,
+    "name": {
+      "english": "Key to Room 6"
+    }
+  },
+  {
+    "name": {
+      "english": "Storage Key"
+    },
+    "id": 734
+  },
+  {
+    "id": 735,
+    "name": {
+      "english": "Devon Scope"
+    }
+  },
+  {
+    "id": 736,
+    "name": {
+      "english": "S.S. Ticket"
+    }
+  },
+  {
+    "name": {
+      "english": "HM07"
+    },
+    "id": 737
+  },
+  {
+    "id": 738,
+    "name": {
+      "english": "Devon Scuba Gear"
+    }
+  },
+  {
+    "name": {
+      "english": "Contest Costume"
+    },
+    "id": 739
+  },
+  {
+    "id": 740,
+    "name": {
+      "english": "Contest Costume"
+    }
+  },
+  {
+    "name": {
+      "english": "Magma Suit"
+    },
+    "id": 741
+  },
+  {
+    "id": 742,
+    "name": {
+      "english": "Aqua Suit"
+    }
+  },
+  {
+    "id": 743,
+    "name": {
+      "english": "Pair of Tickets"
+    }
+  },
+  {
+    "name": {
+      "english": "Mega Bracelet"
+    },
+    "id": 744
+  },
+  {
+    "id": 745,
+    "name": {
+      "english": "Mega Pendant"
+    }
+  },
+  {
+    "id": 746,
+    "name": {
+      "english": "Mega Glasses"
+    }
+  },
+  {
+    "id": 747,
+    "name": {
+      "english": "Mega Anchor"
+    }
+  },
+  {
+    "name": {
+      "english": "Mega Stickpin"
+    },
+    "id": 748
+  },
+  {
+    "name": {
+      "english": "Mega Tiara"
+    },
+    "id": 749
+  },
+  {
+    "id": 750,
+    "name": {
+      "english": "Mega Anklet"
+    }
+  },
+  {
+    "name": {
+      "english": "Meteorite"
+    },
+    "id": 751
+  },
+  {
+    "name": {
+      "english": "Swampertite"
+    },
+    "id": 752
+  },
+  {
+    "name": {
+      "english": "Sceptilite"
+    },
+    "id": 753
+  },
+  {
+    "id": 754,
+    "name": {
+      "english": "Sablenite"
+    }
+  },
+  {
+    "id": 755,
+    "name": {
+      "english": "Altarianite"
+    }
+  },
+  {
+    "name": {
+      "english": "Galladite"
+    },
+    "id": 756
+  },
+  {
+    "id": 757,
+    "name": {
+      "english": "Audinite"
+    }
+  },
+  {
+    "id": 758,
+    "name": {
+      "english": "Metagrossite"
+    }
+  },
+  {
+    "id": 759,
+    "name": {
+      "english": "Sharpedonite"
+    }
+  },
+  {
+    "name": {
+      "english": "Slowbronite"
+    },
+    "id": 760
+  },
+  {
+    "name": {
+      "english": "Steelixite"
+    },
+    "id": 761
+  },
+  {
+    "name": {
+      "english": "Pidgeotite"
+    },
+    "id": 762
+  },
+  {
+    "name": {
+      "english": "Glalitite"
+    },
+    "id": 763
+  },
+  {
+    "id": 764,
+    "name": {
+      "english": "Diancite"
+    }
+  },
+  {
+    "id": 765,
+    "name": {
+      "english": "Prison Bottle"
+    }
+  },
+  {
+    "id": 766,
+    "name": {
+      "english": "Mega Cuff"
+    }
+  },
+  {
+    "id": 767,
+    "name": {
+      "english": "Cameruptite"
+    }
+  },
+  {
+    "name": {
+      "english": "Lopunnite"
+    },
+    "id": 768
+  },
+  {
+    "name": {
+      "english": "Salamencite"
+    },
+    "id": 769
+  },
+  {
+    "id": 770,
+    "name": {
+      "english": "Beedrillite"
+    }
+  },
+  {
+    "id": 771,
+    "name": {
+      "english": "Meteorite"
+    }
+  },
+  {
+    "id": 772,
+    "name": {
+      "english": "Meteorite"
+    }
+  },
+  {
+    "id": 773,
+    "name": {
+      "english": "Key Stone"
+    }
+  },
+  {
+    "id": 774,
+    "name": {
+      "english": "Meteorite Shard"
+    }
+  },
+  {
+    "name": {
+      "english": "Eon Flute"
+    },
+    "id": 775
+  },
+  {
+    "name": {
+      "english": "Normalium Z"
+    },
+    "id": 776
+  },
+  {
+    "id": 777,
+    "name": {
+      "english": "Firium Z"
+    }
+  },
+  {
+    "id": 778,
+    "name": {
+      "english": "Waterium Z"
+    }
+  },
+  {
+    "id": 779,
+    "name": {
+      "english": "Electrium Z"
+    }
+  },
+  {
+    "id": 780,
+    "name": {
+      "english": "Grassium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Icium Z"
+    },
+    "id": 781
+  },
+  {
+    "name": {
+      "english": "Fightinium Z"
+    },
+    "id": 782
+  },
+  {
+    "id": 783,
+    "name": {
+      "english": "Poisonium Z"
+    }
+  },
+  {
+    "id": 784,
+    "name": {
+      "english": "Groundium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Flyinium Z"
+    },
+    "id": 785
+  },
+  {
+    "id": 786,
+    "name": {
+      "english": "Psychium Z"
+    }
+  },
+  {
+    "id": 787,
+    "name": {
+      "english": "Buginium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Rockium Z"
+    },
+    "id": 788
+  },
+  {
+    "name": {
+      "english": "Ghostium Z"
+    },
+    "id": 789
+  },
+  {
+    "name": {
+      "english": "Dragonium Z"
+    },
+    "id": 790
+  },
+  {
+    "name": {
+      "english": "Darkinium Z"
+    },
+    "id": 791
+  },
+  {
+    "name": {
+      "english": "Steelium Z"
+    },
+    "id": 792
+  },
+  {
+    "id": 793,
+    "name": {
+      "english": "Fairium Z"
+    }
+  },
+  {
+    "id": 794,
+    "name": {
+      "english": "Pikanium Z"
+    }
+  },
+  {
+    "id": 795,
+    "name": {
+      "english": "Bottle Cap"
+    }
+  },
+  {
+    "name": {
+      "english": "Gold Bottle Cap"
+    },
+    "id": 796
+  },
+  {
+    "name": {
+      "english": "Z-Ring"
+    },
+    "id": 797
+  },
+  {
+    "id": 798,
+    "name": {
+      "english": "Decidium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Incinium Z"
+    },
+    "id": 799
+  },
+  {
+    "id": 800,
+    "name": {
+      "english": "Primarium Z"
+    }
+  },
+  {
+    "id": 801,
+    "name": {
+      "english": "Tapunium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Marshadium Z"
+    },
+    "id": 802
+  },
+  {
+    "id": 803,
+    "name": {
+      "english": "Aloraichium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Snorlium Z"
+    },
+    "id": 804
+  },
+  {
+    "name": {
+      "english": "Eevium Z"
+    },
+    "id": 805
+  },
+  {
+    "name": {
+      "english": "Mewnium Z"
+    },
+    "id": 806
+  },
+  {
+    "name": {
+      "english": "Normalium Z"
+    },
+    "id": 807
+  },
+  {
+    "id": 808,
+    "name": {
+      "english": "Firium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Waterium Z"
+    },
+    "id": 809
+  },
+  {
+    "id": 810,
+    "name": {
+      "english": "Electrium Z"
+    }
+  },
+  {
+    "id": 811,
+    "name": {
+      "english": "Grassium Z"
+    }
+  },
+  {
+    "id": 812,
+    "name": {
+      "english": "Icium Z"
+    }
+  },
+  {
+    "id": 813,
+    "name": {
+      "english": "Fightinium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Poisonium Z"
+    },
+    "id": 814
+  },
+  {
+    "id": 815,
+    "name": {
+      "english": "Groundium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Flyinium Z"
+    },
+    "id": 816
+  },
+  {
+    "id": 817,
+    "name": {
+      "english": "Psychium Z"
+    }
+  },
+  {
+    "id": 818,
+    "name": {
+      "english": "Buginium Z"
+    }
+  },
+  {
+    "id": 819,
+    "name": {
+      "english": "Rockium Z"
+    }
+  },
+  {
+    "id": 820,
+    "name": {
+      "english": "Ghostium Z"
+    }
+  },
+  {
+    "id": 821,
+    "name": {
+      "english": "Dragonium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Darkinium Z"
+    },
+    "id": 822
+  },
+  {
+    "id": 823,
+    "name": {
+      "english": "Steelium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Fairium Z"
+    },
+    "id": 824
+  },
+  {
+    "id": 825,
+    "name": {
+      "english": "Pikanium Z"
+    }
+  },
+  {
+    "id": 826,
+    "name": {
+      "english": "Decidium Z"
+    }
+  },
+  {
+    "id": 827,
+    "name": {
+      "english": "Incinium Z"
+    }
+  },
+  {
+    "id": 828,
+    "name": {
+      "english": "Primarium Z"
+    }
+  },
+  {
+    "id": 829,
+    "name": {
+      "english": "Tapunium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Marshadium Z"
+    },
+    "id": 830
+  },
+  {
+    "name": {
+      "english": "Aloraichium Z"
+    },
+    "id": 831
+  },
+  {
+    "id": 832,
+    "name": {
+      "english": "Snorlium Z"
+    }
+  },
+  {
+    "id": 833,
+    "name": {
+      "english": "Eevium Z"
+    }
+  },
+  {
+    "id": 834,
+    "name": {
+      "english": "Mewnium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Pikashunium Z"
+    },
+    "id": 835
+  },
+  {
+    "id": 836,
+    "name": {
+      "english": "Pikashunium Z"
+    }
+  },
+  {
+    "id": 841,
+    "name": {
+      "english": "Forage Bag"
+    }
+  },
+  {
+    "name": {
+      "english": "Fishing Rod"
+    },
+    "id": 842
+  },
+  {
+    "id": 843,
+    "name": {
+      "english": "Professor's Mask"
+    }
+  },
+  {
+    "id": 844,
+    "name": {
+      "english": "Festival Ticket"
+    }
+  },
+  {
+    "name": {
+      "english": "Sparkling Stone"
+    },
+    "id": 845
+  },
+  {
+    "name": {
+      "english": "Adrenaline Orb"
+    },
+    "id": 846
+  },
+  {
+    "name": {
+      "english": "Zygarde Cube"
+    },
+    "id": 847
+  },
+  {
+    "name": {
+      "english": "Ice Stone"
+    },
+    "id": 849
+  },
+  {
+    "id": 850,
+    "name": {
+      "english": "Ride Pager"
+    }
+  },
+  {
+    "name": {
+      "english": "Beast Ball"
+    },
+    "id": 851
+  },
+  {
+    "name": {
+      "english": "Big Malasada"
+    },
+    "id": 852
+  },
+  {
+    "id": 853,
+    "name": {
+      "english": "Red Nectar"
+    }
+  },
+  {
+    "name": {
+      "english": "Yellow Nectar"
+    },
+    "id": 854
+  },
+  {
+    "name": {
+      "english": "Pink Nectar"
+    },
+    "id": 855
+  },
+  {
+    "name": {
+      "english": "Purple Nectar"
+    },
+    "id": 856
+  },
+  {
+    "name": {
+      "english": "Sun Flute"
+    },
+    "id": 857
+  },
+  {
+    "id": 858,
+    "name": {
+      "english": "Moon Flute"
+    }
+  },
+  {
+    "name": {
+      "english": "Enigmatic Card"
+    },
+    "id": 860
+  },
+  {
+    "name": {
+      "english": "Terrain Extender"
+    },
+    "id": 879
+  },
+  {
+    "name": {
+      "english": "Protective Pads"
+    },
+    "id": 880
+  },
+  {
+    "name": {
+      "english": "Electric Seed"
+    },
+    "id": 881
+  },
+  {
+    "name": {
+      "english": "Psychic Seed"
+    },
+    "id": 882
+  },
+  {
+    "id": 883,
+    "name": {
+      "english": "Misty Seed"
+    }
+  },
+  {
+    "id": 884,
+    "name": {
+      "english": "Grassy Seed"
+    }
+  },
+  {
+    "name": {
+      "english": "Fighting Memory"
+    },
+    "id": 904
+  },
+  {
+    "id": 905,
+    "name": {
+      "english": "Flying Memory"
+    }
+  },
+  {
+    "name": {
+      "english": "Poison Memory"
+    },
+    "id": 906
+  },
+  {
+    "name": {
+      "english": "Ground Memory"
+    },
+    "id": 907
+  },
+  {
+    "name": {
+      "english": "Rock Memory"
+    },
+    "id": 908
+  },
+  {
+    "name": {
+      "english": "Bug Memory"
+    },
+    "id": 909
+  },
+  {
+    "id": 910,
+    "name": {
+      "english": "Ghost Memory"
+    }
+  },
+  {
+    "id": 911,
+    "name": {
+      "english": "Steel Memory"
+    }
+  },
+  {
+    "name": {
+      "english": "Fire Memory"
+    },
+    "id": 912
+  },
+  {
+    "name": {
+      "english": "Water Memory"
+    },
+    "id": 913
+  },
+  {
+    "name": {
+      "english": "Grass Memory"
+    },
+    "id": 914
+  },
+  {
+    "id": 915,
+    "name": {
+      "english": "Electric Memory"
+    }
+  },
+  {
+    "name": {
+      "english": "Psychic Memory"
+    },
+    "id": 916
+  },
+  {
+    "id": 917,
+    "name": {
+      "english": "Ice Memory"
+    }
+  },
+  {
+    "id": 918,
+    "name": {
+      "english": "Dragon Memory"
+    }
+  },
+  {
+    "name": {
+      "english": "Dark Memory"
+    },
+    "id": 919
+  },
+  {
+    "id": 920,
+    "name": {
+      "english": "Fairy Memory"
+    }
+  },
+  {
+    "id": 921,
+    "name": {
+      "english": "Solganium Z"
+    }
+  },
+  {
+    "id": 922,
+    "name": {
+      "english": "Lunalium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Ultranecrozium Z"
+    },
+    "id": 923
+  },
+  {
+    "name": {
+      "english": "Mimikium Z"
+    },
+    "id": 924
+  },
+  {
+    "id": 925,
+    "name": {
+      "english": "Lycanium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Kommonium Z"
+    },
+    "id": 926
+  },
+  {
+    "name": {
+      "english": "Solganium Z"
+    },
+    "id": 927
+  },
+  {
+    "name": {
+      "english": "Lunalium Z"
+    },
+    "id": 928
+  },
+  {
+    "id": 929,
+    "name": {
+      "english": "Ultranecrozium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Mimikium Z"
+    },
+    "id": 930
+  },
+  {
+    "id": 931,
+    "name": {
+      "english": "Lycanium Z"
+    }
+  },
+  {
+    "name": {
+      "english": "Kommonium Z"
+    },
+    "id": 932
+  },
+  {
+    "id": 933,
+    "name": {
+      "english": "Z-Power Ring"
+    }
+  },
+  {
+    "name": {
+      "english": "Pink Petal"
+    },
+    "id": 934
+  },
+  {
+    "id": 935,
+    "name": {
+      "english": "Orange Petal"
+    }
+  },
+  {
+    "name": {
+      "english": "Blue Petal"
+    },
+    "id": 936
+  },
+  {
+    "name": {
+      "english": "Red Petal"
+    },
+    "id": 937
+  },
+  {
+    "id": 938,
+    "name": {
+      "english": "Green Petal"
+    }
+  },
+  {
+    "name": {
+      "english": "Yellow Petal"
+    },
+    "id": 939
+  },
+  {
+    "name": {
+      "english": "Purple Petal"
+    },
+    "id": 940
+  },
+  {
+    "id": 941,
+    "name": {
+      "english": "Rainbow Flower"
+    }
+  },
+  {
+    "id": 942,
+    "name": {
+      "english": "Surge Badge"
+    }
+  },
+  {
+    "name": {
+      "english": "N-Solarizer"
+    },
+    "id": 943
+  },
+  {
+    "name": {
+      "english": "N-Lunarizer"
+    },
+    "id": 944
+  },
+  {
+    "id": 945,
+    "name": {
+      "english": "N-Solarizer"
+    }
+  },
+  {
+    "name": {
+      "english": "N-Lunarizer"
+    },
+    "id": 946
+  },
+  {
+    "name": {
+      "english": "Ilima's Normalium Z"
+    },
+    "id": 947
+  },
+  {
+    "id": 948,
+    "name": {
+      "english": "Left Poké Ball"
+    }
+  },
+  {
+    "id": 949,
+    "name": {
+      "english": "Roto Hatch"
+    }
+  },
+  {
+    "id": 950,
+    "name": {
+      "english": "Roto Bargain"
+    }
+  },
+  {
+    "name": {
+      "english": "Roto Prize Money"
+    },
+    "id": 951
+  },
+  {
+    "name": {
+      "english": "Roto Exp. Points"
+    },
+    "id": 952
+  },
+  {
+    "id": 953,
+    "name": {
+      "english": "Roto Friendship"
+    }
+  },
+  {
+    "id": 954,
+    "name": {
+      "english": "Roto Encounter"
+    }
+  },
+  {
+    "id": 955,
+    "name": {
+      "english": "Roto Stealth"
+    }
+  },
+  {
+    "id": 956,
+    "name": {
+      "english": "Roto HP Restore"
+    }
+  },
+  {
+    "id": 957,
+    "name": {
+      "english": "Roto PP Restore"
+    }
+  },
+  {
+    "id": 958,
+    "name": {
+      "english": "Roto Boost"
+    }
+  },
+  {
+    "name": {
+      "english": "Roto Catch"
+    },
+    "id": 959
+  }
+]

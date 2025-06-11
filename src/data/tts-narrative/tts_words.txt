@@ -1,0 +1,1 @@
+cat: CAT\nrun: RUN\nencyclopedia: EN-CY-CLO-PE-DIA\n(Continue for all words...)
