@@ -1594,6 +1594,267 @@
     "scene_id": 1
   },
   {
+    "id": 56,
+    "name": "Mankey",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "056MS.png",
+    "image": "056.png",
+    "scene_id": 2
+  },
+  {
+    "id": 66,
+    "name": "Machop",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "066MS.png",
+    "image": "066.png",
+    "scene_id": 2
+  },
+  {
+    "id": 68,
+    "name": "Machamp",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "068MS.png",
+    "image": "068.png",
+    "scene_id": 2
+  },
+  {
+    "id": 93,
+    "name": "Haunter",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "sprite": "093MS.png",
+    "image": "093.png",
+    "scene_id": 2
+  },
+  {
+    "id": 106,
+    "name": "Hitmonlee",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "106MS.png",
+    "image": "106.png",
+    "scene_id": 2
+  },
+  {
+    "id": 200,
+    "name": "Misdreavus",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "200MS.png",
+    "image": "200.png",
+    "scene_id": 2
+  },
+  {
+    "id": 237,
+    "name": "Hitmontop",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "237MS.png",
+    "image": "237.png",
+    "scene_id": 2
+  },
+  {
+    "id": 297,
+    "name": "Hariyama",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "297MS.png",
+    "image": "297.png",
+    "scene_id": 2
+  },
+  {
+    "id": 308,
+    "name": "Medicham",
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "sprite": "308MS.png",
+    "image": "308.png",
+    "scene_id": 2
+  },
+  {
+    "id": 354,
+    "name": "Banette",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "354MS.png",
+    "image": "354.png",
+    "scene_id": 2
+  },
+  {
+    "id": 356,
+    "name": "Dusclops",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "356MS.png",
+    "image": "356.png",
+    "scene_id": 2
+  },
+  {
+    "id": 426,
+    "name": "Drifblim",
+    "types": [
+      "Ghost",
+      "Flying"
+    ],
+    "sprite": "426MS.png",
+    "image": "426.png",
+    "scene_id": 2
+  },
+  {
+    "id": 442,
+    "name": "Spiritomb",
+    "types": [
+      "Ghost",
+      "Dark"
+    ],
+    "sprite": "442MS.png",
+    "image": "442.png",
+    "scene_id": 2
+  },
+  {
+    "id": 448,
+    "name": "Lucario",
+    "types": [
+      "Fighting",
+      "Steel"
+    ],
+    "sprite": "448MS.png",
+    "image": "448.png",
+    "scene_id": 2
+  },
+  {
+    "id": 487,
+    "name": "Giratina",
+    "types": [
+      "Ghost",
+      "Dragon"
+    ],
+    "sprite": "487MS.png",
+    "image": "487.png",
+    "scene_id": 2
+  },
+  {
+    "id": 533,
+    "name": "Gurdurr",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "533MS.png",
+    "image": "533.png",
+    "scene_id": 2
+  },
+  {
+    "id": 538,
+    "name": "Throh",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "538MS.png",
+    "image": "538.png",
+    "scene_id": 2
+  },
+  {
+    "id": 562,
+    "name": "Yamask",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "562MS.png",
+    "image": "562.png",
+    "scene_id": 2
+  },
+  {
+    "id": 607,
+    "name": "Litwick",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "sprite": "607MS.png",
+    "image": "607.png",
+    "scene_id": 2
+  },
+  {
+    "id": 619,
+    "name": "Mienfoo",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "619MS.png",
+    "image": "619.png",
+    "scene_id": 2
+  },
+  {
+    "id": 675,
+    "name": "Pangoro",
+    "types": [
+      "Fighting",
+      "Dark"
+    ],
+    "sprite": "675MS.png",
+    "image": "675.png",
+    "scene_id": 2
+  },
+  {
+    "id": 709,
+    "name": "Trevenant",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "sprite": "709MS.png",
+    "image": "709.png",
+    "scene_id": 2
+  },
+  {
+    "id": 739,
+    "name": "Crabrawler",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "739MS.png",
+    "image": "739.png",
+    "scene_id": 2
+  },
+  {
+    "id": 769,
+    "name": "Sandygast",
+    "types": [
+      "Ghost",
+      "Ground"
+    ],
+    "sprite": "769MS.png",
+    "image": "769.png",
+    "scene_id": 2
+  },
+  {
+    "id": 802,
+    "name": "Marshadow",
+    "types": [
+      "Fighting",
+      "Ghost"
+    ],
+    "sprite": "802MS.png",
+    "image": "802.png",
+    "scene_id": 2
+  },
+  {
     "id": 25,
     "name": "Pikachu",
     "types": [
@@ -3138,88 +3399,6 @@
     "scene_id": 5
   },
   {
-    "id": 56,
-    "name": "Mankey",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "056MS.png",
-    "image": "056.png",
-    "scene_id": 5
-  },
-  {
-    "id": 57,
-    "name": "Primeape",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "057MS.png",
-    "image": "057.png",
-    "scene_id": 5
-  },
-  {
-    "id": 66,
-    "name": "Machop",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "066MS.png",
-    "image": "066.png",
-    "scene_id": 5
-  },
-  {
-    "id": 67,
-    "name": "Machoke",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "067MS.png",
-    "image": "067.png",
-    "scene_id": 5
-  },
-  {
-    "id": 68,
-    "name": "Machamp",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "068MS.png",
-    "image": "068.png",
-    "scene_id": 5
-  },
-  {
-    "id": 92,
-    "name": "Gastly",
-    "types": [
-      "Ghost",
-      "Poison"
-    ],
-    "sprite": "092MS.png",
-    "image": "092.png",
-    "scene_id": 5
-  },
-  {
-    "id": 94,
-    "name": "Gengar",
-    "types": [
-      "Ghost",
-      "Poison"
-    ],
-    "sprite": "094MS.png",
-    "image": "094.png",
-    "scene_id": 5
-  },
-  {
-    "id": 107,
-    "name": "Hitmonchan",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "107MS.png",
-    "image": "107.png",
-    "scene_id": 5
-  },
-  {
     "id": 173,
     "name": "Cleffa",
     "types": [
@@ -3271,78 +3450,6 @@
     "scene_id": 5
   },
   {
-    "id": 236,
-    "name": "Tyrogue",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "236MS.png",
-    "image": "236.png",
-    "scene_id": 5
-  },
-  {
-    "id": 296,
-    "name": "Makuhita",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "296MS.png",
-    "image": "296.png",
-    "scene_id": 5
-  },
-  {
-    "id": 307,
-    "name": "Meditite",
-    "types": [
-      "Fighting",
-      "Psychic"
-    ],
-    "sprite": "307MS.png",
-    "image": "307.png",
-    "scene_id": 5
-  },
-  {
-    "id": 353,
-    "name": "Shuppet",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "353MS.png",
-    "image": "353.png",
-    "scene_id": 5
-  },
-  {
-    "id": 356,
-    "name": "Dusclops",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "356MS.png",
-    "image": "356.png",
-    "scene_id": 5
-  },
-  {
-    "id": 429,
-    "name": "Mismagius",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "429MS.png",
-    "image": "429.png",
-    "scene_id": 5
-  },
-  {
-    "id": 448,
-    "name": "Lucario",
-    "types": [
-      "Fighting",
-      "Steel"
-    ],
-    "sprite": "448MS.png",
-    "image": "448.png",
-    "scene_id": 5
-  },
-  {
     "id": 468,
     "name": "Togekiss",
     "types": [
@@ -3354,26 +3461,6 @@
     "scene_id": 5
   },
   {
-    "id": 532,
-    "name": "Timburr",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "532MS.png",
-    "image": "532.png",
-    "scene_id": 5
-  },
-  {
-    "id": 539,
-    "name": "Sawk",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "539MS.png",
-    "image": "539.png",
-    "scene_id": 5
-  },
-  {
     "id": 608,
     "name": "Lampent",
     "types": [
@@ -3382,6 +3469,16 @@
     ],
     "sprite": "608MS.png",
     "image": "608.png",
+    "scene_id": 5
+  },
+  {
+    "id": 620,
+    "name": "Mienshao",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "620MS.png",
+    "image": "620.png",
     "scene_id": 5
   },
   {
@@ -3412,16 +3509,6 @@
     ],
     "sprite": "671MS.png",
     "image": "671.png",
-    "scene_id": 5
-  },
-  {
-    "id": 674,
-    "name": "Pancham",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "674MS.png",
-    "image": "674.png",
     "scene_id": 5
   },
   {
@@ -3475,14 +3562,25 @@
     "scene_id": 5
   },
   {
-    "id": 709,
-    "name": "Trevenant",
+    "id": 701,
+    "name": "Hawlucha",
+    "types": [
+      "Fighting",
+      "Flying"
+    ],
+    "sprite": "701MS.png",
+    "image": "701.png",
+    "scene_id": 5
+  },
+  {
+    "id": 710,
+    "name": "Pumpkaboo",
     "types": [
       "Ghost",
       "Grass"
     ],
-    "sprite": "709MS.png",
-    "image": "709.png",
+    "sprite": "710MS.png",
+    "image": "710.png",
     "scene_id": 5
   },
   {
@@ -3517,14 +3615,14 @@
     "scene_id": 5
   },
   {
-    "id": 778,
-    "name": "Mimikyu",
+    "id": 770,
+    "name": "Palossand",
     "types": [
       "Ghost",
-      "Fairy"
+      "Ground"
     ],
-    "sprite": "778MS.png",
-    "image": "778.png",
+    "sprite": "770MS.png",
+    "image": "770.png",
     "scene_id": 5
   },
   {
@@ -6396,6 +6494,254 @@
     "scene_id": 8
   },
   {
+    "id": 57,
+    "name": "Primeape",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "057MS.png",
+    "image": "057.png",
+    "scene_id": 9
+  },
+  {
+    "id": 67,
+    "name": "Machoke",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "067MS.png",
+    "image": "067.png",
+    "scene_id": 9
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "sprite": "092MS.png",
+    "image": "092.png",
+    "scene_id": 9
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "sprite": "094MS.png",
+    "image": "094.png",
+    "scene_id": 9
+  },
+  {
+    "id": 107,
+    "name": "Hitmonchan",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "107MS.png",
+    "image": "107.png",
+    "scene_id": 9
+  },
+  {
+    "id": 236,
+    "name": "Tyrogue",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "236MS.png",
+    "image": "236.png",
+    "scene_id": 9
+  },
+  {
+    "id": 296,
+    "name": "Makuhita",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "296MS.png",
+    "image": "296.png",
+    "scene_id": 9
+  },
+  {
+    "id": 307,
+    "name": "Meditite",
+    "types": [
+      "Fighting",
+      "Psychic"
+    ],
+    "sprite": "307MS.png",
+    "image": "307.png",
+    "scene_id": 9
+  },
+  {
+    "id": 353,
+    "name": "Shuppet",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "353MS.png",
+    "image": "353.png",
+    "scene_id": 9
+  },
+  {
+    "id": 355,
+    "name": "Duskull",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "355MS.png",
+    "image": "355.png",
+    "scene_id": 9
+  },
+  {
+    "id": 425,
+    "name": "Drifloon",
+    "types": [
+      "Ghost",
+      "Flying"
+    ],
+    "sprite": "425MS.png",
+    "image": "425.png",
+    "scene_id": 9
+  },
+  {
+    "id": 429,
+    "name": "Mismagius",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "429MS.png",
+    "image": "429.png",
+    "scene_id": 9
+  },
+  {
+    "id": 447,
+    "name": "Riolu",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "447MS.png",
+    "image": "447.png",
+    "scene_id": 9
+  },
+  {
+    "id": 477,
+    "name": "Dusknoir",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "477MS.png",
+    "image": "477.png",
+    "scene_id": 9
+  },
+  {
+    "id": 532,
+    "name": "Timburr",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "532MS.png",
+    "image": "532.png",
+    "scene_id": 9
+  },
+  {
+    "id": 534,
+    "name": "Conkeldurr",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "534MS.png",
+    "image": "534.png",
+    "scene_id": 9
+  },
+  {
+    "id": 539,
+    "name": "Sawk",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "539MS.png",
+    "image": "539.png",
+    "scene_id": 9
+  },
+  {
+    "id": 563,
+    "name": "Cofagrigus",
+    "types": [
+      "Ghost"
+    ],
+    "sprite": "563MS.png",
+    "image": "563.png",
+    "scene_id": 9
+  },
+  {
+    "id": 609,
+    "name": "Chandelure",
+    "types": [
+      "Ghost",
+      "Fire"
+    ],
+    "sprite": "609MS.png",
+    "image": "609.png",
+    "scene_id": 9
+  },
+  {
+    "id": 674,
+    "name": "Pancham",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "674MS.png",
+    "image": "674.png",
+    "scene_id": 9
+  },
+  {
+    "id": 708,
+    "name": "Phantump",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "sprite": "708MS.png",
+    "image": "708.png",
+    "scene_id": 9
+  },
+  {
+    "id": 711,
+    "name": "Gourgeist",
+    "types": [
+      "Ghost",
+      "Grass"
+    ],
+    "sprite": "711MS.png",
+    "image": "711.png",
+    "scene_id": 9
+  },
+  {
+    "id": 766,
+    "name": "Passimian",
+    "types": [
+      "Fighting"
+    ],
+    "sprite": "766MS.png",
+    "image": "766.png",
+    "scene_id": 9
+  },
+  {
+    "id": 778,
+    "name": "Mimikyu",
+    "types": [
+      "Ghost",
+      "Fairy"
+    ],
+    "sprite": "778MS.png",
+    "image": "778.png",
+    "scene_id": 9
+  },
+  {
     "id": 197,
     "name": "Umbreon",
     "types": [
@@ -6481,16 +6827,6 @@
     "scene_id": 10
   },
   {
-    "id": 355,
-    "name": "Duskull",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "355MS.png",
-    "image": "355.png",
-    "scene_id": 10
-  },
-  {
     "id": 359,
     "name": "Absol",
     "types": [
@@ -6498,17 +6834,6 @@
     ],
     "sprite": "359MS.png",
     "image": "359.png",
-    "scene_id": 10
-  },
-  {
-    "id": 426,
-    "name": "Drifblim",
-    "types": [
-      "Ghost",
-      "Flying"
-    ],
-    "sprite": "426MS.png",
-    "image": "426.png",
     "scene_id": 10
   },
   {
@@ -6523,16 +6848,6 @@
     "scene_id": 10
   },
   {
-    "id": 447,
-    "name": "Riolu",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "447MS.png",
-    "image": "447.png",
-    "scene_id": 10
-  },
-  {
     "id": 461,
     "name": "Weavile",
     "types": [
@@ -6541,17 +6856,6 @@
     ],
     "sprite": "461MS.png",
     "image": "461.png",
-    "scene_id": 10
-  },
-  {
-    "id": 487,
-    "name": "Giratina",
-    "types": [
-      "Ghost",
-      "Dragon"
-    ],
-    "sprite": "487MS.png",
-    "image": "487.png",
     "scene_id": 10
   },
   {
@@ -6585,16 +6889,6 @@
     "scene_id": 10
   },
   {
-    "id": 534,
-    "name": "Conkeldurr",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "534MS.png",
-    "image": "534.png",
-    "scene_id": 10
-  },
-  {
     "id": 559,
     "name": "Scraggy",
     "types": [
@@ -6617,16 +6911,6 @@
     "scene_id": 10
   },
   {
-    "id": 563,
-    "name": "Cofagrigus",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "563MS.png",
-    "image": "563.png",
-    "scene_id": 10
-  },
-  {
     "id": 570,
     "name": "Zorua",
     "types": [
@@ -6644,16 +6928,6 @@
     ],
     "sprite": "571MS.png",
     "image": "571.png",
-    "scene_id": 10
-  },
-  {
-    "id": 619,
-    "name": "Mienfoo",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "619MS.png",
-    "image": "619.png",
     "scene_id": 10
   },
   {
@@ -6756,28 +7030,6 @@
     "scene_id": 10
   },
   {
-    "id": 701,
-    "name": "Hawlucha",
-    "types": [
-      "Fighting",
-      "Flying"
-    ],
-    "sprite": "701MS.png",
-    "image": "701.png",
-    "scene_id": 10
-  },
-  {
-    "id": 711,
-    "name": "Gourgeist",
-    "types": [
-      "Ghost",
-      "Grass"
-    ],
-    "sprite": "711MS.png",
-    "image": "711.png",
-    "scene_id": 10
-  },
-  {
     "id": 717,
     "name": "Yveltal",
     "types": [
@@ -6786,17 +7038,6 @@
     ],
     "sprite": "717MS.png",
     "image": "717.png",
-    "scene_id": 10
-  },
-  {
-    "id": 769,
-    "name": "Sandygast",
-    "types": [
-      "Ghost",
-      "Ground"
-    ],
-    "sprite": "769MS.png",
-    "image": "769.png",
     "scene_id": 10
   },
   {
@@ -6809,38 +7050,6 @@
     "sprite": "799MS.png",
     "image": "799.png",
     "scene_id": 10
-  },
-  {
-    "id": 802,
-    "name": "Marshadow",
-    "types": [
-      "Fighting",
-      "Ghost"
-    ],
-    "sprite": "802MS.png",
-    "image": "802.png",
-    "scene_id": 10
-  },
-  {
-    "id": 93,
-    "name": "Haunter",
-    "types": [
-      "Ghost",
-      "Poison"
-    ],
-    "sprite": "093MS.png",
-    "image": "093.png",
-    "scene_id": 11
-  },
-  {
-    "id": 106,
-    "name": "Hitmonlee",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "106MS.png",
-    "image": "106.png",
-    "scene_id": 11
   },
   {
     "id": 124,
@@ -6862,16 +7071,6 @@
     ],
     "sprite": "144MS.png",
     "image": "144.png",
-    "scene_id": 11
-  },
-  {
-    "id": 200,
-    "name": "Misdreavus",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "200MS.png",
-    "image": "200.png",
     "scene_id": 11
   },
   {
@@ -6908,16 +7107,6 @@
     "scene_id": 11
   },
   {
-    "id": 237,
-    "name": "Hitmontop",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "237MS.png",
-    "image": "237.png",
-    "scene_id": 11
-  },
-  {
     "id": 238,
     "name": "Smoochum",
     "types": [
@@ -6926,37 +7115,6 @@
     ],
     "sprite": "238MS.png",
     "image": "238.png",
-    "scene_id": 11
-  },
-  {
-    "id": 297,
-    "name": "Hariyama",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "297MS.png",
-    "image": "297.png",
-    "scene_id": 11
-  },
-  {
-    "id": 308,
-    "name": "Medicham",
-    "types": [
-      "Fighting",
-      "Psychic"
-    ],
-    "sprite": "308MS.png",
-    "image": "308.png",
-    "scene_id": 11
-  },
-  {
-    "id": 354,
-    "name": "Banette",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "354MS.png",
-    "image": "354.png",
     "scene_id": 11
   },
   {
@@ -7023,28 +7181,6 @@
     "scene_id": 11
   },
   {
-    "id": 425,
-    "name": "Drifloon",
-    "types": [
-      "Ghost",
-      "Flying"
-    ],
-    "sprite": "425MS.png",
-    "image": "425.png",
-    "scene_id": 11
-  },
-  {
-    "id": 442,
-    "name": "Spiritomb",
-    "types": [
-      "Ghost",
-      "Dark"
-    ],
-    "sprite": "442MS.png",
-    "image": "442.png",
-    "scene_id": 11
-  },
-  {
     "id": 471,
     "name": "Glaceon",
     "types": [
@@ -7066,16 +7202,6 @@
     "scene_id": 11
   },
   {
-    "id": 477,
-    "name": "Dusknoir",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "477MS.png",
-    "image": "477.png",
-    "scene_id": 11
-  },
-  {
     "id": 478,
     "name": "Froslass",
     "types": [
@@ -7084,26 +7210,6 @@
     ],
     "sprite": "478MS.png",
     "image": "478.png",
-    "scene_id": 11
-  },
-  {
-    "id": 533,
-    "name": "Gurdurr",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "533MS.png",
-    "image": "533.png",
-    "scene_id": 11
-  },
-  {
-    "id": 562,
-    "name": "Yamask",
-    "types": [
-      "Ghost"
-    ],
-    "sprite": "562MS.png",
-    "image": "562.png",
     "scene_id": 11
   },
   {
@@ -7137,17 +7243,6 @@
     "scene_id": 11
   },
   {
-    "id": 609,
-    "name": "Chandelure",
-    "types": [
-      "Ghost",
-      "Fire"
-    ],
-    "sprite": "609MS.png",
-    "image": "609.png",
-    "scene_id": 11
-  },
-  {
     "id": 613,
     "name": "Cubchoo",
     "types": [
@@ -7178,28 +7273,6 @@
     "scene_id": 11
   },
   {
-    "id": 675,
-    "name": "Pangoro",
-    "types": [
-      "Fighting",
-      "Dark"
-    ],
-    "sprite": "675MS.png",
-    "image": "675.png",
-    "scene_id": 11
-  },
-  {
-    "id": 710,
-    "name": "Pumpkaboo",
-    "types": [
-      "Ghost",
-      "Grass"
-    ],
-    "sprite": "710MS.png",
-    "image": "710.png",
-    "scene_id": 11
-  },
-  {
     "id": 712,
     "name": "Bergmite",
     "types": [
@@ -7217,16 +7290,6 @@
     ],
     "sprite": "713MS.png",
     "image": "713.png",
-    "scene_id": 11
-  },
-  {
-    "id": 766,
-    "name": "Passimian",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "766MS.png",
-    "image": "766.png",
     "scene_id": 11
   },
   {
@@ -7492,16 +7555,6 @@
     "scene_id": 12
   },
   {
-    "id": 538,
-    "name": "Throh",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "538MS.png",
-    "image": "538.png",
-    "scene_id": 12
-  },
-  {
     "id": 568,
     "name": "Trubbish",
     "types": [
@@ -7519,27 +7572,6 @@
     ],
     "sprite": "569MS.png",
     "image": "569.png",
-    "scene_id": 12
-  },
-  {
-    "id": 607,
-    "name": "Litwick",
-    "types": [
-      "Ghost",
-      "Fire"
-    ],
-    "sprite": "607MS.png",
-    "image": "607.png",
-    "scene_id": 12
-  },
-  {
-    "id": 620,
-    "name": "Mienshao",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "620MS.png",
-    "image": "620.png",
     "scene_id": 12
   },
   {
@@ -7562,27 +7594,6 @@
     ],
     "sprite": "691MS.png",
     "image": "691.png",
-    "scene_id": 12
-  },
-  {
-    "id": 708,
-    "name": "Phantump",
-    "types": [
-      "Ghost",
-      "Grass"
-    ],
-    "sprite": "708MS.png",
-    "image": "708.png",
-    "scene_id": 12
-  },
-  {
-    "id": 739,
-    "name": "Crabrawler",
-    "types": [
-      "Fighting"
-    ],
-    "sprite": "739MS.png",
-    "image": "739.png",
     "scene_id": 12
   },
   {
@@ -7627,17 +7638,6 @@
     ],
     "sprite": "758MS.png",
     "image": "758.png",
-    "scene_id": 12
-  },
-  {
-    "id": 770,
-    "name": "Palossand",
-    "types": [
-      "Ghost",
-      "Ground"
-    ],
-    "sprite": "770MS.png",
-    "image": "770.png",
     "scene_id": 12
   },
   {

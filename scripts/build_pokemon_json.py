@@ -1,11 +1,24 @@
 import json
 from collections import defaultdict
+from pathlib import Path
 
-# Paths
-pokedex_path = r'D:\PokeReader\pokedex-data\pokedex.json'
-output_path = r'D:\PokeReader\pokedex-data\pokemon.json'
+# Get the directory of the current script
+script_dir = Path(__file__).parent
+# Define the project root relative to the script's location
+project_root = script_dir.parent
+# Define the data directory path
+data_dir = project_root / 'src' / 'data'
 
-# Region mapping: scene_id to theme types
+# Use relative paths to locate the source and output files
+pokedex_path = data_dir / 'pokedex.json'
+output_path = data_dir / 'pokemon.json'
+scenes_path = data_dir / 'scenes.json'
+
+# Region mapping: Dynamically load scene IDs from scenes.json
+with open(scenes_path, 'r', encoding='utf-8') as f:
+    scenes_data = json.load(f)
+
+# This mapping is now more for theme definition than for hardcoding IDs
 scene_type_map = [
     (1, ["Grass", "Bug"]),
     (2, ["Grass", "Bug"]),
@@ -61,18 +74,25 @@ for entry in pokedex:
             "scene_id": None
         })
 
-# Distribute unassigned Pokémon to scenes with fewest Pokémon
+# Distribute unassigned Pokémon to scenes with fewest Pokémon deterministically
 if unassigned:
-    counts = {scene_id: len(pkmn_list) for scene_id, pkmn_list in scene_pokemon.items()}
-    scene_ids = list(counts.keys())
-    idx = 0
+    # Get all possible scene IDs from the scenes file
+    all_scene_ids = {scene['id'] for scene in scenes_data}
+
+    # Initialize counts for all scenes, including potentially empty ones
+    counts = {scene_id: len(scene_pokemon.get(scene_id, [])) for scene_id in all_scene_ids}
+
+    # Sort unassigned Pokémon by ID to ensure a consistent processing order
+    unassigned.sort(key=lambda p: p['id'])
+
     for mon in unassigned:
-        # Find the scene with the fewest Pokémon
-        min_scene = min(counts.keys(), key=lambda k: counts[k])
-        mon["scene_id"] = min_scene
-        scene_pokemon[min_scene].append(mon)
-        counts[min_scene] += 1
-        idx += 1
+        # Find the scene with the fewest Pokémon. Sort by count, then by scene_id for determinism.
+        target_scene_id = sorted(counts.items(), key=lambda item: (item[1], item[0]))[0][0]
+
+        mon["scene_id"] = target_scene_id
+        scene_pokemon[target_scene_id].append(mon)
+        counts[target_scene_id] += 1
+
 
 # Flatten and sort output list by scene, then id
 all_pokemon = []
