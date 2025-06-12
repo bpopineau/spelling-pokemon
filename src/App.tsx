@@ -1,24 +1,21 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import GameMap from './components/GameMap';
 import SceneView from './components/SceneView';
 import Pokedex from './components/Pokedex';
-import Header from './components/Header';
+import MainLayout from './components/MainLayout';
 
 function App() {
-  const location = useLocation();
-  // We will only show the main header on the map and pokedex pages,
-  // not inside an active game scene.
-  const showHeader = !location.pathname.startsWith('/scene/');
-
   return (
-    <>
-      {showHeader && <Header />}
-      <Routes>
+    <Routes>
+      {/* Routes that should have the main header */}
+      <Route element={<MainLayout />}>
         <Route path="/" element={<GameMap />} />
         <Route path="/pokedex" element={<Pokedex />} />
-        <Route path="/scene/:sceneId" element={<SceneView />} />
-      </Routes>
-    </>
+      </Route>
+
+      {/* Route without the header */}
+      <Route path="/scene/:sceneId" element={<SceneView />} />
+    </Routes>
   );
 }
 
