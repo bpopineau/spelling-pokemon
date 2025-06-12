@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ControlsProps {
   onSubmit: () => void;
   onHint: () => void;

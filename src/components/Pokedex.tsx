@@ -1,4 +1,3 @@
-import React from 'react';
 import { useGameStore } from '../services/gameState';
 import allPokemonData from '../data/pokedex.json'; // The main data source for all Pokémon details
 
