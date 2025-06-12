@@ -18,12 +18,18 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   const [message, setMessage] = useState('');
   const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{ name: string; sprite: string } | null>(null);
 
-  // Get new state and actions from the store, including level info
-  const { xp, level, xpForNextLevel, hintCharges, collectedPokemonIds, useHint, addXp, catchPokemon } = useGameStore();
+  const { xp, level, xpToNextLevel, hintCharges, collectedPokemonIds, spendHint, addXp, catchPokemon } = useGameStore();
 
   const scene = scenes.find(s => s.word_start === wordStart && s.word_end === wordEnd);
   const sceneId = scene?.id;
   const currentWord = sceneWords[currentWordIndex];
+
+  // --- Progress Bar Calculation ---
+  const xpForLastLevel = (level - 1) * 100;
+  const xpGainedThisLevel = xp - xpForLastLevel;
+  const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
+  const progressPercentage = Math.max(0, Math.min(100, (xpGainedThisLevel / xpNeededForThisLevel) * 100));
+
 
   useEffect(() => {
     const wordsForScene = words.slice(wordStart, wordEnd + 1);
@@ -94,7 +100,7 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
     }
     const nextChar = currentWord[currentInput.length];
     setCurrentInput(currentInput + nextChar);
-    useHint();
+    spendHint();
   };
 
   if (!currentWord) {
@@ -104,64 +110,90 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   const wordBlanks = "_ ".repeat(currentWord.length);
 
   return (
-    <div className="relative text-center bg-white bg-opacity-75 p-8 rounded-lg shadow-lg w-full max-w-xl">
-      <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
-        <div className="bg-green-200 text-green-800 font-bold px-3 py-1 rounded-full text-sm">
-          Level: {level}
+    // Main container with a solid background and border
+    <div className="bg-white border-4 border-slate-300/70 p-6 rounded-xl shadow-2xl w-full max-w-lg text-gray-800">
+
+      {/* --- Status Bar --- */}
+      <div className="grid grid-cols-3 divide-x divide-slate-300 bg-slate-100 rounded-lg p-2 mb-6 border border-slate-300">
+        {/* Level */}
+        <div className="flex flex-col items-center justify-center px-2">
+          <span className="text-sm font-bold text-slate-600">LEVEL</span>
+          <span className="text-4xl font-bold text-sky-600">{level}</span>
         </div>
-        {/* XP Progress Bar */}
-        <div title={`${xp} / ${xpForNextLevel} XP`} className="w-32 h-4 bg-red-500 border-4 border-yellow-500">
-          <div
-            className="bg-yellow-400 h-full rounded-full"
-            style={{ width: `${(xp / xpForNextLevel) * 100}%` }}
-          ></div>
+
+        {/* XP / Progress */}
+        <div className="flex flex-col items-center justify-center px-4">
+          <span className="text-sm font-bold text-slate-600">PROGRESS</span>
+          <div className="w-full bg-slate-300 rounded-full h-5 mt-1 border border-slate-400/50 shadow-inner">
+            <div
+              className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-500"
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
+          </div>
+          <span className="text-sm font-semibold text-slate-600 mt-1">{xpGainedThisLevel} / {xpNeededForThisLevel} XP</span>
         </div>
-        <div className="bg-purple-200 text-purple-800 font-bold px-3 py-1 rounded-full text-sm">
-          Hints: {hintCharges}
+
+        {/* Hints */}
+        <div className="flex flex-col items-center justify-center px-2">
+          <span className="text-sm font-bold text-slate-600">HINTS</span>
+          <span className="text-4xl font-bold text-purple-600">{hintCharges}</span>
         </div>
       </div>
 
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">Spell the word:</h2>
-      <div className="text-5xl font-mono tracking-[.5em] mb-4 text-gray-900" aria-label={`Word has ${currentWord.length} letters`}>
-        {wordBlanks}
-      </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
-        <input
-          type="text"
-          value={currentInput}
-          onChange={handleInputChange}
-          className="text-4xl p-2 border-2 border-gray-300 rounded-md w-full max-w-sm text-center font-mono tracking-widest"
-          aria-label="Enter your spelling"
-          autoFocus
-          autoComplete="off"
-          autoCapitalize="off"
-        />
-
-        <div className="h-24 my-2 flex flex-col justify-center items-center">
-          {message && <p className="text-2xl text-gray-800">{message}</p>}
-          {lastCaughtPokemon && message.startsWith('Correct') && (
-            <img
-              src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
-              alt={lastCaughtPokemon.name}
-              className="w-16 h-16 mt-2"
-            />
-          )}
+      {/* --- Spelling Area --- */}
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2 text-slate-800">Spell the word:</h2>
+        <div
+          className="text-6xl font-bold font-mono tracking-widest mb-4 text-slate-800 py-2"
+          aria-label={`Word has ${currentWord.length} letters`}
+        >
+          {wordBlanks}
         </div>
 
-        {message.startsWith('Correct') ? (
-          <button type="button" onClick={handleNextWord} className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg text-xl hover:bg-blue-700">
-            Next Word
-          </button>
-        ) : (
-          <Controls
-            onSubmit={() => handleSubmit()}
-            onHint={handleHint}
-            onRepeat={handleRepeat}
-            hintDisabled={hintCharges <= 0 || !currentWord || currentInput.length >= currentWord.length}
+        <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
+          <input
+            type="text"
+            value={currentInput}
+            onChange={handleInputChange}
+            className="text-4xl p-2 border-2 border-gray-300 rounded-md w-full max-w-xs text-center font-mono tracking-widest focus:border-blue-500 focus:ring-blue-500"
+            aria-label="Enter your spelling"
+            autoFocus
+            autoComplete="off"
+            autoCapitalize="off"
           />
-        )}
-      </form>
+
+          <div className="h-24 my-2 flex flex-col justify-center items-center">
+            {message && <p className="text-2xl">{message}</p>}
+            {lastCaughtPokemon && message.startsWith('Correct') && (
+              <img
+                src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
+                alt={lastCaughtPokemon.name}
+                className="w-16 h-16 mt-2"
+              />
+            )}
+          </div>
+
+          {message.startsWith('Correct') ? (
+            <button
+              type="button"
+              onClick={handleNextWord}
+              className="w-full max-w-xs px-6 py-3 bg-blue-500 text-white font-bold rounded-lg text-xl hover:bg-blue-700"
+            >
+              Next Word
+            </button>
+          ) : (
+            <div className="w-full max-w-xs">
+                <Controls
+                    onSubmit={() => handleSubmit()}
+                    onHint={handleHint}
+                    onRepeat={handleRepeat}
+                    hintDisabled={hintCharges <= 0 || !currentWord || currentInput.length >= currentWord.length}
+                />
+            </div>
+          )}
+        </form>
+      </div>
     </div>
   );
 }

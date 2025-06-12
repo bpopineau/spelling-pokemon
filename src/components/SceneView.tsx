@@ -26,11 +26,11 @@ export default function SceneView() {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex flex-col items-center p-4"
+      className="min-h-screen bg-cover bg-center flex flex-col p-4"
       style={{ backgroundImage: `url(${backgroundPath})` }}
     >
-      {/* New Header Area */}
-      <div className="w-full max-w-5xl flex justify-between items-center mb-4">
+      {/* Header Area */}
+      <header className="w-full max-w-5xl flex justify-between items-center mb-4 mx-auto shrink-0">
         <button
           onClick={() => navigate('/')}
           className="px-4 py-2 bg-gray-800 bg-opacity-75 text-white rounded hover:bg-gray-700 z-10"
@@ -42,12 +42,12 @@ export default function SceneView() {
         </h1>
         {/* This empty div helps balance the header so the title stays centered */}
         <div className="w-32"></div>
-      </div>
+      </header>
 
-      {/* New Main Content Area to center the challenge */}
-      <div className="flex-grow flex items-center justify-center w-full">
+      {/* Main Content Area to center the challenge */}
+      <main className="flex-grow flex items-center justify-center w-full">
         <SpellingChallenge wordStart={scene.word_start} wordEnd={scene.word_end} />
-      </div>
+      </main>
     </div>
   );
 }
