@@ -1,93 +1,93 @@
 [
-    {
-        "id": 1,
-        "name": "Glendor Grove Champion",
-        "scene_id": 1,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Glendor Grove."
-    },
-    {
-        "id": 2,
-        "name": "Willowshade Woods Champion",
-        "scene_id": 2,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Willowshade Woods."
-    },
-    {
-        "id": 3,
-        "name": "Sparkspire City Champion",
-        "scene_id": 3,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Sparkspire City."
-    },
-    {
-        "id": 4,
-        "name": "Josara Ridge Ruins Champion",
-        "scene_id": 4,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Josara Ridge Ruins."
-    },
-    {
-        "id": 5,
-        "name": "Whispering Woods Champion",
-        "scene_id": 5,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Whispering Woods."
-    },
-    {
-        "id": 6,
-        "name": "Kalani Island Champion",
-        "scene_id": 6,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Kalani Island."
-    },
-    {
-        "id": 7,
-        "name": "Ember Crag Champion",
-        "scene_id": 7,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Ember Crag."
-    },
-    {
-        "id": 8,
-        "name": "Sunnybrush Prairie Champion",
-        "scene_id": 8,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Sunnybrush Prairie."
-    },
-    {
-        "id": 9,
-        "name": "Fable Fern Grotto Champion",
-        "scene_id": 9,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Fable Fern Grotto."
-    },
-    {
-        "id": 10,
-        "name": "Crimson Shores Champion",
-        "scene_id": 10,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Crimson Shores."
-    },
-    {
-        "id": 11,
-        "name": "Mistveil Summit Champion",
-        "scene_id": 11,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Mistveil Summit."
-    },
-    {
-        "id": 12,
-        "name": "Sulfurion Basin Champion",
-        "scene_id": 12,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Sulfurion Basin."
-    },
-    {
-        "id": 13,
-        "name": "Harmonic Temple Champion",
-        "scene_id": 13,
-        "icon": "badge_icon.svg",
-        "description": "Complete all words in Harmonic Temple."
-    }
+  {
+    "id": 1,
+    "name": "Glendor Grove Champion",
+    "scene_id": 1,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Glendor Grove."
+  },
+  {
+    "id": 2,
+    "name": "Willowshade Woods Champion",
+    "scene_id": 2,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Willowshade Woods."
+  },
+  {
+    "id": 3,
+    "name": "Sparkspire City Champion",
+    "scene_id": 3,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Sparkspire City."
+  },
+  {
+    "id": 4,
+    "name": "Josara Ridge Ruins Champion",
+    "scene_id": 4,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Josara Ridge Ruins."
+  },
+  {
+    "id": 5,
+    "name": "Whispering Woods Champion",
+    "scene_id": 5,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Whispering Woods."
+  },
+  {
+    "id": 6,
+    "name": "Kalani Island Champion",
+    "scene_id": 6,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Kalani Island."
+  },
+  {
+    "id": 7,
+    "name": "Ember Crag Champion",
+    "scene_id": 7,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Ember Crag."
+  },
+  {
+    "id": 8,
+    "name": "Sunnybrush Prairie Champion",
+    "scene_id": 8,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Sunnybrush Prairie."
+  },
+  {
+    "id": 9,
+    "name": "Fable Fern Grotto Champion",
+    "scene_id": 9,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Fable Fern Grotto."
+  },
+  {
+    "id": 10,
+    "name": "Crimson Shores Champion",
+    "scene_id": 10,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Crimson Shores."
+  },
+  {
+    "id": 11,
+    "name": "Mistveil Summit Champion",
+    "scene_id": 11,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Mistveil Summit."
+  },
+  {
+    "id": 12,
+    "name": "Sulfurion Basin Champion",
+    "scene_id": 12,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Sulfurion Basin."
+  },
+  {
+    "id": 13,
+    "name": "Harmonic Temple Champion",
+    "scene_id": 13,
+    "icon": "badge_icon.svg",
+    "description": "Complete all words in Harmonic Temple."
+  }
 ]

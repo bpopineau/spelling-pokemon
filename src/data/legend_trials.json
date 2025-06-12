@@ -1,38 +1,34 @@
 [
-    {
-        "id": 1,
-        "name": "Crimson Trial",
-        "scene_id": 10,
-        "legendary_pokemon": "Moltres",
-        "virtue": "Bravery",
-        "reward_xp": 200
-    },
-    {
-        "id": 2,
-        "name": "Mistveil Trial",
-        "scene_id": 11,
-        "legendary_pokemon": "Articuno",
-        "virtue": "Wisdom",
-        "reward_xp": 200
-    },
-    {
-        "id": 3,
-        "name": "Stormvale Trial",
-        "scene_id": 12,
-        "legendary_pokemon": "Zapdos",
-        "virtue": "Resilience",
-        "reward_xp": 200
-    },
-    {
-        "id": 4,
-        "name": "Final Harmony",
-        "scene_id": 13,
-        "legendary_pokemon": [
-            "Moltres",
-            "Articuno",
-            "Zapdos"
-        ],
-        "virtue": "Harmony",
-        "reward_xp": 300
-    }
+  {
+    "id": 1,
+    "name": "Crimson Trial",
+    "scene_id": 10,
+    "legendary_pokemon": "Moltres",
+    "virtue": "Bravery",
+    "reward_xp": 200
+  },
+  {
+    "id": 2,
+    "name": "Mistveil Trial",
+    "scene_id": 11,
+    "legendary_pokemon": "Articuno",
+    "virtue": "Wisdom",
+    "reward_xp": 200
+  },
+  {
+    "id": 3,
+    "name": "Stormvale Trial",
+    "scene_id": 12,
+    "legendary_pokemon": "Zapdos",
+    "virtue": "Resilience",
+    "reward_xp": 200
+  },
+  {
+    "id": 4,
+    "name": "Final Harmony",
+    "scene_id": 13,
+    "legendary_pokemon": ["Moltres", "Articuno", "Zapdos"],
+    "virtue": "Harmony",
+    "reward_xp": 300
+  }
 ]

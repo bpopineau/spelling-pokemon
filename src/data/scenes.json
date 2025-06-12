@@ -1,106 +1,106 @@
 [
-    {
-        "id": 1,
-        "name": "Glendor Grove",
-        "background": "01-glendor-grove.png",
-        "word_start": 0,
-        "word_end": 76,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 2,
-        "name": "Willowshade Woods",
-        "background": "02-willowshade-woods.png",
-        "word_start": 77,
-        "word_end": 153,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 3,
-        "name": "Sparkspire City",
-        "background": "03-sparkspire-city.png",
-        "word_start": 154,
-        "word_end": 230,
-        "music": "bg_city.ogg"
-    },
-    {
-        "id": 4,
-        "name": "Josara Ridge Ruins",
-        "background": "04-josara-ridge-ruins.png",
-        "word_start": 231,
-        "word_end": 307,
-        "music": "bg_storm.ogg"
-    },
-    {
-        "id": 5,
-        "name": "Whispering Woods",
-        "background": "05-whispering-woods.png",
-        "word_start": 308,
-        "word_end": 384,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 6,
-        "name": "Kalani Island",
-        "background": "06-kalani-island.png",
-        "word_start": 385,
-        "word_end": 461,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 7,
-        "name": "Ember Crag",
-        "background": "07-ember-crag.png",
-        "word_start": 462,
-        "word_end": 538,
-        "music": "bg_fire.ogg"
-    },
-    {
-        "id": 8,
-        "name": "Sunnybrush Prairie",
-        "background": "08-sunnybrush-prarie.png",
-        "word_start": 539,
-        "word_end": 615,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 9,
-        "name": "Fable Fern Grotto",
-        "background": "09-fable-fern-grotto.png",
-        "word_start": 616,
-        "word_end": 692,
-        "music": "bg_forest.ogg"
-    },
-    {
-        "id": 10,
-        "name": "Crimson Shores",
-        "background": "10-crimson-shores.png",
-        "word_start": 693,
-        "word_end": 769,
-        "music": "bg_fire.ogg"
-    },
-    {
-        "id": 11,
-        "name": "Mistveil Summit",
-        "background": "11-mistveil-summit.png",
-        "word_start": 770,
-        "word_end": 846,
-        "music": "bg_ice.ogg"
-    },
-    {
-        "id": 12,
-        "name": "Sulfurion Basin",
-        "background": "12-sulfurion-basin.png",
-        "word_start": 847,
-        "word_end": 923,
-        "music": "bg_storm.ogg"
-    },
-    {
-        "id": 13,
-        "name": "Harmonic Temple",
-        "background": "13-harmonic-temple.png",
-        "word_start": 924,
-        "word_end": 999,
-        "music": "bg_final.ogg"
-    }
+  {
+    "id": 1,
+    "name": "Glendor Grove",
+    "background": "01-glendor-grove.png",
+    "word_start": 0,
+    "word_end": 76,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 2,
+    "name": "Willowshade Woods",
+    "background": "02-willowshade-woods.png",
+    "word_start": 77,
+    "word_end": 153,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 3,
+    "name": "Sparkspire City",
+    "background": "03-sparkspire-city.png",
+    "word_start": 154,
+    "word_end": 230,
+    "music": "bg_city.ogg"
+  },
+  {
+    "id": 4,
+    "name": "Josara Ridge Ruins",
+    "background": "04-josara-ridge-ruins.png",
+    "word_start": 231,
+    "word_end": 307,
+    "music": "bg_storm.ogg"
+  },
+  {
+    "id": 5,
+    "name": "Whispering Woods",
+    "background": "05-whispering-woods.png",
+    "word_start": 308,
+    "word_end": 384,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 6,
+    "name": "Kalani Island",
+    "background": "06-kalani-island.png",
+    "word_start": 385,
+    "word_end": 461,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 7,
+    "name": "Ember Crag",
+    "background": "07-ember-crag.png",
+    "word_start": 462,
+    "word_end": 538,
+    "music": "bg_fire.ogg"
+  },
+  {
+    "id": 8,
+    "name": "Sunnybrush Prairie",
+    "background": "08-sunnybrush-prarie.png",
+    "word_start": 539,
+    "word_end": 615,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 9,
+    "name": "Fable Fern Grotto",
+    "background": "09-fable-fern-grotto.png",
+    "word_start": 616,
+    "word_end": 692,
+    "music": "bg_forest.ogg"
+  },
+  {
+    "id": 10,
+    "name": "Crimson Shores",
+    "background": "10-crimson-shores.png",
+    "word_start": 693,
+    "word_end": 769,
+    "music": "bg_fire.ogg"
+  },
+  {
+    "id": 11,
+    "name": "Mistveil Summit",
+    "background": "11-mistveil-summit.png",
+    "word_start": 770,
+    "word_end": 846,
+    "music": "bg_ice.ogg"
+  },
+  {
+    "id": 12,
+    "name": "Sulfurion Basin",
+    "background": "12-sulfurion-basin.png",
+    "word_start": 847,
+    "word_end": 923,
+    "music": "bg_storm.ogg"
+  },
+  {
+    "id": 13,
+    "name": "Harmonic Temple",
+    "background": "13-harmonic-temple.png",
+    "word_start": 924,
+    "word_end": 999,
+    "music": "bg_final.ogg"
+  }
 ]

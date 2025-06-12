@@ -1,14 +1,14 @@
 [
-    {
-        "id": 1,
-        "name": "Glendor Grove",
-        "desc": "Peaceful forest of discovery.",
-        "background": "/assets/images/backgrounds/01-glendor-grove.png"
-    },
-    {
-        "id": 2,
-        "name": "Willowshade Woods",
-        "desc": "Gentle phonics and digraph review.",
-        "background": "/assets/images/backgrounds/02-willowshade-woods.png"
-    }
+  {
+    "id": 1,
+    "name": "Glendor Grove",
+    "desc": "Peaceful forest of discovery.",
+    "background": "/assets/images/backgrounds/01-glendor-grove.png"
+  },
+  {
+    "id": 2,
+    "name": "Willowshade Woods",
+    "desc": "Gentle phonics and digraph review.",
+    "background": "/assets/images/backgrounds/02-willowshade-woods.png"
+  }
 ]
