@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import words from '../data/words.json';
 import pokemon from '../data/pokemon.json';
-import scenes from '../data/scenes.json'; // This line fixes the error
+import scenes from '../data/scenes.json';
 import Controls from './Controls';
 import { speak } from '../services/ttsService';
 import { useGameStore } from '../services/gameState';
@@ -18,7 +18,8 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   const [message, setMessage] = useState('');
   const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{ name: string; sprite: string } | null>(null);
 
-  const { xp, hintCharges, collectedPokemonIds, useHint, addXp, catchPokemon } = useGameStore();
+  // Get new state and actions from the store, including level info
+  const { xp, level, xpForNextLevel, hintCharges, collectedPokemonIds, useHint, addXp, catchPokemon } = useGameStore();
 
   const scene = scenes.find(s => s.word_start === wordStart && s.word_end === wordEnd);
   const sceneId = scene?.id;
@@ -104,9 +105,16 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
 
   return (
     <div className="relative text-center bg-white bg-opacity-75 p-8 rounded-lg shadow-lg w-full max-w-xl">
-      <div className="absolute top-4 right-4 flex gap-2">
-        <div className="bg-yellow-200 text-yellow-800 font-bold px-3 py-1 rounded-full text-sm">
-          XP: {xp}
+      <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
+        <div className="bg-green-200 text-green-800 font-bold px-3 py-1 rounded-full text-sm">
+          Level: {level}
+        </div>
+        {/* XP Progress Bar */}
+        <div title={`${xp} / ${xpForNextLevel} XP`} className="w-32 h-4 bg-red-500 border-4 border-yellow-500">
+          <div
+            className="bg-yellow-400 h-full rounded-full"
+            style={{ width: `${(xp / xpForNextLevel) * 100}%` }}
+          ></div>
         </div>
         <div className="bg-purple-200 text-purple-800 font-bold px-3 py-1 rounded-full text-sm">
           Hints: {hintCharges}
