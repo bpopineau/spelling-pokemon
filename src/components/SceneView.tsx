@@ -38,6 +38,7 @@ export default function SceneView() {
   // Build the path to the scene background image from the file name stored in
   // the scenes JSON. The actual image lives in `public/assets/images/backgrounds`.
   const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
+  // TODO: show a fallback UI if the background image is missing
 
   return (
     <div

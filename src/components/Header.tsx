@@ -11,6 +11,7 @@ export default function Header() {
   const linkStyle = "px-4 py-2 rounded-md text-lg font-semibold";
   const activeLinkStyle = "bg-blue-500 text-white";
   const inactiveLinkStyle = "bg-gray-200 text-gray-800 hover:bg-gray-300";
+  // TODO: move nav links into a shared array so new sections are easier to add
 
   return (
     <header className="bg-white shadow-md p-4 mb-8">

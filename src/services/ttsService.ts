@@ -18,3 +18,4 @@ export const speak = (text: string) => {
     console.error("Sorry, your browser doesn't support text-to-speech.");
   }
 };
+// TODO: expose voice and language selection options for international players

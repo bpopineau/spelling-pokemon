@@ -6,6 +6,7 @@ scene so the game can easily look up which creatures appear in each region.
 Running this script isn't required for normal gameplay; the resulting
 ``pokemon.json`` file is committed to the repository.
 """
+# TODO: add CLI options for input/output paths instead of hardcoded filenames
 
 import json
 from collections import defaultdict

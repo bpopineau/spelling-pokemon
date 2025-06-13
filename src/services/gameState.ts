@@ -29,6 +29,7 @@ export interface GameState {
   catchPokemon: (pokemonId: number) => void;
   completeScene: (sceneId: number) => void;
 }
+// TODO: split persistence logic out so game actions can be unit tested more easily
 
 // Create the store with our initial state and actions. `persist` from Zustand
 // automatically stores the state in `localStorage` so progress is saved across

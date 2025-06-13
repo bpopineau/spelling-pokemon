@@ -18,6 +18,7 @@ export default function MainLayout() {
         {/* The nested page content goes here */}
         <Outlet />
       </main>
+      {/* TODO: support an optional footer component when more pages need it */}
     </>
   );
 }
