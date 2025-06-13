@@ -1,9 +1,11 @@
 {
+  // Base TypeScript configuration
   "compilerOptions": {
     "strict": true,
     "forceConsistentCasingInFileNames": true
   },
   "files": [],
+  // Include separate configs for the app and Node scripts
   "references": [
     {
       "path": "./tsconfig.app.json"

@@ -1,6 +1,8 @@
+// Shows the Pokémon the player has collected so far
 import { useGameStore } from '../services/gameState';
 import allPokemonData from '../data/pokedex.json'; // The main data source for all Pokémon details
 
+// Display a grid of caught Pokémon
 export default function Pokedex() {
     // Get the list of IDs for Pokémon that have been caught from our global store
     const { collectedPokemonIds } = useGameStore();
@@ -17,7 +19,9 @@ export default function Pokedex() {
             {caughtPokemon.length === 0 ? (
                 <p className="text-center text-lg text-gray-500">You haven't caught any Pokémon yet. Go spell some words!</p>
             ) : (
+                // Show each caught Pokémon in a grid
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                    {/* Each Pokémon gets its own card */}
                     {caughtPokemon.map(pokemon => (
                         <div key={pokemon.id} className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center transition-transform hover:scale-105">
                             <img

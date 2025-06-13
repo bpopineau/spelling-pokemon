@@ -1,3 +1,4 @@
+// Game state store using Zustand. It keeps track of XP, level and more
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
@@ -6,6 +7,7 @@ const LEVEL_UP_XP_BASE = 100;
 const HINT_MAX = 2;
 
 // Define the interface for our store's state and actions
+// All the values we store along with helper functions
 export interface GameState {
   xp: number;
   level: number;
@@ -24,6 +26,7 @@ export interface GameState {
 
 // Create the store with our initial state and actions
 export const useGameStore = create<GameState>()(
+  // persist saves the store in localStorage so progress stays after refresh
   persist(
     (set) => ({
       // Initial State

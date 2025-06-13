@@ -1,3 +1,4 @@
+// ESLint configuration to keep our code clean and consistent
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";

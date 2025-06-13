@@ -1,3 +1,4 @@
+// Shows the player's level, XP and earned badges
 import badges from "../data/badges.json";
 import { useGameStore } from "../services/gameState";
 
@@ -5,11 +6,13 @@ export default function ProgressTracker() {
   const { xp, level, wordsMastered, collectedPokemonIds, earnedBadges } =
     useGameStore();
 
+  // Only keep badges that have been earned
   const earned = badges.filter((b) => earnedBadges.includes(b.id));
 
   return (
     <div className="p-4 md:p-8">
       <h1 className="text-4xl font-bold text-center mb-6">Progress Tracker</h1>
+      {/* Summary numbers */}
       <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
         <div className="bg-white p-4 rounded shadow">
           <h2 className="font-bold">Level</h2>
@@ -33,6 +36,7 @@ export default function ProgressTracker() {
         <p className="text-center">No badges earned yet.</p>
       ) : (
         <ul className="flex flex-wrap justify-center gap-4">
+          {/* Show each earned badge */}
           {earned.map((b) => (
             <li key={b.id} className="bg-white rounded shadow p-2 text-sm">
               {b.name}

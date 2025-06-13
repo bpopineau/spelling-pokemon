@@ -1,2 +1,4 @@
-/* This file is intentionally left empty for now. */
-/* Future global styles that don't fit in Tailwind can go here. */
+/*
+  Global styles for the game.
+  We rely mostly on Tailwind classes, but any extra CSS can be placed here.
+*/
