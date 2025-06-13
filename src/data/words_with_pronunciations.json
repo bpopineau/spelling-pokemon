@@ -1,0 +1,4002 @@
+[
+  {
+    "word": "the",
+    "pronunciation": "DH-AH"
+  },
+  {
+    "word": "of",
+    "pronunciation": "AH-V"
+  },
+  {
+    "word": "and",
+    "pronunciation": "AH-N-D"
+  },
+  {
+    "word": "a",
+    "pronunciation": "AH"
+  },
+  {
+    "word": "to",
+    "pronunciation": "T-UW"
+  },
+  {
+    "word": "in",
+    "pronunciation": "IH-N"
+  },
+  {
+    "word": "is",
+    "pronunciation": "IH-Z"
+  },
+  {
+    "word": "you",
+    "pronunciation": "Y-UW"
+  },
+  {
+    "word": "that",
+    "pronunciation": "DH-AE-T"
+  },
+  {
+    "word": "it",
+    "pronunciation": "IH-T"
+  },
+  {
+    "word": "he",
+    "pronunciation": "HH-IY"
+  },
+  {
+    "word": "was",
+    "pronunciation": "W-AA-Z"
+  },
+  {
+    "word": "for",
+    "pronunciation": "F-AO-R"
+  },
+  {
+    "word": "on",
+    "pronunciation": "AA-N"
+  },
+  {
+    "word": "are",
+    "pronunciation": "AA-R"
+  },
+  {
+    "word": "as",
+    "pronunciation": "AE-Z"
+  },
+  {
+    "word": "with",
+    "pronunciation": "W-IH-DH"
+  },
+  {
+    "word": "his",
+    "pronunciation": "HH-IH-Z"
+  },
+  {
+    "word": "they",
+    "pronunciation": "DH-EY"
+  },
+  {
+    "word": "I",
+    "pronunciation": "AY"
+  },
+  {
+    "word": "at",
+    "pronunciation": "AE-T"
+  },
+  {
+    "word": "be",
+    "pronunciation": "B-IY"
+  },
+  {
+    "word": "this",
+    "pronunciation": "DH-IH-S"
+  },
+  {
+    "word": "have",
+    "pronunciation": "HH-AE-V"
+  },
+  {
+    "word": "from",
+    "pronunciation": "F-R-AH-M"
+  },
+  {
+    "word": "or",
+    "pronunciation": "AO-R"
+  },
+  {
+    "word": "one",
+    "pronunciation": "W-AH-N"
+  },
+  {
+    "word": "had",
+    "pronunciation": "HH-AE-D"
+  },
+  {
+    "word": "by",
+    "pronunciation": "B-AY"
+  },
+  {
+    "word": "word",
+    "pronunciation": "W-ER-D"
+  },
+  {
+    "word": "but",
+    "pronunciation": "B-AH-T"
+  },
+  {
+    "word": "not",
+    "pronunciation": "N-AA-T"
+  },
+  {
+    "word": "what",
+    "pronunciation": "W-AH-T"
+  },
+  {
+    "word": "all",
+    "pronunciation": "AO-L"
+  },
+  {
+    "word": "were",
+    "pronunciation": "W-ER"
+  },
+  {
+    "word": "we",
+    "pronunciation": "W-IY"
+  },
+  {
+    "word": "when",
+    "pronunciation": "W-EH-N"
+  },
+  {
+    "word": "your",
+    "pronunciation": "Y-AO-R"
+  },
+  {
+    "word": "can",
+    "pronunciation": "K-AE-N"
+  },
+  {
+    "word": "said",
+    "pronunciation": "S-EH-D"
+  },
+  {
+    "word": "there",
+    "pronunciation": "DH-EH-R"
+  },
+  {
+    "word": "use",
+    "pronunciation": "Y-UW-S"
+  },
+  {
+    "word": "an",
+    "pronunciation": "AE-N"
+  },
+  {
+    "word": "each",
+    "pronunciation": "IY-CH"
+  },
+  {
+    "word": "which",
+    "pronunciation": "W-IH-CH"
+  },
+  {
+    "word": "she",
+    "pronunciation": "SH-IY"
+  },
+  {
+    "word": "do",
+    "pronunciation": "D-UW"
+  },
+  {
+    "word": "how",
+    "pronunciation": "HH-AW"
+  },
+  {
+    "word": "their",
+    "pronunciation": "DH-EH-R"
+  },
+  {
+    "word": "if",
+    "pronunciation": "IH-F"
+  },
+  {
+    "word": "will",
+    "pronunciation": "W-IH-L"
+  },
+  {
+    "word": "up",
+    "pronunciation": "AH-P"
+  },
+  {
+    "word": "other",
+    "pronunciation": "AH-DH-ER"
+  },
+  {
+    "word": "about",
+    "pronunciation": "AH-B-AW-T"
+  },
+  {
+    "word": "out",
+    "pronunciation": "AW-T"
+  },
+  {
+    "word": "many",
+    "pronunciation": "M-EH-N-IY"
+  },
+  {
+    "word": "then",
+    "pronunciation": "DH-EH-N"
+  },
+  {
+    "word": "them",
+    "pronunciation": "DH-EH-M"
+  },
+  {
+    "word": "these",
+    "pronunciation": "DH-IY-Z"
+  },
+  {
+    "word": "so",
+    "pronunciation": "S-OW"
+  },
+  {
+    "word": "some",
+    "pronunciation": "S-AH-M"
+  },
+  {
+    "word": "her",
+    "pronunciation": "HH-ER"
+  },
+  {
+    "word": "would",
+    "pronunciation": "W-UH-D"
+  },
+  {
+    "word": "make",
+    "pronunciation": "M-EY-K"
+  },
+  {
+    "word": "like",
+    "pronunciation": "L-AY-K"
+  },
+  {
+    "word": "him",
+    "pronunciation": "HH-IH-M"
+  },
+  {
+    "word": "into",
+    "pronunciation": "IH-N-T-UW"
+  },
+  {
+    "word": "time",
+    "pronunciation": "T-AY-M"
+  },
+  {
+    "word": "has",
+    "pronunciation": "HH-AE-Z"
+  },
+  {
+    "word": "look",
+    "pronunciation": "L-UH-K"
+  },
+  {
+    "word": "two",
+    "pronunciation": "T-UW"
+  },
+  {
+    "word": "more",
+    "pronunciation": "M-AO-R"
+  },
+  {
+    "word": "write",
+    "pronunciation": "R-AY-T"
+  },
+  {
+    "word": "go",
+    "pronunciation": "G-OW"
+  },
+  {
+    "word": "see",
+    "pronunciation": "S-IY"
+  },
+  {
+    "word": "number",
+    "pronunciation": "N-AH-M-B-ER"
+  },
+  {
+    "word": "no",
+    "pronunciation": "N-OW"
+  },
+  {
+    "word": "way",
+    "pronunciation": "W-EY"
+  },
+  {
+    "word": "could",
+    "pronunciation": "K-UH-D"
+  },
+  {
+    "word": "people",
+    "pronunciation": "P-IY-P-AH-L"
+  },
+  {
+    "word": "my",
+    "pronunciation": "M-AY"
+  },
+  {
+    "word": "than",
+    "pronunciation": "DH-AE-N"
+  },
+  {
+    "word": "first",
+    "pronunciation": "F-ER-S-T"
+  },
+  {
+    "word": "water",
+    "pronunciation": "W-AO-T-ER"
+  },
+  {
+    "word": "been",
+    "pronunciation": "B-IH-N"
+  },
+  {
+    "word": "call",
+    "pronunciation": "K-AO-L"
+  },
+  {
+    "word": "who",
+    "pronunciation": "HH-UW"
+  },
+  {
+    "word": "oil",
+    "pronunciation": "OY-L"
+  },
+  {
+    "word": "now",
+    "pronunciation": "N-AW"
+  },
+  {
+    "word": "find",
+    "pronunciation": "F-AY-N-D"
+  },
+  {
+    "word": "long",
+    "pronunciation": "L-AO-NG"
+  },
+  {
+    "word": "down",
+    "pronunciation": "D-AW-N"
+  },
+  {
+    "word": "dy",
+    "pronunciation": ""
+  },
+  {
+    "word": "did",
+    "pronunciation": "D-IH-D"
+  },
+  {
+    "word": "get",
+    "pronunciation": "G-EH-T"
+  },
+  {
+    "word": "come",
+    "pronunciation": "K-AH-M"
+  },
+  {
+    "word": "made",
+    "pronunciation": "M-EY-D"
+  },
+  {
+    "word": "may",
+    "pronunciation": "M-EY"
+  },
+  {
+    "word": "part",
+    "pronunciation": "P-AA-R-T"
+  },
+  {
+    "word": "over",
+    "pronunciation": "OW-V-ER"
+  },
+  {
+    "word": "new",
+    "pronunciation": "N-UW"
+  },
+  {
+    "word": "sound",
+    "pronunciation": "S-AW-N-D"
+  },
+  {
+    "word": "take",
+    "pronunciation": "T-EY-K"
+  },
+  {
+    "word": "only",
+    "pronunciation": "OW-N-L-IY"
+  },
+  {
+    "word": "little",
+    "pronunciation": "L-IH-T-AH-L"
+  },
+  {
+    "word": "work",
+    "pronunciation": "W-ER-K"
+  },
+  {
+    "word": "know",
+    "pronunciation": "N-OW"
+  },
+  {
+    "word": "place",
+    "pronunciation": "P-L-EY-S"
+  },
+  {
+    "word": "year",
+    "pronunciation": "Y-IH-R"
+  },
+  {
+    "word": "live",
+    "pronunciation": "L-AY-V"
+  },
+  {
+    "word": "me",
+    "pronunciation": "M-IY"
+  },
+  {
+    "word": "back",
+    "pronunciation": "B-AE-K"
+  },
+  {
+    "word": "give",
+    "pronunciation": "G-IH-V"
+  },
+  {
+    "word": "most",
+    "pronunciation": "M-OW-S-T"
+  },
+  {
+    "word": "very",
+    "pronunciation": "V-EH-R-IY"
+  },
+  {
+    "word": "after",
+    "pronunciation": "AE-F-T-ER"
+  },
+  {
+    "word": "thing",
+    "pronunciation": "TH-IH-NG"
+  },
+  {
+    "word": "our",
+    "pronunciation": "AW-ER"
+  },
+  {
+    "word": "just",
+    "pronunciation": "JH-AH-S-T"
+  },
+  {
+    "word": "name",
+    "pronunciation": "N-EY-M"
+  },
+  {
+    "word": "good",
+    "pronunciation": "G-UH-D"
+  },
+  {
+    "word": "sentence",
+    "pronunciation": "S-EH-N-T-AH-N-S"
+  },
+  {
+    "word": "man",
+    "pronunciation": "M-AE-N"
+  },
+  {
+    "word": "think",
+    "pronunciation": "TH-IH-NG-K"
+  },
+  {
+    "word": "say",
+    "pronunciation": "S-EY"
+  },
+  {
+    "word": "great",
+    "pronunciation": "G-R-EY-T"
+  },
+  {
+    "word": "where",
+    "pronunciation": "W-EH-R"
+  },
+  {
+    "word": "help",
+    "pronunciation": "HH-EH-L-P"
+  },
+  {
+    "word": "through",
+    "pronunciation": "TH-R-UW"
+  },
+  {
+    "word": "much",
+    "pronunciation": "M-AH-CH"
+  },
+  {
+    "word": "before",
+    "pronunciation": "B-IH-F-AO-R"
+  },
+  {
+    "word": "line",
+    "pronunciation": "L-AY-N"
+  },
+  {
+    "word": "right",
+    "pronunciation": "R-AY-T"
+  },
+  {
+    "word": "too",
+    "pronunciation": "T-UW"
+  },
+  {
+    "word": "mean",
+    "pronunciation": "M-IY-N"
+  },
+  {
+    "word": "old",
+    "pronunciation": "OW-L-D"
+  },
+  {
+    "word": "any",
+    "pronunciation": "EH-N-IY"
+  },
+  {
+    "word": "same",
+    "pronunciation": "S-EY-M"
+  },
+  {
+    "word": "tell",
+    "pronunciation": "T-EH-L"
+  },
+  {
+    "word": "boy",
+    "pronunciation": "B-OY"
+  },
+  {
+    "word": "follow",
+    "pronunciation": "F-AA-L-OW"
+  },
+  {
+    "word": "came",
+    "pronunciation": "K-EY-M"
+  },
+  {
+    "word": "want",
+    "pronunciation": "W-AA-N-T"
+  },
+  {
+    "word": "show",
+    "pronunciation": "SH-OW"
+  },
+  {
+    "word": "also",
+    "pronunciation": "AO-L-S-OW"
+  },
+  {
+    "word": "around",
+    "pronunciation": "ER-AW-N-D"
+  },
+  {
+    "word": "form",
+    "pronunciation": "F-AO-R-M"
+  },
+  {
+    "word": "three",
+    "pronunciation": "TH-R-IY"
+  },
+  {
+    "word": "small",
+    "pronunciation": "S-M-AO-L"
+  },
+  {
+    "word": "set",
+    "pronunciation": "S-EH-T"
+  },
+  {
+    "word": "put",
+    "pronunciation": "P-UH-T"
+  },
+  {
+    "word": "end",
+    "pronunciation": "EH-N-D"
+  },
+  {
+    "word": "does",
+    "pronunciation": "D-AH-Z"
+  },
+  {
+    "word": "another",
+    "pronunciation": "AH-N-AH-DH-ER"
+  },
+  {
+    "word": "well",
+    "pronunciation": "W-EH-L"
+  },
+  {
+    "word": "large",
+    "pronunciation": "L-AA-R-JH"
+  },
+  {
+    "word": "must",
+    "pronunciation": "M-AH-S-T"
+  },
+  {
+    "word": "big",
+    "pronunciation": "B-IH-G"
+  },
+  {
+    "word": "even",
+    "pronunciation": "IY-V-IH-N"
+  },
+  {
+    "word": "such",
+    "pronunciation": "S-AH-CH"
+  },
+  {
+    "word": "because",
+    "pronunciation": "B-IH-K-AO-Z"
+  },
+  {
+    "word": "turn",
+    "pronunciation": "T-ER-N"
+  },
+  {
+    "word": "here",
+    "pronunciation": "HH-IY-R"
+  },
+  {
+    "word": "why",
+    "pronunciation": "W-AY"
+  },
+  {
+    "word": "ask",
+    "pronunciation": "AE-S-K"
+  },
+  {
+    "word": "went",
+    "pronunciation": "W-EH-N-T"
+  },
+  {
+    "word": "men",
+    "pronunciation": "M-EH-N"
+  },
+  {
+    "word": "read",
+    "pronunciation": "R-EH-D"
+  },
+  {
+    "word": "need",
+    "pronunciation": "N-IY-D"
+  },
+  {
+    "word": "land",
+    "pronunciation": "L-AE-N-D"
+  },
+  {
+    "word": "different",
+    "pronunciation": "D-IH-F-ER-AH-N-T"
+  },
+  {
+    "word": "home",
+    "pronunciation": "HH-OW-M"
+  },
+  {
+    "word": "us",
+    "pronunciation": "AH-S"
+  },
+  {
+    "word": "move",
+    "pronunciation": "M-UW-V"
+  },
+  {
+    "word": "try",
+    "pronunciation": "T-R-AY"
+  },
+  {
+    "word": "kind",
+    "pronunciation": "K-AY-N-D"
+  },
+  {
+    "word": "hand",
+    "pronunciation": "HH-AE-N-D"
+  },
+  {
+    "word": "picture",
+    "pronunciation": "P-IH-K-CH-ER"
+  },
+  {
+    "word": "again",
+    "pronunciation": "AH-G-EH-N"
+  },
+  {
+    "word": "change",
+    "pronunciation": "CH-EY-N-JH"
+  },
+  {
+    "word": "off",
+    "pronunciation": "AO-F"
+  },
+  {
+    "word": "play",
+    "pronunciation": "P-L-EY"
+  },
+  {
+    "word": "spell",
+    "pronunciation": "S-P-EH-L"
+  },
+  {
+    "word": "air",
+    "pronunciation": "EH-R"
+  },
+  {
+    "word": "away",
+    "pronunciation": "AH-W-EY"
+  },
+  {
+    "word": "animal",
+    "pronunciation": "AE-N-AH-M-AH-L"
+  },
+  {
+    "word": "house",
+    "pronunciation": "HH-AW-S"
+  },
+  {
+    "word": "point",
+    "pronunciation": "P-OY-N-T"
+  },
+  {
+    "word": "page",
+    "pronunciation": "P-EY-JH"
+  },
+  {
+    "word": "letter",
+    "pronunciation": "L-EH-T-ER"
+  },
+  {
+    "word": "mother",
+    "pronunciation": "M-AH-DH-ER"
+  },
+  {
+    "word": "answer",
+    "pronunciation": "AE-N-S-ER"
+  },
+  {
+    "word": "found",
+    "pronunciation": "F-AW-N-D"
+  },
+  {
+    "word": "study",
+    "pronunciation": "S-T-AH-D-IY"
+  },
+  {
+    "word": "still",
+    "pronunciation": "S-T-IH-L"
+  },
+  {
+    "word": "learn",
+    "pronunciation": "L-ER-N"
+  },
+  {
+    "word": "should",
+    "pronunciation": "SH-UH-D"
+  },
+  {
+    "word": "America",
+    "pronunciation": "AH-M-EH-R-AH-K-AH"
+  },
+  {
+    "word": "world",
+    "pronunciation": "W-ER-L-D"
+  },
+  {
+    "word": "high",
+    "pronunciation": "HH-AY"
+  },
+  {
+    "word": "every",
+    "pronunciation": "EH-V-ER-IY"
+  },
+  {
+    "word": "near",
+    "pronunciation": "N-IH-R"
+  },
+  {
+    "word": "add",
+    "pronunciation": "AE-D"
+  },
+  {
+    "word": "food",
+    "pronunciation": "F-UW-D"
+  },
+  {
+    "word": "between",
+    "pronunciation": "B-IH-T-W-IY-N"
+  },
+  {
+    "word": "own",
+    "pronunciation": "OW-N"
+  },
+  {
+    "word": "below",
+    "pronunciation": "B-IH-L-OW"
+  },
+  {
+    "word": "country",
+    "pronunciation": "K-AH-N-T-R-IY"
+  },
+  {
+    "word": "plant",
+    "pronunciation": "P-L-AE-N-T"
+  },
+  {
+    "word": "last",
+    "pronunciation": "L-AE-S-T"
+  },
+  {
+    "word": "school",
+    "pronunciation": "S-K-UW-L"
+  },
+  {
+    "word": "father",
+    "pronunciation": "F-AA-DH-ER"
+  },
+  {
+    "word": "keep",
+    "pronunciation": "K-IY-P"
+  },
+  {
+    "word": "tree",
+    "pronunciation": "T-R-IY"
+  },
+  {
+    "word": "never",
+    "pronunciation": "N-EH-V-ER"
+  },
+  {
+    "word": "start",
+    "pronunciation": "S-T-AA-R-T"
+  },
+  {
+    "word": "city",
+    "pronunciation": "S-IH-T-IY"
+  },
+  {
+    "word": "earth",
+    "pronunciation": "ER-TH"
+  },
+  {
+    "word": "eye",
+    "pronunciation": "AY"
+  },
+  {
+    "word": "light",
+    "pronunciation": "L-AY-T"
+  },
+  {
+    "word": "thought",
+    "pronunciation": "TH-AO-T"
+  },
+  {
+    "word": "head",
+    "pronunciation": "HH-EH-D"
+  },
+  {
+    "word": "under",
+    "pronunciation": "AH-N-D-ER"
+  },
+  {
+    "word": "story",
+    "pronunciation": "S-T-AO-R-IY"
+  },
+  {
+    "word": "saw",
+    "pronunciation": "S-AO"
+  },
+  {
+    "word": "left",
+    "pronunciation": "L-EH-F-T"
+  },
+  {
+    "word": "don\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "few",
+    "pronunciation": "F-Y-UW"
+  },
+  {
+    "word": "while",
+    "pronunciation": "W-AY-L"
+  },
+  {
+    "word": "along",
+    "pronunciation": "AH-L-AO-NG"
+  },
+  {
+    "word": "might",
+    "pronunciation": "M-AY-T"
+  },
+  {
+    "word": "close",
+    "pronunciation": "K-L-OW-S"
+  },
+  {
+    "word": "something",
+    "pronunciation": "S-AH-M-TH-IH-NG"
+  },
+  {
+    "word": "seem",
+    "pronunciation": "S-IY-M"
+  },
+  {
+    "word": "next",
+    "pronunciation": "N-EH-K-S-T"
+  },
+  {
+    "word": "hard",
+    "pronunciation": "HH-AA-R-D"
+  },
+  {
+    "word": "open",
+    "pronunciation": "OW-P-AH-N"
+  },
+  {
+    "word": "example",
+    "pronunciation": "IH-G-Z-AE-M-P-AH-L"
+  },
+  {
+    "word": "begin",
+    "pronunciation": "B-IH-G-IH-N"
+  },
+  {
+    "word": "life",
+    "pronunciation": "L-AY-F"
+  },
+  {
+    "word": "always",
+    "pronunciation": "AO-L-W-EY-Z"
+  },
+  {
+    "word": "those",
+    "pronunciation": "DH-OW-Z"
+  },
+  {
+    "word": "both",
+    "pronunciation": "B-OW-TH"
+  },
+  {
+    "word": "paper",
+    "pronunciation": "P-EY-P-ER"
+  },
+  {
+    "word": "together",
+    "pronunciation": "T-AH-G-EH-DH-ER"
+  },
+  {
+    "word": "got",
+    "pronunciation": "G-AA-T"
+  },
+  {
+    "word": "group",
+    "pronunciation": "G-R-UW-P"
+  },
+  {
+    "word": "often",
+    "pronunciation": "AO-F-AH-N"
+  },
+  {
+    "word": "run",
+    "pronunciation": "R-AH-N"
+  },
+  {
+    "word": "important",
+    "pronunciation": "IH-M-P-AO-R-T-AH-N-T"
+  },
+  {
+    "word": "until",
+    "pronunciation": "AH-N-T-IH-L"
+  },
+  {
+    "word": "children",
+    "pronunciation": "CH-IH-L-D-R-AH-N"
+  },
+  {
+    "word": "side",
+    "pronunciation": "S-AY-D"
+  },
+  {
+    "word": "feet",
+    "pronunciation": "F-IY-T"
+  },
+  {
+    "word": "car",
+    "pronunciation": "K-AA-R"
+  },
+  {
+    "word": "mile",
+    "pronunciation": "M-AY-L"
+  },
+  {
+    "word": "night",
+    "pronunciation": "N-AY-T"
+  },
+  {
+    "word": "walk",
+    "pronunciation": "W-AO-K"
+  },
+  {
+    "word": "white",
+    "pronunciation": "W-AY-T"
+  },
+  {
+    "word": "sea",
+    "pronunciation": "S-IY"
+  },
+  {
+    "word": "began",
+    "pronunciation": "B-IH-G-AE-N"
+  },
+  {
+    "word": "grow",
+    "pronunciation": "G-R-OW"
+  },
+  {
+    "word": "took",
+    "pronunciation": "T-UH-K"
+  },
+  {
+    "word": "river",
+    "pronunciation": "R-IH-V-ER"
+  },
+  {
+    "word": "four",
+    "pronunciation": "F-AO-R"
+  },
+  {
+    "word": "carry",
+    "pronunciation": "K-AE-R-IY"
+  },
+  {
+    "word": "state",
+    "pronunciation": "S-T-EY-T"
+  },
+  {
+    "word": "once",
+    "pronunciation": "W-AH-N-S"
+  },
+  {
+    "word": "book",
+    "pronunciation": "B-UH-K"
+  },
+  {
+    "word": "hear",
+    "pronunciation": "HH-IY-R"
+  },
+  {
+    "word": "stop",
+    "pronunciation": "S-T-AA-P"
+  },
+  {
+    "word": "without",
+    "pronunciation": "W-IH-TH-AW-T"
+  },
+  {
+    "word": "second",
+    "pronunciation": "S-EH-K-AH-N-D"
+  },
+  {
+    "word": "late",
+    "pronunciation": "L-EY-T"
+  },
+  {
+    "word": "miss",
+    "pronunciation": "M-IH-S"
+  },
+  {
+    "word": "idea",
+    "pronunciation": "AY-D-IY-AH"
+  },
+  {
+    "word": "enough",
+    "pronunciation": "IH-N-AH-F"
+  },
+  {
+    "word": "eat",
+    "pronunciation": "IY-T"
+  },
+  {
+    "word": "face",
+    "pronunciation": "F-EY-S"
+  },
+  {
+    "word": "watch",
+    "pronunciation": "W-AA-CH"
+  },
+  {
+    "word": "far",
+    "pronunciation": "F-AA-R"
+  },
+  {
+    "word": "Indian",
+    "pronunciation": "IH-N-D-IY-AH-N"
+  },
+  {
+    "word": "real",
+    "pronunciation": "R-IY-L"
+  },
+  {
+    "word": "almost",
+    "pronunciation": "AO-L-M-OW-S-T"
+  },
+  {
+    "word": "let",
+    "pronunciation": "L-EH-T"
+  },
+  {
+    "word": "above",
+    "pronunciation": "AH-B-AH-V"
+  },
+  {
+    "word": "girl",
+    "pronunciation": "G-ER-L"
+  },
+  {
+    "word": "sometimes",
+    "pronunciation": "S-AH-M-T-AY-M-Z"
+  },
+  {
+    "word": "mountain",
+    "pronunciation": "M-AW-N-T-AH-N"
+  },
+  {
+    "word": "cut",
+    "pronunciation": "K-AH-T"
+  },
+  {
+    "word": "young",
+    "pronunciation": "Y-AH-NG"
+  },
+  {
+    "word": "talk",
+    "pronunciation": "T-AO-K"
+  },
+  {
+    "word": "soon",
+    "pronunciation": "S-UW-N"
+  },
+  {
+    "word": "list",
+    "pronunciation": "L-IH-S-T"
+  },
+  {
+    "word": "song",
+    "pronunciation": "S-AO-NG"
+  },
+  {
+    "word": "being",
+    "pronunciation": "B-IY-IH-NG"
+  },
+  {
+    "word": "leave",
+    "pronunciation": "L-IY-V"
+  },
+  {
+    "word": "family",
+    "pronunciation": "F-AE-M-AH-L-IY"
+  },
+  {
+    "word": "it\u00e2\u20ac\u2122s",
+    "pronunciation": ""
+  },
+  {
+    "word": "afternoon",
+    "pronunciation": "AE-F-T-ER-N-UW-N"
+  },
+  {
+    "word": "body",
+    "pronunciation": "B-AA-D-IY"
+  },
+  {
+    "word": "music",
+    "pronunciation": "M-Y-UW-Z-IH-K"
+  },
+  {
+    "word": "color",
+    "pronunciation": "K-AH-L-ER"
+  },
+  {
+    "word": "stand",
+    "pronunciation": "S-T-AE-N-D"
+  },
+  {
+    "word": "sun",
+    "pronunciation": "S-AH-N"
+  },
+  {
+    "word": "questions",
+    "pronunciation": "K-W-EH-S-CH-AH-N-Z"
+  },
+  {
+    "word": "fish",
+    "pronunciation": "F-IH-SH"
+  },
+  {
+    "word": "area",
+    "pronunciation": "EH-R-IY-AH"
+  },
+  {
+    "word": "mark",
+    "pronunciation": "M-AA-R-K"
+  },
+  {
+    "word": "dog",
+    "pronunciation": "D-AO-G"
+  },
+  {
+    "word": "horse",
+    "pronunciation": "HH-AO-R-S"
+  },
+  {
+    "word": "birds",
+    "pronunciation": "B-ER-D-Z"
+  },
+  {
+    "word": "problem",
+    "pronunciation": "P-R-AA-B-L-AH-M"
+  },
+  {
+    "word": "complete",
+    "pronunciation": "K-AH-M-P-L-IY-T"
+  },
+  {
+    "word": "room",
+    "pronunciation": "R-UW-M"
+  },
+  {
+    "word": "knew",
+    "pronunciation": "N-UW"
+  },
+  {
+    "word": "since",
+    "pronunciation": "S-IH-N-S"
+  },
+  {
+    "word": "ever",
+    "pronunciation": "EH-V-ER"
+  },
+  {
+    "word": "piece",
+    "pronunciation": "P-IY-S"
+  },
+  {
+    "word": "told",
+    "pronunciation": "T-OW-L-D"
+  },
+  {
+    "word": "usually",
+    "pronunciation": "Y-UW-ZH-AH-W-AH-L-IY"
+  },
+  {
+    "word": "didn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "friends",
+    "pronunciation": "F-R-EH-N-D-Z"
+  },
+  {
+    "word": "easy",
+    "pronunciation": "IY-Z-IY"
+  },
+  {
+    "word": "heard",
+    "pronunciation": "HH-ER-D"
+  },
+  {
+    "word": "order",
+    "pronunciation": "AO-R-D-ER"
+  },
+  {
+    "word": "red",
+    "pronunciation": "R-EH-D"
+  },
+  {
+    "word": "door",
+    "pronunciation": "D-AO-R"
+  },
+  {
+    "word": "sure",
+    "pronunciation": "SH-UH-R"
+  },
+  {
+    "word": "become",
+    "pronunciation": "B-IH-K-AH-M"
+  },
+  {
+    "word": "top",
+    "pronunciation": "T-AA-P"
+  },
+  {
+    "word": "ship",
+    "pronunciation": "SH-IH-P"
+  },
+  {
+    "word": "across",
+    "pronunciation": "AH-K-R-AO-S"
+  },
+  {
+    "word": "today",
+    "pronunciation": "T-AH-D-EY"
+  },
+  {
+    "word": "during",
+    "pronunciation": "D-UH-R-IH-NG"
+  },
+  {
+    "word": "short",
+    "pronunciation": "SH-AO-R-T"
+  },
+  {
+    "word": "better",
+    "pronunciation": "B-EH-T-ER"
+  },
+  {
+    "word": "best",
+    "pronunciation": "B-EH-S-T"
+  },
+  {
+    "word": "however",
+    "pronunciation": "HH-AW-EH-V-ER"
+  },
+  {
+    "word": "low",
+    "pronunciation": "L-OW"
+  },
+  {
+    "word": "hours",
+    "pronunciation": "AW-ER-Z"
+  },
+  {
+    "word": "black",
+    "pronunciation": "B-L-AE-K"
+  },
+  {
+    "word": "products",
+    "pronunciation": "P-R-AA-D-AH-K-T-S"
+  },
+  {
+    "word": "happened",
+    "pronunciation": "HH-AE-P-AH-N-D"
+  },
+  {
+    "word": "whole",
+    "pronunciation": "HH-OW-L"
+  },
+  {
+    "word": "measure",
+    "pronunciation": "M-EH-ZH-ER"
+  },
+  {
+    "word": "remember",
+    "pronunciation": "R-IH-M-EH-M-B-ER"
+  },
+  {
+    "word": "early",
+    "pronunciation": "ER-L-IY"
+  },
+  {
+    "word": "waves",
+    "pronunciation": "W-EY-V-Z"
+  },
+  {
+    "word": "reached",
+    "pronunciation": "R-IY-CH-T"
+  },
+  {
+    "word": "listen",
+    "pronunciation": "L-IH-S-AH-N"
+  },
+  {
+    "word": "wind",
+    "pronunciation": "W-AY-N-D"
+  },
+  {
+    "word": "rock",
+    "pronunciation": "R-AA-K"
+  },
+  {
+    "word": "space",
+    "pronunciation": "S-P-EY-S"
+  },
+  {
+    "word": "covered",
+    "pronunciation": "K-AH-V-ER-D"
+  },
+  {
+    "word": "fast",
+    "pronunciation": "F-AE-S-T"
+  },
+  {
+    "word": "several",
+    "pronunciation": "S-EH-V-R-AH-L"
+  },
+  {
+    "word": "hold",
+    "pronunciation": "HH-OW-L-D"
+  },
+  {
+    "word": "himself",
+    "pronunciation": "HH-IH-M-S-EH-L-F"
+  },
+  {
+    "word": "toward",
+    "pronunciation": "T-AH-W-AO-R-D"
+  },
+  {
+    "word": "five",
+    "pronunciation": "F-AY-V"
+  },
+  {
+    "word": "step",
+    "pronunciation": "S-T-EH-P"
+  },
+  {
+    "word": "morning",
+    "pronunciation": "M-AO-R-N-IH-NG"
+  },
+  {
+    "word": "passed",
+    "pronunciation": "P-AE-S-T"
+  },
+  {
+    "word": "vowel",
+    "pronunciation": "V-AW-AH-L"
+  },
+  {
+    "word": "true",
+    "pronunciation": "T-R-UW"
+  },
+  {
+    "word": "hundred",
+    "pronunciation": "HH-AH-N-D-R-AH-D"
+  },
+  {
+    "word": "against",
+    "pronunciation": "AH-G-EH-N-S-T"
+  },
+  {
+    "word": "pattern",
+    "pronunciation": "P-AE-T-ER-N"
+  },
+  {
+    "word": "numeral",
+    "pronunciation": "N-UW-M-ER-AH-L"
+  },
+  {
+    "word": "table",
+    "pronunciation": "T-EY-B-AH-L"
+  },
+  {
+    "word": "north",
+    "pronunciation": "N-AO-R-TH"
+  },
+  {
+    "word": "slowly",
+    "pronunciation": "S-L-OW-L-IY"
+  },
+  {
+    "word": "money",
+    "pronunciation": "M-AH-N-IY"
+  },
+  {
+    "word": "map",
+    "pronunciation": "M-AE-P"
+  },
+  {
+    "word": "farm",
+    "pronunciation": "F-AA-R-M"
+  },
+  {
+    "word": "pulled",
+    "pronunciation": "P-UH-L-D"
+  },
+  {
+    "word": "draw",
+    "pronunciation": "D-R-AO"
+  },
+  {
+    "word": "voice",
+    "pronunciation": "V-OY-S"
+  },
+  {
+    "word": "seen",
+    "pronunciation": "S-IY-N"
+  },
+  {
+    "word": "cold",
+    "pronunciation": "K-OW-L-D"
+  },
+  {
+    "word": "cried",
+    "pronunciation": "K-R-AY-D"
+  },
+  {
+    "word": "plan",
+    "pronunciation": "P-L-AE-N"
+  },
+  {
+    "word": "notice",
+    "pronunciation": "N-OW-T-AH-S"
+  },
+  {
+    "word": "south",
+    "pronunciation": "S-AW-TH"
+  },
+  {
+    "word": "sing",
+    "pronunciation": "S-IH-NG"
+  },
+  {
+    "word": "war",
+    "pronunciation": "W-AO-R"
+  },
+  {
+    "word": "ground",
+    "pronunciation": "G-R-AW-N-D"
+  },
+  {
+    "word": "fall",
+    "pronunciation": "F-AO-L"
+  },
+  {
+    "word": "king",
+    "pronunciation": "K-IH-NG"
+  },
+  {
+    "word": "town",
+    "pronunciation": "T-AW-N"
+  },
+  {
+    "word": "I\u00e2\u20ac\u2122ll",
+    "pronunciation": ""
+  },
+  {
+    "word": "unit",
+    "pronunciation": "Y-UW-N-AH-T"
+  },
+  {
+    "word": "figure",
+    "pronunciation": "F-IH-G-Y-ER"
+  },
+  {
+    "word": "certain",
+    "pronunciation": "S-ER-T-AH-N"
+  },
+  {
+    "word": "field",
+    "pronunciation": "F-IY-L-D"
+  },
+  {
+    "word": "travel",
+    "pronunciation": "T-R-AE-V-AH-L"
+  },
+  {
+    "word": "wood",
+    "pronunciation": "W-UH-D"
+  },
+  {
+    "word": "fire",
+    "pronunciation": "F-AY-ER"
+  },
+  {
+    "word": "upon",
+    "pronunciation": "AH-P-AA-N"
+  },
+  {
+    "word": "done",
+    "pronunciation": "D-AH-N"
+  },
+  {
+    "word": "English",
+    "pronunciation": "IH-NG-G-L-IH-SH"
+  },
+  {
+    "word": "road",
+    "pronunciation": "R-OW-D"
+  },
+  {
+    "word": "half",
+    "pronunciation": "HH-AE-F"
+  },
+  {
+    "word": "ten",
+    "pronunciation": "T-EH-N"
+  },
+  {
+    "word": "fly",
+    "pronunciation": "F-L-AY"
+  },
+  {
+    "word": "gave",
+    "pronunciation": "G-EY-V"
+  },
+  {
+    "word": "box",
+    "pronunciation": "B-AA-K-S"
+  },
+  {
+    "word": "finally",
+    "pronunciation": "F-AY-N-AH-L-IY"
+  },
+  {
+    "word": "wait",
+    "pronunciation": "W-EY-T"
+  },
+  {
+    "word": "correct",
+    "pronunciation": "K-ER-EH-K-T"
+  },
+  {
+    "word": "oh",
+    "pronunciation": "OW"
+  },
+  {
+    "word": "quickly",
+    "pronunciation": "K-W-IH-K-L-IY"
+  },
+  {
+    "word": "person",
+    "pronunciation": "P-ER-S-AH-N"
+  },
+  {
+    "word": "became",
+    "pronunciation": "B-IH-K-EY-M"
+  },
+  {
+    "word": "shown",
+    "pronunciation": "SH-OW-N"
+  },
+  {
+    "word": "minutes",
+    "pronunciation": "M-IH-N-AH-T-S"
+  },
+  {
+    "word": "strong",
+    "pronunciation": "S-T-R-AO-NG"
+  },
+  {
+    "word": "verb",
+    "pronunciation": "V-ER-B"
+  },
+  {
+    "word": "stars",
+    "pronunciation": "S-T-AA-R-Z"
+  },
+  {
+    "word": "front",
+    "pronunciation": "F-R-AH-N-T"
+  },
+  {
+    "word": "feel",
+    "pronunciation": "F-IY-L"
+  },
+  {
+    "word": "fact",
+    "pronunciation": "F-AE-K-T"
+  },
+  {
+    "word": "inches",
+    "pronunciation": "IH-N-CH-AH-Z"
+  },
+  {
+    "word": "street",
+    "pronunciation": "S-T-R-IY-T"
+  },
+  {
+    "word": "decided",
+    "pronunciation": "D-IH-S-AY-D-IH-D"
+  },
+  {
+    "word": "contain",
+    "pronunciation": "K-AH-N-T-EY-N"
+  },
+  {
+    "word": "course",
+    "pronunciation": "K-AO-R-S"
+  },
+  {
+    "word": "surface",
+    "pronunciation": "S-ER-F-AH-S"
+  },
+  {
+    "word": "produce",
+    "pronunciation": "P-R-AH-D-UW-S"
+  },
+  {
+    "word": "building",
+    "pronunciation": "B-IH-L-D-IH-NG"
+  },
+  {
+    "word": "ocean",
+    "pronunciation": "OW-SH-AH-N"
+  },
+  {
+    "word": "class",
+    "pronunciation": "K-L-AE-S"
+  },
+  {
+    "word": "note",
+    "pronunciation": "N-OW-T"
+  },
+  {
+    "word": "nothing",
+    "pronunciation": "N-AH-TH-IH-NG"
+  },
+  {
+    "word": "rest",
+    "pronunciation": "R-EH-S-T"
+  },
+  {
+    "word": "carefully",
+    "pronunciation": "K-EH-R-F-AH-L-IY"
+  },
+  {
+    "word": "scientist",
+    "pronunciation": "S-AY-AH-N-T-IH-S-T"
+  },
+  {
+    "word": "inside",
+    "pronunciation": "IH-N-S-AY-D"
+  },
+  {
+    "word": "wheels",
+    "pronunciation": "W-IY-L-Z"
+  },
+  {
+    "word": "stay",
+    "pronunciation": "S-T-EY"
+  },
+  {
+    "word": "green",
+    "pronunciation": "G-R-IY-N"
+  },
+  {
+    "word": "known",
+    "pronunciation": "N-OW-N"
+  },
+  {
+    "word": "island",
+    "pronunciation": "AY-L-AH-N-D"
+  },
+  {
+    "word": "week",
+    "pronunciation": "W-IY-K"
+  },
+  {
+    "word": "less",
+    "pronunciation": "L-EH-S"
+  },
+  {
+    "word": "machine",
+    "pronunciation": "M-AH-SH-IY-N"
+  },
+  {
+    "word": "base",
+    "pronunciation": "B-EY-S"
+  },
+  {
+    "word": "ago",
+    "pronunciation": "AH-G-OW"
+  },
+  {
+    "word": "stood",
+    "pronunciation": "S-T-UH-D"
+  },
+  {
+    "word": "plane",
+    "pronunciation": "P-L-EY-N"
+  },
+  {
+    "word": "system",
+    "pronunciation": "S-IH-S-T-AH-M"
+  },
+  {
+    "word": "behind",
+    "pronunciation": "B-IH-HH-AY-N-D"
+  },
+  {
+    "word": "ran",
+    "pronunciation": "R-AE-N"
+  },
+  {
+    "word": "round",
+    "pronunciation": "R-AW-N-D"
+  },
+  {
+    "word": "boat",
+    "pronunciation": "B-OW-T"
+  },
+  {
+    "word": "game",
+    "pronunciation": "G-EY-M"
+  },
+  {
+    "word": "force",
+    "pronunciation": "F-AO-R-S"
+  },
+  {
+    "word": "brought",
+    "pronunciation": "B-R-AO-T"
+  },
+  {
+    "word": "understand",
+    "pronunciation": "AH-N-D-ER-S-T-AE-N-D"
+  },
+  {
+    "word": "warm",
+    "pronunciation": "W-AO-R-M"
+  },
+  {
+    "word": "common",
+    "pronunciation": "K-AA-M-AH-N"
+  },
+  {
+    "word": "bring",
+    "pronunciation": "B-R-IH-NG"
+  },
+  {
+    "word": "explain",
+    "pronunciation": "IH-K-S-P-L-EY-N"
+  },
+  {
+    "word": "dry",
+    "pronunciation": "D-R-AY"
+  },
+  {
+    "word": "though",
+    "pronunciation": "DH-OW"
+  },
+  {
+    "word": "language",
+    "pronunciation": "L-AE-NG-G-W-AH-JH"
+  },
+  {
+    "word": "shape",
+    "pronunciation": "SH-EY-P"
+  },
+  {
+    "word": "deep",
+    "pronunciation": "D-IY-P"
+  },
+  {
+    "word": "thousands",
+    "pronunciation": "TH-AW-Z-AH-N-D-Z"
+  },
+  {
+    "word": "yes",
+    "pronunciation": "Y-EH-S"
+  },
+  {
+    "word": "clear",
+    "pronunciation": "K-L-IH-R"
+  },
+  {
+    "word": "equation",
+    "pronunciation": "IH-K-W-EY-ZH-AH-N"
+  },
+  {
+    "word": "yet",
+    "pronunciation": "Y-EH-T"
+  },
+  {
+    "word": "government",
+    "pronunciation": "G-AH-V-ER-M-AH-N-T"
+  },
+  {
+    "word": "filled",
+    "pronunciation": "F-IH-L-D"
+  },
+  {
+    "word": "heat",
+    "pronunciation": "HH-IY-T"
+  },
+  {
+    "word": "full",
+    "pronunciation": "F-UH-L"
+  },
+  {
+    "word": "hot",
+    "pronunciation": "HH-AA-T"
+  },
+  {
+    "word": "check",
+    "pronunciation": "CH-EH-K"
+  },
+  {
+    "word": "object",
+    "pronunciation": "AA-B-JH-EH-K-T"
+  },
+  {
+    "word": "am",
+    "pronunciation": "AE-M"
+  },
+  {
+    "word": "rule",
+    "pronunciation": "R-UW-L"
+  },
+  {
+    "word": "among",
+    "pronunciation": "AH-M-AH-NG"
+  },
+  {
+    "word": "noun",
+    "pronunciation": "N-AW-N"
+  },
+  {
+    "word": "power",
+    "pronunciation": "P-AW-ER"
+  },
+  {
+    "word": "cannot",
+    "pronunciation": "K-AE-N-AA-T"
+  },
+  {
+    "word": "able",
+    "pronunciation": "EY-B-AH-L"
+  },
+  {
+    "word": "six",
+    "pronunciation": "S-IH-K-S"
+  },
+  {
+    "word": "size",
+    "pronunciation": "S-AY-Z"
+  },
+  {
+    "word": "dark",
+    "pronunciation": "D-AA-R-K"
+  },
+  {
+    "word": "ball",
+    "pronunciation": "B-AO-L"
+  },
+  {
+    "word": "material",
+    "pronunciation": "M-AH-T-IH-R-IY-AH-L"
+  },
+  {
+    "word": "special",
+    "pronunciation": "S-P-EH-SH-AH-L"
+  },
+  {
+    "word": "heavy",
+    "pronunciation": "HH-EH-V-IY"
+  },
+  {
+    "word": "fine",
+    "pronunciation": "F-AY-N"
+  },
+  {
+    "word": "pair",
+    "pronunciation": "P-EH-R"
+  },
+  {
+    "word": "circle",
+    "pronunciation": "S-ER-K-AH-L"
+  },
+  {
+    "word": "include",
+    "pronunciation": "IH-N-K-L-UW-D"
+  },
+  {
+    "word": "built",
+    "pronunciation": "B-IH-L-T"
+  },
+  {
+    "word": "can\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "matter",
+    "pronunciation": "M-AE-T-ER"
+  },
+  {
+    "word": "square",
+    "pronunciation": "S-K-W-EH-R"
+  },
+  {
+    "word": "syllables",
+    "pronunciation": "S-IH-L-AH-B-AH-L-Z"
+  },
+  {
+    "word": "perhaps",
+    "pronunciation": "P-ER-HH-AE-P-S"
+  },
+  {
+    "word": "bill",
+    "pronunciation": "B-IH-L"
+  },
+  {
+    "word": "felt",
+    "pronunciation": "F-EH-L-T"
+  },
+  {
+    "word": "suddenly",
+    "pronunciation": "S-AH-D-AH-N-L-IY"
+  },
+  {
+    "word": "test",
+    "pronunciation": "T-EH-S-T"
+  },
+  {
+    "word": "direction",
+    "pronunciation": "D-ER-EH-K-SH-AH-N"
+  },
+  {
+    "word": "center",
+    "pronunciation": "S-EH-N-T-ER"
+  },
+  {
+    "word": "farmers",
+    "pronunciation": "F-AA-R-M-ER-Z"
+  },
+  {
+    "word": "ready",
+    "pronunciation": "R-EH-D-IY"
+  },
+  {
+    "word": "anything",
+    "pronunciation": "EH-N-IY-TH-IH-NG"
+  },
+  {
+    "word": "divided",
+    "pronunciation": "D-IH-V-AY-D-AH-D"
+  },
+  {
+    "word": "general",
+    "pronunciation": "JH-EH-N-ER-AH-L"
+  },
+  {
+    "word": "energy",
+    "pronunciation": "EH-N-ER-JH-IY"
+  },
+  {
+    "word": "subject",
+    "pronunciation": "S-AH-B-JH-EH-K-T"
+  },
+  {
+    "word": "Europe",
+    "pronunciation": "Y-UH-R-AH-P"
+  },
+  {
+    "word": "moon",
+    "pronunciation": "M-UW-N"
+  },
+  {
+    "word": "region",
+    "pronunciation": "R-IY-JH-AH-N"
+  },
+  {
+    "word": "return",
+    "pronunciation": "R-IH-T-ER-N"
+  },
+  {
+    "word": "believe",
+    "pronunciation": "B-IH-L-IY-V"
+  },
+  {
+    "word": "dance",
+    "pronunciation": "D-AE-N-S"
+  },
+  {
+    "word": "members",
+    "pronunciation": "M-EH-M-B-ER-Z"
+  },
+  {
+    "word": "picked",
+    "pronunciation": "P-IH-K-T"
+  },
+  {
+    "word": "simple",
+    "pronunciation": "S-IH-M-P-AH-L"
+  },
+  {
+    "word": "cells",
+    "pronunciation": "S-EH-L-Z"
+  },
+  {
+    "word": "paint",
+    "pronunciation": "P-EY-N-T"
+  },
+  {
+    "word": "mind",
+    "pronunciation": "M-AY-N-D"
+  },
+  {
+    "word": "love",
+    "pronunciation": "L-AH-V"
+  },
+  {
+    "word": "cause",
+    "pronunciation": "K-AA-Z"
+  },
+  {
+    "word": "rain",
+    "pronunciation": "R-EY-N"
+  },
+  {
+    "word": "exercise",
+    "pronunciation": "EH-K-S-ER-S-AY-Z"
+  },
+  {
+    "word": "eggs",
+    "pronunciation": "EH-G-Z"
+  },
+  {
+    "word": "train",
+    "pronunciation": "T-R-EY-N"
+  },
+  {
+    "word": "blue",
+    "pronunciation": "B-L-UW"
+  },
+  {
+    "word": "wish",
+    "pronunciation": "W-IH-SH"
+  },
+  {
+    "word": "drop",
+    "pronunciation": "D-R-AA-P"
+  },
+  {
+    "word": "developed",
+    "pronunciation": "D-IH-V-EH-L-AH-P-T"
+  },
+  {
+    "word": "window",
+    "pronunciation": "W-IH-N-D-OW"
+  },
+  {
+    "word": "difference",
+    "pronunciation": "D-IH-F-ER-AH-N-S"
+  },
+  {
+    "word": "distance",
+    "pronunciation": "D-IH-S-T-AH-N-S"
+  },
+  {
+    "word": "heart",
+    "pronunciation": "HH-AA-R-T"
+  },
+  {
+    "word": "sit",
+    "pronunciation": "S-IH-T"
+  },
+  {
+    "word": "sum",
+    "pronunciation": "S-AH-M"
+  },
+  {
+    "word": "summer",
+    "pronunciation": "S-AH-M-ER"
+  },
+  {
+    "word": "wall",
+    "pronunciation": "W-AO-L"
+  },
+  {
+    "word": "forest",
+    "pronunciation": "F-AO-R-AH-S-T"
+  },
+  {
+    "word": "probably",
+    "pronunciation": "P-R-AA-B-AH-B-L-IY"
+  },
+  {
+    "word": "legs",
+    "pronunciation": "L-EH-G-Z"
+  },
+  {
+    "word": "sat",
+    "pronunciation": "S-AE-T"
+  },
+  {
+    "word": "main",
+    "pronunciation": "M-EY-N"
+  },
+  {
+    "word": "winter",
+    "pronunciation": "W-IH-N-T-ER"
+  },
+  {
+    "word": "wide",
+    "pronunciation": "W-AY-D"
+  },
+  {
+    "word": "written",
+    "pronunciation": "R-IH-T-AH-N"
+  },
+  {
+    "word": "length",
+    "pronunciation": "L-EH-NG-K-TH"
+  },
+  {
+    "word": "reason",
+    "pronunciation": "R-IY-Z-AH-N"
+  },
+  {
+    "word": "kept",
+    "pronunciation": "K-EH-P-T"
+  },
+  {
+    "word": "inerest",
+    "pronunciation": ""
+  },
+  {
+    "word": "arms",
+    "pronunciation": "AA-R-M-Z"
+  },
+  {
+    "word": "brother",
+    "pronunciation": "B-R-AH-DH-ER"
+  },
+  {
+    "word": "race",
+    "pronunciation": "R-EY-S"
+  },
+  {
+    "word": "present",
+    "pronunciation": "P-R-EH-Z-AH-N-T"
+  },
+  {
+    "word": "beautiful",
+    "pronunciation": "B-Y-UW-T-AH-F-AH-L"
+  },
+  {
+    "word": "store",
+    "pronunciation": "S-T-AO-R"
+  },
+  {
+    "word": "job",
+    "pronunciation": "JH-AA-B"
+  },
+  {
+    "word": "edge",
+    "pronunciation": "EH-JH"
+  },
+  {
+    "word": "past",
+    "pronunciation": "P-AE-S-T"
+  },
+  {
+    "word": "sign",
+    "pronunciation": "S-AY-N"
+  },
+  {
+    "word": "record",
+    "pronunciation": "R-AH-K-AO-R-D"
+  },
+  {
+    "word": "finished",
+    "pronunciation": "F-IH-N-IH-SH-T"
+  },
+  {
+    "word": "discovered",
+    "pronunciation": "D-IH-S-K-AH-V-ER-D"
+  },
+  {
+    "word": "wild",
+    "pronunciation": "W-AY-L-D"
+  },
+  {
+    "word": "happy",
+    "pronunciation": "HH-AE-P-IY"
+  },
+  {
+    "word": "beside",
+    "pronunciation": "B-IH-S-AY-D"
+  },
+  {
+    "word": "gone",
+    "pronunciation": "G-AO-N"
+  },
+  {
+    "word": "sky",
+    "pronunciation": "S-K-AY"
+  },
+  {
+    "word": "glass",
+    "pronunciation": "G-L-AE-S"
+  },
+  {
+    "word": "million",
+    "pronunciation": "M-IH-L-Y-AH-N"
+  },
+  {
+    "word": "west",
+    "pronunciation": "W-EH-S-T"
+  },
+  {
+    "word": "lay",
+    "pronunciation": "L-EY"
+  },
+  {
+    "word": "weather",
+    "pronunciation": "W-EH-DH-ER"
+  },
+  {
+    "word": "root",
+    "pronunciation": "R-UW-T"
+  },
+  {
+    "word": "instruments",
+    "pronunciation": "IH-N-S-T-R-AH-M-AH-N-T-S"
+  },
+  {
+    "word": "meet",
+    "pronunciation": "M-IY-T"
+  },
+  {
+    "word": "third",
+    "pronunciation": "TH-ER-D"
+  },
+  {
+    "word": "months",
+    "pronunciation": "M-AH-N-TH-S"
+  },
+  {
+    "word": "paragraph",
+    "pronunciation": "P-AE-R-AH-G-R-AE-F"
+  },
+  {
+    "word": "raised",
+    "pronunciation": "R-EY-Z-D"
+  },
+  {
+    "word": "represent",
+    "pronunciation": "R-EH-P-R-AH-Z-EH-N-T"
+  },
+  {
+    "word": "soft",
+    "pronunciation": "S-AA-F-T"
+  },
+  {
+    "word": "whether",
+    "pronunciation": "W-EH-DH-ER"
+  },
+  {
+    "word": "clothes",
+    "pronunciation": "K-L-OW-DH-Z"
+  },
+  {
+    "word": "flowers",
+    "pronunciation": "F-L-AW-ER-Z"
+  },
+  {
+    "word": "shall",
+    "pronunciation": "SH-AE-L"
+  },
+  {
+    "word": "teacher",
+    "pronunciation": "T-IY-CH-ER"
+  },
+  {
+    "word": "held",
+    "pronunciation": "HH-EH-L-D"
+  },
+  {
+    "word": "describe",
+    "pronunciation": "D-IH-S-K-R-AY-B"
+  },
+  {
+    "word": "drive",
+    "pronunciation": "D-R-AY-V"
+  },
+  {
+    "word": "cross",
+    "pronunciation": "K-R-AO-S"
+  },
+  {
+    "word": "speak",
+    "pronunciation": "S-P-IY-K"
+  },
+  {
+    "word": "solve",
+    "pronunciation": "S-AA-L-V"
+  },
+  {
+    "word": "appear",
+    "pronunciation": "AH-P-IH-R"
+  },
+  {
+    "word": "metal",
+    "pronunciation": "M-EH-T-AH-L"
+  },
+  {
+    "word": "son",
+    "pronunciation": "S-AH-N"
+  },
+  {
+    "word": "either",
+    "pronunciation": "IY-DH-ER"
+  },
+  {
+    "word": "ice",
+    "pronunciation": "AY-S"
+  },
+  {
+    "word": "sleep",
+    "pronunciation": "S-L-IY-P"
+  },
+  {
+    "word": "village",
+    "pronunciation": "V-IH-L-AH-JH"
+  },
+  {
+    "word": "factors",
+    "pronunciation": "F-AE-K-T-ER-Z"
+  },
+  {
+    "word": "result",
+    "pronunciation": "R-IH-Z-AH-L-T"
+  },
+  {
+    "word": "jumped",
+    "pronunciation": "JH-AH-M-P-T"
+  },
+  {
+    "word": "snow",
+    "pronunciation": "S-N-OW"
+  },
+  {
+    "word": "ride",
+    "pronunciation": "R-AY-D"
+  },
+  {
+    "word": "care",
+    "pronunciation": "K-EH-R"
+  },
+  {
+    "word": "floor",
+    "pronunciation": "F-L-AO-R"
+  },
+  {
+    "word": "hill",
+    "pronunciation": "HH-IH-L"
+  },
+  {
+    "word": "pushed",
+    "pronunciation": "P-UH-SH-T"
+  },
+  {
+    "word": "baby",
+    "pronunciation": "B-EY-B-IY"
+  },
+  {
+    "word": "buy",
+    "pronunciation": "B-AY"
+  },
+  {
+    "word": "century",
+    "pronunciation": "S-EH-N-CH-ER-IY"
+  },
+  {
+    "word": "outside",
+    "pronunciation": "AW-T-S-AY-D"
+  },
+  {
+    "word": "everything",
+    "pronunciation": "EH-V-R-IY-TH-IH-NG"
+  },
+  {
+    "word": "tall",
+    "pronunciation": "T-AO-L"
+  },
+  {
+    "word": "already",
+    "pronunciation": "AO-L-R-EH-D-IY"
+  },
+  {
+    "word": "instead",
+    "pronunciation": "IH-N-S-T-EH-D"
+  },
+  {
+    "word": "phrase",
+    "pronunciation": "F-R-EY-Z"
+  },
+  {
+    "word": "soil",
+    "pronunciation": "S-OY-L"
+  },
+  {
+    "word": "bed",
+    "pronunciation": "B-EH-D"
+  },
+  {
+    "word": "copy",
+    "pronunciation": "K-AA-P-IY"
+  },
+  {
+    "word": "free",
+    "pronunciation": "F-R-IY"
+  },
+  {
+    "word": "hope",
+    "pronunciation": "HH-OW-P"
+  },
+  {
+    "word": "spring",
+    "pronunciation": "S-P-R-IH-NG"
+  },
+  {
+    "word": "case",
+    "pronunciation": "K-EY-S"
+  },
+  {
+    "word": "laughed",
+    "pronunciation": "L-AE-F-T"
+  },
+  {
+    "word": "nation",
+    "pronunciation": "N-EY-SH-AH-N"
+  },
+  {
+    "word": "quite",
+    "pronunciation": "K-W-AY-T"
+  },
+  {
+    "word": "type",
+    "pronunciation": "T-AY-P"
+  },
+  {
+    "word": "themselves",
+    "pronunciation": "DH-EH-M-S-EH-L-V-Z"
+  },
+  {
+    "word": "temperature",
+    "pronunciation": "T-EH-M-P-R-AH-CH-ER"
+  },
+  {
+    "word": "bright",
+    "pronunciation": "B-R-AY-T"
+  },
+  {
+    "word": "lead",
+    "pronunciation": "L-EH-D"
+  },
+  {
+    "word": "everyone",
+    "pronunciation": "EH-V-R-IY-W-AH-N"
+  },
+  {
+    "word": "method",
+    "pronunciation": "M-EH-TH-AH-D"
+  },
+  {
+    "word": "section",
+    "pronunciation": "S-EH-K-SH-AH-N"
+  },
+  {
+    "word": "lake",
+    "pronunciation": "L-EY-K"
+  },
+  {
+    "word": "consonant",
+    "pronunciation": "K-AA-N-S-AH-N-AH-N-T"
+  },
+  {
+    "word": "within",
+    "pronunciation": "W-IH-DH-IH-N"
+  },
+  {
+    "word": "dictionary",
+    "pronunciation": "D-IH-K-SH-AH-N-EH-R-IY"
+  },
+  {
+    "word": "hair",
+    "pronunciation": "HH-EH-R"
+  },
+  {
+    "word": "age",
+    "pronunciation": "EY-JH"
+  },
+  {
+    "word": "amount",
+    "pronunciation": "AH-M-AW-N-T"
+  },
+  {
+    "word": "scale",
+    "pronunciation": "S-K-EY-L"
+  },
+  {
+    "word": "pounds",
+    "pronunciation": "P-AW-N-D-Z"
+  },
+  {
+    "word": "although",
+    "pronunciation": "AO-L-DH-OW"
+  },
+  {
+    "word": "per",
+    "pronunciation": "P-ER"
+  },
+  {
+    "word": "broken",
+    "pronunciation": "B-R-OW-K-AH-N"
+  },
+  {
+    "word": "moment",
+    "pronunciation": "M-OW-M-AH-N-T"
+  },
+  {
+    "word": "tiny",
+    "pronunciation": "T-AY-N-IY"
+  },
+  {
+    "word": "possible",
+    "pronunciation": "P-AA-S-AH-B-AH-L"
+  },
+  {
+    "word": "gold",
+    "pronunciation": "G-OW-L-D"
+  },
+  {
+    "word": "milk",
+    "pronunciation": "M-IH-L-K"
+  },
+  {
+    "word": "quiet",
+    "pronunciation": "K-W-AY-AH-T"
+  },
+  {
+    "word": "natural",
+    "pronunciation": "N-AE-CH-ER-AH-L"
+  },
+  {
+    "word": "lot",
+    "pronunciation": "L-AA-T"
+  },
+  {
+    "word": "stone",
+    "pronunciation": "S-T-OW-N"
+  },
+  {
+    "word": "act",
+    "pronunciation": "AE-K-T"
+  },
+  {
+    "word": "build",
+    "pronunciation": "B-IH-L-D"
+  },
+  {
+    "word": "middle",
+    "pronunciation": "M-IH-D-AH-L"
+  },
+  {
+    "word": "speed",
+    "pronunciation": "S-P-IY-D"
+  },
+  {
+    "word": "count",
+    "pronunciation": "K-AW-N-T"
+  },
+  {
+    "word": "cat",
+    "pronunciation": "K-AE-T"
+  },
+  {
+    "word": "someone",
+    "pronunciation": "S-AH-M-W-AH-N"
+  },
+  {
+    "word": "sail",
+    "pronunciation": "S-EY-L"
+  },
+  {
+    "word": "rolled",
+    "pronunciation": "R-OW-L-D"
+  },
+  {
+    "word": "bear",
+    "pronunciation": "B-EH-R"
+  },
+  {
+    "word": "wonder",
+    "pronunciation": "W-AH-N-D-ER"
+  },
+  {
+    "word": "smiled",
+    "pronunciation": "S-M-AY-L-D"
+  },
+  {
+    "word": "angle",
+    "pronunciation": "AE-NG-G-AH-L"
+  },
+  {
+    "word": "fraction",
+    "pronunciation": "F-R-AE-K-SH-AH-N"
+  },
+  {
+    "word": "Africa",
+    "pronunciation": "AE-F-R-AH-K-AH"
+  },
+  {
+    "word": "killed",
+    "pronunciation": "K-IH-L-D"
+  },
+  {
+    "word": "melody",
+    "pronunciation": "M-EH-L-AH-D-IY"
+  },
+  {
+    "word": "bottom",
+    "pronunciation": "B-AA-T-AH-M"
+  },
+  {
+    "word": "trip",
+    "pronunciation": "T-R-IH-P"
+  },
+  {
+    "word": "hole",
+    "pronunciation": "HH-OW-L"
+  },
+  {
+    "word": "poor",
+    "pronunciation": "P-UH-R"
+  },
+  {
+    "word": "let\u00e2\u20ac\u2122s",
+    "pronunciation": ""
+  },
+  {
+    "word": "fight",
+    "pronunciation": "F-AY-T"
+  },
+  {
+    "word": "surprise",
+    "pronunciation": "S-ER-P-R-AY-Z"
+  },
+  {
+    "word": "French",
+    "pronunciation": "F-R-EH-N-CH"
+  },
+  {
+    "word": "died",
+    "pronunciation": "D-AY-D"
+  },
+  {
+    "word": "beat",
+    "pronunciation": "B-IY-T"
+  },
+  {
+    "word": "exactly",
+    "pronunciation": "IH-G-Z-AE-K-T-L-IY"
+  },
+  {
+    "word": "remain",
+    "pronunciation": "R-IH-M-EY-N"
+  },
+  {
+    "word": "dress",
+    "pronunciation": "D-R-EH-S"
+  },
+  {
+    "word": "iron",
+    "pronunciation": "AY-ER-N"
+  },
+  {
+    "word": "couldn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "fingers",
+    "pronunciation": "F-IH-NG-G-ER-Z"
+  },
+  {
+    "word": "row",
+    "pronunciation": "R-OW"
+  },
+  {
+    "word": "least",
+    "pronunciation": "L-IY-S-T"
+  },
+  {
+    "word": "catch",
+    "pronunciation": "K-AE-CH"
+  },
+  {
+    "word": "climbed",
+    "pronunciation": "K-L-AY-M-D"
+  },
+  {
+    "word": "wrote",
+    "pronunciation": "R-OW-T"
+  },
+  {
+    "word": "shouted",
+    "pronunciation": "SH-AW-T-AH-D"
+  },
+  {
+    "word": "continued",
+    "pronunciation": "K-AH-N-T-IH-N-Y-UW-D"
+  },
+  {
+    "word": "itself",
+    "pronunciation": "IH-T-S-EH-L-F"
+  },
+  {
+    "word": "else",
+    "pronunciation": "EH-L-S"
+  },
+  {
+    "word": "plains",
+    "pronunciation": "P-L-EY-N-Z"
+  },
+  {
+    "word": "gas",
+    "pronunciation": "G-AE-S"
+  },
+  {
+    "word": "England",
+    "pronunciation": "IH-NG-G-L-AH-N-D"
+  },
+  {
+    "word": "burning",
+    "pronunciation": "B-ER-N-IH-NG"
+  },
+  {
+    "word": "design",
+    "pronunciation": "D-IH-Z-AY-N"
+  },
+  {
+    "word": "joined",
+    "pronunciation": "JH-OY-N-D"
+  },
+  {
+    "word": "foot",
+    "pronunciation": "F-UH-T"
+  },
+  {
+    "word": "law",
+    "pronunciation": "L-AO"
+  },
+  {
+    "word": "ears",
+    "pronunciation": "IH-R-Z"
+  },
+  {
+    "word": "grass",
+    "pronunciation": "G-R-AE-S"
+  },
+  {
+    "word": "you\u00e2\u20ac\u2122re",
+    "pronunciation": ""
+  },
+  {
+    "word": "grew",
+    "pronunciation": "G-R-UW"
+  },
+  {
+    "word": "skin",
+    "pronunciation": "S-K-IH-N"
+  },
+  {
+    "word": "valley",
+    "pronunciation": "V-AE-L-IY"
+  },
+  {
+    "word": "cents",
+    "pronunciation": "S-EH-N-T-S"
+  },
+  {
+    "word": "key",
+    "pronunciation": "K-IY"
+  },
+  {
+    "word": "president",
+    "pronunciation": "P-R-EH-Z-AH-D-EH-N-T"
+  },
+  {
+    "word": "brown",
+    "pronunciation": "B-R-AW-N"
+  },
+  {
+    "word": "trouble",
+    "pronunciation": "T-R-AH-B-AH-L"
+  },
+  {
+    "word": "cool",
+    "pronunciation": "K-UW-L"
+  },
+  {
+    "word": "cloud",
+    "pronunciation": "K-L-AW-D"
+  },
+  {
+    "word": "lost",
+    "pronunciation": "L-AO-S-T"
+  },
+  {
+    "word": "sent",
+    "pronunciation": "S-EH-N-T"
+  },
+  {
+    "word": "symbols",
+    "pronunciation": "S-IH-M-B-AH-L-Z"
+  },
+  {
+    "word": "wear",
+    "pronunciation": "W-EH-R"
+  },
+  {
+    "word": "bad",
+    "pronunciation": "B-AE-D"
+  },
+  {
+    "word": "save",
+    "pronunciation": "S-EY-V"
+  },
+  {
+    "word": "experiment",
+    "pronunciation": "IH-K-S-P-EH-R-AH-M-AH-N-T"
+  },
+  {
+    "word": "engine",
+    "pronunciation": "EH-N-JH-AH-N"
+  },
+  {
+    "word": "alone",
+    "pronunciation": "AH-L-OW-N"
+  },
+  {
+    "word": "drawing",
+    "pronunciation": "D-R-AO-IH-NG"
+  },
+  {
+    "word": "east",
+    "pronunciation": "IY-S-T"
+  },
+  {
+    "word": "pay",
+    "pronunciation": "P-EY"
+  },
+  {
+    "word": "single",
+    "pronunciation": "S-IH-NG-G-AH-L"
+  },
+  {
+    "word": "touch",
+    "pronunciation": "T-AH-CH"
+  },
+  {
+    "word": "information",
+    "pronunciation": "IH-N-F-ER-M-EY-SH-AH-N"
+  },
+  {
+    "word": "express",
+    "pronunciation": "IH-K-S-P-R-EH-S"
+  },
+  {
+    "word": "mouth",
+    "pronunciation": "M-AW-TH"
+  },
+  {
+    "word": "yard",
+    "pronunciation": "Y-AA-R-D"
+  },
+  {
+    "word": "equal",
+    "pronunciation": "IY-K-W-AH-L"
+  },
+  {
+    "word": "decimal",
+    "pronunciation": "D-EH-S-AH-M-AH-L"
+  },
+  {
+    "word": "yourself",
+    "pronunciation": "Y-ER-S-EH-L-F"
+  },
+  {
+    "word": "control",
+    "pronunciation": "K-AH-N-T-R-OW-L"
+  },
+  {
+    "word": "practice",
+    "pronunciation": "P-R-AE-K-T-AH-S"
+  },
+  {
+    "word": "report",
+    "pronunciation": "R-IY-P-AO-R-T"
+  },
+  {
+    "word": "straight",
+    "pronunciation": "S-T-R-EY-T"
+  },
+  {
+    "word": "rise",
+    "pronunciation": "R-AY-Z"
+  },
+  {
+    "word": "statement",
+    "pronunciation": "S-T-EY-T-M-AH-N-T"
+  },
+  {
+    "word": "stick",
+    "pronunciation": "S-T-IH-K"
+  },
+  {
+    "word": "party",
+    "pronunciation": "P-AA-R-T-IY"
+  },
+  {
+    "word": "seeds",
+    "pronunciation": "S-IY-D-Z"
+  },
+  {
+    "word": "suppose",
+    "pronunciation": "S-AH-P-OW-Z"
+  },
+  {
+    "word": "woman",
+    "pronunciation": "W-UH-M-AH-N"
+  },
+  {
+    "word": "coast",
+    "pronunciation": "K-OW-S-T"
+  },
+  {
+    "word": "bank",
+    "pronunciation": "B-AE-NG-K"
+  },
+  {
+    "word": "period",
+    "pronunciation": "P-IH-R-IY-AH-D"
+  },
+  {
+    "word": "wire",
+    "pronunciation": "W-AY-ER"
+  },
+  {
+    "word": "choose",
+    "pronunciation": "CH-UW-Z"
+  },
+  {
+    "word": "clean",
+    "pronunciation": "K-L-IY-N"
+  },
+  {
+    "word": "visit",
+    "pronunciation": "V-IH-Z-AH-T"
+  },
+  {
+    "word": "bit",
+    "pronunciation": "B-IH-T"
+  },
+  {
+    "word": "whose",
+    "pronunciation": "HH-UW-Z"
+  },
+  {
+    "word": "received",
+    "pronunciation": "R-AH-S-IY-V-D"
+  },
+  {
+    "word": "garden",
+    "pronunciation": "G-AA-R-D-AH-N"
+  },
+  {
+    "word": "please",
+    "pronunciation": "P-L-IY-Z"
+  },
+  {
+    "word": "strange",
+    "pronunciation": "S-T-R-EY-N-JH"
+  },
+  {
+    "word": "caught",
+    "pronunciation": "K-AA-T"
+  },
+  {
+    "word": "fell",
+    "pronunciation": "F-EH-L"
+  },
+  {
+    "word": "team",
+    "pronunciation": "T-IY-M"
+  },
+  {
+    "word": "God",
+    "pronunciation": "G-AA-D"
+  },
+  {
+    "word": "captain",
+    "pronunciation": "K-AE-P-T-AH-N"
+  },
+  {
+    "word": "direct",
+    "pronunciation": "D-ER-EH-K-T"
+  },
+  {
+    "word": "ring",
+    "pronunciation": "R-IH-NG"
+  },
+  {
+    "word": "serve",
+    "pronunciation": "S-ER-V"
+  },
+  {
+    "word": "child",
+    "pronunciation": "CH-AY-L-D"
+  },
+  {
+    "word": "desert",
+    "pronunciation": "D-EH-Z-ER-T"
+  },
+  {
+    "word": "increase",
+    "pronunciation": "IH-N-K-R-IY-S"
+  },
+  {
+    "word": "history",
+    "pronunciation": "HH-IH-S-T-ER-IY"
+  },
+  {
+    "word": "cost",
+    "pronunciation": "K-AA-S-T"
+  },
+  {
+    "word": "maybe",
+    "pronunciation": "M-EY-B-IY"
+  },
+  {
+    "word": "business",
+    "pronunciation": "B-IH-Z-N-AH-S"
+  },
+  {
+    "word": "separate",
+    "pronunciation": "S-EH-P-ER-EY-T"
+  },
+  {
+    "word": "break",
+    "pronunciation": "B-R-EY-K"
+  },
+  {
+    "word": "uncle",
+    "pronunciation": "AH-NG-K-AH-L"
+  },
+  {
+    "word": "hunting",
+    "pronunciation": "HH-AH-N-T-IH-NG"
+  },
+  {
+    "word": "flow",
+    "pronunciation": "F-L-OW"
+  },
+  {
+    "word": "lady",
+    "pronunciation": "L-EY-D-IY"
+  },
+  {
+    "word": "students",
+    "pronunciation": "S-T-UW-D-AH-N-T-S"
+  },
+  {
+    "word": "human",
+    "pronunciation": "HH-Y-UW-M-AH-N"
+  },
+  {
+    "word": "art",
+    "pronunciation": "AA-R-T"
+  },
+  {
+    "word": "feeling",
+    "pronunciation": "F-IY-L-IH-NG"
+  },
+  {
+    "word": "supply",
+    "pronunciation": "S-AH-P-L-AY"
+  },
+  {
+    "word": "corner",
+    "pronunciation": "K-AO-R-N-ER"
+  },
+  {
+    "word": "electric",
+    "pronunciation": "IH-L-EH-K-T-R-IH-K"
+  },
+  {
+    "word": "insects",
+    "pronunciation": "IH-N-S-EH-K-T-S"
+  },
+  {
+    "word": "crops",
+    "pronunciation": "K-R-AA-P-S"
+  },
+  {
+    "word": "tone",
+    "pronunciation": "T-OW-N"
+  },
+  {
+    "word": "hit",
+    "pronunciation": "HH-IH-T"
+  },
+  {
+    "word": "sand",
+    "pronunciation": "S-AE-N-D"
+  },
+  {
+    "word": "doctor",
+    "pronunciation": "D-AA-K-T-ER"
+  },
+  {
+    "word": "provide",
+    "pronunciation": "P-R-AH-V-AY-D"
+  },
+  {
+    "word": "thus",
+    "pronunciation": "DH-AH-S"
+  },
+  {
+    "word": "won\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "cook",
+    "pronunciation": "K-UH-K"
+  },
+  {
+    "word": "bones",
+    "pronunciation": "B-OW-N-Z"
+  },
+  {
+    "word": "tail",
+    "pronunciation": "T-EY-L"
+  },
+  {
+    "word": "board",
+    "pronunciation": "B-AO-R-D"
+  },
+  {
+    "word": "modern",
+    "pronunciation": "M-AA-D-ER-N"
+  },
+  {
+    "word": "compound",
+    "pronunciation": "K-AA-M-P-AW-N-D"
+  },
+  {
+    "word": "mine",
+    "pronunciation": "M-AY-N"
+  },
+  {
+    "word": "wasn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "fit",
+    "pronunciation": "F-IH-T"
+  },
+  {
+    "word": "addition",
+    "pronunciation": "AH-D-IH-SH-AH-N"
+  },
+  {
+    "word": "belong",
+    "pronunciation": "B-IH-L-AO-NG"
+  },
+  {
+    "word": "safe",
+    "pronunciation": "S-EY-F"
+  },
+  {
+    "word": "soldiers",
+    "pronunciation": "S-OW-L-JH-ER-Z"
+  },
+  {
+    "word": "guess",
+    "pronunciation": "G-EH-S"
+  },
+  {
+    "word": "silent",
+    "pronunciation": "S-AY-L-AH-N-T"
+  },
+  {
+    "word": "trade",
+    "pronunciation": "T-R-EY-D"
+  },
+  {
+    "word": "rather",
+    "pronunciation": "R-AE-DH-ER"
+  },
+  {
+    "word": "compare",
+    "pronunciation": "K-AH-M-P-EH-R"
+  },
+  {
+    "word": "crowd",
+    "pronunciation": "K-R-AW-D"
+  },
+  {
+    "word": "poem",
+    "pronunciation": "P-OW-AH-M"
+  },
+  {
+    "word": "enjoy",
+    "pronunciation": "EH-N-JH-OY"
+  },
+  {
+    "word": "elements",
+    "pronunciation": "EH-L-AH-M-AH-N-T-S"
+  },
+  {
+    "word": "indicate",
+    "pronunciation": "IH-N-D-AH-K-EY-T"
+  },
+  {
+    "word": "except",
+    "pronunciation": "IH-K-S-EH-P-T"
+  },
+  {
+    "word": "expect",
+    "pronunciation": "IH-K-S-P-EH-K-T"
+  },
+  {
+    "word": "flat",
+    "pronunciation": "F-L-AE-T"
+  },
+  {
+    "word": "seven",
+    "pronunciation": "S-EH-V-AH-N"
+  },
+  {
+    "word": "interesting",
+    "pronunciation": "IH-N-T-R-AH-S-T-IH-NG"
+  },
+  {
+    "word": "sense",
+    "pronunciation": "S-EH-N-S"
+  },
+  {
+    "word": "string",
+    "pronunciation": "S-T-R-IH-NG"
+  },
+  {
+    "word": "blow",
+    "pronunciation": "B-L-OW"
+  },
+  {
+    "word": "famous",
+    "pronunciation": "F-EY-M-AH-S"
+  },
+  {
+    "word": "value",
+    "pronunciation": "V-AE-L-Y-UW"
+  },
+  {
+    "word": "wings",
+    "pronunciation": "W-IH-NG-Z"
+  },
+  {
+    "word": "movement",
+    "pronunciation": "M-UW-V-M-AH-N-T"
+  },
+  {
+    "word": "pole",
+    "pronunciation": "P-OW-L"
+  },
+  {
+    "word": "exciting",
+    "pronunciation": "IH-K-S-AY-T-IH-NG"
+  },
+  {
+    "word": "branches",
+    "pronunciation": "B-R-AE-N-CH-AH-Z"
+  },
+  {
+    "word": "thick",
+    "pronunciation": "TH-IH-K"
+  },
+  {
+    "word": "blood",
+    "pronunciation": "B-L-AH-D"
+  },
+  {
+    "word": "lie",
+    "pronunciation": "L-AY"
+  },
+  {
+    "word": "spot",
+    "pronunciation": "S-P-AA-T"
+  },
+  {
+    "word": "bell",
+    "pronunciation": "B-EH-L"
+  },
+  {
+    "word": "fun",
+    "pronunciation": "F-AH-N"
+  },
+  {
+    "word": "loud",
+    "pronunciation": "L-AW-D"
+  },
+  {
+    "word": "consider",
+    "pronunciation": "K-AH-N-S-IH-D-ER"
+  },
+  {
+    "word": "suggested",
+    "pronunciation": "S-AH-G-JH-EH-S-T-AH-D"
+  },
+  {
+    "word": "thin",
+    "pronunciation": "TH-IH-N"
+  },
+  {
+    "word": "position",
+    "pronunciation": "P-AH-Z-IH-SH-AH-N"
+  },
+  {
+    "word": "entered",
+    "pronunciation": "EH-N-T-ER-D"
+  },
+  {
+    "word": "fruit",
+    "pronunciation": "F-R-UW-T"
+  },
+  {
+    "word": "tied",
+    "pronunciation": "T-AY-D"
+  },
+  {
+    "word": "rich",
+    "pronunciation": "R-IH-CH"
+  },
+  {
+    "word": "dillars",
+    "pronunciation": ""
+  },
+  {
+    "word": "send",
+    "pronunciation": "S-EH-N-D"
+  },
+  {
+    "word": "sight",
+    "pronunciation": "S-AY-T"
+  },
+  {
+    "word": "chief",
+    "pronunciation": "CH-IY-F"
+  },
+  {
+    "word": "Japanese",
+    "pronunciation": "JH-AE-P-AH-N-IY-Z"
+  },
+  {
+    "word": "stream",
+    "pronunciation": "S-T-R-IY-M"
+  },
+  {
+    "word": "planets",
+    "pronunciation": "P-L-AE-N-AH-T-S"
+  },
+  {
+    "word": "rhythm",
+    "pronunciation": "R-IH-DH-AH-M"
+  },
+  {
+    "word": "eight",
+    "pronunciation": "EY-T"
+  },
+  {
+    "word": "science",
+    "pronunciation": "S-AY-AH-N-S"
+  },
+  {
+    "word": "major",
+    "pronunciation": "M-EY-JH-ER"
+  },
+  {
+    "word": "observe",
+    "pronunciation": "AH-B-Z-ER-V"
+  },
+  {
+    "word": "tube",
+    "pronunciation": "T-UW-B"
+  },
+  {
+    "word": "necessary",
+    "pronunciation": "N-EH-S-AH-S-EH-R-IY"
+  },
+  {
+    "word": "weight",
+    "pronunciation": "W-EY-T"
+  },
+  {
+    "word": "meat",
+    "pronunciation": "M-IY-T"
+  },
+  {
+    "word": "lifted",
+    "pronunciation": "L-IH-F-T-AH-D"
+  },
+  {
+    "word": "process",
+    "pronunciation": "P-R-AA-S-EH-S"
+  },
+  {
+    "word": "army",
+    "pronunciation": "AA-R-M-IY"
+  },
+  {
+    "word": "hat",
+    "pronunciation": "HH-AE-T"
+  },
+  {
+    "word": "property",
+    "pronunciation": "P-R-AA-P-ER-T-IY"
+  },
+  {
+    "word": "particular",
+    "pronunciation": "P-ER-T-IH-K-Y-AH-L-ER"
+  },
+  {
+    "word": "swim",
+    "pronunciation": "S-W-IH-M"
+  },
+  {
+    "word": "terms",
+    "pronunciation": "T-ER-M-Z"
+  },
+  {
+    "word": "current",
+    "pronunciation": "K-ER-AH-N-T"
+  },
+  {
+    "word": "park",
+    "pronunciation": "P-AA-R-K"
+  },
+  {
+    "word": "sell",
+    "pronunciation": "S-EH-L"
+  },
+  {
+    "word": "shoulder",
+    "pronunciation": "SH-OW-L-D-ER"
+  },
+  {
+    "word": "industry",
+    "pronunciation": "IH-N-D-AH-S-T-R-IY"
+  },
+  {
+    "word": "wash",
+    "pronunciation": "W-AA-SH"
+  },
+  {
+    "word": "block",
+    "pronunciation": "B-L-AA-K"
+  },
+  {
+    "word": "spread",
+    "pronunciation": "S-P-R-EH-D"
+  },
+  {
+    "word": "cattle",
+    "pronunciation": "K-AE-T-AH-L"
+  },
+  {
+    "word": "wife",
+    "pronunciation": "W-AY-F"
+  },
+  {
+    "word": "sharp",
+    "pronunciation": "SH-AA-R-P"
+  },
+  {
+    "word": "company",
+    "pronunciation": "K-AH-M-P-AH-N-IY"
+  },
+  {
+    "word": "radio",
+    "pronunciation": "R-EY-D-IY-OW"
+  },
+  {
+    "word": "we\u00e2\u20ac\u2122ll",
+    "pronunciation": ""
+  },
+  {
+    "word": "action",
+    "pronunciation": "AE-K-SH-AH-N"
+  },
+  {
+    "word": "capital",
+    "pronunciation": "K-AE-P-AH-T-AH-L"
+  },
+  {
+    "word": "factories",
+    "pronunciation": "F-AE-K-T-ER-IY-Z"
+  },
+  {
+    "word": "settled",
+    "pronunciation": "S-EH-T-AH-L-D"
+  },
+  {
+    "word": "yellow",
+    "pronunciation": "Y-EH-L-OW"
+  },
+  {
+    "word": "isn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "southern",
+    "pronunciation": "S-AH-DH-ER-N"
+  },
+  {
+    "word": "truck",
+    "pronunciation": "T-R-AH-K"
+  },
+  {
+    "word": "fair",
+    "pronunciation": "F-EH-R"
+  },
+  {
+    "word": "printed",
+    "pronunciation": "P-R-IH-N-T-AH-D"
+  },
+  {
+    "word": "wouldn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "ahead",
+    "pronunciation": "AH-HH-EH-D"
+  },
+  {
+    "word": "chance",
+    "pronunciation": "CH-AE-N-S"
+  },
+  {
+    "word": "born",
+    "pronunciation": "B-AO-R-N"
+  },
+  {
+    "word": "level",
+    "pronunciation": "L-EH-V-AH-L"
+  },
+  {
+    "word": "triangle",
+    "pronunciation": "T-R-AY-AE-NG-G-AH-L"
+  },
+  {
+    "word": "molecules",
+    "pronunciation": "M-AA-L-AH-K-Y-UW-L-Z"
+  },
+  {
+    "word": "France",
+    "pronunciation": "F-R-AE-N-S"
+  },
+  {
+    "word": "repeated",
+    "pronunciation": "R-IH-P-IY-T-IH-D"
+  },
+  {
+    "word": "column",
+    "pronunciation": "K-AA-L-AH-M"
+  },
+  {
+    "word": "western",
+    "pronunciation": "W-EH-S-T-ER-N"
+  },
+  {
+    "word": "church",
+    "pronunciation": "CH-ER-CH"
+  },
+  {
+    "word": "sister",
+    "pronunciation": "S-IH-S-T-ER"
+  },
+  {
+    "word": "oxygen",
+    "pronunciation": "AA-K-S-AH-JH-AH-N"
+  },
+  {
+    "word": "plural",
+    "pronunciation": "P-L-UH-R-AH-L"
+  },
+  {
+    "word": "various",
+    "pronunciation": "V-EH-R-IY-AH-S"
+  },
+  {
+    "word": "agreed",
+    "pronunciation": "AH-G-R-IY-D"
+  },
+  {
+    "word": "opposite",
+    "pronunciation": "AA-P-AH-Z-AH-T"
+  },
+  {
+    "word": "wrong",
+    "pronunciation": "R-AO-NG"
+  },
+  {
+    "word": "chart",
+    "pronunciation": "CH-AA-R-T"
+  },
+  {
+    "word": "prepared",
+    "pronunciation": "P-R-IY-P-EH-R-D"
+  },
+  {
+    "word": "pretty",
+    "pronunciation": "P-R-IH-T-IY"
+  },
+  {
+    "word": "solution",
+    "pronunciation": "S-AH-L-UW-SH-AH-N"
+  },
+  {
+    "word": "fresh",
+    "pronunciation": "F-R-EH-SH"
+  },
+  {
+    "word": "shop",
+    "pronunciation": "SH-AA-P"
+  },
+  {
+    "word": "suffix",
+    "pronunciation": "S-AH-F-IH-K-S"
+  },
+  {
+    "word": "especially",
+    "pronunciation": "AH-S-P-EH-SH-L-IY"
+  },
+  {
+    "word": "shoes",
+    "pronunciation": "SH-UW-Z"
+  },
+  {
+    "word": "actually",
+    "pronunciation": "AE-K-CH-AH-W-AH-L-IY"
+  },
+  {
+    "word": "nose",
+    "pronunciation": "N-OW-Z"
+  },
+  {
+    "word": "afraid",
+    "pronunciation": "AH-F-R-EY-D"
+  },
+  {
+    "word": "dead",
+    "pronunciation": "D-EH-D"
+  },
+  {
+    "word": "sugar",
+    "pronunciation": "SH-UH-G-ER"
+  },
+  {
+    "word": "adjective",
+    "pronunciation": "AE-JH-IH-K-T-IH-V"
+  },
+  {
+    "word": "fig",
+    "pronunciation": "F-IH-G"
+  },
+  {
+    "word": "office",
+    "pronunciation": "AO-F-AH-S"
+  },
+  {
+    "word": "huge",
+    "pronunciation": "HH-Y-UW-JH"
+  },
+  {
+    "word": "gun",
+    "pronunciation": "G-AH-N"
+  },
+  {
+    "word": "similar",
+    "pronunciation": "S-IH-M-AH-L-ER"
+  },
+  {
+    "word": "death",
+    "pronunciation": "D-EH-TH"
+  },
+  {
+    "word": "score",
+    "pronunciation": "S-K-AO-R"
+  },
+  {
+    "word": "forward",
+    "pronunciation": "F-AO-R-W-ER-D"
+  },
+  {
+    "word": "stretched",
+    "pronunciation": "S-T-R-EH-CH-T"
+  },
+  {
+    "word": "experienced",
+    "pronunciation": "IH-K-S-P-IH-R-IY-AH-N-S-T"
+  },
+  {
+    "word": "rose",
+    "pronunciation": "R-OW-Z"
+  },
+  {
+    "word": "allow",
+    "pronunciation": "AH-L-AW"
+  },
+  {
+    "word": "fear",
+    "pronunciation": "F-IH-R"
+  },
+  {
+    "word": "workers",
+    "pronunciation": "W-ER-K-ER-Z"
+  },
+  {
+    "word": "Washington",
+    "pronunciation": "W-AA-SH-IH-NG-T-AH-N"
+  },
+  {
+    "word": "Greek",
+    "pronunciation": "G-R-IY-K"
+  },
+  {
+    "word": "women",
+    "pronunciation": "W-IH-M-AH-N"
+  },
+  {
+    "word": "bought",
+    "pronunciation": "B-AA-T"
+  },
+  {
+    "word": "led",
+    "pronunciation": "L-EH-D"
+  },
+  {
+    "word": "march",
+    "pronunciation": "M-AA-R-CH"
+  },
+  {
+    "word": "northern",
+    "pronunciation": "N-AO-R-DH-ER-N"
+  },
+  {
+    "word": "create",
+    "pronunciation": "K-R-IY-EY-T"
+  },
+  {
+    "word": "British",
+    "pronunciation": "B-R-IH-T-IH-SH"
+  },
+  {
+    "word": "difficult",
+    "pronunciation": "D-IH-F-AH-K-AH-L-T"
+  },
+  {
+    "word": "match",
+    "pronunciation": "M-AE-CH"
+  },
+  {
+    "word": "win",
+    "pronunciation": "W-IH-N"
+  },
+  {
+    "word": "doesn\u00e2\u20ac\u2122t",
+    "pronunciation": ""
+  },
+  {
+    "word": "steel",
+    "pronunciation": "S-T-IY-L"
+  },
+  {
+    "word": "total",
+    "pronunciation": "T-OW-T-AH-L"
+  },
+  {
+    "word": "deal",
+    "pronunciation": "D-IY-L"
+  },
+  {
+    "word": "determine",
+    "pronunciation": "D-AH-T-ER-M-AH-N"
+  },
+  {
+    "word": "evening",
+    "pronunciation": "IY-V-N-IH-NG"
+  },
+  {
+    "word": "nor",
+    "pronunciation": "N-AO-R"
+  },
+  {
+    "word": "rope",
+    "pronunciation": "R-OW-P"
+  },
+  {
+    "word": "cotton",
+    "pronunciation": "K-AA-T-AH-N"
+  },
+  {
+    "word": "apple",
+    "pronunciation": "AE-P-AH-L"
+  },
+  {
+    "word": "details",
+    "pronunciation": "D-IH-T-EY-L-Z"
+  },
+  {
+    "word": "entire",
+    "pronunciation": "IH-N-T-AY-ER"
+  },
+  {
+    "word": "corn",
+    "pronunciation": "K-AO-R-N"
+  },
+  {
+    "word": "substances",
+    "pronunciation": "S-AH-B-S-T-AH-N-S-AH-Z"
+  },
+  {
+    "word": "smell",
+    "pronunciation": "S-M-EH-L"
+  },
+  {
+    "word": "tools",
+    "pronunciation": "T-UW-L-Z"
+  },
+  {
+    "word": "conditions",
+    "pronunciation": "K-AH-N-D-IH-SH-AH-N-Z"
+  },
+  {
+    "word": "cows",
+    "pronunciation": "K-AW-Z"
+  },
+  {
+    "word": "track",
+    "pronunciation": "T-R-AE-K"
+  },
+  {
+    "word": "arrived",
+    "pronunciation": "ER-AY-V-D"
+  },
+  {
+    "word": "located",
+    "pronunciation": "L-OW-K-EY-T-AH-D"
+  },
+  {
+    "word": "sir",
+    "pronunciation": "S-ER"
+  },
+  {
+    "word": "seat",
+    "pronunciation": "S-IY-T"
+  },
+  {
+    "word": "division",
+    "pronunciation": "D-IH-V-IH-ZH-AH-N"
+  },
+  {
+    "word": "effect",
+    "pronunciation": "IH-F-EH-K-T"
+  },
+  {
+    "word": "underline",
+    "pronunciation": "AH-N-D-ER-L-AY-N"
+  },
+  {
+    "word": "view",
+    "pronunciation": "V-Y-UW"
+  }
+]

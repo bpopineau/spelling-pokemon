@@ -1,3 +1,4 @@
+// src/main.tsx
 // Entry point of the React application.
 //
 // Vite uses this file as the bootstrap for the entire game. We locate the
@@ -12,7 +13,7 @@ import { createRoot } from "react-dom/client";
 // `BrowserRouter` manages navigation and keeps the URL in sync with the current
 // screen. It enables deep links (e.g. `/pokedex`) to work correctly.
 import { BrowserRouter } from "react-router-dom";
-// Global Tailwind styles
+// Global styles
 import "./index.css";
 // The main App component that holds all screens
 import App from "./App.tsx";
