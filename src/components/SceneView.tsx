@@ -45,7 +45,10 @@ const SceneView: FC = () => {
   return (
     <Box sx={{ bgcolor: "grey.100", minHeight: "100vh", py: 4 }}>
       <Container maxWidth="md">
-        <Paper elevation={4} sx={{ position: "relative", mb: 4, overflow: "hidden" }}>
+        <Paper
+          elevation={4}
+          sx={{ position: "relative", mb: 4, overflow: "hidden" }}
+        >
           <Box
             component="header"
             sx={{
@@ -57,7 +60,8 @@ const SceneView: FC = () => {
               justifyContent: "space-between",
               alignItems: "center",
               p: 2,
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0))",
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0))",
             }}
           >
             <Button
@@ -92,7 +96,10 @@ const SceneView: FC = () => {
         </Paper>
 
         <Box component="main">
-          <SpellingChallenge wordStart={scene.word_start} wordEnd={scene.word_end} />
+          <SpellingChallenge
+            wordStart={scene.word_start}
+            wordEnd={scene.word_end}
+          />
         </Box>
       </Container>
     </Box>

@@ -5,13 +5,7 @@
 
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Stack,
-} from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Stack } from "@mui/material";
 
 const linkStyle = {
   color: "inherit",
@@ -35,26 +29,13 @@ const Header: FC = () => (
 
       {/* Navigation */}
       <Stack direction="row" spacing={1}>
-        <Button
-          component={NavLink}
-          to="/"
-          end
-          sx={linkStyle}
-        >
+        <Button component={NavLink} to="/" end sx={linkStyle}>
           Map
         </Button>
-        <Button
-          component={NavLink}
-          to="/pokedex"
-          sx={linkStyle}
-        >
+        <Button component={NavLink} to="/pokedex" sx={linkStyle}>
           Pokédex
         </Button>
-        <Button
-          component={NavLink}
-          to="/progress"
-          sx={linkStyle}
-        >
+        <Button component={NavLink} to="/progress" sx={linkStyle}>
           Progress
         </Button>
       </Stack>

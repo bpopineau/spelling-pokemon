@@ -3,12 +3,12 @@
 // Lightweight wrapper for SVG assets in /public/assets/icons.
 // Accepts `name`, optional `size`, and `className` for styling.
 
-import { FC } from 'react';
+import { FC } from "react";
 
 export interface IconProps {
-  name: string;         // Filename without `.svg`
-  size?: number;        // Height/width in pixels (default 24)
-  className?: string;   // Extra CSS classes
+  name: string; // Filename without `.svg`
+  size?: number; // Height/width in pixels (default 24)
+  className?: string; // Extra CSS classes
 }
 
 const Icon: FC<IconProps> = ({ name, size = 24, className }) => (
@@ -19,10 +19,10 @@ const Icon: FC<IconProps> = ({ name, size = 24, className }) => (
     height={size}
     className={className}
     loading="lazy"
-    style={{ display: 'inline-block' }}
+    style={{ display: "inline-block" }}
     onError={(e) => {
       // Optional: hide img if missing asset
-      (e.target as HTMLImageElement).style.visibility = 'hidden';
+      (e.target as HTMLImageElement).style.visibility = "hidden";
       // TODO: log missing icon name for debugging
     }}
   />

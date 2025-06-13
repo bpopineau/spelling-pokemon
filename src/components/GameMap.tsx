@@ -1,14 +1,14 @@
 // File: src/components/GameMap.tsx
 
-import { FC, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-import regionHotspots from '@/data/regionHotspots';
-import scenesData from '@/data/scenes.json';
-import { useGameStore } from '@/services/gameState';
-import { Box, Tooltip, Paper } from '@mui/material';
+import { FC, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import regionHotspots from "@/data/regionHotspots";
+import scenesData from "@/data/scenes.json";
+import { useGameStore } from "@/services/gameState";
+import { Box, Tooltip, Paper } from "@mui/material";
 
 // Derive the hotspot item type directly from the data
-type RegionHotspot = typeof regionHotspots[number];
+type RegionHotspot = (typeof regionHotspots)[number];
 
 // Type describing scene unlock requirements
 interface SceneUnlock {
@@ -17,7 +17,7 @@ interface SceneUnlock {
 }
 
 // Path to the world map image asset
-const MAP_SRC = '/assets/images/map/world-map.png';
+const MAP_SRC = "/assets/images/map/world-map.png";
 
 /**
  * GameMap Component
@@ -33,7 +33,7 @@ const GameMap: FC = () => {
   const scenes = useMemo<SceneUnlock[]>(() => scenesData as SceneUnlock[], []);
   const unlockedSceneIds = useMemo<Set<number>>(
     () => new Set(scenes.filter((s) => xp >= s.unlock_xp).map((s) => s.id)),
-    [xp, scenes]
+    [xp, scenes],
   );
 
   /** Navigate to the spelling challenge for a given scene */
@@ -48,20 +48,20 @@ const GameMap: FC = () => {
       component="section"
       aria-label="World Map"
       sx={{
-        minHeight: 'calc(100vh - 96px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        minHeight: "calc(100vh - 96px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         p: { xs: 2, md: 4 },
-        bgcolor: 'grey.100',
+        bgcolor: "grey.100",
       }}
     >
       <Paper
         elevation={6}
         sx={{
-          position: 'relative',
-          maxWidth: '75rem',
-          overflow: 'hidden',
+          position: "relative",
+          maxWidth: "75rem",
+          overflow: "hidden",
           lineHeight: 0,
         }}
       >
@@ -70,7 +70,7 @@ const GameMap: FC = () => {
           src={MAP_SRC}
           alt="World Map"
           loading="lazy"
-          sx={{ width: '100%', height: 'auto' }}
+          sx={{ width: "100%", height: "auto" }}
         />
 
         {regionHotspots.map((region: RegionHotspot) => {
@@ -83,20 +83,20 @@ const GameMap: FC = () => {
                 aria-disabled={!unlocked}
                 onClick={() => handleRegionClick(region.sceneId)}
                 onKeyDown={(e) => {
-                  if (unlocked && (e.key === 'Enter' || e.key === ' ')) {
+                  if (unlocked && (e.key === "Enter" || e.key === " ")) {
                     handleRegionClick(region.sceneId);
                   }
                 }}
                 sx={{
                   ...region.style,
-                  position: 'absolute',
-                  cursor: unlocked ? 'pointer' : 'not-allowed',
-                  '&:hover': {
+                  position: "absolute",
+                  cursor: unlocked ? "pointer" : "not-allowed",
+                  "&:hover": {
                     backgroundColor: unlocked
-                      ? 'rgba(255, 255, 255, 0.2)'
-                      : 'transparent',
+                      ? "rgba(255, 255, 255, 0.2)"
+                      : "transparent",
                   },
-                  outline: 'none',
+                  outline: "none",
                 }}
               />
             </Tooltip>

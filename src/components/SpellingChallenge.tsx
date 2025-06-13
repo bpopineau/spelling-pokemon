@@ -36,7 +36,10 @@ interface SpellingChallengeProps {
  * Handles word progression, input, feedback, XP rewards, and Pokémon catching.
  * TODO: Extract spelling logic into a custom hook for unit testing and reuse.
  */
-const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) => {
+const SpellingChallenge: FC<SpellingChallengeProps> = ({
+  wordStart,
+  wordEnd,
+}) => {
   // --- Global Game State ---
   const {
     xp,
@@ -57,12 +60,17 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
   const [feedbackMsg, setFeedbackMsg] = useState("");
   const [shaking, setShaking] = useState(false);
   const [answered, setAnswered] = useState(false);
-  const [lastCaught, setLastCaught] = useState<{ id: number; name: string; sprite: string } | null>(null);
+  const [lastCaught, setLastCaught] = useState<{
+    id: number;
+    name: string;
+    sprite: string;
+  } | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
 
   // --- Derived Scene Data ---
   const scene = useMemo(
-    () => scenes.find((s) => s.word_start === wordStart && s.word_end === wordEnd),
+    () =>
+      scenes.find((s) => s.word_start === wordStart && s.word_end === wordEnd),
     [wordStart, wordEnd],
   );
   // TODO: Handle missing scene (e.g., show error or fallback UI)
@@ -130,7 +138,9 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
 
       // Catch next available Pokémon
       const candidates = pokemonData.filter((p) => p.scene_id === scene?.id);
-      const nextPoke = candidates.find((p) => !collectedPokemonIds.includes(p.id));
+      const nextPoke = candidates.find(
+        (p) => !collectedPokemonIds.includes(p.id),
+      );
 
       if (nextPoke) {
         catchPokemon(nextPoke.id);
@@ -168,7 +178,11 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
   };
 
   const handleHint = () => {
-    if (hintCharges > 0 && !answered && inputValue.length < currentWord.length) {
+    if (
+      hintCharges > 0 &&
+      !answered &&
+      inputValue.length < currentWord.length
+    ) {
       const nextChar = currentWord[inputValue.length];
       setInputValue((prev) => prev + nextChar);
       spendHint();
@@ -181,11 +195,9 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
   }
 
   // Construct blanks display
-  const blanks = currentWord.split("").map((_, i) => (
-    <span key={i}>
-      {inputValue[i]?.toUpperCase() || "_"}
-    </span>
-  ));
+  const blanks = currentWord
+    .split("")
+    .map((_, i) => <span key={i}>{inputValue[i]?.toUpperCase() || "_"}</span>);
 
   return (
     <>
@@ -202,9 +214,18 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
       <Card>
         <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
           {/* Status Bar */}
-          <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              mb: 2,
+            }}
+          >
             <Box sx={{ textAlign: "center" }}>
-              <Typography variant="caption" color="text.secondary">LEVEL</Typography>
+              <Typography variant="caption" color="text.secondary">
+                LEVEL
+              </Typography>
               <Typography variant="h5">{level}</Typography>
             </Box>
 
@@ -213,7 +234,9 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
             </Box>
 
             <Box sx={{ textAlign: "center" }}>
-              <Typography variant="caption" color="text.secondary">HINTS</Typography>
+              <Typography variant="caption" color="text.secondary">
+                HINTS
+              </Typography>
               <Typography variant="h5">{hintCharges}</Typography>
             </Box>
           </Box>
@@ -221,13 +244,23 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
           <Divider sx={{ my: 2 }} />
 
           {/* Spelling Form */}
-          <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: "center" }}>
-            <Typography variant="h6" gutterBottom>Spell the word:</Typography>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{ textAlign: "center" }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Spell the word:
+            </Typography>
 
             <Typography
               variant="h4"
               component="div"
-              sx={{ fontFamily: "monospace", letterSpacing: { xs: "0.5em", sm: "1em" }, my: 3 }}
+              sx={{
+                fontFamily: "monospace",
+                letterSpacing: { xs: "0.5em", sm: "1em" },
+                my: 3,
+              }}
             >
               {blanks}
             </Typography>
@@ -239,19 +272,44 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
               autoComplete="off"
               variant="outlined"
               disabled={answered}
-              sx={{ mb: 2, width: "100%", maxWidth: 300, animation: shaking ? "shake 0.82s" : "none" }}
+              sx={{
+                mb: 2,
+                width: "100%",
+                maxWidth: 300,
+                animation: shaking ? "shake 0.82s" : "none",
+              }}
               inputProps={{
-                style: { textAlign: "center", fontSize: 24, letterSpacing: "0.2em", padding: 10 },
+                style: {
+                  textAlign: "center",
+                  fontSize: 24,
+                  letterSpacing: "0.2em",
+                  padding: 10,
+                },
                 maxLength: currentWord.length,
               }}
             />
 
-            <OnScreenKeyboard onKey={handleKeyboardInput} onBackspace={handleBackspace} />
+            <OnScreenKeyboard
+              onKey={handleKeyboardInput}
+              onBackspace={handleBackspace}
+            />
 
             {/* Feedback */}
-            <Box sx={{ height: 90, mt: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Box
+              sx={{
+                height: 90,
+                mt: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               {feedbackMsg && !feedbackMsg.startsWith("Correct") && (
-                <Alert severity={feedbackMsg.includes("completed") ? "success" : "info"}>
+                <Alert
+                  severity={
+                    feedbackMsg.includes("completed") ? "success" : "info"
+                  }
+                >
                   {feedbackMsg}
                 </Alert>
               )}
@@ -259,7 +317,12 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({ wordStart, wordEnd }) =
 
             {/* Actions */}
             {answered && !dialogOpen ? (
-              <Button fullWidth sx={{ maxWidth: 300 }} variant="contained" onClick={handleNext}>
+              <Button
+                fullWidth
+                sx={{ maxWidth: 300 }}
+                variant="contained"
+                onClick={handleNext}
+              >
                 Next Word
               </Button>
             ) : (

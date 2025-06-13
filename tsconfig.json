@@ -12,11 +12,11 @@
     /* ----------------------------------------------------------------- *
      *  NEW: let tsc understand "@/..." alias  and  JSON imports         *
      * ----------------------------------------------------------------- */
-    "baseUrl": ".",                   // root of the repo
+    "baseUrl": ".", // root of the repo
     "paths": {
-      "@/*": ["src/*"]                // so tsc finds '@/data/…', '@/services/…'
+      "@/*": ["src/*"] // so tsc finds '@/data/…', '@/services/…'
     },
-    "resolveJsonModule": true,        // allow `import scenes from "@/data/scenes.json"`
+    "resolveJsonModule": true, // allow `import scenes from "@/data/scenes.json"`
     "allowSyntheticDefaultImports": true,
 
     /* Strictness / quality -------------------------------------------- */
@@ -37,14 +37,7 @@
     "useDefineForClassFields": true
   },
 
-  "include": [
-    "src",
-    "vite.config.ts",
-    "scripts",
-    "tests"
-  ],
+  "include": ["src", "vite.config.ts", "scripts", "tests"],
 
-  "references": [
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

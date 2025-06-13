@@ -3,7 +3,7 @@
   "compilerOptions": {
     /* Node-specific compiler options ---------------------------------- */
     "composite": true,
-    "module": "NodeNext",            // must match moduleResolution NodeNext
+    "module": "NodeNext", // must match moduleResolution NodeNext
     "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
 
@@ -19,9 +19,5 @@
   },
 
   /* Scope to tooling / scripts / configs */
-  "include": [
-    "vite.config.ts",
-    "scripts/**/*",
-    "eslint.config.js"
-  ]
+  "include": ["vite.config.ts", "scripts/**/*", "eslint.config.js"]
 }

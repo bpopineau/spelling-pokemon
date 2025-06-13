@@ -17,7 +17,7 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run build        # produces dist/
+      - run: npm run build # produces dist/
 
       # Publish to the `gh-pages` branch
       - name: Deploy

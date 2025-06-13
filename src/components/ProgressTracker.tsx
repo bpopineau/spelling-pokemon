@@ -1,13 +1,13 @@
 // File: src/components/ProgressTracker.tsx
 
-import { FC, useMemo } from 'react';
-import badgesData from '@/data/badges.json';
-import { useGameStore } from '@/services/gameState';
-import { Alert, Box, Card, CardContent, Typography } from '@mui/material';
-import ProgressBar from './ProgressBar';
-import Icon from './Icon';
+import { FC, useMemo } from "react";
+import badgesData from "@/data/badges.json";
+import { useGameStore } from "@/services/gameState";
+import { Alert, Box, Card, CardContent, Typography } from "@mui/material";
+import ProgressBar from "./ProgressBar";
+import Icon from "./Icon";
 
-type Badge = typeof badgesData[number];
+type Badge = (typeof badgesData)[number];
 
 const ProgressTracker: FC = () => {
   // --- Global state selectors ---
@@ -30,7 +30,7 @@ const ProgressTracker: FC = () => {
   // --- Memoized derived data ---
   const earnedBadgeList = useMemo<Badge[]>(
     () => badgesData.filter((b) => earnedBadges.includes(b.id)),
-    [earnedBadges]
+    [earnedBadges],
   );
 
   const { xpCurrent, xpTotal } = useMemo(() => {
@@ -43,28 +43,31 @@ const ProgressTracker: FC = () => {
   }, [xp, level, xpToNextLevel]);
 
   // Total Pokémon caught
-  const pokemonCount = useMemo(() => collectedPokemonIds.length, [collectedPokemonIds]);
+  const pokemonCount = useMemo(
+    () => collectedPokemonIds.length,
+    [collectedPokemonIds],
+  );
 
   return (
-    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: 900, mx: 'auto' }}>
+    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: 900, mx: "auto" }}>
       <Typography variant="h3" component="h1" align="center" sx={{ mb: 4 }}>
         Progress Tracker
       </Typography>
 
       {/* Top Stats */}
-      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 4 }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mb: 4 }}>
         {[
-          { label: 'Level', value: level },
-          { label: 'Total XP', value: xp },
-          { label: 'Words Mastered', value: wordsMastered },
-          { label: 'Pokémon', value: pokemonCount },
+          { label: "Level", value: level },
+          { label: "Total XP", value: xp },
+          { label: "Words Mastered", value: wordsMastered },
+          { label: "Pokémon", value: pokemonCount },
         ].map(({ label, value }) => (
           <Card
             key={label}
             sx={{
-              textAlign: 'center',
-              flex: '1 1 calc(50% - 8px)',
-              '@media (min-width:600px)': { flex: '1 1 calc(25% - 12px)' },
+              textAlign: "center",
+              flex: "1 1 calc(50% - 8px)",
+              "@media (min-width:600px)": { flex: "1 1 calc(25% - 12px)" },
             }}
           >
             <CardContent>
@@ -92,22 +95,24 @@ const ProgressTracker: FC = () => {
             Badges Earned
           </Typography>
           {earnedBadgeList.length === 0 ? (
-            <Alert severity="info">No badges earned yet. Complete scenes to earn them!</Alert>
+            <Alert severity="info">
+              No badges earned yet. Complete scenes to earn them!
+            </Alert>
           ) : (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
               {earnedBadgeList.map((badge) => (
                 <Box
                   key={badge.id}
                   role="group"
                   aria-label={badge.name}
                   sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
                     p: 2,
                     border: 1,
-                    borderColor: 'divider',
+                    borderColor: "divider",
                     borderRadius: 2,
                     width: 120,
                   }}

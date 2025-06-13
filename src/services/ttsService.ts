@@ -4,9 +4,9 @@
 // Components can call `speak("hello")` without worrying about browser quirks.
 
 type SpeakOptions = {
-  lang?: string;       // e.g. "en-US"
-  rate?: number;       // 0.1 – 10 (1 is default)
-  voiceName?: string;  // Exact `SpeechSynthesisVoice.name`
+  lang?: string; // e.g. "en-US"
+  rate?: number; // 0.1 – 10 (1 is default)
+  voiceName?: string; // Exact `SpeechSynthesisVoice.name`
 };
 
 /** Browser-safe TTS helper */

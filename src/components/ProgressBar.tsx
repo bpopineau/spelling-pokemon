@@ -13,10 +13,10 @@ export interface ProgressBarProps {
 }
 
 const ProgressBar: FC<ProgressBarProps> = ({ current, total }) => {
-  const percentage = useMemo(() => (total > 0 ? (current / total) * 100 : 0), [
-    current,
-    total,
-  ]);
+  const percentage = useMemo(
+    () => (total > 0 ? (current / total) * 100 : 0),
+    [current, total],
+  );
 
   return (
     <Box

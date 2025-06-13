@@ -3,9 +3,9 @@
 // Action buttons shown beneath the spelling input:
 // Repeat (TTS), Hint (reveal next letter), and Submit (check spelling).
 
-import { FC, memo } from 'react';
-import { Button, Stack } from '@mui/material';
-import Icon from './Icon';        // Adjust path if needed
+import { FC, memo } from "react";
+import { Button, Stack } from "@mui/material";
+import Icon from "./Icon"; // Adjust path if needed
 
 export interface ControlsProps {
   onSubmit: () => void;

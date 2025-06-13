@@ -1,9 +1,4 @@
-// eslint.config.js – flat-config ESLint v9
-// --------------------------------------------------------------
-// • Enforces TypeScript-strict + React best practices
-// • Integrates Prettier formatting (must be last in extends array)
-// • Works out-of-the-box with Vite + React 18
-
+// eslint.config.js  – flat-config with type-info enabled
 import js from "@eslint/js";
 import globals from "globals";
 import eslintPluginReact from "eslint-plugin-react";
@@ -11,32 +6,33 @@ import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import eslintPluginReactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import prettierConfig from "eslint-config-prettier";
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const tsconfigRoot = dirname(fileURLToPath(import.meta.url)); // repo root
 
 export default tseslint.config(
-  // 1) Ignore patterns
-  {
-    ignores: [
-      "dist",
-      "node_modules",
-      "**/*.local",
-      ".DS_Store",
-    ],
-  },
+  /* ───────── Ignored paths ───────── */
+  { ignores: ["dist", "node_modules", "**/*.local", ".DS_Store"] },
 
-  // 2) Base JavaScript rules (ESLint recommended)
+  /* ───────── Base JS rules ───────── */
   js.configs.recommended,
 
-  // 3) TypeScript rules (strict)
+  /* ───────── TypeScript rules ─────── */
   ...tseslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
 
-  // 4) React & hooks
+  /* ───────── React + Hooks ───────── */
   {
     languageOptions: {
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
         ecmaFeatures: { jsx: true },
+
+        // ***  ADD THESE TWO LINES  ***
+        project: ["./tsconfig.json"],          // ← tells ESLint where type-info lives
+        tsconfigRootDir: tsconfigRoot,         // repo root for globs
       },
       globals: {
         ...globals.browser,
@@ -51,25 +47,20 @@ export default tseslint.config(
     },
 
     rules: {
-      // React
       ...eslintPluginReact.configs.recommended.rules,
-      // Hooks
       ...eslintPluginReactHooks.configs.recommended.rules,
 
-      // Ensure React Refresh boundaries are safe
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
 
-      // TypeScript strictness
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
 
-      // Prefer arrow-functions for components
       "react/function-component-definition": [
         "warn",
         {
@@ -80,6 +71,6 @@ export default tseslint.config(
     },
   },
 
-  // 5) Prettier has to be last to disable conflicting stylistic rules
+  /* ───────── Prettier (last) ───────── */
   prettierConfig
 );

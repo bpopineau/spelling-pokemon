@@ -13,9 +13,9 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [
-    react(),             // React 18 Fast Refresh + JSX transform
-    tsconfigPaths(),     // Keeps @/ alias (and others) synced with tsconfig.json
-    svgr(),              // Import SVGs:  import { ReactComponent as Logo } from './logo.svg?react'
+    react(), // React 18 Fast Refresh + JSX transform
+    tsconfigPaths(), // Keeps @/ alias (and others) synced with tsconfig.json
+    svgr(), // Import SVGs:  import { ReactComponent as Logo } from './logo.svg?react'
   ],
 
   // Optional: customize the dev server
