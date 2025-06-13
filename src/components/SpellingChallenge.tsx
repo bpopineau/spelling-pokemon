@@ -1,26 +1,46 @@
-import { useState, useEffect } from 'react';
-import words from '../data/words.json';
-import pokemon from '../data/pokemon.json';
-import scenes from '../data/scenes.json';
-import Controls from './Controls';
-import { speak } from '../services/ttsService';
-import { useGameStore } from '../services/gameState';
+import { useState, useEffect } from "react";
+import words from "../data/words.json";
+import pokemon from "../data/pokemon.json";
+import scenes from "../data/scenes.json";
+import Controls from "./Controls";
+import OnScreenKeyboard from "./OnScreenKeyboard";
+import { speak } from "../services/ttsService";
+import { useGameStore } from "../services/gameState";
 
 interface SpellingChallengeProps {
   wordStart: number;
   wordEnd: number;
 }
 
-export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChallengeProps) {
+export default function SpellingChallenge({
+  wordStart,
+  wordEnd,
+}: SpellingChallengeProps) {
   const [sceneWords, setSceneWords] = useState<string[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentInput, setCurrentInput] = useState('');
-  const [message, setMessage] = useState('');
-  const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{ name: string; sprite: string } | null>(null);
+  const [currentInput, setCurrentInput] = useState("");
+  const [message, setMessage] = useState("");
+  const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{
+    name: string;
+    sprite: string;
+  } | null>(null);
 
-  const { xp, level, xpToNextLevel, hintCharges, collectedPokemonIds, spendHint, addXp, catchPokemon } = useGameStore();
+  const {
+    xp,
+    level,
+    xpToNextLevel,
+    hintCharges,
+    collectedPokemonIds,
+    spendHint,
+    addXp,
+    catchPokemon,
+    incrementWordsMastered,
+    completeScene,
+  } = useGameStore();
 
-  const scene = scenes.find(s => s.word_start === wordStart && s.word_end === wordEnd);
+  const scene = scenes.find(
+    (s) => s.word_start === wordStart && s.word_end === wordEnd,
+  );
   const sceneId = scene?.id;
   const currentWord = sceneWords[currentWordIndex];
 
@@ -28,15 +48,17 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
-  const progressPercentage = Math.max(0, Math.min(100, (xpGainedThisLevel / xpNeededForThisLevel) * 100));
-
+  const progressPercentage = Math.max(
+    0,
+    Math.min(100, (xpGainedThisLevel / xpNeededForThisLevel) * 100),
+  );
 
   useEffect(() => {
     const wordsForScene = words.slice(wordStart, wordEnd + 1);
     setSceneWords(wordsForScene);
     setCurrentWordIndex(0);
-    setCurrentInput('');
-    setMessage('');
+    setCurrentInput("");
+    setMessage("");
     setLastCaughtPokemon(null);
   }, [wordStart, wordEnd]);
 
@@ -47,11 +69,21 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   }, [currentWord]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newV = event.target.value.replace(/[^a-zA-Z]/g, '').toLowerCase();
+    const newV = event.target.value.replace(/[^a-zA-Z]/g, "").toLowerCase();
     if (currentWord && newV.length > currentWord.length) {
       return;
     }
     setCurrentInput(newV);
+  };
+
+  const handleKeyboardInput = (char: string) => {
+    if (currentWord && currentInput.length < currentWord.length) {
+      setCurrentInput((prev) => (prev + char).slice(0, currentWord.length));
+    }
+  };
+
+  const handleBackspace = () => {
+    setCurrentInput((prev) => prev.slice(0, -1));
   };
 
   const handleRepeat = () => {
@@ -66,20 +98,25 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
 
     if (currentInput.toLowerCase() === currentWord?.toLowerCase()) {
       addXp(10);
+      incrementWordsMastered();
 
-      const scenePokemon = pokemon.filter(p => p.scene_id === sceneId);
-      const nextPokemonToCatch = scenePokemon.find(p => !collectedPokemonIds.includes(p.id));
+      const scenePokemon = pokemon.filter((p) => p.scene_id === sceneId);
+      const nextPokemonToCatch = scenePokemon.find(
+        (p) => !collectedPokemonIds.includes(p.id),
+      );
 
       if (nextPokemonToCatch) {
         catchPokemon(nextPokemonToCatch.id);
-        setLastCaughtPokemon({ name: nextPokemonToCatch.name, sprite: nextPokemonToCatch.sprite });
+        setLastCaughtPokemon({
+          name: nextPokemonToCatch.name,
+          sprite: nextPokemonToCatch.sprite,
+        });
         setMessage(`Correct! You caught ${nextPokemonToCatch.name}!`);
       } else {
-        setMessage('Correct! 🎉');
+        setMessage("Correct! 🎉");
       }
-
     } else {
-      setMessage('Try again! 🤔');
+      setMessage("Try again! 🤔");
     }
   };
 
@@ -87,15 +124,22 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
     if (currentWordIndex < sceneWords.length - 1) {
       setCurrentWordIndex(currentWordIndex + 1);
     } else {
-      setMessage('You have completed all the words in this scene! 🏆');
+      setMessage("You have completed all the words in this scene! 🏆");
+      if (sceneId) {
+        completeScene(sceneId);
+      }
     }
-    setCurrentInput('');
-    setMessage('');
+    setCurrentInput("");
+    setMessage("");
     setLastCaughtPokemon(null);
   };
 
   const handleHint = () => {
-    if (hintCharges <= 0 || !currentWord || currentInput.length >= currentWord.length) {
+    if (
+      hintCharges <= 0 ||
+      !currentWord ||
+      currentInput.length >= currentWord.length
+    ) {
       return;
     }
     const nextChar = currentWord[currentInput.length];
@@ -104,7 +148,11 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   };
 
   if (!currentWord) {
-    return <div className="text-center bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">Loading challenge...</div>;
+    return (
+      <div className="text-center bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">
+        Loading challenge...
+      </div>
+    );
   }
 
   const wordBlanks = "_ ".repeat(currentWord.length);
@@ -112,7 +160,6 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
   return (
     // Main container with a solid background and border
     <div className="bg-white border-4 border-slate-300/70 p-6 rounded-xl shadow-2xl w-full max-w-lg text-gray-800">
-
       {/* --- Status Bar --- */}
       <div className="grid grid-cols-3 divide-x divide-slate-300 bg-slate-100 rounded-lg p-2 mb-6 border border-slate-300">
         {/* Level */}
@@ -130,20 +177,25 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
               style={{ width: `${progressPercentage}%` }}
             ></div>
           </div>
-          <span className="text-sm font-semibold text-slate-600 mt-1">{xpGainedThisLevel} / {xpNeededForThisLevel} XP</span>
+          <span className="text-sm font-semibold text-slate-600 mt-1">
+            {xpGainedThisLevel} / {xpNeededForThisLevel} XP
+          </span>
         </div>
 
         {/* Hints */}
         <div className="flex flex-col items-center justify-center px-2">
           <span className="text-sm font-bold text-slate-600">HINTS</span>
-          <span className="text-4xl font-bold text-purple-600">{hintCharges}</span>
+          <span className="text-4xl font-bold text-purple-600">
+            {hintCharges}
+          </span>
         </div>
       </div>
 
-
       {/* --- Spelling Area --- */}
       <div className="text-center">
-        <h2 className="text-3xl font-bold mb-2 text-slate-800">Spell the word:</h2>
+        <h2 className="text-3xl font-bold mb-2 text-slate-800">
+          Spell the word:
+        </h2>
         <div
           className="text-6xl font-bold font-mono tracking-widest mb-4 text-slate-800 py-2"
           aria-label={`Word has ${currentWord.length} letters`}
@@ -151,7 +203,10 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
           {wordBlanks}
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center w-full"
+        >
           <input
             type="text"
             value={currentInput}
@@ -163,9 +218,14 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
             autoCapitalize="off"
           />
 
+          <OnScreenKeyboard
+            onKey={handleKeyboardInput}
+            onBackspace={handleBackspace}
+          />
+
           <div className="h-24 my-2 flex flex-col justify-center items-center">
             {message && <p className="text-2xl">{message}</p>}
-            {lastCaughtPokemon && message.startsWith('Correct') && (
+            {lastCaughtPokemon && message.startsWith("Correct") && (
               <img
                 src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
                 alt={lastCaughtPokemon.name}
@@ -174,7 +234,7 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
             )}
           </div>
 
-          {message.startsWith('Correct') ? (
+          {message.startsWith("Correct") ? (
             <button
               type="button"
               onClick={handleNextWord}
@@ -184,12 +244,16 @@ export default function SpellingChallenge({ wordStart, wordEnd }: SpellingChalle
             </button>
           ) : (
             <div className="w-full max-w-xs">
-                <Controls
-                    onSubmit={() => handleSubmit()}
-                    onHint={handleHint}
-                    onRepeat={handleRepeat}
-                    hintDisabled={hintCharges <= 0 || !currentWord || currentInput.length >= currentWord.length}
-                />
+              <Controls
+                onSubmit={() => handleSubmit()}
+                onHint={handleHint}
+                onRepeat={handleRepeat}
+                hintDisabled={
+                  hintCharges <= 0 ||
+                  !currentWord ||
+                  currentInput.length >= currentWord.length
+                }
+              />
             </div>
           )}
         </form>

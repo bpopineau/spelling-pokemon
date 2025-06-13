@@ -1,0 +1,43 @@
+import React from "react";
+
+interface KeyboardProps {
+  onKey: (char: string) => void;
+  onBackspace: () => void;
+}
+
+const layout = [
+  ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+  ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+  ["z", "x", "c", "v", "b", "n", "m"],
+];
+
+export default function OnScreenKeyboard({
+  onKey,
+  onBackspace,
+}: KeyboardProps) {
+  return (
+    <div className="flex flex-col items-center gap-2 mt-4">
+      {layout.map((row, idx) => (
+        <div key={idx} className="flex gap-1">
+          {row.map((ch) => (
+            <button
+              key={ch}
+              onClick={() => onKey(ch)}
+              className="w-8 h-8 bg-gray-200 rounded text-sm font-bold hover:bg-gray-300"
+            >
+              {ch}
+            </button>
+          ))}
+        </div>
+      ))}
+      <div className="flex gap-1">
+        <button
+          onClick={onBackspace}
+          className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"
+        >
+          ⌫
+        </button>
+      </div>
+    </div>
+  );
+}

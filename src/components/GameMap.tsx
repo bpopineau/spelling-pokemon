@@ -4,12 +4,27 @@
  */
 import { useNavigate } from "react-router-dom";
 import regionHotspots from "../data/regionHotspots";
+import scenesData from "../data/scenes.json";
+
+interface SceneUnlock {
+  id: number;
+  unlock_xp: number;
+}
+import { useGameStore } from "../services/gameState";
 
 export default function GameMap() {
   const navigate = useNavigate();
+  const { xp } = useGameStore();
 
   const handleRegionClick = (sceneId: number) => {
     navigate(`/scene/${sceneId}`);
+  };
+
+  const isUnlocked = (sceneId: number) => {
+    const scenes = scenesData as SceneUnlock[];
+    const scene = scenes.find((s) => s.id === sceneId);
+    if (!scene) return false;
+    return xp >= scene.unlock_xp;
   };
 
   return (
@@ -22,16 +37,20 @@ export default function GameMap() {
           className="w-full h-auto object-cover"
         />
 
-        {regionHotspots.map((region) => (
-          <button
-            key={region.id}
-            style={region.style}
-            aria-label={`Select ${region.name}`}
-            title={region.name}
-            className="absolute bg-transparent hover:bg-white hover:bg-opacity-20 focus:outline-none transition-opacity"
-            onClick={() => handleRegionClick(region.sceneId)}
-          />
-        ))}
+        {regionHotspots.map((region) => {
+          const unlocked = isUnlocked(region.sceneId);
+          return (
+            <button
+              key={region.id}
+              style={region.style}
+              aria-label={`Select ${region.name}`}
+              title={region.name}
+              disabled={!unlocked}
+              className={`absolute bg-transparent focus:outline-none transition-opacity ${unlocked ? "hover:bg-white hover:bg-opacity-20" : "opacity-50 cursor-not-allowed"}`}
+              onClick={() => unlocked && handleRegionClick(region.sceneId)}
+            />
+          );
+        })}
       </div>
     </div>
   );
