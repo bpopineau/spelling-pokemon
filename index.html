@@ -1,7 +1,7 @@
 <!--
-  This is the main HTML page. It only contains a single div where
-  our React game will be placed. All the JavaScript and styles are
-  loaded by Vite so the page can stay very small.
+  This is the main HTML page. It contains only a single div where
+  our React game will be placed. All JavaScript bundles and stylesheets are
+  injected by Vite so the page can remain very small.
 -->
 <!doctype html>
 <html lang="en">
@@ -13,6 +13,7 @@
     <title>Vite + React + TS</title>
   </head>
   <body>
+    <!-- React mounts the entire game into this single div -->
     <div id="root"></div>
     <!-- main.tsx starts our React code -->
     <script type="module" src="/src/main.tsx"></script>

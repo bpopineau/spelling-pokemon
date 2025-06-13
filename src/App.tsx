@@ -1,21 +1,26 @@
-// The main application component. It defines all the different
-// screens you can visit and which component shows on each one.
+// The main application component.
+//
+// This file wires together all of the high level screens in the game. React
+// Router is used to map URLs to components so that navigation works both when
+// clicking links and when a player reloads the page with a deep link.
 import { Routes, Route } from "react-router-dom";
-// Map screen showing the world
+// Screen that displays the overworld map where scenes can be selected
 import GameMap from "./components/GameMap";
-// Scene screen where spelling challenges happen
+// Screen where the actual spelling challenge for a scene takes place
 import SceneView from "./components/SceneView";
-// A simple list of Pokémon the player has caught
+// Shows a list of all Pokémon that the player has caught so far
 import Pokedex from "./components/Pokedex";
-// Stats about the player's progress
+// Displays current XP, level and badges the player has earned
 import ProgressTracker from "./components/ProgressTracker";
-// Layout that provides the shared header
+// Wrapper component that injects the persistent header into certain routes
 import MainLayout from "./components/MainLayout";
 
-// App holds the routes for the entire game
+// `App` only contains the routing table. The heavy lifting for game logic lives
+// inside the individual components listed here.
 function App() {
   return (
-    // Define the URLs and which screen they show
+    // Define the URL structure for the game. Each `<Route>` maps a path to the
+    // component that should render when that path is active.
     <Routes>
       {/* Routes that share the header */}
       <Route element={<MainLayout />}>

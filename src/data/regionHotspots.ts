@@ -1,3 +1,6 @@
+// Describes the clickable area for a region on the world map. The `style`
+// object contains percentage-based positioning so the hotspot scales with the
+// size of the map image.
 export interface Hotspot {
   id: number;
   name: string;
@@ -10,6 +13,7 @@ export interface Hotspot {
   };
 }
 
+// List of all hotspots. The order matches the visual layout on the map.
 const regionHotspots: Hotspot[] = [
   {
     id: 1,
