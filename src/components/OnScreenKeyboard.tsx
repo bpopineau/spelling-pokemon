@@ -1,5 +1,8 @@
-// Small on-screen keyboard for touch devices
-import React from "react";
+// Small on-screen keyboard for touch devices.
+//
+// It mirrors a simplified QWERTY layout so players on phones or tablets can
+// input letters without relying on their device's built-in keyboard. The parent
+// component supplies callbacks for both key presses and backspace events.
 
 interface KeyboardProps {
   // Add a letter to the input
@@ -19,6 +22,8 @@ export default function OnScreenKeyboard({
   onKey,
   onBackspace,
 }: KeyboardProps) {
+  // Render three rows of letter buttons followed by a backspace button. The
+  // layout array defined above controls the characters displayed on each row.
   return (
     <div className="flex flex-col items-center gap-2 mt-4">
       {layout.map((row, idx) => (
@@ -36,7 +41,8 @@ export default function OnScreenKeyboard({
         </div>
       ))}
       <div className="flex gap-1">
-        {/* Backspace key */}
+        {/* Backspace key. Clicking this removes the last character from the
+            player's input. */}
         <button
           onClick={onBackspace}
           className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"

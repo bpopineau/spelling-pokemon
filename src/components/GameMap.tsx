@@ -1,15 +1,19 @@
 /**
  * GameMap Component
  *
- * This screen shows the big world map. The player can click on
- * different areas to start a scene. Each area unlocks when the
- * player has enough experience points.
+ * Displays the large interactive map that acts as the hub for all scenes. Each
+ * region on the map is represented by a transparent button positioned over the
+ * background image. A region becomes clickable when the player has earned
+ * enough XP. Clicking a region navigates to the spelling challenge for that
+ * area. This component is intentionally stateless and simply reads from the
+ * global game store to know which regions should be unlocked.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
 import regionHotspots from "../data/regionHotspots"; // clickable map spots
 import scenesData from "../data/scenes.json"; // data about when scenes unlock
 
-// Simple type so we know what data scenes.json gives us
+// A lightweight type describing the shape of the scene unlock data so TypeScript
+// can help us catch mismatches with the JSON file.
 interface SceneUnlock {
   id: number;
   unlock_xp: number;
@@ -17,15 +21,20 @@ interface SceneUnlock {
 import { useGameStore } from "../services/gameState"; // global game data store
 
 export default function GameMap() {
-  const navigate = useNavigate(); // allows changing the URL
-  const { xp } = useGameStore(); // player's current XP
+  // Router navigation function used to change the URL programmatically
+  const navigate = useNavigate();
 
-  // When a region button is clicked we go to the scene page
+  // Pull the current XP value from the global store so we know which regions
+  // should be available.
+  const { xp } = useGameStore();
+
+  // Navigate to the scene page when a region hotspot is clicked.
   const handleRegionClick = (sceneId: number) => {
     navigate(`/scene/${sceneId}`);
   };
 
-  // Check if the player has enough XP to visit a scene
+  // Determine whether a scene is unlocked by comparing the player's XP to the
+  // `unlock_xp` value from the scenes data.
   const isUnlocked = (sceneId: number) => {
     const scenes = scenesData as SceneUnlock[];
     const scene = scenes.find((s) => s.id === sceneId);

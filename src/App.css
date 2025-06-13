@@ -1,4 +1,8 @@
 /*
   Global styles for the game.
-  We rely mostly on Tailwind classes, but any extra CSS can be placed here.
+
+  The project primarily uses Tailwind utility classes, however any additional
+  custom CSS rules that don't fit well into utility classes can live in this
+  file. Keeping it short helps ensure the design remains consistent across
+  components.
 */

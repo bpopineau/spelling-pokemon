@@ -1,5 +1,10 @@
 // SpellingChallenge presents one word at a time for the player to spell.
-// It also handles giving XP, catching Pokémon and using hints.
+//
+// This component encapsulates the bulk of the gameplay logic. It is responsible
+// for iterating through a set of words, validating the player's input, awarding
+// experience points and handing out Pokémon rewards. A small set of helper
+// components (e.g. `Controls` and `OnScreenKeyboard`) are used to keep the UI
+// manageable.
 import { useState, useEffect } from "react";
 import words from "../data/words.json"; // list of all spelling words
 import pokemon from "../data/pokemon.json"; // which Pokémon appear in scenes
@@ -9,7 +14,9 @@ import OnScreenKeyboard from "./OnScreenKeyboard"; // clickable keyboard
 import { speak } from "../services/ttsService"; // helper for text-to-speech
 import { useGameStore } from "../services/gameState"; // global game state
 
-// Props tell the component which words it should use
+// Props tell the component which words it should use. `wordStart` and
+// `wordEnd` are indexes into the master word list and determine the words for
+// the currently active scene.
 interface SpellingChallengeProps {
   wordStart: number;
   wordEnd: number;
@@ -32,6 +39,8 @@ export default function SpellingChallenge({
     sprite: string;
   } | null>(null);
 
+  // Pull the relevant pieces of global state from the store. These values are
+  // kept in a central location so multiple components can stay in sync.
   const {
     xp,
     level,
@@ -43,7 +52,7 @@ export default function SpellingChallenge({
     catchPokemon,
     incrementWordsMastered,
     completeScene,
-  } = useGameStore(); // read and update the global game progress
+  } = useGameStore();
 
   // Figure out which scene these words belong to
   const scene = scenes.find(
@@ -53,7 +62,9 @@ export default function SpellingChallenge({
   const currentWord = sceneWords[currentWordIndex];
 
   // --- Progress Bar Calculation ---
-  // These numbers help us show how close the player is to the next level
+  // These numbers help us show how close the player is to the next level. They
+  // are derived from the XP totals in the global state and are recalculated on
+  // every render so the progress bar stays accurate.
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
@@ -62,7 +73,9 @@ export default function SpellingChallenge({
     Math.min(100, (xpGainedThisLevel / xpNeededForThisLevel) * 100),
   );
 
-  // When the scene changes, load the right words and reset state
+  // When the scene changes, load the right words and reset state. This effect
+  // runs whenever `wordStart` or `wordEnd` change (i.e. when a new scene is
+  // loaded).
   useEffect(() => {
     const wordsForScene = words.slice(wordStart, wordEnd + 1);
     setSceneWords(wordsForScene);
@@ -72,14 +85,16 @@ export default function SpellingChallenge({
     setLastCaughtPokemon(null);
   }, [wordStart, wordEnd]);
 
-  // Read the word aloud each time it changes
+  // Read the word aloud each time it changes. The call to `speak` uses the
+  // browser's SpeechSynthesis API and is abstracted in `ttsService`.
   useEffect(() => {
     if (currentWord) {
       speak(currentWord);
     }
   }, [currentWord]);
 
-  // Called when the player types in the input box
+  // Called when the player types in the input box. Input is filtered to letters
+  // only so accidental spaces or punctuation don't break the game.
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newV = event.target.value.replace(/[^a-zA-Z]/g, "").toLowerCase();
     if (currentWord && newV.length > currentWord.length) {
@@ -88,26 +103,28 @@ export default function SpellingChallenge({
     setCurrentInput(newV);
   };
 
-  // Called when the on-screen keyboard is used
+  // Called when the on-screen keyboard is used. This ensures players on touch
+  // devices can still participate without needing a physical keyboard.
   const handleKeyboardInput = (char: string) => {
     if (currentWord && currentInput.length < currentWord.length) {
       setCurrentInput((prev) => (prev + char).slice(0, currentWord.length));
     }
   };
 
-  // Remove the last letter from the input
+  // Remove the last letter from the input (used by the on-screen keyboard).
   const handleBackspace = () => {
     setCurrentInput((prev) => prev.slice(0, -1));
   };
 
-  // Speak the current word again
+  // Speak the current word again when the repeat button is pressed.
   const handleRepeat = () => {
     if (currentWord) {
       speak(currentWord);
     }
   };
 
-  // Check if the spelling is correct when the form is submitted
+  // Check if the spelling is correct when the form is submitted. Correct
+  // answers award XP and may trigger a Pokémon catch.
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     if (e) e.preventDefault();
     if (!currentInput) return;
@@ -136,7 +153,8 @@ export default function SpellingChallenge({
     }
   };
 
-  // Move on to the next word in the list
+  // Move on to the next word in the list, or end the scene if there are no
+  // words left.
   const handleNextWord = () => {
     if (currentWordIndex < sceneWords.length - 1) {
       setCurrentWordIndex(currentWordIndex + 1);
@@ -151,7 +169,8 @@ export default function SpellingChallenge({
     setLastCaughtPokemon(null);
   };
 
-  // Fill in the next letter if the player has hints left
+  // Fill in the next letter if the player has hints left. This consumes a hint
+  // charge from the global store.
   const handleHint = () => {
     if (
       hintCharges <= 0 ||

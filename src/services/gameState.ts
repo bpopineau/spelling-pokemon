@@ -1,13 +1,19 @@
-// Game state store using Zustand. It keeps track of XP, level and more
+// Game state store using Zustand. It keeps track of XP, level and more.
+//
+// Zustand provides a minimal and lightweight state container similar to Redux
+// but with a much simpler API. All persistent player progress is stored here so
+// that any component can read or update it without prop drilling.
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-// The base amount of XP needed to level up
+// The base amount of XP needed to level up. Each new level multiplies this
+// value so that higher levels require progressively more experience.
 const LEVEL_UP_XP_BASE = 100;
 const HINT_MAX = 2;
 
-// Define the interface for our store's state and actions
-// All the values we store along with helper functions
+// Define the interface for our store's state and actions. This gives TypeScript
+// knowledge of everything stored as well as the functions used to mutate the
+// state.
 export interface GameState {
   xp: number;
   level: number;
@@ -24,7 +30,9 @@ export interface GameState {
   completeScene: (sceneId: number) => void;
 }
 
-// Create the store with our initial state and actions
+// Create the store with our initial state and actions. `persist` from Zustand
+// automatically stores the state in `localStorage` so progress is saved across
+// page reloads.
 export const useGameStore = create<GameState>()(
   // persist saves the store in localStorage so progress stays after refresh
   persist(
@@ -40,6 +48,7 @@ export const useGameStore = create<GameState>()(
       earnedBadges: [],
 
       // Actions
+      // Increase the player's XP and handle level up logic.
       addXp: (amount) => {
         set((state) => {
           const newXp = state.xp + amount;
@@ -61,6 +70,7 @@ export const useGameStore = create<GameState>()(
         });
       },
 
+      // Spend one hint charge if any are available.
       spendHint: () => {
         set((state) => {
           if (state.hintCharges > 0) {
@@ -70,6 +80,8 @@ export const useGameStore = create<GameState>()(
         });
       },
 
+      // Called whenever the player spells a word correctly.
+      // Every 5 words mastered the player earns an extra hint charge.
       incrementWordsMastered: () => {
         set((state) => {
           const newCount = state.wordsMastered + 1;
@@ -81,6 +93,7 @@ export const useGameStore = create<GameState>()(
         });
       },
 
+      // Record that a Pokémon was caught in the current scene.
       catchPokemon: (pokemonId) => {
         set((state) => {
           // Prevent adding duplicate Pokémon IDs
@@ -93,6 +106,7 @@ export const useGameStore = create<GameState>()(
         });
       },
 
+      // Mark a scene as completed and award the corresponding badge.
       completeScene: (sceneId) => {
         set((state) => {
           if (!state.completedScenes.includes(sceneId)) {

@@ -1,4 +1,8 @@
-// Buttons shown under the spelling input
+// Buttons shown under the spelling input.
+//
+// This component is intentionally small and purely presentational. It exposes a
+// few callback props so the parent component (`SpellingChallenge`) can decide
+// what happens when each button is pressed.
 interface ControlsProps {
   onSubmit: () => void;
   onHint: () => void;

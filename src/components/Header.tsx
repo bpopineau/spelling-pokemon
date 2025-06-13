@@ -1,8 +1,13 @@
-// Simple header with navigation links
+// The persistent header that appears on most screens.
+//
+// It contains navigation links allowing the player to move between the world
+// map, the Pokédex and the progress tracker. `NavLink` from React Router is used
+// so that the active link can be styled differently.
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  // Basic styles for the navigation links
+  // CSS class fragments used to style the navigation links. Keeping them in
+  // variables makes the JSX below easier to read and maintain.
   const linkStyle = "px-4 py-2 rounded-md text-lg font-semibold";
   const activeLinkStyle = "bg-blue-500 text-white";
   const inactiveLinkStyle = "bg-gray-200 text-gray-800 hover:bg-gray-300";
