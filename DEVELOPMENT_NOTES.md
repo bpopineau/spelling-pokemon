@@ -11,7 +11,7 @@ This document complements inline `TODO:` comments. Each section lists guidance, 
 | **README.md**                               | ✅ Completely rewritten (setup, scripts, features, CI). Keep in sync with new commands. |
 | **game_design_specification.md**            | ✅ Updated lore, regions, trials. Review when adding new scenes.                        |
 | **assets.md**                               | ⚠️ Must be updated whenever images / audio are added to `public/assets/`.               |
-| **index.html**                              | _TODO:_ set `<title>` to **Spelling Adventure** and add favicon.                        |
+| **index.html**                              | ✅ Title and favicon present; uses Google Fonts + Material Icons.                       |
 | **eslint.config.js**                        | Uses ESLint v9 flat-config. Strict TS + React + Prettier.                               |
 | **prettierrc.json**                         | Standard Prettier. Keep in sync with team preferences.                                  |
 | **vite.config.ts**                          | Uses `vite-tsconfig-paths` + `vite-plugin-svgr`. No Tailwind plugin.                    |

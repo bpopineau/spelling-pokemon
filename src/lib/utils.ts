@@ -1,6 +1,6 @@
 // File: src/lib/utils.ts
 //
-// Utility to build className strings while safely merging Tailwind classes.
+// Utility to build className strings while safely merging utility classes.
 // Uses `clsx` for conditional joins and `tailwind-merge` to resolve conflicts.
 //
 // Example:
@@ -13,6 +13,5 @@
 import clsx, { type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-/** Compose class names and merge Tailwind utility conflicts */
-export const cn = (...classes: ClassValue[]): string =>
-  twMerge(clsx(...classes));
+/** Compose class names and merge utility class conflicts */
+export const cn = (...classes: ClassValue[]): string => twMerge(clsx(...classes));

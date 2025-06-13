@@ -10,7 +10,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import "./index.css"; // Global Tailwind / MUI baseline styles
+import "./index.css"; // Global MUI baseline styles
 import App from "./App";
 
 const container = document.getElementById("root");
