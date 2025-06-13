@@ -39,5 +39,7 @@
 
   "include": ["src", "vite.config.ts", "scripts", "tests"],
 
+  "exclude": ["node_modules", "dist", "dist-types"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
