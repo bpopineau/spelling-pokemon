@@ -1,23 +1,16 @@
-// File: tsconfig.node.json
 {
   "compilerOptions": {
-    /* Node-specific compiler options ---------------------------------- */
     "composite": true,
-    "module": "NodeNext", // must match moduleResolution NodeNext
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
-
-    /* Emit only declarations so root project can reference us */
-    "emitDeclarationOnly": true,
-    "declarationDir": "dist-types",
-
-    /* Ambient types for Node scripts & configs */
+    "noEmit": true,
     "types": ["node"],
-
-    /* Strictness */
     "strict": true
   },
-
-  /* Scope to tooling / scripts / configs */
-  "include": ["vite.config.ts", "scripts/**/*", "eslint.config.js"]
+  "include": [
+    "vite.config.ts",
+    "scripts/**/*",
+    "eslint.config.js"
+  ]
 }
