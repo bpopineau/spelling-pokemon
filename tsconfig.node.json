@@ -1,28 +1,27 @@
+// File: tsconfig.node.json
 {
-  // TypeScript settings for Node-based tools
   "compilerOptions": {
+    /* Node-specific compiler options ---------------------------------- */
     "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": [
-      "ES2022"
-    ],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    "module": "NodeNext",            // must match moduleResolution NodeNext
+    "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+
+    /* Emit only declarations so root project can reference us */
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist-types",
+
+    /* Ambient types for Node scripts & configs */
+    "types": ["node"],
+
+    /* Strictness */
+    "strict": true
   },
+
+  /* Scope to tooling / scripts / configs */
   "include": [
-    "vite.config.ts"
+    "vite.config.ts",
+    "scripts/**/*",
+    "eslint.config.js"
   ]
 }

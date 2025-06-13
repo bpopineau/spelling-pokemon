@@ -1,29 +1,36 @@
+// File: tsconfig.json
 {
   "compilerOptions": {
+    /* Language & Environment */
     "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    /* Module Resolution */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Strictness & Quality */
     "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Project-specific Types  ——  Vitest & Vite globals */
+    "types": ["vitest/globals", "vite/client"],
+
+    /* Class Fields */
+    "useDefineForClassFields": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+
+  /* Include source, config, and script folders */
+  "include": ["src", "vite.config.ts", "scripts", "tests"],
+
+  /* Build references */
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ]
 }

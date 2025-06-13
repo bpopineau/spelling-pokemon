@@ -1,115 +1,95 @@
-# Development Notes
+# Development Notes  (Updated 2025-06-13)
 
-This file provides high-level guidance for developers working on the code base. Each section lists notes, todos and potential improvements for the corresponding file. Many of these suggestions now also appear inline in the code as `TODO` comments.
+This document complements inline `TODO:` comments. Each section lists guidance, open tasks, and potential improvements for the corresponding file or area.
 
-## Root configuration and documentation
+---
 
-### `README.md`
-- Minimal README from Vite template. Could be expanded with game-specific instructions and build steps.
+## 1  Root Configuration & Docs
 
-### `assets.md`
-- Detailed asset inventory. Ensure this stays up to date when adding new images/audio.
-- Consider splitting into smaller docs if asset count grows.
+| File | Status / Notes |
+| ---- | -------------- |
+| **README.md** | ✅ Completely rewritten (setup, scripts, features, CI). Keep in sync with new commands. |
+| **game_design_specification.md** | ✅ Updated lore, regions, trials. Review when adding new scenes. |
+| **assets.md** | ⚠️ Must be updated whenever images / audio are added to `public/assets/`. |
+| **index.html** | _TODO:_ set `<title>` to **Spelling Adventure** and add favicon. |
+| **eslint.config.js** | Uses ESLint v9 flat-config. Strict TS + React + Prettier. |
+| **prettierrc.json** | Standard Prettier. Keep in sync with team preferences. |
+| **vite.config.ts** | Uses `vite-tsconfig-paths` + `vite-plugin-svgr`. No Tailwind plugin. |
+| **tailwind.config.js / postcss.config.cjs** | **Removed** — project is 100 % MUI. |
+| **tsconfig*.json** | Strict + moduleResolution bundler. Maintain compatibility. |
+| **package.json** | Dev scripts: `dev`, `build`, `preview`, `lint`, `format`, `test`, `test:watch`. |
 
-### `game_design_specification.md`
-- Long design document describing gameplay. No immediate actions but good reference for features.
+---
 
-### `index.html`
-- Only hosts the React root element. Simple and fine as is.
-- TODO: Update `<title>` and icons to match the game name instead of "Vite + React + TS".
+## 2  Source Code (`src/`)
 
-### `eslint.config.js`, `prettierrc.json`
-- Provide linting and formatting rules. Keep in sync with team style preferences.
+### 2.1 Entry & Routing
+| File | Notes |
+| ---- | ----- |
+| **main.tsx** | Uses React 18 `createRoot`. Throws error if `#root` missing. |
+| **App.tsx** | Defines all routes, including `NotFound`. Scene route renders without header. |
 
-### `postcss.config.cjs`, `tailwind.config.js`
-- Tailwind setup. No obvious issues. Review periodically with Tailwind upgrades.
+### 2.2 Components
+| Component | Key Points & TODOs |
+| --------- | ------------------ |
+| **Header.tsx** | Navigation links via `NavLink`; underline active route. _TODO:_ Add responsive drawer for mobile. |
+| **MainLayout.tsx** | Wraps pages with `Header`. Footer placeholder for future. |
+| **GameMap.tsx** | Memoized unlock logic; keyboard-accessible hotspots. _TODO:_ extract `useSceneUnlocks` hook. |
+| **SceneView.tsx** | Memoized scene lookup; graceful “Scene Not Found” fallback. |
+| **SpellingChallenge.tsx** | Refactored into smaller state blocks; TODOs to move game logic into custom hook & constants. |
+| **Controls.tsx** | Memoized; accessible button labels. Consider keyboard shortcuts. |
+| **OnScreenKeyboard.tsx** | Memoized; `aria-label`s; pixel-perfect sizing. |
+| **ProgressTracker.tsx** | Memoized selectors; uses `ProgressBar`; base XP constant inlined (100). |
+| **Pokedex.tsx** | Responsive grid; lazy-loads images. _TODO:_ filters/sorting + pagination. |
+| **ProgressBar.tsx** | ARIA progress semantics; optional compact variant TODO. |
 
-### TypeScript configs (`tsconfig*.json`)
-- Strict settings enabled. Ensure Node and browser builds stay compatible with these settings.
+### 2.3 Services
+| Service | Status |
+| ------- | ------ |
+| **gameState.ts** | Zustand store; constants centralized; TODO: extract persistence for unit tests, pure helper for level math. |
+| **ttsService.ts** | Typed helper with `SpeakOptions`; TODO: voice picker + queued speech. |
 
-### `vite.config.ts`
-- Very small. May need additional config (e.g. asset base path, plugins) as the project grows.
+### 2.4 Utilities
+| File | Notes |
+| ---- | ----- |
+| **lib/utils.ts** | `cn()` helper using `clsx` + `tailwind-merge` (kept for potential future utility merging). |
 
-### `package.json`
-- Contains standard dev scripts. Consider adding script for running unit tests once tests exist.
+---
 
-## Source Code (`src`)
+## 3  Data (`src/data/`)
 
-### `main.tsx`
-- React entry point using `createRoot`. Implementation is straightforward.
-- Potential improvement: error boundary or suspense fallback could be added here.
+* **words.json**, **scenes.json**, **pokemon.json** — core game datasets.
+* **regionHotspots.ts** — immutable hotspot list; update if map graphic changes.
+* Keep JSON IDs in sync with constants in `scripts/build_pokemon_json.py`.
 
-### `App.tsx`
-- Defines routing only. Future screens should be added here.
-- TODO: Add NotFound route for unmatched URLs.
+---
 
-### Components
+## 4  Build-Time Scripts (`scripts/`)
 
-#### `Header.tsx`
-- Displays navigation links with active styles.
-- Could extract link list to a constant for easier updates.
+| Script | Purpose / TODO |
+| ------ | -------------- |
+| **build_pokemon_json.py** | Assigns Pokémon to scenes by type; now uses CLI args, TypedDict, deterministic assignment. _TODO:_ expose `--dry-run` to preview diff. |
 
-#### `MainLayout.tsx`
-- Wraps pages with `Header`. Consider supporting optional footer later.
+---
 
-#### `GameMap.tsx`
-- Renders map with clickable regions.
-- Unlock logic uses XP stored in `scenes.json`.
-- TODO: Add keyboard navigation/accessibility for the region buttons.
+## 5  Testing & CI
 
-#### `SceneView.tsx`
-- Loads scene by ID from the URL and displays `SpellingChallenge`.
-- Uses inline styles for background image.
-- TODO: Add error handling for missing background assets.
+| Area | Notes |
+| ---- | ----- |
+| **Vitest** | Config in `vitest.config.ts`; DOM via happy-dom. Add tests under `src/**/__tests__`. |
+| **Example tests** | `gameState` store spec provided; extend to components. |
+| **CI** | `.github/workflows/ci.yml` lints & tests on push. _TODO:_ add build step when assets hosted remotely. |
 
-#### `SpellingChallenge.tsx`
-- Core game logic. Uses Zustand store for XP, hints and Pokémon capture.
-- Consider refactoring into smaller hooks for readability (input handling, progress calculations, etc.).
-- Future improvement: replace magic numbers (e.g. XP per word) with constants or config.
+---
 
-#### `Controls.tsx`
-- Presentational buttons only. No immediate concerns.
+## 6  Future Improvements
 
-#### `OnScreenKeyboard.tsx`
-- Simple on-screen keyboard. Could allow customizing layout via props if needed.
+1. **Custom MUI theme** to centralize palette + typography.
+2. **i18n**: multiple TTS languages, word lists, and voices.
+3. **Cloud save** (Supabase): enable cross-device progress sync.
+4. **Performance**: code-split scenes; analyze bundle with `vite build --report`.
+5. **Accessibility**: Add focus outlines, ARIA live regions for feedback.
 
-#### `Pokedex.tsx`
-- Lists captured Pokémon.
-- Could paginate or lazy load if number of Pokémon becomes large.
+---
 
-#### `ProgressTracker.tsx`
-- Shows player stats and earned badges.
-- TODO: use `ProgressBar` component to show XP progress similar to `SpellingChallenge`.
-
-#### `ProgressBar.tsx`
-- Generic progress bar. Could be reused in other screens.
-
-### Assets (`src/assets`)
-- Only contains `react.svg`. Actual game assets live in `public/` but are not committed here.
-
-### Data files (`src/data`)
-- JSON and TypeScript files containing game content (words, scenes, Pokémon, etc.).
-- Keep these in sync with any scripts that generate them (see `scripts/` below).
-- `regionHotspots.ts`: may need coordinate adjustments if map image changes.
-
-### Services (`src/services`)
-
-#### `gameState.ts`
-- Zustand store managing XP, hints, Pokémon, etc.
-- TODO: Consider splitting persistence logic from game actions for easier testing.
-- Additional actions may be needed for future features (e.g. resetting progress).
-
-#### `ttsService.ts`
-- Wrapper around `SpeechSynthesis` API.
-- Could allow selecting different voices or languages via options.
-
-## Scripts
-
-### `scripts/build_pokemon_json.py`
-- Utility to assign Pokémon to scenes based on type. Only needed when updating `pokedex.json`.
-- Ensure environment has Python 3 available when running.
-- TODO: Add command-line options (input/output paths) for flexibility.
-
-## Data (`public`)
-- Currently only `vite.svg` committed. Actual game assets (images, audio) are referenced in docs but not included. Ensure asset paths match the deployed environment.
-
+_Keep this doc current whenever significant architectural or tooling changes are introduced._
