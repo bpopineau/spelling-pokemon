@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "rimraf dist-types && tsc --noEmit && vite build",
+    "build": "npx rimraf dist-types && tsc --noEmit && vite build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "format": "prettier --write .",
