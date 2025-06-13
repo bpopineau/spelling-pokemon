@@ -68,6 +68,7 @@ export default function GameMap() {
             />
           );
         })}
+        {/* TODO: allow navigating regions via keyboard for accessibility */}
       </div>
     </div>
   );

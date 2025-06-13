@@ -3,6 +3,7 @@
 // This component reads progress information from the global store and presents
 // it in a simple dashboard format. It doesn't include any interactive controls
 // beyond listing the data.
+// TODO: display XP progress using <ProgressBar> like in SpellingChallenge
 import badges from "../data/badges.json";
 import { useGameStore } from "../services/gameState";
 

@@ -10,6 +10,7 @@ interface KeyboardProps {
   // Remove the last letter
   onBackspace: () => void;
 }
+// TODO: allow custom keyboard layouts via props
 
 // Each row of keys on the keyboard
 const layout = [

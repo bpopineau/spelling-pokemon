@@ -3,6 +3,7 @@
 // The component reads the IDs of caught Pokémon from the global game store and
 // cross references them with the master Pokédex data to display full details
 // (name, types and sprite) for each one.
+// TODO: add pagination or lazy loading when the list grows large
 import { useGameStore } from "../services/gameState";
 import allPokemonData from "../data/pokedex.json"; // The main data source for all Pokémon details
 

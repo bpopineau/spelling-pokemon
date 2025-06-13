@@ -31,6 +31,7 @@ function App() {
 
       {/* This screen hides the header so the scene fills the page */}
       <Route path="/scene/:sceneId" element={<SceneView />} />
+      {/* TODO: add a <Route> for unmatched URLs to show a 404 screen */}
     </Routes>
   );
 }

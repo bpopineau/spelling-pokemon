@@ -5,6 +5,8 @@
 // experience points and handing out Pokémon rewards. A small set of helper
 // components (e.g. `Controls` and `OnScreenKeyboard`) are used to keep the UI
 // manageable.
+// TODO: break logic into smaller hooks for easier testing and reuse
+// TODO: replace magic numbers (XP values, hint thresholds) with constants
 import { useState, useEffect } from "react";
 import words from "../data/words.json"; // list of all spelling words
 import pokemon from "../data/pokemon.json"; // which Pokémon appear in scenes
