@@ -14,8 +14,8 @@ This document complements inline `TODO:` comments. Each section lists guidance, 
 | **index.html**                              | _TODO:_ set `<title>` to **Spelling Adventure** and add favicon.                        |
 | **eslint.config.js**                        | Uses ESLint v9 flat-config. Strict TS + React + Prettier.                               |
 | **prettierrc.json**                         | Standard Prettier. Keep in sync with team preferences.                                  |
-| **vite.config.ts**                          | Uses `vite-tsconfig-paths` + `vite-plugin-svgr`. No Tailwind plugin.                    |
-| **tailwind.config.js / postcss.config.cjs** | **Removed** — project is 100 % MUI.                                                     |
+| **vite.config.ts**                          | Uses `vite-tsconfig-paths` + `vite-plugin-svgr`. MUI-only stack.                       |
+| **tailwind.config.js / postcss.config.cjs** | **Removed** — project now relies solely on MUI.                                         |
 | **tsconfig\*.json**                         | Strict + moduleResolution bundler. Maintain compatibility.                              |
 | **package.json**                            | Dev scripts: `dev`, `build`, `preview`, `lint`, `format`, `test`, `test:watch`.         |
 
@@ -56,7 +56,7 @@ This document complements inline `TODO:` comments. Each section lists guidance, 
 
 | File             | Notes                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------ |
-| **lib/utils.ts** | `cn()` helper using `clsx` + `tailwind-merge` (kept for potential future utility merging). |
+| **lib/utils.ts** | `cn()` helper using `clsx`; includes `tailwind-merge` for optional utility deduplication. |
 
 ---
 
