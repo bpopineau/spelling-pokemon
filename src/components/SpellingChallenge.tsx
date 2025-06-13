@@ -13,10 +13,24 @@ import {
   Button,
   Card,
   CardContent,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   TextField,
   Typography,
   Divider,
 } from "@mui/material";
+
+// Define the shake animation keyframes
+const shakeAnimation = `
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+`;
 
 interface SpellingChallengeProps {
   wordStart: number;
@@ -32,9 +46,13 @@ export default function SpellingChallenge({
   const [currentInput, setCurrentInput] = useState("");
   const [message, setMessage] = useState("");
   const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{
+    id: number;
     name: string;
     sprite: string;
   } | null>(null);
+  const [isCatchDialogOpen, setCatchDialogOpen] = useState(false);
+  const [isShaking, setIsShaking] = useState(false); // State for shake animation
+  const [isAnswered, setIsAnswered] = useState(false); // State to disable form
 
   const {
     xp,
@@ -66,6 +84,7 @@ export default function SpellingChallenge({
     setCurrentInput("");
     setMessage("");
     setLastCaughtPokemon(null);
+    setIsAnswered(false); // Reset on new scene
   }, [wordStart, wordEnd]);
 
   useEffect(() => {
@@ -100,12 +119,12 @@ export default function SpellingChallenge({
 
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     if (e) e.preventDefault();
-    if (!currentInput) return;
+    if (!currentInput || isAnswered) return; // Prevent submission if already answered
 
     if (currentInput.toLowerCase() === currentWord?.toLowerCase()) {
+      setIsAnswered(true); // Disable form
       addXp(10);
       incrementWordsMastered();
-      setMessage("Correct!");
 
       const scenePokemon = pokemon.filter((p) => p.scene_id === sceneId);
       const nextPokemonToCatch = scenePokemon.find(
@@ -115,28 +134,42 @@ export default function SpellingChallenge({
       if (nextPokemonToCatch) {
         catchPokemon(nextPokemonToCatch.id);
         setLastCaughtPokemon({
+          id: nextPokemonToCatch.id,
           name: nextPokemonToCatch.name,
           sprite: nextPokemonToCatch.sprite,
         });
-        setMessage(`Correct! You caught ${nextPokemonToCatch.name}!`);
+        setCatchDialogOpen(true);
+      } else {
+        setMessage("Correct! 🎉");
       }
     } else {
       setMessage("Try again!");
+      setIsShaking(true); // Trigger shake animation
+      setTimeout(() => setIsShaking(false), 820); // Reset shake after animation
     }
   };
 
   const handleNextWord = () => {
     if (currentWordIndex < sceneWords.length - 1) {
       setCurrentWordIndex(currentWordIndex + 1);
+      setCurrentInput("");
+      setMessage("");
+      setLastCaughtPokemon(null);
+      setIsAnswered(false); // Re-enable form for next word
     } else {
       setMessage("You have completed all the words in this scene! 🏆");
       if (sceneId) {
         completeScene(sceneId);
       }
+      setCurrentInput("");
+      setLastCaughtPokemon(null);
+      setIsAnswered(true); // Keep form disabled at the end
     }
-    setCurrentInput("");
-    setMessage("");
-    setLastCaughtPokemon(null);
+  };
+
+  const handleCloseCatchDialog = () => {
+    setCatchDialogOpen(false);
+    handleNextWord();
   };
 
   const handleHint = () => {
@@ -156,7 +189,6 @@ export default function SpellingChallenge({
     return <Typography>Loading challenge...</Typography>;
   }
 
-  // Create placeholders with dashes
   const wordBlanks = currentWord.split('').map((_, index) => (
     <span key={index}>
       {currentInput[index] ? currentInput[index].toUpperCase() : '_'}
@@ -164,10 +196,12 @@ export default function SpellingChallenge({
   ));
 
   return (
-    <Card>
-      <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
-        {/* Status Bar */}
-        <Box
+    <>
+      <style>{shakeAnimation}</style> {/* Inject keyframes into the document */}
+      <Card>
+        <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
+          {/* Status Bar, etc. */}
+          <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
@@ -200,9 +234,8 @@ export default function SpellingChallenge({
         </Box>
 
         <Divider sx={{ my: 2 }} />
-
-        {/* Spelling Area */}
-        <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: "center" }}>
+          {/* Spelling Area */}
+          <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: "center" }}>
           <Typography variant="h6" gutterBottom>
             Spell the word:
           </Typography>
@@ -212,39 +245,45 @@ export default function SpellingChallenge({
             component="div"
             sx={{
               fontFamily: "monospace",
-              letterSpacing: { xs: "0.25em", sm: "0.5em" }, // Less spacing on small screens
+              letterSpacing: { xs: "0.5em", sm: "1em" },
               my: 3,
-              fontSize: { xs: '1.5rem', sm: '2.125rem' } // Smaller font on small screens
+              fontSize: { xs: "1.5rem", sm: "2.125rem" },
             }}
           >
             {wordBlanks}
           </Typography>
 
-          <TextField
-            value={currentInput.toUpperCase()}
-            onChange={handleInputChange}
-            autoFocus
-            autoComplete="off"
-            variant="outlined"
-            inputProps={{
-              style: {
-                textAlign: "center",
-                fontSize: "2rem",
-                letterSpacing: "0.2em",
-                padding: "10px",
-              },
-              maxLength: currentWord.length,
-            }}
-            sx={{ mb: 2, width: "100%", maxWidth: "300px" }}
-          />
+            <TextField
+              value={currentInput.toUpperCase()}
+              onChange={handleInputChange}
+              autoFocus
+              autoComplete="off"
+              variant="outlined"
+              disabled={isAnswered} // Disable based on state
+              sx={{ // Apply animation conditionally
+                mb: 2,
+                width: "100%",
+                maxWidth: "300px",
+                animation: isShaking ? "shake 0.82s" : "none",
+              }}
+              inputProps={{
+                style: {
+                  textAlign: "center",
+                  fontSize: "2rem",
+                  letterSpacing: "0.2em",
+                  padding: "10px",
+                },
+                maxLength: currentWord.length,
+              }}
+            />
 
-          <OnScreenKeyboard
-            onKey={handleKeyboardInput}
-            onBackspace={handleBackspace}
-          />
+            <OnScreenKeyboard
+              onKey={handleKeyboardInput}
+              onBackspace={handleBackspace}
+            />
 
-          {/* Feedback Message */}
-          <Box
+            {/* Feedback Message */}
+            <Box
             sx={{
               height: 90,
               mt: 2,
@@ -253,50 +292,59 @@ export default function SpellingChallenge({
               justifyContent: "center",
             }}
           >
-            {message && (
+            {message && !message.startsWith("Correct") && (
               <Alert
-                severity={message.startsWith("Correct") ? "success" : "info"}
+                severity={message.includes("completed") ? "success" : "info"}
               >
                 {message}
-                {lastCaughtPokemon && message.startsWith("Correct") && (
-                  <img
-                    src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
-                    alt={lastCaughtPokemon.name}
-                    style={{
-                      width: "48px",
-                      height: "48px",
-                      marginTop: "8px",
-                      imageRendering: "pixelated",
-                    }}
-                  />
-                )}
               </Alert>
             )}
-          </Box>
+            </Box>
 
-          {/* Action Buttons */}
-          {message.startsWith("Correct") ? (
-            <Button
-              variant="contained"
-              onClick={handleNextWord}
-              sx={{ width: "100%", maxWidth: "300px" }}
-            >
-              Next Word
-            </Button>
-          ) : (
-            <Controls
-              onSubmit={() => handleSubmit()}
-              onHint={handleHint}
-              onRepeat={handleRepeat}
-              hintDisabled={
-                hintCharges <= 0 ||
-                !currentWord ||
-                currentInput.length >= currentWord.length
-              }
-            />
-          )}
-        </Box>
-      </CardContent>
-    </Card>
+            {/* Action Buttons */}
+            {isAnswered && !isCatchDialogOpen ? (
+              <Button
+                variant="contained"
+                onClick={handleNextWord}
+                sx={{ width: "100%", maxWidth: "300px" }}
+              >
+                Next Word
+              </Button>
+            ) : (
+              <Controls
+                onSubmit={handleSubmit}
+                onHint={handleHint}
+                onRepeat={handleRepeat}
+                hintDisabled={hintCharges <= 0 || isAnswered}
+                submitDisabled={isAnswered}
+              />
+            )}
+          </Box>
+        </CardContent>
+      </Card>
+
+      {/* Pokémon Caught Dialog */}
+      <Dialog open={isCatchDialogOpen} onClose={handleCloseCatchDialog}>
+        <DialogTitle sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+          You caught a {lastCaughtPokemon?.name}!
+        </DialogTitle>
+        <DialogContent sx={{ textAlign: 'center' }}>
+          <img
+            src={`/assets/images/pokemon/${String(lastCaughtPokemon?.id).padStart(3,"0")}.png`}
+            alt={lastCaughtPokemon?.name}
+            style={{
+              width: "100%",
+              maxWidth: "250px",
+              margin: "auto",
+            }}
+          />
+        </DialogContent>
+        <DialogActions sx={{ justifyContent: 'center', pb: 2 }}>
+          <Button onClick={handleCloseCatchDialog} variant="contained" autoFocus>
+            Continue
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
   );
 }
