@@ -12,19 +12,20 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
+  // 👇👇👇 This is CRUCIAL for GitHub Pages!
+  base: "/spelling-pokemon/",
+
   plugins: [
     react(), // React 18 Fast Refresh + JSX transform
     tsconfigPaths(), // Keeps @/ alias (and others) synced with tsconfig.json
     svgr(), // Import SVGs:  import { ReactComponent as Logo } from './logo.svg?react'
   ],
 
-  // Optional: customize the dev server
   server: {
     port: 5173,
     open: true,
   },
 
-  // Build tweaks (Tree-shaking already handled by default)
   build: {
     target: "es2020",
     sourcemap: false,
