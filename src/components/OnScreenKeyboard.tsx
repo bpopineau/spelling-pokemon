@@ -1,10 +1,14 @@
+// Small on-screen keyboard for touch devices
 import React from "react";
 
 interface KeyboardProps {
+  // Add a letter to the input
   onKey: (char: string) => void;
+  // Remove the last letter
   onBackspace: () => void;
 }
 
+// Each row of keys on the keyboard
 const layout = [
   ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
   ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -20,6 +24,7 @@ export default function OnScreenKeyboard({
       {layout.map((row, idx) => (
         <div key={idx} className="flex gap-1">
           {row.map((ch) => (
+            // Regular letter button
             <button
               key={ch}
               onClick={() => onKey(ch)}
@@ -31,6 +36,7 @@ export default function OnScreenKeyboard({
         </div>
       ))}
       <div className="flex gap-1">
+        {/* Backspace key */}
         <button
           onClick={onBackspace}
           className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"

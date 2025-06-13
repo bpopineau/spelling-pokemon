@@ -1,13 +1,18 @@
+// SceneView shows a single scene background and the spelling challenge.
 import { useParams, useNavigate } from 'react-router-dom';
-import scenes from '../data/scenes.json';
+import scenes from '../data/scenes.json'; // scene details such as background
 import SpellingChallenge from './SpellingChallenge';
 
+// Displays the chosen scene and its spelling challenge
 export default function SceneView() {
+  // Get the id of the scene from the URL
   const { sceneId } = useParams();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // used to go back to the map
 
+  // Find the matching scene data
   const scene = scenes.find(s => s.id === Number(sceneId));
 
+  // If the scene doesn't exist show an error screen
   if (!scene) {
     return (
       <div className="min-h-screen bg-gray-800 text-white flex flex-col items-center justify-center p-4">
@@ -22,6 +27,7 @@ export default function SceneView() {
     );
   }
 
+  // Build the path to the scene background image
   const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
 
   return (
@@ -29,7 +35,7 @@ export default function SceneView() {
       className="min-h-screen bg-cover bg-center flex flex-col p-4"
       style={{ backgroundImage: `url(${backgroundPath})` }}
     >
-      {/* Header Area */}
+      {/* Top bar with the back button and scene name */}
       <header className="w-full max-w-5xl flex justify-between items-center mb-4 mx-auto shrink-0">
         <button
           onClick={() => navigate('/')}
@@ -40,11 +46,11 @@ export default function SceneView() {
         <h1 className="text-4xl font-bold text-white bg-gray-800 bg-opacity-75 px-6 py-3 rounded-lg">
           {scene.name}
         </h1>
-        {/* This empty div helps balance the header so the title stays centered */}
+        {/* This empty div keeps the title centered by taking up space */}
         <div className="w-32"></div>
       </header>
 
-      {/* Main Content Area to center the challenge */}
+      {/* Main content where the spelling challenge appears */}
       <main className="flex-grow flex items-center justify-center w-full">
         <SpellingChallenge wordStart={scene.word_start} wordEnd={scene.word_end} />
       </main>

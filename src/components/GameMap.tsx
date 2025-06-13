@@ -1,25 +1,31 @@
 /**
  * GameMap Component
- * Displays the world map as the main entry screen with interactive hotspots.
+ *
+ * This screen shows the big world map. The player can click on
+ * different areas to start a scene. Each area unlocks when the
+ * player has enough experience points.
  */
-import { useNavigate } from "react-router-dom";
-import regionHotspots from "../data/regionHotspots";
-import scenesData from "../data/scenes.json";
+import { useNavigate } from "react-router-dom"; // used to change screens
+import regionHotspots from "../data/regionHotspots"; // clickable map spots
+import scenesData from "../data/scenes.json"; // data about when scenes unlock
 
+// Simple type so we know what data scenes.json gives us
 interface SceneUnlock {
   id: number;
   unlock_xp: number;
 }
-import { useGameStore } from "../services/gameState";
+import { useGameStore } from "../services/gameState"; // global game data store
 
 export default function GameMap() {
-  const navigate = useNavigate();
-  const { xp } = useGameStore();
+  const navigate = useNavigate(); // allows changing the URL
+  const { xp } = useGameStore(); // player's current XP
 
+  // When a region button is clicked we go to the scene page
   const handleRegionClick = (sceneId: number) => {
     navigate(`/scene/${sceneId}`);
   };
 
+  // Check if the player has enough XP to visit a scene
   const isUnlocked = (sceneId: number) => {
     const scenes = scenesData as SceneUnlock[];
     const scene = scenes.find((s) => s.id === sceneId);
@@ -28,6 +34,7 @@ export default function GameMap() {
   };
 
   return (
+    // The main container holds the map image and the invisible buttons
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
       {/* The padding class was changed from p-4 to p-8 to match the original 2rem */}
       <div className="relative w-full max-w-4xl rounded-lg overflow-hidden shadow-lg">
@@ -38,6 +45,7 @@ export default function GameMap() {
         />
 
         {regionHotspots.map((region) => {
+          // Each hotspot is a button positioned over the map
           const unlocked = isUnlocked(region.sceneId);
           return (
             <button

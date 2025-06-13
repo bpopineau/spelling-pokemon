@@ -1,12 +1,12 @@
+"""Build pokemon.json with scene assignments based on types."""
+
 import json
 from collections import defaultdict
 from pathlib import Path
 
-# Get the directory of the current script
+# Figure out where we are so we can find the data files
 script_dir = Path(__file__).parent
-# Define the project root relative to the script's location
 project_root = script_dir.parent
-# Define the data directory path
 data_dir = project_root / 'src' / 'data'
 
 # Use relative paths to locate the source and output files
@@ -43,6 +43,7 @@ with open(pokedex_path, 'r', encoding='utf-8') as f:
 scene_pokemon = defaultdict(list)
 unassigned = []
 
+# Go through every Pokémon entry
 for entry in pokedex:
     pid = entry['id']
     name = entry['name']['english'] if isinstance(entry['name'], dict) else entry['name']
@@ -99,7 +100,7 @@ all_pokemon = []
 for scene_id in sorted(scene_pokemon.keys()):
     all_pokemon.extend(sorted(scene_pokemon[scene_id], key=lambda x: x["id"]))
 
-# Write to pokemon.json
+# Save the final list to pokemon.json
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(all_pokemon, f, ensure_ascii=False, indent=2)
 
