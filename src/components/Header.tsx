@@ -12,10 +12,17 @@ export default function Header() {
   const activeLinkStyle = "bg-blue-500 text-white";
   const inactiveLinkStyle = "bg-gray-200 text-gray-800 hover:bg-gray-300";
   // TODO: move nav links into a shared array so new sections are easier to add
+  // TODO: Consider using shadcn/ui's NavigationMenu for these links.
+  // The NavLink components from react-router-dom could be wrapped by or used
+  // with shadcn/ui's navigation components.
+  // Specifically, NavigationMenuList, NavigationMenuItem, NavigationMenuLink,
+  // and navigationMenuTriggerStyle from shadcn/ui could be relevant.
 
   return (
     <header className="bg-white shadow-md p-4 mb-8">
       {/* Navigation links */}
+      {/* Consider using shadcn/ui's NavigationMenu here.
+          See https://ui.shadcn.com/docs/components/navigation-menu */}
       <nav className="flex justify-center items-center gap-4">
         <NavLink
           to="/"

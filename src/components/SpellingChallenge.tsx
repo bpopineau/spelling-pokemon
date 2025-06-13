@@ -199,6 +199,10 @@ export default function SpellingChallenge({
     // Main container with a solid background and border
     <div className="bg-white border-4 border-slate-300/70 p-6 rounded-xl shadow-2xl w-full max-w-lg text-gray-800">
       {/* --- Status Bar --- */}
+      {/* TODO: Consider using a shadcn/ui Card component to group these status elements (Level, XP, Hints)
+          or use styled divs with Tailwind CSS (which shadcn/ui is built upon).
+          The ProgressBar is already a separate component and suggestions for it are in ProgressBar.tsx.
+          See https://ui.shadcn.com/docs/components/card */}
       <div className="grid grid-cols-3 divide-x divide-slate-300 bg-slate-100 rounded-lg p-2 mb-6 border border-slate-300">
         {/* Level */}
         <div className="flex flex-col items-center justify-center px-2">
@@ -234,6 +238,9 @@ export default function SpellingChallenge({
           onSubmit={handleSubmit}
           className="flex flex-col items-center w-full"
         >
+          {/* TODO: Replace this HTML input with shadcn/ui's Input component.
+              Example: <Input type="text" value={currentInput} onChange={handleInputChange} ... />
+              See https://ui.shadcn.com/docs/components/input */}
           <input
             type="text"
             value={currentInput}
@@ -245,11 +252,19 @@ export default function SpellingChallenge({
             autoCapitalize="off"
           />
 
+          {/* TODO: While OnScreenKeyboard is a custom component, its individual key buttons
+              could be implemented or styled using shadcn/ui Button components for consistency.
+              See https://ui.shadcn.com/docs/components/button */}
           <OnScreenKeyboard
             onKey={handleKeyboardInput}
             onBackspace={handleBackspace}
           />
 
+          {/* TODO: For feedback messages (e.g., "Correct!", "Try again!", "You caught..."),
+              consider using shadcn/ui's Alert component (with AlertTitle and AlertDescription)
+              or potentially Toast for less intrusive notifications.
+              See https://ui.shadcn.com/docs/components/alert
+              See https://ui.shadcn.com/docs/components/toast */}
           <div className="h-24 my-2 flex flex-col justify-center items-center">
             {message && <p className="text-2xl">{message}</p>}
             {lastCaughtPokemon && message.startsWith("Correct") && (
@@ -262,6 +277,9 @@ export default function SpellingChallenge({
           </div>
 
           {message.startsWith("Correct") ? (
+            // TODO: Replace this HTML button with a shadcn/ui Button component.
+            // Example: <Button type="button" onClick={handleNextWord} className="w-full max-w-xs">Next Word</Button>
+            // See https://ui.shadcn.com/docs/components/button
             <button
               type="button"
               onClick={handleNextWord}
@@ -271,6 +289,7 @@ export default function SpellingChallenge({
             </button>
           ) : (
             <div className="w-full max-w-xs">
+              {/* Controls component has its own set of suggestions in Controls.tsx */}
               <Controls
                 onSubmit={() => handleSubmit()}
                 onHint={handleHint}
