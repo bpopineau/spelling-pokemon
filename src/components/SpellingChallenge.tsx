@@ -131,6 +131,8 @@ export default function SpellingChallenge({
     if (currentInput.toLowerCase() === currentWord?.toLowerCase()) {
       addXp(10);
       incrementWordsMastered();
+      // TODO: play "correct.wav" from `public/assets/sounds/` here for
+      // positive feedback as listed in assets.md
 
       const scenePokemon = pokemon.filter((p) => p.scene_id === sceneId);
       const nextPokemonToCatch = scenePokemon.find(
@@ -139,6 +141,7 @@ export default function SpellingChallenge({
 
       if (nextPokemonToCatch) {
         catchPokemon(nextPokemonToCatch.id);
+        // TODO: play "catch.wav" from `public/assets/sounds/` when a Pokémon is caught
         setLastCaughtPokemon({
           name: nextPokemonToCatch.name,
           sprite: nextPokemonToCatch.sprite,
@@ -148,6 +151,7 @@ export default function SpellingChallenge({
         setMessage("Correct! 🎉");
       }
     } else {
+      // TODO: play "incorrect.wav" from `public/assets/sounds/` for wrong answers
       setMessage("Try again! 🤔");
     }
   };
@@ -161,6 +165,7 @@ export default function SpellingChallenge({
       setMessage("You have completed all the words in this scene! 🏆");
       if (sceneId) {
         completeScene(sceneId);
+        // TODO: play "badge.wav" from `public/assets/sounds/` when a scene is completed
       }
     }
     setCurrentInput("");
@@ -268,11 +273,15 @@ export default function SpellingChallenge({
           <div className="h-24 my-2 flex flex-col justify-center items-center">
             {message && <p className="text-2xl">{message}</p>}
             {lastCaughtPokemon && message.startsWith("Correct") && (
-              <img
-                src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
-                alt={lastCaughtPokemon.name}
-                className="w-16 h-16 mt-2"
-              />
+              <>
+                <img
+                  src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
+                  alt={lastCaughtPokemon.name}
+                  className="w-16 h-16 mt-2"
+                />
+                {/* Sprite images live under `public/assets/images/sprites/`.
+                    Ensure the sprite sheet is copied there as listed in assets.md. */}
+              </>
             )}
           </div>
 

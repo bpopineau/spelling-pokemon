@@ -54,6 +54,9 @@ export default function Pokedex() {
                 alt={pokemon.name.english}
                 className="w-24 h-24"
               />
+              {/* Pokémon artwork lives under `public/assets/images/pokemon/` as
+                  documented in assets.md. Ensure the images are copied there
+                  for these entries to display. */}
               {/* TODO: This could be <CardHeader><CardTitle>{pokemon.name.english}</CardTitle></CardHeader> */}
               <h2 className="mt-2 text-lg font-bold text-gray-700 text-center">
                 {pokemon.name.english}

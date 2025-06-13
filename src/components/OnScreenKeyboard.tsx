@@ -51,6 +51,9 @@ export default function OnScreenKeyboard({
             player's input. */}
         {/* TODO: Replace this with a shadcn/ui Button as well for visual
             consistency. */}
+        {/* The backspace icon file (`backspace_icon.svg`) should be placed in
+            `public/assets/icons/` as listed in assets.md and can be used inside
+            this button once the icon library is wired up. */}
         <button
           onClick={onBackspace}
           className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"
