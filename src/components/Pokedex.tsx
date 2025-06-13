@@ -25,26 +25,40 @@ export default function Pokedex() {
 
       {caughtPokemon.length === 0 ? (
         // No Pokémon have been caught yet
+        // TODO: Consider using shadcn/ui's Alert component here.
+        // Example: <Alert><AlertTitle>No Pokémon Caught!</AlertTitle><AlertDescription>You haven't caught any Pokémon yet. Go spell some words!</AlertDescription></Alert>
+        // See https://ui.shadcn.com/docs/components/alert
         <p className="text-center text-lg text-gray-500">
           You haven't caught any Pokémon yet. Go spell some words!
         </p>
       ) : (
         // Show each caught Pokémon in a grid
+        // TODO: Consider using shadcn/ui's Card component for each Pokémon entry.
+        // This would involve Card, CardHeader, CardTitle, CardContent, and potentially CardFooter.
+        // See https://ui.shadcn.com/docs/components/card
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {/* Each Pokémon gets its own card */}
           {caughtPokemon.map((pokemon) => (
+            // TODO: Replace this div with <Card key={pokemon.id}>...</Card>
             <div
               key={pokemon.id}
               className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center transition-transform hover:scale-105"
             >
+              {/* TODO: Consider using shadcn/ui's AspectRatio component here to maintain consistent image dimensions.
+                  Example: <AspectRatio ratio={1 / 1} className="bg-muted">
+                             <img ... />
+                           </AspectRatio>
+                  See https://ui.shadcn.com/docs/components/aspect-ratio */}
               <img
                 src={`/assets/images/pokemon/${String(pokemon.id).padStart(3, "0")}.png`}
                 alt={pokemon.name.english}
                 className="w-24 h-24"
               />
+              {/* TODO: This could be <CardHeader><CardTitle>{pokemon.name.english}</CardTitle></CardHeader> */}
               <h2 className="mt-2 text-lg font-bold text-gray-700 text-center">
                 {pokemon.name.english}
               </h2>
+              {/* TODO: This section could be part of <CardContent> */}
               <div className="flex flex-wrap justify-center gap-2 mt-1">
                 {pokemon.type.map((type) => (
                   <span
@@ -55,6 +69,7 @@ export default function Pokedex() {
                   </span>
                 ))}
               </div>
+              {/* TODO: If there were actions, they could go in <CardFooter> */}
             </div>
           ))}
         </div>

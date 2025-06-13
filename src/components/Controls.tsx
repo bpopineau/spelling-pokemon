@@ -11,6 +11,10 @@ interface ControlsProps {
 }
 
 // Simple component to show the repeat, hint and submit buttons
+// TODO: Replace HTML button elements with shadcn/ui's Button component.
+// See https://ui.shadcn.com/docs/components/button
+// The `variant` prop (e.g., "default", "destructive", "outline", "secondary", "ghost", "link")
+// and the `size` prop can be used to achieve the desired styling.
 export default function Controls({
   onSubmit,
   onHint,
@@ -20,6 +24,7 @@ export default function Controls({
   return (
     <div className="flex justify-center flex-wrap gap-2 mt-4">
       {/* Repeat the word out loud */}
+      {/* TODO: Replace with shadcn/ui Button. Example: <Button variant="outline" onClick={onRepeat}>Repeat Word 🔁</Button> */}
       <button
         onClick={onRepeat}
         className="h-12 px-4 bg-blue-500 rounded-md text-white font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700"
@@ -27,6 +32,7 @@ export default function Controls({
         Repeat Word 🔁
       </button>
       {/* Fill in the next letter */}
+      {/* TODO: Replace with shadcn/ui Button. Example: <Button variant="secondary" onClick={onHint} disabled={hintDisabled}>Hint ✨</Button> */}
       <button
         onClick={onHint}
         disabled={hintDisabled}
@@ -35,6 +41,7 @@ export default function Controls({
         Hint ✨
       </button>
       {/* Check the spelling */}
+      {/* TODO: Replace with shadcn/ui Button. Example: <Button onClick={onSubmit}>Submit</Button> */}
       <button
         onClick={onSubmit}
         className="h-12 px-8 bg-green-500 rounded-md text-white font-bold hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-700"
