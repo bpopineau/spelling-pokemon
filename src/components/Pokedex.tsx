@@ -1,6 +1,8 @@
-// Shows the Pokémon the player has collected so far.
-import { useGameStore } from "@/services/gameState";
-import allPokemonData from "@/data/pokedex.json";
+// File: src/components/Pokedex.tsx
+
+import { FC, useMemo } from 'react';
+import { useGameStore } from '@/services/gameState';
+import allPokemonData from '@/data/pokedex.json';
 import {
   Alert,
   Box,
@@ -10,74 +12,81 @@ import {
   Chip,
   Stack,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 
-// Display a grid of caught Pokémon
-export default function Pokedex() {
-  // Get the list of IDs for Pokémon that have been caught from our global store
-  const { collectedPokemonIds } = useGameStore();
+type Pokemon = typeof allPokemonData[number];
 
-  // Filter the master Pokédex to get data for only the Pokémon the player has caught
-  const caughtPokemon = allPokemonData.filter((pokemon) =>
-    collectedPokemonIds.includes(pokemon.id),
+const Pokedex: FC = () => {
+  // --- Global state selector ---
+  const collectedPokemonIds = useGameStore(state => state.collectedPokemonIds);
+
+  // --- Memoized caught Pokémon data ---
+  const caughtPokemon = useMemo<Pokemon[]>(
+    () => allPokemonData.filter(p => collectedPokemonIds.includes(p.id)),
+    [collectedPokemonIds]
   );
 
   return (
-    <Box sx={{ p: { xs: 2, md: 4 } }}>
+    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: 1200, mx: 'auto' }}>
       <Typography variant="h3" component="h1" align="center" sx={{ mb: 4 }}>
         Pokédex
       </Typography>
 
       {caughtPokemon.length === 0 ? (
-        // No Pokémon have been caught yet
         <Alert severity="info">
-          You haven't caught any Pokémon yet. Go spell some words!
+          You haven’t caught any Pokémon yet. Go spell some words!
         </Alert>
       ) : (
-        // Show each caught Pokémon in a grid using Box with Flexbox
         <Box
+          component="section"
+          aria-label="Caught Pokémon"
           sx={{
-            display: "flex",
-            flexWrap: "wrap",
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: 2,
+            justifyContent: 'center',
           }}
         >
-          {caughtPokemon.map((pokemon) => (
-            <Box
+          {caughtPokemon.map(pokemon => (
+            <Card
               key={pokemon.id}
               sx={{
                 width: {
-                  xs: "calc(50% - 8px)", // 2 columns on extra-small screens
-                  sm: "calc(33.333% - 11px)", // 3 columns on small
-                  md: "calc(25% - 12px)", // 4 columns on medium
-                  lg: "calc(16.666% - 14px)", // 6 columns on large
+                  xs: 'calc(50% - 8px)',
+                  sm: 'calc(33.333% - 11px)',
+                  md: 'calc(25% - 12px)',
+                  lg: 'calc(16.666% - 14px)',
                 },
               }}
             >
-              <Card>
-                <CardMedia
-                  component="img"
-                  sx={{ height: 140, objectFit: "contain", p: 2 }}
-                  image={`/assets/images/pokemon/${String(
-                    pokemon.id,
-                  ).padStart(3, "0")}.png`}
-                  alt={pokemon.name.english}
-                />
-                <CardContent sx={{ textAlign: "center" }}>
-                  <Typography gutterBottom variant="h6" component="div">
-                    {pokemon.name.english}
-                  </Typography>
-                  <Stack direction="row" spacing={1} justifyContent="center">
-                    {pokemon.type.map((type) => (
-                      <Chip key={type} label={type} size="small" />
-                    ))}
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Box>
+              <CardMedia
+                component="img"
+                image={`/assets/images/pokemon/${String(pokemon.id).padStart(3, '0')}.png`}
+                alt={pokemon.name.english}
+                loading="lazy"
+                sx={{ height: 140, objectFit: 'contain', p: 2 }}
+              />
+              <CardContent sx={{ textAlign: 'center' }}>
+                <Typography variant="h6" gutterBottom>
+                  {pokemon.name.english}
+                </Typography>
+                <Stack direction="row" spacing={1} justifyContent="center">
+                  {pokemon.type.map(type => (
+                    <Chip key={type} label={type} size="small" />
+                  ))}
+                </Stack>
+              </CardContent>
+            </Card>
           ))}
         </Box>
       )}
     </Box>
   );
-}
+};
+
+export default Pokedex;
+
+// TODO: Extract the responsive card grid into a <PokédexGrid> component.
+// TODO: Lazy-load images with React Suspense or an <Image> component.
+// TODO: Add snapshot tests for empty and populated states.
+// TODO: Consider adding Pokémon sorting/filter controls.

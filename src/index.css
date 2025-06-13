@@ -1,12 +1,20 @@
-/*
-  A basic body reset for the MUI application.
-  All component styling is now handled by MUI.
-*/
+/* File: src/index.css
+   Global styles for Spelling Adventure (MUI-only setup) */
+
+/* Body reset aligned with MUI defaults */
 body {
   margin: 0;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* A neutral background color that works well with MUI's paper/card components */
   background-color: #f4f6f8;
+  /* neutral backdrop for MUI Paper/Card */
+}
+
+/* Keep pixel-art Pokémon sprites crisp when scaled */
+img {
+  image-rendering: crisp-edges;
+  /* Firefox */
+  image-rendering: pixelated;
+  /* Chrome */
 }

@@ -1,30 +1,65 @@
-// The persistent header that appears on most screens.
+// File: src/components/Header.tsx
+//
+// Persistent top navigation bar with links to Map, Pokédex, and Progress screens.
+// Uses NavLink’s `isActive` predicate to style the current page.
+
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Stack,
+} from "@mui/material";
 
-export default function Header() {
-  return (
-    <AppBar position="static">
-      <Toolbar>
-        {/* Title */}
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Spelling Adventure
-        </Typography>
+const linkStyle = {
+  color: "inherit",
+  textDecoration: "none",
+  "&.active": {
+    borderBottom: "2px solid currentColor",
+  },
+} as const;
 
-        {/* Navigation Links */}
-        <Button color="inherit" component={NavLink} to="/">
+const Header: FC = () => (
+  <AppBar position="static">
+    <Toolbar sx={{ gap: 2 }}>
+      {/* Title */}
+      <Typography
+        variant="h6"
+        component="h1"
+        sx={{ flexGrow: 1, fontWeight: 600 }}
+      >
+        Spelling Adventure
+      </Typography>
+
+      {/* Navigation */}
+      <Stack direction="row" spacing={1}>
+        <Button
+          component={NavLink}
+          to="/"
+          end
+          sx={linkStyle}
+        >
           Map
         </Button>
-        <Button color="inherit" component={NavLink} to="/pokedex">
+        <Button
+          component={NavLink}
+          to="/pokedex"
+          sx={linkStyle}
+        >
           Pokédex
         </Button>
-        <Button color="inherit" component={NavLink} to="/progress">
+        <Button
+          component={NavLink}
+          to="/progress"
+          sx={linkStyle}
+        >
           Progress
         </Button>
-      </Toolbar>
-    </AppBar>
-  );
-}
+      </Stack>
+    </Toolbar>
+  </AppBar>
+);
+
+export default Header;

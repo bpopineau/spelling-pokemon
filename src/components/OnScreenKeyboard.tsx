@@ -1,55 +1,59 @@
-// Small on-screen keyboard for touch devices.
+// File: src/components/OnScreenKeyboard.tsx
 //
-// It mirrors a simplified QWERTY layout so players on phones or tablets can
-// input letters without relying on their device's built-in keyboard. The parent
-// component supplies callbacks for both key presses and backspace events.
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
+// A simplified QWERTY keyboard for touch devices.
+// Parent component supplies onKey and onBackspace callbacks.
 
-interface KeyboardProps {
-  // Add a letter to the input
-  onKey: (char: string) => void;
-  // Remove the last letter
-  onBackspace: () => void;
+import { FC, memo } from 'react';
+import { Button, Stack } from '@mui/material';
+
+export interface KeyboardProps {
+  onKey: (char: string) => void;     // Add a letter
+  onBackspace: () => void;           // Remove last letter
 }
 
-// Each row of keys on the keyboard
-const layout = [
-  ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
-  ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
-  ["z", "x", "c", "v", "b", "n", "m"],
+// Static keyboard layout (rows of characters)
+const LAYOUT: ReadonlyArray<ReadonlyArray<string>> = [
+  ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+  ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+  ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
 ];
 
-export default function OnScreenKeyboard({
-  onKey,
-  onBackspace,
-}: KeyboardProps) {
-  // Render three rows of letter buttons followed by a backspace button.
+const OnScreenKeyboard: FC<KeyboardProps> = ({ onKey, onBackspace }) => {
   return (
     <Stack spacing={1} alignItems="center" sx={{ mt: 2 }}>
-      {layout.map((row, idx) => (
-        <Stack key={idx} direction="row" spacing={1}>
+      {LAYOUT.map((row, rowIdx) => (
+        <Stack key={`row-${rowIdx}`} direction="row" spacing={1}>
           {row.map((ch) => (
             <Button
               key={ch}
-              onClick={() => onKey(ch)}
               variant="outlined"
-              sx={{ minWidth: '40px', padding: '8px', textTransform: 'lowercase' }}
+              size="small"
+              aria-label={`Letter ${ch.toUpperCase()}`}
+              onClick={() => onKey(ch)}
+              sx={{ minWidth: 40, p: 1, textTransform: 'lowercase' }}
             >
               {ch}
             </Button>
           ))}
         </Stack>
       ))}
+
+      {/* Backspace */}
       <Stack direction="row" spacing={1}>
         <Button
-          onClick={onBackspace}
           variant="outlined"
-          sx={{ minWidth: '80px' }}
+          aria-label="Backspace"
+          onClick={onBackspace}
+          sx={{ minWidth: 80 }}
         >
           ⌫
         </Button>
       </Stack>
     </Stack>
   );
-}
+};
+
+export default memo(OnScreenKeyboard);
+
+// TODO: Consider theme-based sizing for buttons.
+// TODO: Add key-press sounds or haptic feedback on mobile (optional).

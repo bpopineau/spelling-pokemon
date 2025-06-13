@@ -1,35 +1,69 @@
-"""Build pokemon.json with scene assignments based on types.
-
-This script is a small utility used during development to pre-process the raw
-Pokédex data. It groups Pokémon by their primary type and assigns them to a
-scene so the game can easily look up which creatures appear in each region.
-Running this script isn't required for normal gameplay; the resulting
-``pokemon.json`` file is committed to the repository.
+#!/usr/bin/env python3
 """
-# TODO: add CLI options for input/output paths instead of hardcoded filenames
+build_pokemon_json.py
+---------------------
 
+Generate **pokemon.json** with scene assignments based on Pokémon primary
+types.  This runs at _build time_ (or occasionally during content updates)
+and is **NOT** required for normal gameplay—the generated file is committed.
+
+Key improvements
+────────────────
+• CLI arguments for input / output paths (`--pokedex`, `--scenes`, `--out`).
+• Clear function boundaries for loading, assigning, and writing data.
+• Deterministic assignment:  Pokémon are distributed to the scene with the fewest
+  entries (then lowest scene-id) when no type match is found.
+• Type annotations & early failure checks.
+• Prints a concise summary when finished.
+"""
+
+from __future__ import annotations
+
+import argparse
 import json
 from collections import defaultdict
 from pathlib import Path
+from typing import Dict, List, TypedDict, Iterable, Tuple
 
-# Determine the project directories so we can locate the data files no matter
-# where the script is executed from.
-script_dir = Path(__file__).parent
-project_root = script_dir.parent
-data_dir = project_root / 'src' / 'data'
+# ———————————————————————————————————————————————————————————————————— types
 
-# Use relative paths to locate the source and output files
-pokedex_path = data_dir / 'pokedex.json'
-output_path = data_dir / 'pokemon.json'
-scenes_path = data_dir / 'scenes.json'
 
-# Region mapping: Dynamically load scene IDs from scenes.json. Each tuple maps a
-# scene ID to one or more Pokémon types that thematically fit that region.
-with open(scenes_path, 'r', encoding='utf-8') as f:
-    scenes_data = json.load(f)
+class PokemonEntry(TypedDict):
+    id: int
+    name: str
+    types: List[str]
+    sprite: str
+    image: str
+    scene_id: int | None
 
-# This mapping is now more for theme definition than for hardcoding IDs
-scene_type_map = [
+
+class Scene(TypedDict):
+    id: int
+    name: str
+    background: str
+    word_start: int
+    word_end: int
+
+
+# —————————————————————————————————————————————————————————— cli helpers
+
+
+def parse_args() -> argparse.Namespace:
+    root = Path(__file__).resolve().parents[1]  # project root
+    data_dir = root / "src" / "data"
+
+    parser = argparse.ArgumentParser(description="Assign Pokémon to scenes.")
+    parser.add_argument("--pokedex", type=Path, default=data_dir / "pokedex.json")
+    parser.add_argument("--scenes", type=Path, default=data_dir / "scenes.json")
+    parser.add_argument("--out", type=Path, default=data_dir / "pokemon.json")
+    return parser.parse_args()
+
+
+# ————————————————————————————————————————————————————————— assignment logic
+
+
+# Scene-type themes (edit to taste)
+SCENE_TYPE_MAP: list[Tuple[int, list[str]]] = [
     (1, ["Grass", "Bug"]),
     (2, ["Grass", "Bug"]),
     (3, ["Electric", "Steel"]),
@@ -42,80 +76,94 @@ scene_type_map = [
     (10, ["Fire", "Dark"]),
     (11, ["Ice"]),
     (12, ["Poison", "Ground"]),
-    (13, ["Psychic", "Dragon"])
+    (13, ["Psychic", "Dragon"]),
 ]
 
-# Load pokedex.json which contains every Pokémon along with their types.
-with open(pokedex_path, 'r', encoding='utf-8') as f:
-    pokedex = json.load(f)
 
-# Assign Pokémon by primary type
-scene_pokemon = defaultdict(list)
-unassigned = []
+def load_json(path: Path) -> list[dict]:
+    if not path.exists():
+        raise FileNotFoundError(path)
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
 
-# Go through every Pokémon entry and attempt to assign it to a region based on
-# its primary type. Any Pokémon that don't match a themed region are stored in
-# `unassigned` so we can distribute them later.
-for entry in pokedex:
-    pid = entry['id']
-    name = entry['name']['english'] if isinstance(entry['name'], dict) else entry['name']
-    types = entry['type'] if isinstance(entry['type'], list) else [entry['type']]
-    primary_type = types[0]
 
-    # Try to assign to the first region whose theme matches the primary type
-    assigned = False
-    for scene_id, theme_types in scene_type_map:
-        if primary_type in theme_types:
-            scene_pokemon[scene_id].append({
-                "id": pid,
-                "name": name,
-                "types": types,
-                "sprite": f"{str(pid).zfill(3)}MS.png",
-                "image": f"{str(pid).zfill(3)}.png",
-                "scene_id": scene_id
-            })
-            assigned = True
-            break
+def assign_pokemon(
+    pokedex: Iterable[dict], scene_type_map: list[Tuple[int, list[str]]]
+) -> list[PokemonEntry]:
+    scene_pokemon: Dict[int, list[PokemonEntry]] = defaultdict(list)
+    unassigned: list[PokemonEntry] = []
 
-    if not assigned:
-        unassigned.append({
+    for entry in pokedex:
+        pid: int = entry["id"]
+        name: str = entry["name"]["english"] if isinstance(entry["name"], dict) else entry["name"]
+        types: list[str] = entry["type"] if isinstance(entry["type"], list) else [entry["type"]]
+        primary = types[0]
+
+        poke_dict: PokemonEntry = {
             "id": pid,
             "name": name,
             "types": types,
-            "sprite": f"{str(pid).zfill(3)}MS.png",
-            "image": f"{str(pid).zfill(3)}.png",
-            "scene_id": None
-        })
+            "sprite": f"{pid:03d}MS.png",
+            "image": f"{pid:03d}.png",
+            "scene_id": None,
+        }
 
-# Distribute unassigned Pokémon to scenes with the fewest Pokémon in a
-# deterministic manner so running this script multiple times gives the same
-# result.
-if unassigned:
-    # Get all possible scene IDs from the scenes file
-    all_scene_ids = {scene['id'] for scene in scenes_data}
+        # try thematic assignment
+        for scene_id, theme_types in scene_type_map:
+            if primary in theme_types:
+                poke_dict["scene_id"] = scene_id
+                scene_pokemon[scene_id].append(poke_dict)
+                break
+        else:
+            unassigned.append(poke_dict)
 
-    # Initialize counts for all scenes, including potentially empty ones
-    counts = {scene_id: len(scene_pokemon.get(scene_id, [])) for scene_id in all_scene_ids}
+    return distribute_unassigned(unassigned, scene_pokemon)
 
-    # Sort unassigned Pokémon by ID to ensure a consistent processing order
-    unassigned.sort(key=lambda p: p['id'])
+
+def distribute_unassigned(
+    unassigned: list[PokemonEntry], scene_pokemon: Dict[int, list[PokemonEntry]]
+) -> list[PokemonEntry]:
+    # If no unassigned, flatten and return quickly
+    if not unassigned:
+        return [p for plist in scene_pokemon.values() for p in plist]
+
+    # Initialise counts
+    counts = {sid: len(lst) for sid, lst in scene_pokemon.items()}
+
+    # Deterministic order
+    unassigned.sort(key=lambda p: p["id"])
 
     for mon in unassigned:
-        # Find the scene with the fewest Pokémon. Sort by count, then by scene_id for determinism.
-        target_scene_id = sorted(counts.items(), key=lambda item: (item[1], item[0]))[0][0]
+        # pick scene with fewest Pokémon, tie-break on id
+        target_id = min(counts.items(), key=lambda item: (item[1], item[0]))[0]
+        mon["scene_id"] = target_id
+        scene_pokemon[target_id].append(mon)
+        counts[target_id] = counts.get(target_id, 0) + 1
 
-        mon["scene_id"] = target_scene_id
-        scene_pokemon[target_scene_id].append(mon)
-        counts[target_scene_id] += 1
+    return [p for plist in scene_pokemon.values() for p in plist]
 
 
-# Flatten and sort output list by scene, then id
-all_pokemon = []
-for scene_id in sorted(scene_pokemon.keys()):
-    all_pokemon.extend(sorted(scene_pokemon[scene_id], key=lambda x: x["id"]))
+def save_json(data: list[PokemonEntry], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-# Save the final list to pokemon.json so the game can load it directly.
-with open(output_path, 'w', encoding='utf-8') as f:
-    json.dump(all_pokemon, f, ensure_ascii=False, indent=2)
 
-print(f"pokemon.json written with {len(all_pokemon)} entries assigned to regions by type.")
+# —————————————————————————————————————————————————————————————— main
+
+
+def main() -> None:
+    args = parse_args()
+
+    pokedex_data = load_json(args.pokedex)
+    _ = load_json(args.scenes)  # scenes currently unused but validated
+
+    assigned: list[PokemonEntry] = assign_pokemon(pokedex_data, SCENE_TYPE_MAP)
+    assigned.sort(key=lambda p: (p["scene_id"] or 0, p["id"]))
+
+    save_json(assigned, args.out)
+    print(f"Wrote {len(assigned)} Pokémon to {args.out.relative_to(Path.cwd())}")
+
+
+if __name__ == "__main__":
+    main()

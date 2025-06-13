@@ -1,92 +1,102 @@
-/**
- * GameMap Component
- *
- * Displays the large interactive map that acts as the hub for all scenes. Each
- * region on the map is represented by a transparent button positioned over the
- * background image. A region becomes clickable when the player has earned
- * enough XP. Clicking a region navigates to the spelling challenge for that
- * area. This component is intentionally stateless and simply reads from the
- * global game store to know which regions should be unlocked.
- */
-import { useNavigate } from "react-router-dom"; // used to change screens
-import regionHotspots from "@/data/regionHotspots"; // clickable map spots
-import scenesData from "@/data/scenes.json"; // data about when scenes unlock
-import { useGameStore } from "@/services/gameState";
-import { Box, Tooltip, Paper } from "@mui/material";
+// File: src/components/GameMap.tsx
 
-// A lightweight type describing the shape of the scene unlock data so TypeScript
-// can help us catch mismatches with the JSON file.
+import { FC, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import regionHotspots from '@/data/regionHotspots';
+import scenesData from '@/data/scenes.json';
+import { useGameStore } from '@/services/gameState';
+import { Box, Tooltip, Paper } from '@mui/material';
+
+// Derive the hotspot item type directly from the data
+type RegionHotspot = typeof regionHotspots[number];
+
+// Type describing scene unlock requirements
 interface SceneUnlock {
   id: number;
   unlock_xp: number;
 }
 
-export default function GameMap() {
-  // Router navigation function used to change the URL programmatically
+// Path to the world map image asset
+const MAP_SRC = '/assets/images/map/world-map.png';
+
+/**
+ * GameMap Component
+ *
+ * Renders the interactive world map with clickable regions.
+ * Regions become available based on player XP (from global state).
+ */
+const GameMap: FC = () => {
   const navigate = useNavigate();
+  const xp = useGameStore((state) => state.xp);
 
-  // Pull the current XP value from the global store so we know which regions
-  // should be available.
-  const { xp } = useGameStore();
+  // Memoize scene unlock data and compute unlocked scene IDs
+  const scenes = useMemo<SceneUnlock[]>(() => scenesData as SceneUnlock[], []);
+  const unlockedSceneIds = useMemo<Set<number>>(
+    () => new Set(scenes.filter((s) => xp >= s.unlock_xp).map((s) => s.id)),
+    [xp, scenes]
+  );
 
-  // Navigate to the scene page when a region hotspot is clicked.
+  /** Navigate to the spelling challenge for a given scene */
   const handleRegionClick = (sceneId: number) => {
-    navigate(`/scene/${sceneId}`);
-  };
-
-  // Determine whether a scene is unlocked by comparing the player's XP to the
-  // `unlock_xp` value from the scenes data.
-  const isUnlocked = (sceneId: number) => {
-    const scenes = scenesData as SceneUnlock[];
-    const scene = scenes.find((s) => s.id === sceneId);
-    if (!scene) return false;
-    return xp >= scene.unlock_xp;
+    if (unlockedSceneIds.has(sceneId)) {
+      navigate(`/scene/${sceneId}`);
+    }
   };
 
   return (
-    // The main container holds the map image and the invisible buttons
     <Box
+      component="section"
+      aria-label="World Map"
       sx={{
-        minHeight: "calc(100vh - 96px)", // Adjust for header height
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        minHeight: 'calc(100vh - 96px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         p: { xs: 2, md: 4 },
-        bgcolor: "grey.100",
+        bgcolor: 'grey.100',
       }}
     >
       <Paper
         elevation={6}
         sx={{
-          position: "relative",
-          maxWidth: "75rem",
-          overflow: "hidden",
-          lineHeight: 0, // Removes extra space below the img
+          position: 'relative',
+          maxWidth: '75rem',
+          overflow: 'hidden',
+          lineHeight: 0,
         }}
       >
-        <img
-          src="/assets/images/map/world-map.png"
+        <Box
+          component="img"
+          src={MAP_SRC}
           alt="World Map"
-          style={{ width: "100%", height: "auto" }}
+          loading="lazy"
+          sx={{ width: '100%', height: 'auto' }}
         />
-        {/* The world map graphic should be placed at
-            `public/assets/images/map/world-map.png` as noted in assets.md. */}
 
-        {regionHotspots.map((region) => {
-          const unlocked = isUnlocked(region.sceneId);
+        {regionHotspots.map((region: RegionHotspot) => {
+          const unlocked = unlockedSceneIds.has(region.sceneId);
           return (
             <Tooltip title={region.name} key={region.id} arrow>
               <Box
-                style={region.style}
-                onClick={() => unlocked && handleRegionClick(region.sceneId)}
+                role="button"
+                tabIndex={0}
+                aria-disabled={!unlocked}
+                onClick={() => handleRegionClick(region.sceneId)}
+                onKeyDown={(e) => {
+                  if (unlocked && (e.key === 'Enter' || e.key === ' ')) {
+                    handleRegionClick(region.sceneId);
+                  }
+                }}
                 sx={{
-                  position: "absolute",
-                  cursor: unlocked ? "pointer" : "not-allowed",
-                  "&:hover": {
+                  ...region.style,
+                  position: 'absolute',
+                  cursor: unlocked ? 'pointer' : 'not-allowed',
+                  '&:hover': {
                     backgroundColor: unlocked
-                      ? "rgba(255, 255, 255, 0.2)"
-                      : "transparent",
+                      ? 'rgba(255, 255, 255, 0.2)'
+                      : 'transparent',
                   },
+                  outline: 'none',
                 }}
               />
             </Tooltip>
@@ -95,4 +105,11 @@ export default function GameMap() {
       </Paper>
     </Box>
   );
-}
+};
+
+export default GameMap;
+
+// TODO: Extract scene-unlock logic into `useSceneUnlocks` hook
+// TODO: Move hotspot style objects into theme or styled-components
+// TODO: Add an error boundary for missing map asset
+// TODO: Refine focus and hover states for accessibility

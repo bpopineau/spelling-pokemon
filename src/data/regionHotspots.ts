@@ -1,20 +1,31 @@
-// Describes the clickable area for a region on the world map. The `style`
-// object contains percentage-based positioning so the hotspot scales with the
-// size of the map image.
-export interface Hotspot {
-  id: number;
-  name: string;
-  sceneId: number;
-  style: {
-    left: string;
-    top: string;
-    width: string;
-    height: string;
-  };
+// File: src/data/regionHotspots.ts
+//
+// Defines the clickable hotspots that overlay the world-map image.
+// Each hotspot is positioned with percentage values so it scales
+// correctly at every viewport size.
+
+/** Style for an absolute-positioned hotspot (percentage values only). */
+export interface HotspotStyle {
+  left: `${number}%`;
+  top: `${number}%`;
+  width: `${number}%`;
+  height: `${number}%`;
 }
 
-// List of all hotspots. The order matches the visual layout on the map.
-const regionHotspots: Hotspot[] = [
+/** Hotspot metadata used by the GameMap component. */
+export interface RegionHotspot {
+  /** Unique hotspot id (matches visual order on the map). */
+  id: number;
+  /** Display name shown in the tooltip. */
+  name: string;
+  /** Scene id that should load when clicked. */
+  sceneId: number;
+  /** Absolute-position style in percentages. */
+  style: HotspotStyle;
+}
+
+/** Immutable list of hotspots in map layout order. */
+export const regionHotspots: readonly RegionHotspot[] = [
   {
     id: 1,
     name: "Glendor Grove",
@@ -69,6 +80,11 @@ const regionHotspots: Hotspot[] = [
     sceneId: 9,
     style: { left: "65%", top: "65%", width: "30%", height: "30%" },
   },
-];
+] as const;
 
 export default regionHotspots;
+
+// NOTE:
+// - `as const` makes the array (and its nested objects) deeply readonly,
+//   preventing accidental mutation and enabling literal-type inference.
+// - GameMap derives its RegionHotspot type via `typeof regionHotspots[number]`.

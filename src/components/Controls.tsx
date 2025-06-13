@@ -1,9 +1,13 @@
-// Buttons shown under the spelling input.
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import Icon from "@/components/Icon"; // Import our custom Icon component
+// File: src/components/Controls.tsx
+//
+// Action buttons shown beneath the spelling input:
+// Repeat (TTS), Hint (reveal next letter), and Submit (check spelling).
 
-interface ControlsProps {
+import { FC, memo } from 'react';
+import { Button, Stack } from '@mui/material';
+import Icon from './Icon';        // Adjust path if needed
+
+export interface ControlsProps {
   onSubmit: () => void;
   onHint: () => void;
   onRepeat: () => void;
@@ -11,19 +15,19 @@ interface ControlsProps {
   submitDisabled?: boolean;
 }
 
-// Simple component to show the repeat, hint and submit buttons
-export default function Controls({
+const Controls: FC<ControlsProps> = ({
   onSubmit,
   onHint,
   onRepeat,
   hintDisabled,
-  submitDisabled,
-}: ControlsProps) {
+  submitDisabled = false,
+}) => {
   return (
     <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 2 }}>
-      {/* Repeat the word out loud */}
+      {/* Repeat */}
       <Button
         variant="outlined"
+        aria-label="Repeat word"
         startIcon={<Icon name="repeat_icon" size={20} />}
         onClick={onRepeat}
         disabled={submitDisabled}
@@ -31,9 +35,10 @@ export default function Controls({
         Repeat
       </Button>
 
-      {/* Fill in the next letter */}
+      {/* Hint */}
       <Button
         variant="outlined"
+        aria-label="Get a hint"
         startIcon={<Icon name="hint_icon" size={20} />}
         onClick={onHint}
         disabled={hintDisabled || submitDisabled}
@@ -41,9 +46,10 @@ export default function Controls({
         Hint
       </Button>
 
-      {/* Check the spelling */}
+      {/* Submit */}
       <Button
         variant="contained"
+        aria-label="Submit spelling"
         startIcon={<Icon name="submit_icon" size={20} />}
         onClick={onSubmit}
         disabled={submitDisabled}
@@ -52,4 +58,9 @@ export default function Controls({
       </Button>
     </Stack>
   );
-}
+};
+
+export default memo(Controls);
+
+// TODO: Extract common button style props into a theme variant if reused elsewhere.
+// TODO: Add keyboard shortcut support (e.g., Enter to submit, H for hint).

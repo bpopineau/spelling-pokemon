@@ -1,27 +1,27 @@
-// Layout wrapper that adds the header on top of pages.
+// File: src/components/MainLayout.tsx
 //
-// React Router allows routes to nest. `MainLayout` is used as a wrapper for
-// most pages so that they all display the same header component. The `<Outlet>`
-// represents where the child route's element should be rendered.
+// Wraps every page in the shared application chrome. It renders the global
+// <Header> and delegates nested routes to React Router’s <Outlet>.
+//
+// If you decide to create a custom MUI theme later, you can wrap the layout
+// in <ThemeProvider> here—but for now, no dark/light mode toggling is included.
+
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
-// TODO: Once shadcn/ui is installed, wrap the layout in its `ThemeProvider`
-// to enable dark mode and component theming. See
-// https://ui.shadcn.com/docs/dark-mode/theming
 
-export default function MainLayout() {
-  // This component simply arranges the shared header and whatever page
-  // component is currently active. React Router injects that page via
-  // the `<Outlet>` element below.
-  return (
-    <>
-      {/* Shared header */}
-      <Header />
-      <main>
-        {/* The nested page content goes here */}
-        <Outlet />
-      </main>
-      {/* TODO: support an optional footer component when more pages need it */}
-    </>
-  );
-}
+const MainLayout: FC = () => (
+  <>
+    {/* Global header */}
+    <Header />
+
+    {/* Routed page content */}
+    <main role="main" style={{ minHeight: "calc(100vh - 64px)" }}>
+      <Outlet />
+    </main>
+
+    {/* Placeholder for a future footer if needed */}
+  </>
+);
+
+export default MainLayout;
