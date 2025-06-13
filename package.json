@@ -3,15 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
   "scripts": {
-    "dev": "vite",
-    "build": "npx rimraf dist-types && tsc --noEmit && vite build",
-    "deploy": "gh-pages -d dist",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "tsc --noEmit && vite build",
+  "preview": "vite preview",
+  "predeploy": "copy dist\\index.html dist\\404.html",
+  "deploy": "gh-pages -d dist"
+},
+
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -45,7 +45,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "gh-pages": "^6.0.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "happy-dom": "^18.0.1",
     "prettier": "^3.3.2",
