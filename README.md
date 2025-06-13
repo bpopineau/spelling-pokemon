@@ -31,6 +31,27 @@ export default tseslint.config({
 });
 ```
 
+## UI Components with shadcn/ui
+
+This project uses Tailwind CSS for styling. To speed up development and keep the
+design consistent, consider installing [shadcn/ui](https://ui.shadcn.com/), which
+provides a set of ready‑made React components built on Tailwind.
+
+1. Initialize shadcn/ui in the project root:
+   ```bash
+   npx shadcn-ui@latest init
+   ```
+2. Add individual components as needed, for example:
+   ```bash
+   npx shadcn-ui@latest add button card input
+   ```
+   Generated components live under `src/components/ui/` and can be imported just
+   like any other React component.
+
+Check the `TODO` comments throughout the codebase (e.g. in `Header.tsx` or
+`SpellingChallenge.tsx`) for suggestions on where these components could replace
+hand-rolled HTML structures.
+
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js

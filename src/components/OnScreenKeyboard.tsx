@@ -11,6 +11,8 @@ interface KeyboardProps {
   onBackspace: () => void;
 }
 // TODO: allow custom keyboard layouts via props
+//       The individual keys could be built with shadcn/ui's `Button` component
+//       for consistent styling once the library is available.
 
 // Each row of keys on the keyboard
 const layout = [
@@ -31,6 +33,9 @@ export default function OnScreenKeyboard({
         <div key={idx} className="flex gap-1">
           {row.map((ch) => (
             // Regular letter button
+            // TODO: Swap these `<button>` elements for shadcn/ui `Button`
+            //       components so the keyboard matches the rest of the UI.
+            //       See https://ui.shadcn.com/docs/components/button
             <button
               key={ch}
               onClick={() => onKey(ch)}
@@ -44,6 +49,8 @@ export default function OnScreenKeyboard({
       <div className="flex gap-1">
         {/* Backspace key. Clicking this removes the last character from the
             player's input. */}
+        {/* TODO: Replace this with a shadcn/ui Button as well for visual
+            consistency. */}
         <button
           onClick={onBackspace}
           className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"

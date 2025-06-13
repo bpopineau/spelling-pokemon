@@ -25,6 +25,9 @@ export default function SceneView() {
     return (
       <div className="min-h-screen bg-gray-800 text-white flex flex-col items-center justify-center p-4">
         <h1 className="text-4xl font-bold mb-4">Scene Not Found</h1>
+        {/* TODO: Replace this HTML button with a shadcn/ui Button for a
+            consistent look across the app.
+            See https://ui.shadcn.com/docs/components/button */}
         <button
           onClick={() => navigate("/")}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
@@ -47,6 +50,8 @@ export default function SceneView() {
     >
       {/* Top bar with the back button and scene name */}
       <header className="w-full max-w-5xl flex justify-between items-center mb-4 mx-auto shrink-0">
+        {/* TODO: Use a shadcn/ui Button here as well so navigation controls
+            share a common style. */}
         <button
           onClick={() => navigate("/")}
           className="px-4 py-2 bg-gray-800 bg-opacity-75 text-white rounded hover:bg-gray-700 z-10"
