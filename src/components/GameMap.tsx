@@ -52,6 +52,8 @@ export default function GameMap() {
           alt="World Map"
           className="w-full h-auto object-cover"
         />
+        {/* The world map graphic should be placed at
+            `public/assets/images/map/world-map.png` as noted in assets.md. */}
 
         {regionHotspots.map((region) => {
           // Each hotspot is a button positioned over the map.

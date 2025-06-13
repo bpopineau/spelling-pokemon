@@ -4,6 +4,8 @@
 // us provide auditory feedback without needing any external libraries. This
 // helper function abstracts the API so other components only need to pass the
 // text they want spoken.
+// Narrative scripts used with this service are stored in
+// `src/data/tts-narrative/` as described in assets.md.
 export const speak = (text: string) => {
   if ("speechSynthesis" in window) {
     // Stop any previous speech so words don't overlap

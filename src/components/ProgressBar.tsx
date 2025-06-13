@@ -1,4 +1,3 @@
-import React from "react";
 
 interface ProgressBarProps {
   /** Current XP gained within the level */

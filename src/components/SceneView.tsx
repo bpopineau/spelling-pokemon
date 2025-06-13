@@ -40,8 +40,15 @@ export default function SceneView() {
 
   // Build the path to the scene background image from the file name stored in
   // the scenes JSON. The actual image lives in `public/assets/images/backgrounds`.
+  // See `assets.md` for the full list of provided backgrounds.
   const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
   // TODO: show a fallback UI if the background image is missing
+
+  // TODO: Play the background music for this scene using `scene.music`.
+  // The music files (e.g. `bg_forest.ogg`) are located in
+  // `public/assets/sounds/` as documented in `assets.md`. A simple
+  // `<audio>` element or custom hook can start playback when the component
+  // mounts and stop it on unmount.
 
   return (
     <div

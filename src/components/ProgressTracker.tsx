@@ -51,6 +51,9 @@ export default function ProgressTracker() {
         <p className="text-center">No badges earned yet.</p>
       ) : (
         // TODO: Each badge could be a `<Card>` as well for a consistent look.
+        //       When badge icons are added to `public/assets/icons/` (see
+        //       assets.md), display the corresponding `badge_icon.svg` next to
+        //       each badge name.
         <ul className="flex flex-wrap justify-center gap-4">
           {/* Show each earned badge */}
           {earned.map((b) => (
