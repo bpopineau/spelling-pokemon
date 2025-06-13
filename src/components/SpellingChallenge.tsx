@@ -11,6 +11,7 @@ import pokemon from "../data/pokemon.json"; // which Pokémon appear in scenes
 import scenes from "../data/scenes.json"; // scene definitions
 import Controls from "./Controls"; // buttons like hint and submit
 import OnScreenKeyboard from "./OnScreenKeyboard"; // clickable keyboard
+import ProgressBar from "./ProgressBar";
 import { speak } from "../services/ttsService"; // helper for text-to-speech
 import { useGameStore } from "../services/gameState"; // global game state
 
@@ -68,10 +69,6 @@ export default function SpellingChallenge({
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
-  const progressPercentage = Math.max(
-    0,
-    Math.min(100, (xpGainedThisLevel / xpNeededForThisLevel) * 100),
-  );
 
   // When the scene changes, load the right words and reset state. This effect
   // runs whenever `wordStart` or `wordEnd` change (i.e. when a new scene is
@@ -208,18 +205,7 @@ export default function SpellingChallenge({
         </div>
 
         {/* XP / Progress */}
-        <div className="flex flex-col items-center justify-center px-4">
-          <span className="text-sm font-bold text-slate-600">PROGRESS</span>
-          <div className="w-full bg-slate-300 rounded-full h-5 mt-1 border border-slate-400/50 shadow-inner">
-            <div
-              className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-500"
-              style={{ width: `${progressPercentage}%` }}
-            ></div>
-          </div>
-          <span className="text-sm font-semibold text-slate-600 mt-1">
-            {xpGainedThisLevel} / {xpNeededForThisLevel} XP
-          </span>
-        </div>
+        <ProgressBar current={xpGainedThisLevel} total={xpNeededForThisLevel} />
 
         {/* Hints */}
         <div className="flex flex-col items-center justify-center px-2">
