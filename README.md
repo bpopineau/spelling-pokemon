@@ -32,6 +32,8 @@ $ npm run dev # dev server at http://localhost:5173 with HMR
 | format     | Format code with Prettier                   |
 | test       | Run Vitest unit tests once                  |
 | test:watch | Run tests in watch mode                     |
+| predeploy  | Copy `dist/index.html` to `dist/404.html`    |
+| deploy     | Publish the `dist/` folder to GitHub Pages   |
 
 ---
 
@@ -56,6 +58,16 @@ Add tests in `src/**/__tests__/*.spec.ts(x)`.
 
 $ npm run build # optimized output → dist/
 $ npm run preview # preview build at http://localhost:4173
+
+## 🚢 Deployment
+
+Run these commands to publish the site:
+
+```bash
+$ npm run build
+$ npm run predeploy
+$ npm run deploy
+```
 
 ---
 
