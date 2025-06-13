@@ -5,7 +5,8 @@
     "background": "01-glendor-grove.png",
     "word_start": 0,
     "word_end": 76,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 0
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "background": "02-willowshade-woods.png",
     "word_start": 77,
     "word_end": 153,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 100
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "background": "03-sparkspire-city.png",
     "word_start": 154,
     "word_end": 230,
-    "music": "bg_city.ogg"
+    "music": "bg_city.ogg",
+    "unlock_xp": 200
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "background": "04-josara-ridge-ruins.png",
     "word_start": 231,
     "word_end": 307,
-    "music": "bg_storm.ogg"
+    "music": "bg_storm.ogg",
+    "unlock_xp": 300
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "background": "05-whispering-woods.png",
     "word_start": 308,
     "word_end": 384,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 400
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "background": "06-kalani-island.png",
     "word_start": 385,
     "word_end": 461,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 500
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "background": "07-ember-crag.png",
     "word_start": 462,
     "word_end": 538,
-    "music": "bg_fire.ogg"
+    "music": "bg_fire.ogg",
+    "unlock_xp": 600
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "background": "08-sunnybrush-prarie.png",
     "word_start": 539,
     "word_end": 615,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 700
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "background": "09-fable-fern-grotto.png",
     "word_start": 616,
     "word_end": 692,
-    "music": "bg_forest.ogg"
+    "music": "bg_forest.ogg",
+    "unlock_xp": 800
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "background": "10-crimson-shores.png",
     "word_start": 693,
     "word_end": 769,
-    "music": "bg_fire.ogg"
+    "music": "bg_fire.ogg",
+    "unlock_xp": 900
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "background": "11-mistveil-summit.png",
     "word_start": 770,
     "word_end": 846,
-    "music": "bg_ice.ogg"
+    "music": "bg_ice.ogg",
+    "unlock_xp": 1000
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "background": "12-sulfurion-basin.png",
     "word_start": 847,
     "word_end": 923,
-    "music": "bg_storm.ogg"
+    "music": "bg_storm.ogg",
+    "unlock_xp": 1100
   },
   {
     "id": 13,
@@ -101,6 +113,7 @@
     "background": "13-harmonic-temple.png",
     "word_start": 924,
     "word_end": 999,
-    "music": "bg_final.ogg"
+    "music": "bg_final.ogg",
+    "unlock_xp": 1200
   }
 ]
