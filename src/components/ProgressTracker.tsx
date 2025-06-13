@@ -10,8 +10,26 @@ import {
 } from "@mui/material";
 import ProgressBar from "./ProgressBar";
 import Icon from "@/components/Icon"; // Corrected import path
+import useBackgroundMusic from "@/hooks/useBackgroundMusic";
+
+// --- Background Music Setup ---
+const musicTracks = [
+  "/assets/sounds/bg_city.ogg",
+  "/assets/sounds/bg_final.ogg",
+  "/assets/sounds/bg_fire.ogg",
+  "/assets/sounds/bg_forest.ogg",
+  "/assets/sounds/bg_ice.ogg",
+  "/assets/sounds/bg_storm.ogg",
+];
+
+const getRandomTrack = () =>
+  musicTracks[Math.floor(Math.random() * musicTracks.length)];
+// --- End Background Music Setup ---
 
 export default function ProgressTracker() {
+  // Play a random background track.
+  useBackgroundMusic(getRandomTrack());
+
   // Pull various progress metrics from the central store
   const {
     xp,

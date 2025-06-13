@@ -13,6 +13,21 @@ import regionHotspots from "@/data/regionHotspots"; // clickable map spots
 import scenesData from "@/data/scenes.json"; // data about when scenes unlock
 import { useGameStore } from "@/services/gameState";
 import { Box, Tooltip, Paper } from "@mui/material";
+import useBackgroundMusic from "@/hooks/useBackgroundMusic";
+
+// --- Background Music Setup ---
+const musicTracks = [
+  "/assets/sounds/bg_city.ogg",
+  "/assets/sounds/bg_final.ogg",
+  "/assets/sounds/bg_fire.ogg",
+  "/assets/sounds/bg_forest.ogg",
+  "/assets/sounds/bg_ice.ogg",
+  "/assets/sounds/bg_storm.ogg",
+];
+
+const getRandomTrack = () =>
+  musicTracks[Math.floor(Math.random() * musicTracks.length)];
+// --- End Background Music Setup ---
 
 // A lightweight type describing the shape of the scene unlock data so TypeScript
 // can help us catch mismatches with the JSON file.
@@ -24,6 +39,9 @@ interface SceneUnlock {
 export default function GameMap() {
   // Router navigation function used to change the URL programmatically
   const navigate = useNavigate();
+
+  // Play a random background track.
+  useBackgroundMusic(getRandomTrack());
 
   // Pull the current XP value from the global store so we know which regions
   // should be available.

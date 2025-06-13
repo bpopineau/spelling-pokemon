@@ -11,9 +11,27 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import useBackgroundMusic from "@/hooks/useBackgroundMusic";
+
+// --- Background Music Setup ---
+const musicTracks = [
+  "/assets/sounds/bg_city.ogg",
+  "/assets/sounds/bg_final.ogg",
+  "/assets/sounds/bg_fire.ogg",
+  "/assets/sounds/bg_forest.ogg",
+  "/assets/sounds/bg_ice.ogg",
+  "/assets/sounds/bg_storm.ogg",
+];
+
+const getRandomTrack = () =>
+  musicTracks[Math.floor(Math.random() * musicTracks.length)];
+// --- End Background Music Setup ---
 
 // Display a grid of caught Pokémon
 export default function Pokedex() {
+  // Play a random background track when the Pokédex is viewed.
+  useBackgroundMusic(getRandomTrack());
+
   // Get the list of IDs for Pokémon that have been caught from our global store
   const { collectedPokemonIds } = useGameStore();
 

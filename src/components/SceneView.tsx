@@ -4,12 +4,18 @@ import scenes from "@/data/scenes.json";
 import SpellingChallenge from "./SpellingChallenge";
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
 import Icon from "@/components/Icon";
+import useBackgroundMusic from "@/hooks/useBackgroundMusic";
 
 // Displays the chosen scene and its spelling challenge
 export default function SceneView() {
   const { sceneId } = useParams();
   const navigate = useNavigate();
   const scene = scenes.find((s) => s.id === Number(sceneId));
+
+  // Determine the music for this scene and play it using our hook.
+  // The hook will handle starting and stopping the music automatically.
+  const backgroundMusic = scene ? `/assets/sounds/${scene.music}` : null;
+  useBackgroundMusic(backgroundMusic);
 
   if (!scene) {
     return (

@@ -11,6 +11,18 @@ import { persist } from "zustand/middleware";
 const LEVEL_UP_XP_BASE = 100;
 const HINT_MAX = 2;
 
+// Define the initial state to reuse it for the reset action
+const initialState = {
+  xp: 0,
+  level: 1,
+  xpToNextLevel: LEVEL_UP_XP_BASE,
+  hintCharges: HINT_MAX,
+  wordsMastered: 0,
+  collectedPokemonIds: [],
+  completedScenes: [],
+  earnedBadges: [],
+};
+
 // Define the interface for our store's state and actions. This gives TypeScript
 // knowledge of everything stored as well as the functions used to mutate the
 // state.
@@ -28,6 +40,7 @@ export interface GameState {
   incrementWordsMastered: () => void;
   catchPokemon: (pokemonId: number) => void;
   completeScene: (sceneId: number) => void;
+  resetProgress: () => void; // Add reset to the interface
 }
 // TODO: split persistence logic out so game actions can be unit tested more easily
 
@@ -38,17 +51,8 @@ export const useGameStore = create<GameState>()(
   // persist saves the store in localStorage so progress stays after refresh
   persist(
     (set) => ({
-      // Initial State
-      xp: 0,
-      level: 1,
-      xpToNextLevel: LEVEL_UP_XP_BASE,
-      hintCharges: HINT_MAX,
-      wordsMastered: 0,
-      collectedPokemonIds: [],
-      completedScenes: [],
-      earnedBadges: [],
+      ...initialState,
 
-      // Actions
       // Increase the player's XP and handle level up logic.
       addXp: (amount) => {
         set((state) => {
@@ -119,7 +123,16 @@ export const useGameStore = create<GameState>()(
           return state;
         });
       },
+
+      // The new reset action. It sets the state back to the initial values.
+      resetProgress: () => set(initialState),
     }),
     { name: "game-state" },
   ),
 );
+
+// --- For quick testing in the browser console ---
+// Expose the store to the window object, but only in development mode.
+if (import.meta.env.DEV) {
+  (window as any).gameStore = useGameStore;
+}

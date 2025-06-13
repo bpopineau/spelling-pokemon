@@ -22,6 +22,12 @@ import {
   Divider,
 } from "@mui/material";
 
+// Define the shape of our new word object
+interface WordEntry {
+  word: string;
+  pronunciation?: string;
+}
+
 // Define the shake animation keyframes
 const shakeAnimation = `
   @keyframes shake {
@@ -41,7 +47,7 @@ export default function SpellingChallenge({
   wordStart,
   wordEnd,
 }: SpellingChallengeProps) {
-  const [sceneWords, setSceneWords] = useState<string[]>([]);
+  const [sceneWords, setSceneWords] = useState<WordEntry[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentInput, setCurrentInput] = useState("");
   const [message, setMessage] = useState("");
@@ -71,14 +77,22 @@ export default function SpellingChallenge({
     (s) => s.word_start === wordStart && s.word_end === wordEnd,
   );
   const sceneId = scene?.id;
-  const currentWord = sceneWords[currentWordIndex];
+  const currentWordObject = sceneWords[currentWordIndex];
+  const currentWord = currentWordObject?.word;
 
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
 
   useEffect(() => {
-    const wordsForScene = words.slice(wordStart, wordEnd + 1);
+    // FIX: Convert the string array from words.json into an array of WordEntry objects.
+    const slicedWords: string[] = words.slice(wordStart, wordEnd + 1);
+    const wordsForScene: WordEntry[] = slicedWords.map(word => ({
+      word: word,
+      // Default the pronunciation to the word itself.
+      // If you update words.json later, this will be replaced.
+      pronunciation: word
+    }));
     setSceneWords(wordsForScene);
     setCurrentWordIndex(0);
     setCurrentInput("");
@@ -88,10 +102,10 @@ export default function SpellingChallenge({
   }, [wordStart, wordEnd]);
 
   useEffect(() => {
-    if (currentWord) {
-      speak(currentWord);
+    if (currentWordObject) {
+      speak(currentWordObject.pronunciation || currentWordObject.word);
     }
-  }, [currentWord]);
+  }, [currentWordObject]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value.replace(/[^a-zA-Z]/g, "").toLowerCase();
@@ -112,8 +126,8 @@ export default function SpellingChallenge({
   };
 
   const handleRepeat = () => {
-    if (currentWord) {
-      speak(currentWord);
+    if (currentWordObject) {
+      speak(currentWordObject.pronunciation || currentWordObject.word);
     }
   };
 
@@ -185,13 +199,13 @@ export default function SpellingChallenge({
     spendHint();
   };
 
-  if (!currentWord) {
+  if (!currentWordObject || !currentWord) {
     return <Typography>Loading challenge...</Typography>;
   }
 
-  const wordBlanks = currentWord.split('').map((_, index) => (
+  const wordBlanks = currentWord.split("").map((_, index) => (
     <span key={index}>
-      {currentInput[index] ? currentInput[index].toUpperCase() : '_'}
+      {currentInput[index] ? currentInput[index].toUpperCase() : "_"}
     </span>
   ));
 
@@ -202,56 +216,56 @@ export default function SpellingChallenge({
         <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
           {/* Status Bar, etc. */}
           <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            mb: 2,
-          }}
-        >
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="caption" color="text.secondary">
-              LEVEL
-            </Typography>
-            <Typography variant="h5" component="div">
-              {level}
-            </Typography>
-          </Box>
-          <Box sx={{ width: "40%" }}>
-            <ProgressBar
-              current={xpGainedThisLevel}
-              total={xpNeededForThisLevel}
-            />
-          </Box>
-          <Box sx={{ textAlign: "center" }}>
-            <Typography variant="caption" color="text.secondary">
-              HINTS
-            </Typography>
-            <Typography variant="h5" component="div">
-              {hintCharges}
-            </Typography>
-          </Box>
-        </Box>
-
-        <Divider sx={{ my: 2 }} />
-          {/* Spelling Area */}
-          <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: "center" }}>
-          <Typography variant="h6" gutterBottom>
-            Spell the word:
-          </Typography>
-
-          <Typography
-            variant="h4"
-            component="div"
             sx={{
-              fontFamily: "monospace",
-              letterSpacing: { xs: "0.5em", sm: "1em" },
-              my: 3,
-              fontSize: { xs: "1.5rem", sm: "2.125rem" },
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              mb: 2,
             }}
           >
-            {wordBlanks}
-          </Typography>
+            <Box sx={{ textAlign: "center" }}>
+              <Typography variant="caption" color="text.secondary">
+                LEVEL
+              </Typography>
+              <Typography variant="h5" component="div">
+                {level}
+              </Typography>
+            </Box>
+            <Box sx={{ width: "40%" }}>
+              <ProgressBar
+                current={xpGainedThisLevel}
+                total={xpNeededForThisLevel}
+              />
+            </Box>
+            <Box sx={{ textAlign: "center" }}>
+              <Typography variant="caption" color="text.secondary">
+                HINTS
+              </Typography>
+              <Typography variant="h5" component="div">
+                {hintCharges}
+              </Typography>
+            </Box>
+          </Box>
+
+          <Divider sx={{ my: 2 }} />
+          {/* Spelling Area */}
+          <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: "center" }}>
+            <Typography variant="h6" gutterBottom>
+              Spell the word:
+            </Typography>
+
+            <Typography
+              variant="h4"
+              component="div"
+              sx={{
+                fontFamily: "monospace",
+                letterSpacing: { xs: "0.5em", sm: "1em" },
+                my: 3,
+                fontSize: { xs: "1.5rem", sm: "2.125rem" },
+              }}
+            >
+              {wordBlanks}
+            </Typography>
 
             <TextField
               value={currentInput.toUpperCase()}
@@ -284,21 +298,21 @@ export default function SpellingChallenge({
 
             {/* Feedback Message */}
             <Box
-            sx={{
-              height: 90,
-              mt: 2,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {message && !message.startsWith("Correct") && (
-              <Alert
-                severity={message.includes("completed") ? "success" : "info"}
-              >
-                {message}
-              </Alert>
-            )}
+              sx={{
+                height: 90,
+                mt: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {message && !message.startsWith("Correct") && (
+                <Alert
+                  severity={message.includes("completed") ? "success" : "info"}
+                >
+                  {message}
+                </Alert>
+              )}
             </Box>
 
             {/* Action Buttons */}
@@ -330,7 +344,7 @@ export default function SpellingChallenge({
         </DialogTitle>
         <DialogContent sx={{ textAlign: 'center' }}>
           <img
-            src={`/assets/images/pokemon/${String(lastCaughtPokemon?.id).padStart(3,"0")}.png`}
+            src={`/assets/images/pokemon/${String(lastCaughtPokemon?.id).padStart(3, "0")}.png`}
             alt={lastCaughtPokemon?.name}
             style={{
               width: "100%",
