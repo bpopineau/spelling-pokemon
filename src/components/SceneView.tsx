@@ -39,8 +39,11 @@ const SceneView: FC = () => {
     );
   }
 
-  // Simple string concat—no hook needed
-  const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
+  // Simple string concat—no hook needed. Prefix with BASE_URL so the image
+  // loads correctly when deployed under a subpath.
+  const backgroundPath =
+    import.meta.env.BASE_URL +
+    `assets/images/backgrounds/${scene.background}`;
 
   return (
     <Box sx={{ bgcolor: "grey.100", minHeight: "100vh", py: 4 }}>

@@ -63,7 +63,7 @@ const Pokedex: FC = () => {
             >
               <CardMedia
                 component="img"
-                image={`/assets/images/pokemon/${String(pokemon.id).padStart(3, "0")}.png`}
+                image={`${import.meta.env.BASE_URL}assets/images/pokemon/${String(pokemon.id).padStart(3, "0")}.png`}
                 alt={pokemon.name.english}
                 loading="lazy"
                 sx={{ height: 140, objectFit: "contain", p: 2 }}

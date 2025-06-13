@@ -13,7 +13,7 @@ export interface IconProps {
 
 const Icon: FC<IconProps> = ({ name, size = 24, className }) => (
   <img
-    src={`/assets/icons/${name}.svg`}
+    src={`${import.meta.env.BASE_URL}assets/icons/${name}.svg`}
     alt={`${name} icon`}
     width={size}
     height={size}

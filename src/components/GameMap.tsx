@@ -16,8 +16,10 @@ interface SceneUnlock {
   unlock_xp: number;
 }
 
-// Path to the world map image asset
-const MAP_SRC = "/assets/images/map/world-map.png";
+// Path to the world map image asset. Prefix with BASE_URL so the
+// image loads correctly when the app is served from a subpath.
+const MAP_SRC =
+  import.meta.env.BASE_URL + "assets/images/map/world-map.png";
 
 /**
  * GameMap Component

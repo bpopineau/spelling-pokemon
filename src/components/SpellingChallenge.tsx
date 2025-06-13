@@ -345,7 +345,7 @@ const SpellingChallenge: FC<SpellingChallengeProps> = ({
         </DialogTitle>
         <DialogContent sx={{ textAlign: "center" }}>
           <img
-            src={`/assets/images/pokemon/${String(lastCaught?.id).padStart(3, "0")}.png`}
+            src={`${import.meta.env.BASE_URL}assets/images/pokemon/${String(lastCaught?.id).padStart(3, "0")}.png`}
             alt={lastCaught?.name}
             style={{ width: "100%", maxWidth: 250, margin: "auto" }}
           />
