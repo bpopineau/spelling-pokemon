@@ -54,7 +54,11 @@ export default function GameMap() {
         />
 
         {regionHotspots.map((region) => {
-          // Each hotspot is a button positioned over the map
+          // Each hotspot is a button positioned over the map.
+          // TODO: Replace with a shadcn/ui `<Button>` and wrap in `<Tooltip>`
+          //       so the region name appears on hover.
+          //       See https://ui.shadcn.com/docs/components/button and
+          //       https://ui.shadcn.com/docs/components/tooltip
           const unlocked = isUnlocked(region.sceneId);
           return (
             <button

@@ -5,6 +5,9 @@
 // represents where the child route's element should be rendered.
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
+// TODO: Once shadcn/ui is installed, wrap the layout in its `ThemeProvider`
+// to enable dark mode and component theming. See
+// https://ui.shadcn.com/docs/dark-mode/theming
 
 export default function MainLayout() {
   // This component simply arranges the shared header and whatever page

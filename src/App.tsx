@@ -31,7 +31,9 @@ function App() {
 
       {/* This screen hides the header so the scene fills the page */}
       <Route path="/scene/:sceneId" element={<SceneView />} />
-      {/* TODO: add a <Route> for unmatched URLs to show a 404 screen */}
+      {/* TODO: add a <Route> for unmatched URLs to show a 404 screen.
+          The 404 page could leverage shadcn/ui's `Alert` component to display
+          the error message. */}
     </Routes>
   );
 }
