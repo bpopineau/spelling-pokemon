@@ -1,49 +1,40 @@
-// SpellingChallenge presents one word at a time for the player to spell.
-//
-// This component encapsulates the bulk of the gameplay logic. It is responsible
-// for iterating through a set of words, validating the player's input, awarding
-// experience points and handing out Pokémon rewards. A small set of helper
-// components (e.g. `Controls` and `OnScreenKeyboard`) are used to keep the UI
-// manageable.
-// TODO: break logic into smaller hooks for easier testing and reuse
-// TODO: replace magic numbers (XP values, hint thresholds) with constants
 import { useState, useEffect } from "react";
-import words from "../data/words.json"; // list of all spelling words
-import pokemon from "../data/pokemon.json"; // which Pokémon appear in scenes
-import scenes from "../data/scenes.json"; // scene definitions
-import Controls from "./Controls"; // buttons like hint and submit
-import OnScreenKeyboard from "./OnScreenKeyboard"; // clickable keyboard
+import words from "@/data/words.json";
+import pokemon from "@/data/pokemon.json";
+import scenes from "@/data/scenes.json";
+import Controls from "./Controls";
+import OnScreenKeyboard from "./OnScreenKeyboard";
 import ProgressBar from "./ProgressBar";
-import { speak } from "../services/ttsService"; // helper for text-to-speech
-import { useGameStore } from "../services/gameState"; // global game state
+import { speak } from "@/services/ttsService";
+import { useGameStore } from "@/services/gameState";
+import {
+  Alert,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  TextField,
+  Typography,
+} from "@mui/material";
 
-// Props tell the component which words it should use. `wordStart` and
-// `wordEnd` are indexes into the master word list and determine the words for
-// the currently active scene.
 interface SpellingChallengeProps {
   wordStart: number;
   wordEnd: number;
 }
 
-// The main component that runs the spelling logic
 export default function SpellingChallenge({
   wordStart,
   wordEnd,
 }: SpellingChallengeProps) {
-  // Words for this scene and which one the player is on
   const [sceneWords, setSceneWords] = useState<string[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  // What the player has typed so far
   const [currentInput, setCurrentInput] = useState("");
-  // Feedback shown under the input box
   const [message, setMessage] = useState("");
   const [lastCaughtPokemon, setLastCaughtPokemon] = useState<{
     name: string;
     sprite: string;
   } | null>(null);
 
-  // Pull the relevant pieces of global state from the store. These values are
-  // kept in a central location so multiple components can stay in sync.
   const {
     xp,
     level,
@@ -57,24 +48,16 @@ export default function SpellingChallenge({
     completeScene,
   } = useGameStore();
 
-  // Figure out which scene these words belong to
   const scene = scenes.find(
     (s) => s.word_start === wordStart && s.word_end === wordEnd,
   );
   const sceneId = scene?.id;
   const currentWord = sceneWords[currentWordIndex];
 
-  // --- Progress Bar Calculation ---
-  // These numbers help us show how close the player is to the next level. They
-  // are derived from the XP totals in the global state and are recalculated on
-  // every render so the progress bar stays accurate.
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
 
-  // When the scene changes, load the right words and reset state. This effect
-  // runs whenever `wordStart` or `wordEnd` change (i.e. when a new scene is
-  // loaded).
   useEffect(() => {
     const wordsForScene = words.slice(wordStart, wordEnd + 1);
     setSceneWords(wordsForScene);
@@ -84,46 +67,36 @@ export default function SpellingChallenge({
     setLastCaughtPokemon(null);
   }, [wordStart, wordEnd]);
 
-  // Read the word aloud each time it changes. The call to `speak` uses the
-  // browser's SpeechSynthesis API and is abstracted in `ttsService`.
   useEffect(() => {
     if (currentWord) {
       speak(currentWord);
     }
   }, [currentWord]);
 
-  // Called when the player types in the input box. Input is filtered to letters
-  // only so accidental spaces or punctuation don't break the game.
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newV = event.target.value.replace(/[^a-zA-Z]/g, "").toLowerCase();
-    if (currentWord && newV.length > currentWord.length) {
+    const newValue = event.target.value.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    if (currentWord && newValue.length > currentWord.length) {
       return;
     }
-    setCurrentInput(newV);
+    setCurrentInput(newValue);
   };
 
-  // Called when the on-screen keyboard is used. This ensures players on touch
-  // devices can still participate without needing a physical keyboard.
   const handleKeyboardInput = (char: string) => {
     if (currentWord && currentInput.length < currentWord.length) {
       setCurrentInput((prev) => (prev + char).slice(0, currentWord.length));
     }
   };
 
-  // Remove the last letter from the input (used by the on-screen keyboard).
   const handleBackspace = () => {
     setCurrentInput((prev) => prev.slice(0, -1));
   };
 
-  // Speak the current word again when the repeat button is pressed.
   const handleRepeat = () => {
     if (currentWord) {
       speak(currentWord);
     }
   };
 
-  // Check if the spelling is correct when the form is submitted. Correct
-  // answers award XP and may trigger a Pokémon catch.
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     if (e) e.preventDefault();
     if (!currentInput) return;
@@ -131,8 +104,7 @@ export default function SpellingChallenge({
     if (currentInput.toLowerCase() === currentWord?.toLowerCase()) {
       addXp(10);
       incrementWordsMastered();
-      // TODO: play "correct.wav" from `public/assets/sounds/` here for
-      // positive feedback as listed in assets.md
+      setMessage("Correct!");
 
       const scenePokemon = pokemon.filter((p) => p.scene_id === sceneId);
       const nextPokemonToCatch = scenePokemon.find(
@@ -141,23 +113,17 @@ export default function SpellingChallenge({
 
       if (nextPokemonToCatch) {
         catchPokemon(nextPokemonToCatch.id);
-        // TODO: play "catch.wav" from `public/assets/sounds/` when a Pokémon is caught
         setLastCaughtPokemon({
           name: nextPokemonToCatch.name,
           sprite: nextPokemonToCatch.sprite,
         });
         setMessage(`Correct! You caught ${nextPokemonToCatch.name}!`);
-      } else {
-        setMessage("Correct! 🎉");
       }
     } else {
-      // TODO: play "incorrect.wav" from `public/assets/sounds/` for wrong answers
-      setMessage("Try again! 🤔");
+      setMessage("Try again!");
     }
   };
 
-  // Move on to the next word in the list, or end the scene if there are no
-  // words left.
   const handleNextWord = () => {
     if (currentWordIndex < sceneWords.length - 1) {
       setCurrentWordIndex(currentWordIndex + 1);
@@ -165,7 +131,6 @@ export default function SpellingChallenge({
       setMessage("You have completed all the words in this scene! 🏆");
       if (sceneId) {
         completeScene(sceneId);
-        // TODO: play "badge.wav" from `public/assets/sounds/` when a scene is completed
       }
     }
     setCurrentInput("");
@@ -173,8 +138,6 @@ export default function SpellingChallenge({
     setLastCaughtPokemon(null);
   };
 
-  // Fill in the next letter if the player has hints left. This consumes a hint
-  // charge from the global store.
   const handleHint = () => {
     if (
       hintCharges <= 0 ||
@@ -188,131 +151,94 @@ export default function SpellingChallenge({
     spendHint();
   };
 
-  // Wait until a word is ready
   if (!currentWord) {
-    return (
-      <div className="text-center bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">
-        Loading challenge...
-      </div>
-    );
+    return <Typography>Loading challenge...</Typography>;
   }
 
-  const wordBlanks = "_ ".repeat(currentWord.length);
-  // Example: if the word has 5 letters we show "_ _ _ _ _"
+  const wordBlanks = currentWord.split('').map((_, index) => (
+    <span key={index} style={{ margin: '0 0.25em' }}>
+      {currentInput[index] ? currentInput[index].toUpperCase() : '_'}
+    </span>
+  ));
 
   return (
-    // Main container with a solid background and border
-    <div className="bg-white border-4 border-slate-300/70 p-6 rounded-xl shadow-2xl w-full max-w-lg text-gray-800">
-      {/* --- Status Bar --- */}
-      {/* TODO: Consider using a shadcn/ui Card component to group these status elements (Level, XP, Hints)
-          or use styled divs with Tailwind CSS (which shadcn/ui is built upon).
-          The ProgressBar is already a separate component and suggestions for it are in ProgressBar.tsx.
-          See https://ui.shadcn.com/docs/components/card */}
-      <div className="grid grid-cols-3 divide-x divide-slate-300 bg-slate-100 rounded-lg p-2 mb-6 border border-slate-300">
-        {/* Level */}
-        <div className="flex flex-col items-center justify-center px-2">
-          <span className="text-sm font-bold text-slate-600">LEVEL</span>
-          <span className="text-4xl font-bold text-sky-600">{level}</span>
-        </div>
+    <Card sx={{ maxWidth: 500, mx: 'auto' }}>
+      <CardContent sx={{ p: 3 }}>
+        {/* Status Bar */}
+        <Box sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', mb: 3, textAlign: 'center' }}>
+            <Box>
+                <Typography variant="overline">LEVEL</Typography>
+                <Typography variant="h4">{level}</Typography>
+            </Box>
+            <Box sx={{ width: '33%' }}>
+                <ProgressBar current={xpGainedThisLevel} total={xpNeededForThisLevel} />
+            </Box>
+            <Box>
+                <Typography variant="overline">HINTS</Typography>
+                <Typography variant="h4">{hintCharges}</Typography>
+            </Box>
+        </Box>
 
-        {/* XP / Progress */}
-        <ProgressBar current={xpGainedThisLevel} total={xpNeededForThisLevel} />
+        {/* Spelling Area */}
+        <Box component="form" onSubmit={handleSubmit} sx={{ textAlign: 'center' }}>
+          <Typography variant="h6" gutterBottom>
+            Spell the word:
+          </Typography>
 
-        {/* Hints */}
-        <div className="flex flex-col items-center justify-center px-2">
-          <span className="text-sm font-bold text-slate-600">HINTS</span>
-          <span className="text-4xl font-bold text-purple-600">
-            {hintCharges}
-          </span>
-        </div>
-      </div>
+          <Typography variant="h3" component="div" sx={{ fontFamily: 'monospace', letterSpacing: '0.5em', my: 2 }}>
+            {wordBlanks}
+          </Typography>
 
-      {/* --- Spelling Area --- */}
-      <div className="text-center">
-        <h2 className="text-3xl font-bold mb-2 text-slate-800">
-          Spell the word:
-        </h2>
-        <div
-          className="text-6xl font-bold font-mono tracking-widest mb-4 text-slate-800 py-2"
-          aria-label={`Word has ${currentWord.length} letters`}
-        >
-          {wordBlanks}
-        </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col items-center w-full"
-        >
-          {/* TODO: Replace this HTML input with shadcn/ui's Input component.
-              Example: <Input type="text" value={currentInput} onChange={handleInputChange} ... />
-              See https://ui.shadcn.com/docs/components/input */}
-          <input
-            type="text"
-            value={currentInput}
+          <TextField
+            value={currentInput.toUpperCase()}
             onChange={handleInputChange}
-            className="text-4xl p-2 border-2 border-gray-300 rounded-md w-full max-w-xs text-center font-mono tracking-widest focus:border-blue-500 focus:ring-blue-500"
-            aria-label="Enter your spelling"
             autoFocus
             autoComplete="off"
-            autoCapitalize="off"
+            variant="outlined"
+            inputProps={{
+              style: { textAlign: 'center', fontSize: '2rem', letterSpacing: '0.2em' },
+              maxLength: currentWord.length
+            }}
+            sx={{ mb: 2, width: '100%', maxWidth: '300px' }}
           />
 
-          {/* TODO: While OnScreenKeyboard is a custom component, its individual key buttons
-              could be implemented or styled using shadcn/ui Button components for consistency.
-              See https://ui.shadcn.com/docs/components/button */}
-          <OnScreenKeyboard
-            onKey={handleKeyboardInput}
-            onBackspace={handleBackspace}
-          />
+          <OnScreenKeyboard onKey={handleKeyboardInput} onBackspace={handleBackspace} />
 
-          {/* TODO: For feedback messages (e.g., "Correct!", "Try again!", "You caught..."),
-              consider using shadcn/ui's Alert component (with AlertTitle and AlertDescription)
-              or potentially Toast for less intrusive notifications.
-              See https://ui.shadcn.com/docs/components/alert
-              See https://ui.shadcn.com/docs/components/toast */}
-          <div className="h-24 my-2 flex flex-col justify-center items-center">
-            {message && <p className="text-2xl">{message}</p>}
-            {lastCaughtPokemon && message.startsWith("Correct") && (
-              <>
-                <img
-                  src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
-                  alt={lastCaughtPokemon.name}
-                  className="w-16 h-16 mt-2"
-                />
-                {/* Sprite images live under `public/assets/images/sprites/`.
-                    Ensure the sprite sheet is copied there as listed in assets.md. */}
-              </>
+          {/* Feedback Message */}
+          <Box sx={{ height: 90, mt: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {message && (
+              <Alert severity={message.startsWith("Correct") ? "success" : "info"}>
+                {message}
+                {lastCaughtPokemon && message.startsWith("Correct") && (
+                  <img
+                    src={`/assets/images/sprites/${lastCaughtPokemon.sprite}`}
+                    alt={lastCaughtPokemon.name}
+                    style={{ width: '48px', height: '48px', marginTop: '8px', imageRendering: 'pixelated' }}
+                  />
+                )}
+              </Alert>
             )}
-          </div>
+          </Box>
 
+          {/* Action Buttons */}
           {message.startsWith("Correct") ? (
-            // TODO: Replace this HTML button with a shadcn/ui Button component.
-            // Example: <Button type="button" onClick={handleNextWord} className="w-full max-w-xs">Next Word</Button>
-            // See https://ui.shadcn.com/docs/components/button
-            <button
-              type="button"
-              onClick={handleNextWord}
-              className="w-full max-w-xs px-6 py-3 bg-blue-500 text-white font-bold rounded-lg text-xl hover:bg-blue-700"
-            >
+            <Button variant="contained" onClick={handleNextWord} sx={{ width: '100%', maxWidth: '300px' }}>
               Next Word
-            </button>
+            </Button>
           ) : (
-            <div className="w-full max-w-xs">
-              {/* Controls component has its own set of suggestions in Controls.tsx */}
-              <Controls
-                onSubmit={() => handleSubmit()}
-                onHint={handleHint}
-                onRepeat={handleRepeat}
-                hintDisabled={
-                  hintCharges <= 0 ||
-                  !currentWord ||
-                  currentInput.length >= currentWord.length
-                }
-              />
-            </div>
+            <Controls
+              onSubmit={() => handleSubmit()}
+              onHint={handleHint}
+              onRepeat={handleRepeat}
+              hintDisabled={
+                hintCharges <= 0 ||
+                !currentWord ||
+                currentInput.length >= currentWord.length
+              }
+            />
           )}
-        </form>
-      </div>
-    </div>
+        </Box>
+      </CardContent>
+    </Card>
   );
 }

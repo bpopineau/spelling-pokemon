@@ -1,4 +1,5 @@
 // Vite configuration file. This tells Vite how to build the project.
+import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -6,4 +7,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   // Enable React support
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });

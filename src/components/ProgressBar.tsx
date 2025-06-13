@@ -1,3 +1,6 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import LinearProgress from "@mui/material/LinearProgress";
 
 interface ProgressBarProps {
   /** Current XP gained within the level */
@@ -9,27 +12,20 @@ interface ProgressBarProps {
 /**
  * Visual progress bar showing XP progress toward the next level.
  */
-// TODO: Consider replacing this custom progress bar with shadcn/ui's Progress component.
-// See https://ui.shadcn.com/docs/components/progress
-// The `value` prop of the shadcn/ui Progress component would correspond to the `percentage`
-// calculated below.
 export default function ProgressBar({ current, total }: ProgressBarProps) {
-  const percentage = Math.max(0, Math.min(100, (current / total) * 100));
+  const percentage = total > 0 ? (current / total) * 100 : 0;
 
   return (
-    <div className="flex flex-col items-center justify-center px-4">
-      <span className="text-sm font-bold text-slate-600">PROGRESS</span>
-      {/* TODO: Replace this div structure with <Progress value={percentage} /> from shadcn/ui.
-          The styling can be adjusted using classNames as needed. */}
-      <div className="w-full bg-slate-300 rounded-full h-5 mt-1 border border-slate-400/50 shadow-inner">
-        <div
-          className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-500"
-          style={{ width: `${percentage}%` }}
-        />
-      </div>
-      <span className="text-sm font-semibold text-slate-600 mt-1">
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', px: 2, width: '100%' }}>
+      <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
+        PROGRESS
+      </Typography>
+      <Box sx={{ width: '100%', mt: 0.5 }}>
+        <LinearProgress variant="determinate" value={percentage} />
+      </Box>
+      <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'medium' }}>
         {current} / {total} XP
-      </span>
-    </div>
+      </Typography>
+    </Box>
   );
 }

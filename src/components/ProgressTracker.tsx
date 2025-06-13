@@ -1,68 +1,121 @@
 // Shows the player's level, XP and earned badges.
-//
-// This component reads progress information from the global store and presents
-// it in a simple dashboard format. It doesn't include any interactive controls
-// beyond listing the data.
-// TODO: display XP progress using <ProgressBar> like in SpellingChallenge
-//       or shadcn/ui's `<Progress>` component once shadcn/ui is installed.
-//       See https://ui.shadcn.com/docs/components/progress
-import badges from "../data/badges.json";
-import { useGameStore } from "../services/gameState";
+import badges from "@/data/badges.json";
+import { useGameStore } from "@/services/gameState";
+import {
+  Alert,
+  Box,
+  Card,
+  CardContent,
+  Typography,
+} from "@mui/material";
+import ProgressBar from "./ProgressBar";
+import Icon from "@/components/Icon"; // Corrected import path
 
 export default function ProgressTracker() {
   // Pull various progress metrics from the central store
-  const { xp, level, wordsMastered, collectedPokemonIds, earnedBadges } =
-    useGameStore();
+  const {
+    xp,
+    level,
+    xpToNextLevel,
+    wordsMastered,
+    collectedPokemonIds,
+    earnedBadges,
+  } = useGameStore();
 
-  // Only keep badges that have been earned. The badge list is static so we
-  // simply filter the IDs we have earned.
+  // Filter for earned badges
   const earned = badges.filter((b) => earnedBadges.includes(b.id));
 
+  // Calculate XP progress for the current level
+  const xpForLastLevel = (level - 1) * 100;
+  const xpGainedThisLevel = xp - xpForLastLevel;
+  const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
+
   return (
-    <div className="p-4 md:p-8">
-      <h1 className="text-4xl font-bold text-center mb-6">Progress Tracker</h1>
-      {/* Summary numbers showing overall progress */}
-      {/* TODO: Consider using shadcn/ui's `<Card>` component for each stat
-          to ensure consistent padding and shadows.
-          See https://ui.shadcn.com/docs/components/card */}
-      <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
-        <div className="bg-white p-4 rounded shadow">
-          <h2 className="font-bold">Level</h2>
-          <p>{level}</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h2 className="font-bold">XP</h2>
-          <p>{xp}</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h2 className="font-bold">Words Mastered</h2>
-          <p>{wordsMastered}</p>
-        </div>
-        <div className="bg-white p-4 rounded shadow">
-          <h2 className="font-bold">Pokémon</h2>
-          <p>{collectedPokemonIds.length}</p>
-        </div>
-      </div>
-      {/* List of earned badges */}
-      <h2 className="text-2xl font-bold mt-6 mb-2 text-center">Badges</h2>
-      {earned.length === 0 ? (
-        // TODO: Could also use <Alert> from shadcn/ui to show this message.
-        // See https://ui.shadcn.com/docs/components/alert
-        <p className="text-center">No badges earned yet.</p>
-      ) : (
-        // TODO: Each badge could be a `<Card>` as well for a consistent look.
-        //       When badge icons are added to `public/assets/icons/` (see
-        //       assets.md), display the corresponding `badge_icon.svg` next to
-        //       each badge name.
-        <ul className="flex flex-wrap justify-center gap-4">
-          {/* Show each earned badge */}
-          {earned.map((b) => (
-            <li key={b.id} className="bg-white rounded shadow p-2 text-sm">
-              {b.name}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: '900px', mx: 'auto' }}>
+      <Typography variant="h3" component="h1" align="center" sx={{ mb: 4 }}>
+        Progress Tracker
+      </Typography>
+
+      {/* Main Stats Grid using Box and Flexbox */}
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 4 }}>
+        <Box sx={{ flexGrow: 1, flexBasis: { xs: 'calc(50% - 8px)', sm: 'calc(25% - 12px)' } }}>
+          <Card sx={{ textAlign: 'center' }}>
+            <CardContent>
+              <Typography variant="overline">Level</Typography>
+              <Typography variant="h4">{level}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box sx={{ flexGrow: 1, flexBasis: { xs: 'calc(50% - 8px)', sm: 'calc(25% - 12px)' } }}>
+          <Card sx={{ textAlign: 'center' }}>
+            <CardContent>
+              <Typography variant="overline">Total XP</Typography>
+              <Typography variant="h4">{xp}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box sx={{ flexGrow: 1, flexBasis: { xs: 'calc(50% - 8px)', sm: 'calc(25% - 12px)' } }}>
+          <Card sx={{ textAlign: 'center' }}>
+            <CardContent>
+              <Typography variant="overline">Words Mastered</Typography>
+              <Typography variant="h4">{wordsMastered}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+        <Box sx={{ flexGrow: 1, flexBasis: { xs: 'calc(50% - 8px)', sm: 'calc(25% - 12px)' } }}>
+          <Card sx={{ textAlign: 'center' }}>
+            <CardContent>
+              <Typography variant="overline">Pokémon</Typography>
+              <Typography variant="h4">{collectedPokemonIds.length}</Typography>
+            </CardContent>
+          </Card>
+        </Box>
+      </Box>
+
+      {/* XP Progress Card */}
+      <Card sx={{ mb: 4 }}>
+        <CardContent>
+          <Typography variant="h6" sx={{ mb: 1 }}>Progress to Next Level</Typography>
+          <ProgressBar
+            current={xpGainedThisLevel}
+            total={xpNeededForThisLevel}
+          />
+        </CardContent>
+      </Card>
+
+      {/* Badges Card */}
+      <Card>
+        <CardContent>
+          <Typography variant="h6" sx={{ mb: 2 }}>Badges Earned</Typography>
+          {earned.length === 0 ? (
+            <Alert severity="info">
+              No badges earned yet. Complete scenes to earn them!
+            </Alert>
+          ) : (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+              {earned.map((badge) => (
+                <Box
+                  key={badge.id}
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    p: 2,
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    borderRadius: 2,
+                    width: 120,
+                  }}
+                >
+                  <Icon name={badge.icon} className="w-16 h-16" />
+                  <Typography variant="caption" sx={{ mt: 1 }}>{badge.name}</Typography>
+                </Box>
+              ))}
+            </Box>
+          )}
+        </CardContent>
+      </Card>
+    </Box>
   );
 }

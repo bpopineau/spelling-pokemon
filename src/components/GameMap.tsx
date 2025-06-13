@@ -9,8 +9,10 @@
  * global game store to know which regions should be unlocked.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
-import regionHotspots from "../data/regionHotspots"; // clickable map spots
-import scenesData from "../data/scenes.json"; // data about when scenes unlock
+import regionHotspots from "@/data/regionHotspots"; // clickable map spots
+import scenesData from "@/data/scenes.json"; // data about when scenes unlock
+import { useGameStore } from "@/services/gameState";
+import { Box, Tooltip, Paper } from "@mui/material";
 
 // A lightweight type describing the shape of the scene unlock data so TypeScript
 // can help us catch mismatches with the JSON file.
@@ -18,7 +20,6 @@ interface SceneUnlock {
   id: number;
   unlock_xp: number;
 }
-import { useGameStore } from "../services/gameState"; // global game data store
 
 export default function GameMap() {
   // Router navigation function used to change the URL programmatically
@@ -44,38 +45,54 @@ export default function GameMap() {
 
   return (
     // The main container holds the map image and the invisible buttons
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
-      {/* The padding class was changed from p-4 to p-8 to match the original 2rem */}
-      <div className="relative w-full max-w-4xl rounded-lg overflow-hidden shadow-lg">
+    <Box
+      sx={{
+        minHeight: "calc(100vh - 96px)", // Adjust for header height
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        p: { xs: 2, md: 4 },
+        bgcolor: "grey.100",
+      }}
+    >
+      <Paper
+        elevation={6}
+        sx={{
+          position: "relative",
+          maxWidth: "75rem",
+          overflow: "hidden",
+          lineHeight: 0, // Removes extra space below the img
+        }}
+      >
         <img
           src="/assets/images/map/world-map.png"
           alt="World Map"
-          className="w-full h-auto object-cover"
+          style={{ width: "100%", height: "auto" }}
         />
         {/* The world map graphic should be placed at
             `public/assets/images/map/world-map.png` as noted in assets.md. */}
 
         {regionHotspots.map((region) => {
-          // Each hotspot is a button positioned over the map.
-          // TODO: Replace with a shadcn/ui `<Button>` and wrap in `<Tooltip>`
-          //       so the region name appears on hover.
-          //       See https://ui.shadcn.com/docs/components/button and
-          //       https://ui.shadcn.com/docs/components/tooltip
           const unlocked = isUnlocked(region.sceneId);
           return (
-            <button
-              key={region.id}
-              style={region.style}
-              aria-label={`Select ${region.name}`}
-              title={region.name}
-              disabled={!unlocked}
-              className={`absolute bg-transparent focus:outline-none transition-opacity ${unlocked ? "hover:bg-white hover:bg-opacity-20" : "opacity-50 cursor-not-allowed"}`}
-              onClick={() => unlocked && handleRegionClick(region.sceneId)}
-            />
+            <Tooltip title={region.name} key={region.id} arrow>
+              <Box
+                style={region.style}
+                onClick={() => unlocked && handleRegionClick(region.sceneId)}
+                sx={{
+                  position: "absolute",
+                  cursor: unlocked ? "pointer" : "not-allowed",
+                  "&:hover": {
+                    backgroundColor: unlocked
+                      ? "rgba(255, 255, 255, 0.2)"
+                      : "transparent",
+                  },
+                }}
+              />
+            </Tooltip>
           );
         })}
-        {/* TODO: allow navigating regions via keyboard for accessibility */}
-      </div>
-    </div>
+      </Paper>
+    </Box>
   );
 }

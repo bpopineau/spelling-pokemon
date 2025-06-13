@@ -1,24 +1,22 @@
-<!--
-  This is the main HTML page. It contains only a single div where
-  our React game will be placed. All JavaScript bundles and stylesheets are
-  injected by Vite so the page can remain very small.
--->
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Basic meta tags and the page title -->
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <!-- TODO: Replace favicon with `public/assets/icons/menu_icon.svg` or
-         another icon from assets.md once copied into the project -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <!-- TODO: update page title and icons for the final game branding -->
-  </head>
-  <body>
-    <!-- React mounts the entire game into this single div -->
-    <div id="root"></div>
-    <!-- main.tsx starts our React code -->
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spelling Adventure</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

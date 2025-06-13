@@ -3,6 +3,8 @@
 // It mirrors a simplified QWERTY layout so players on phones or tablets can
 // input letters without relying on their device's built-in keyboard. The parent
 // component supplies callbacks for both key presses and backspace events.
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 interface KeyboardProps {
   // Add a letter to the input
@@ -10,9 +12,6 @@ interface KeyboardProps {
   // Remove the last letter
   onBackspace: () => void;
 }
-// TODO: allow custom keyboard layouts via props
-//       The individual keys could be built with shadcn/ui's `Button` component
-//       for consistent styling once the library is available.
 
 // Each row of keys on the keyboard
 const layout = [
@@ -25,42 +24,32 @@ export default function OnScreenKeyboard({
   onKey,
   onBackspace,
 }: KeyboardProps) {
-  // Render three rows of letter buttons followed by a backspace button. The
-  // layout array defined above controls the characters displayed on each row.
+  // Render three rows of letter buttons followed by a backspace button.
   return (
-    <div className="flex flex-col items-center gap-2 mt-4">
+    <Stack spacing={1} alignItems="center" sx={{ mt: 2 }}>
       {layout.map((row, idx) => (
-        <div key={idx} className="flex gap-1">
+        <Stack key={idx} direction="row" spacing={1}>
           {row.map((ch) => (
-            // Regular letter button
-            // TODO: Swap these `<button>` elements for shadcn/ui `Button`
-            //       components so the keyboard matches the rest of the UI.
-            //       See https://ui.shadcn.com/docs/components/button
-            <button
+            <Button
               key={ch}
               onClick={() => onKey(ch)}
-              className="w-8 h-8 bg-gray-200 rounded text-sm font-bold hover:bg-gray-300"
+              variant="outlined"
+              sx={{ minWidth: '40px', padding: '8px', textTransform: 'lowercase' }}
             >
               {ch}
-            </button>
+            </Button>
           ))}
-        </div>
+        </Stack>
       ))}
-      <div className="flex gap-1">
-        {/* Backspace key. Clicking this removes the last character from the
-            player's input. */}
-        {/* TODO: Replace this with a shadcn/ui Button as well for visual
-            consistency. */}
-        {/* The backspace icon file (`backspace_icon.svg`) should be placed in
-            `public/assets/icons/` as listed in assets.md and can be used inside
-            this button once the icon library is wired up. */}
-        <button
+      <Stack direction="row" spacing={1}>
+        <Button
           onClick={onBackspace}
-          className="flex-1 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm font-bold"
+          variant="outlined"
+          sx={{ minWidth: '80px' }}
         >
           ⌫
-        </button>
-      </div>
-    </div>
+        </Button>
+      </Stack>
+    </Stack>
   );
 }
