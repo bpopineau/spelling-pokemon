@@ -32,6 +32,6 @@ export default defineConfig({
   },
   // Vitest uses this section for unit test configuration
   test: {
-    environment: "node",
+    environment: "jsdom",
   },
 });

@@ -27,8 +27,14 @@ The output is placed in the `dist/` directory. You can preview the build using `
 Unit tests are written with [Vitest](https://vitest.dev/). Run all tests with:
 
 ```bash
-npm test
+npx vitest run
 ```
+
+## Resetting Progress
+
+Visit the **Progress Tracker** page (`/progress`) to view your badges and stats.
+You can reset all progress using the **Reset Progress** button at the bottom of
+the page. This will clear collected Pokémon and XP.
 
 ## Adding Assets
 
