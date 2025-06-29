@@ -1,6 +1,12 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
+//
+// Development Plan:
+// - Expose color and label props so the progress bar can adapt to different
+//   themes or be repurposed for mini-progress indicators elsewhere.
+// - Add an optional animation prop to control whether the bar fills with a
+//   transition, which could be useful for results screens.
 
 interface ProgressBarProps {
   /** Current XP gained within the level */

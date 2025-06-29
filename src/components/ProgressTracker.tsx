@@ -13,6 +13,14 @@ import {
 import ProgressBar from "./ProgressBar";
 import Icon from "@/components/Icon"; // Corrected import path
 import useBackgroundMusic from "@/hooks/useBackgroundMusic";
+//
+// Development Plan:
+// - Integrate the same `ProgressBar` component in other places (e.g., scene
+//   results screens) for a consistent look.
+// - When achievements beyond badges are introduced, expand this screen to show
+//   them in a dedicated section.
+// - Provide a reset-progress button that calls `resetProgress()` from the game
+//   store (with confirmation) for parental control.
 
 // --- Background Music Setup ---
 const musicTracks = [

@@ -7,6 +7,14 @@
 // text they want spoken.
 // Narrative scripts used with this service are stored in
 // `src/data/tts-narrative/` as described in assets.md.
+//
+// Development Plan:
+// - Allow selecting from the list of available voices and persist the player's
+//   preference in `gameState`.
+// - Add support for queuing longer narration scripts so scenes can play a
+//   sequence of lines with proper timing.
+// - Consider falling back to a server-side TTS service for platforms without
+//   built-in speech synthesis.
 
 // A variable to hold the voices once they are loaded.
 let voices: SpeechSynthesisVoice[] = [];

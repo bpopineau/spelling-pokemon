@@ -6,6 +6,14 @@
 // game inside that element. Keeping the bootstrapping logic here makes it easy
 // to change how React is mounted without touching the rest of the codebase.
 import { StrictMode } from "react";
+//
+// Development Plan:
+// - Introduce an error boundary component around <App> so unexpected runtime
+//   errors show a friendly message rather than a blank screen.
+// - Consider lazy loading larger screens with React.lazy and <Suspense> once
+//   routing becomes more complex.
+// - This is also the ideal place to initialize service worker registration when
+//   offline support becomes a goal.
 // `createRoot` gives us full control over how React attaches to the DOM. This is
 // the modern replacement for `ReactDOM.render` and enables React 18 features
 // such as concurrent rendering.

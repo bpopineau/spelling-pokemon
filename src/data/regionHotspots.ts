@@ -14,6 +14,13 @@ export interface Hotspot {
 }
 
 // List of all hotspots. The order matches the visual layout on the map.
+//
+// Development Plan:
+// - Move this data to an external JSON file or CMS so designers can tweak
+//   coordinates without touching TypeScript.
+// - Provide multiple hotspot sets for different map sizes or orientations if we
+//   add a mobile-specific map layout.
+// - Validate the hotspot coordinates at build time to catch typos early.
 const regionHotspots: Hotspot[] = [
   {
     id: 1,

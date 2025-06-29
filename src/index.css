@@ -1,6 +1,13 @@
 /*
-  A basic body reset for the MUI application.
-  All component styling is now handled by MUI.
+  Global stylesheet
+
+  Development Plan:
+  - Define CSS custom properties (variables) for colors and spacing so minor
+    visual tweaks can be made without touching every component.
+  - Investigate integrating a CSS reset library if additional cross-browser
+    consistency issues appear.
+  - Review font loading strategy; consider self-hosting fonts for offline
+    support when packaging the game.
 */
 body {
   margin: 0;

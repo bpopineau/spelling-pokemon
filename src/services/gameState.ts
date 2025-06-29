@@ -5,6 +5,14 @@
 // that any component can read or update it without prop drilling.
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+//
+// Development Plan:
+// - Separate persistence (localStorage) from the gameplay logic so that the
+//   store can be unit tested without hitting browser APIs.
+// - Add selectors for derived data such as current level percentage to reduce
+//   duplication in components.
+// - Explore syncing this state to an optional backend in the future for
+//   cross-device save support.
 
 // The base amount of XP needed to level up. Each new level multiplies this
 // value so that higher levels require progressively more experience.
