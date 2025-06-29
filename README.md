@@ -30,6 +30,18 @@ Unit tests are written with [Vitest](https://vitest.dev/). Run all tests with:
 npx vitest run
 ```
 
+## Generating Pronunciation Data
+
+If you update the word list, run `build_pronunciations.py` to generate
+`words_with_pronunciations.json`:
+
+```bash
+python build_pronunciations.py --input src/data/words.json --output src/data/words_with_pronunciations.json
+```
+
+The script now accepts `--input` and `--output` flags so custom word lists can
+be processed easily.
+
 ## Resetting Progress
 
 Visit the **Progress Tracker** page (`/progress`) to view your badges and stats.

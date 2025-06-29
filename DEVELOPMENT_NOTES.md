@@ -111,6 +111,10 @@ This file provides high-level guidance for developers working on the code base. 
 - Ensure environment has Python 3 available when running.
 - TODO: Add command-line options (input/output paths) for flexibility.
 
+### `build_pronunciations.py`
+- Generates `words_with_pronunciations.json` from a word list using the CMU Pronouncing Dictionary.
+- Now accepts `--input` and `--output` arguments to specify file paths.
+
 ## Data (`public`)
 - Currently only `vite.svg` committed. Actual game assets (images, audio) are referenced in docs but not included. Ensure asset paths match the deployed environment.
 
