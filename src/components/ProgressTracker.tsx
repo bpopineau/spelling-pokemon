@@ -13,6 +13,7 @@ import {
   Box,
   Card,
   CardContent,
+  Button,
   Typography,
 } from "@mui/material";
 import ProgressBar from "./ProgressBar";
@@ -24,8 +25,8 @@ import useBackgroundMusic from "@/hooks/useBackgroundMusic";
 //   results screens) for a consistent look.
 // - When achievements beyond badges are introduced, expand this screen to show
 //   them in a dedicated section.
-// - Provide a reset-progress button that calls `resetProgress()` from the game
-//   store (with confirmation) for parental control.
+// - ✔ Provide a reset-progress button that calls `resetProgress()` from the
+//   game store (with confirmation) for parental control.
 // - Add export/import of progress data via JSON to make backups simple.
 // - Document badge requirements and XP formulas in README.md so progression
 //   tweaks can be made without searching through code.
@@ -56,6 +57,7 @@ export default function ProgressTracker() {
     wordsMastered,
     collectedPokemonIds,
     earnedBadges,
+    resetProgress,
   } = useGameStore(); // Zustand store keeps progress persisted across sessions
 
   // Filter for earned badges
@@ -65,6 +67,12 @@ export default function ProgressTracker() {
   const xpForLastLevel = (level - 1) * 100;
   const xpGainedThisLevel = xp - xpForLastLevel;
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
+
+  const handleReset = () => {
+    if (window.confirm("Reset all progress? This cannot be undone.")) {
+      resetProgress();
+    }
+  };
 
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: '900px', mx: 'auto' }}>
@@ -152,6 +160,12 @@ export default function ProgressTracker() {
           )}
         </CardContent>
       </Card>
+
+      <Box sx={{ textAlign: 'center', mt: 4 }}>
+        <Button variant="outlined" color="error" onClick={handleReset}>
+          Reset Progress
+        </Button>
+      </Box>
     </Box>
   );
 }

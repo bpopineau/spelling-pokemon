@@ -79,7 +79,8 @@ This file provides high-level guidance for developers working on the code base. 
 
 #### `ProgressTracker.tsx`
 - Shows player stats and earned badges.
-- TODO: use `ProgressBar` component to show XP progress similar to `SpellingChallenge`.
+- Uses `ProgressBar` component to show XP progress.
+- Added reset button allowing players to clear progress.
 
 #### `ProgressBar.tsx`
 - Generic progress bar. Could be reused in other screens.
