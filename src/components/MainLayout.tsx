@@ -19,7 +19,7 @@ import Header from "./Header";
 //   open modals without rendering them individually.
 // - Consider wrapping the layout in an error boundary to gracefully handle
 //   unexpected issues in nested routes.
-// - Document the expected layout structure in DEVELOPMENT_NOTES.md so new pages
+// - Document the expected layout structure in docs/DEVELOPMENT_NOTES.md so new pages
 //   follow the same conventions.
 
 // Wrapping pages with `MainLayout` ensures a consistent header. Additional

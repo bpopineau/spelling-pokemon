@@ -52,7 +52,7 @@ export default function SceneView() {
   }
 
   // Construct the path to the scene's background image. All background assets
-  // live under `public/assets/images/backgrounds/` as documented in assets.md.
+  // live under `public/assets/images/backgrounds/` as documented in docs/assets.md.
   const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
 
   return (
