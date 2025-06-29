@@ -14,7 +14,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 //   themes or be repurposed for mini-progress indicators elsewhere.
 // - Add an optional animation prop to control whether the bar fills with a
 //   transition, which could be useful for results screens.
-// - Document recommended sizing and usage examples in DEVELOPMENT_NOTES.md to
+// - Document recommended sizing and usage examples in docs/DEVELOPMENT_NOTES.md to
 //   encourage consistent styling across pages.
 // - Consider extracting the calculation logic to a helper so other progress
 //   meters can reuse it without duplicating math.

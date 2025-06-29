@@ -8,7 +8,7 @@
 // Development Plan:
 // - Add functions for calculating level curves or XP rewards.
 // - Allow customizing unlock rules via settings files in the future.
-// - Document any formula changes in DEVELOPMENT_NOTES.md when updated.
+// - Document any formula changes in docs/DEVELOPMENT_NOTES.md when updated.
 
 /**
  * Returns true if the provided scene is unlocked at the given XP level.

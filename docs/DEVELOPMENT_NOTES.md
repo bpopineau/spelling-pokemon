@@ -7,11 +7,11 @@ This file provides high-level guidance for developers working on the code base. 
 ### `README.md`
 - Minimal README from Vite template. Could be expanded with game-specific instructions and build steps.
 
-### `assets.md`
+### `docs/assets.md`
 - Detailed asset inventory. Ensure this stays up to date when adding new images/audio.
 - Consider splitting into smaller docs if asset count grows.
 
-### `game_design_specification.md`
+### `docs/game_design_specification.md`
 - Long design document describing gameplay. No immediate actions but good reference for features.
 
 ### `index.html`

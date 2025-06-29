@@ -14,7 +14,7 @@ import React from 'react';
 //   the icon set grows large.
 // - Provide a script to batch optimize SVGs (e.g., with SVGO) so new icons stay
 //   lightweight and consistent.
-// - Document naming conventions for icons in assets.md so designers know how to
+// - Document naming conventions for icons in docs/assets.md so designers know how to
 //   add new artwork without code changes.
 
 // Central place for SVG icons. Placing them under `public/assets/icons` allows

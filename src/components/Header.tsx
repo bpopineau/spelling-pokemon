@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 //   during scrolling.
 // - Add highlighting for the active route using NavLink's styling so players
 //   always know which section they are in.
-// - Document the header structure in DEVELOPMENT_NOTES.md so theming changes are
+// - Document the header structure in docs/DEVELOPMENT_NOTES.md so theming changes are
 //   straightforward.
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";

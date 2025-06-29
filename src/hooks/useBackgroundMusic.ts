@@ -13,7 +13,7 @@ import { playBackgroundMusic, stopBackgroundMusic } from '@/services/audioServic
 //   respects preferences stored in `settings.json`.
 // - Provide a way to fade music in and out rather than starting/stopping
 //   abruptly. This could reuse the Web Audio API for smoother transitions.
-// - Document how to supply custom music tracks in assets.md so composers know
+// - Document how to supply custom music tracks in docs/assets.md so composers know
 //   the expected file format and location.
 // - Explore adding a "no music" option for accessibility or classroom use.
 

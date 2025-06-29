@@ -4,8 +4,8 @@ This document describes how automated agents should contribute to the **Spelling
 
 ## Project Context
 - The app is built with React, TypeScript and Vite. Code should stay accessible and easy to understand for new contributors and young learners.
-- Game assets live under `public/assets` and are enumerated in [`assets.md`](./assets.md).
-- Important design decisions are captured in [`DEVELOPMENT_NOTES.md`](./DEVELOPMENT_NOTES.md) and [`game_design_specification.md`](./game_design_specification.md). Review these before implementing major features.
+- Game assets live under `public/assets` and are enumerated in [`assets.md`](./docs/assets.md).
+- Important design decisions are captured in [`DEVELOPMENT_NOTES.md`](./docs/DEVELOPMENT_NOTES.md) and [`game_design_specification.md`](./docs/game_design_specification.md). Review these before implementing major features.
 
 ## In-code Comments
 - Begin every new file with a banner comment stating the file path and a concise description of its purpose.

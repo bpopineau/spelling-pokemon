@@ -25,7 +25,7 @@ export interface Hotspot {
 // - Provide multiple hotspot sets for different map sizes or orientations if we
 //   add a mobile-specific map layout.
 // - Validate the hotspot coordinates at build time to catch typos early.
-// - Document the coordinate system (percent-based values) in assets.md so map
+// - Document the coordinate system (percent-based values) in docs/assets.md so map
 //   artists can easily align hotspots with new artwork.
 // - Consider exposing a debug overlay in development mode to visualize these
 //   hotspots when tweaking positions.

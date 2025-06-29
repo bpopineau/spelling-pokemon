@@ -149,7 +149,7 @@ export default function GameMap() {
           style={{ width: "100%", height: "auto" }}
         />
         {/* The world map graphic should be placed at
-            `public/assets/images/map/world-map.png` as noted in assets.md. */}
+            `public/assets/images/map/world-map.png` as noted in docs/assets.md. */}
 
         {/*
           Render an invisible clickable box for each region. The hotspot

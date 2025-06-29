@@ -17,7 +17,7 @@ import { persist } from "zustand/middleware";
 //   duplication in components.
 // - Explore syncing this state to an optional backend in the future for
 //   cross-device save support.
-// - Document the entire state shape in DEVELOPMENT_NOTES.md so new features can
+// - Document the entire state shape in docs/DEVELOPMENT_NOTES.md so new features can
 //   extend it confidently.
 // - Provide example unit tests for reducers/actions so contributors understand
 //   how to test store behavior.

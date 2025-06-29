@@ -11,7 +11,7 @@
 // helper function abstracts the API so other components only need to pass the
 // text they want spoken.
 // Narrative scripts used with this service are stored in
-// `src/data/tts-narrative/` as described in assets.md.
+// `src/data/tts-narrative/` as described in docs/assets.md.
 //
 // Development Plan:
 // - Allow selecting from the list of available voices and persist the player's
@@ -20,7 +20,7 @@
 //   sequence of lines with proper timing.
 // - Consider falling back to a server-side TTS service for platforms without
 //   built-in speech synthesis.
-// - Document recommended voice names in assets.md along with notes on which
+// - Document recommended voice names in docs/assets.md along with notes on which
 //   browsers provide them by default.
 // - Explore caching generated audio clips with IndexedDB so frequently used
 //   phrases play instantly.

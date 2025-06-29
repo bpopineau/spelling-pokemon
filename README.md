@@ -1,6 +1,8 @@
 # Spelling Adventure
 
 Spelling Adventure is a Pokémon‑inspired spelling game for early readers. The app is built with React, TypeScript and Vite and teaches vocabulary through region‑based challenges.
+For a list of design documents and development notes, see [docs/README.md](./docs/README.md).
+
 
 ## Getting Started
 
