@@ -10,6 +10,7 @@
 // us provide auditory feedback without needing any external libraries. This
 // helper function abstracts the API so other components only need to pass the
 // text they want spoken.
+import { pauseBackgroundMusic, resumeBackgroundMusic } from "@/services/audioService";
 // Narrative scripts used with this service are stored in
 // `src/data/tts-narrative/` as described in docs/assets.md.
 //
@@ -105,6 +106,7 @@ export const speak = (text: string, phonetic?: string) => {
   if ("speechSynthesis" in window) {
     // Stop any previous speech so words don't overlap
     window.speechSynthesis.cancel();
+    pauseBackgroundMusic();
     const utterance = new SpeechSynthesisUtterance();
 
     // Selecting a friendly voice can dramatically improve clarity for young
@@ -146,6 +148,7 @@ export const speak = (text: string, phonetic?: string) => {
       utterance.text = text;
     }
 
+    utterance.addEventListener("end", resumeBackgroundMusic);
     window.speechSynthesis.speak(utterance);
   } else {
     // Most modern browsers support this API, but in case a user is on an
