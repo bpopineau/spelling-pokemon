@@ -1,5 +1,12 @@
 // The persistent header that appears on most screens.
 import { NavLink } from "react-router-dom";
+//
+// Development Plan:
+// - Extract the list of navigation links to a separate configuration so new
+//   menu items can be added without editing JSX.
+// - Include an optional settings or help menu once those screens are built.
+// - Consider making the header sticky on mobile to keep navigation accessible
+//   during scrolling.
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";

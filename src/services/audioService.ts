@@ -1,4 +1,12 @@
 import settings from '@/data/settings.json';
+//
+// Development Plan:
+// - Wrap this logic in a more robust audio manager that can handle overlapping
+//   sound effects in addition to background music.
+// - Read volume and mute settings from the Zustand store so changes persist
+//   across sessions.
+// - When Service Workers are added, consider caching audio files for offline
+//   support.
 
 // A very small wrapper around the HTMLAudioElement used for background music.
 // By reusing a single audio element we avoid overlapping tracks when the user

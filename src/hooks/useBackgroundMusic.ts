@@ -1,5 +1,11 @@
 import { useEffect } from 'react';
 import { playBackgroundMusic, stopBackgroundMusic } from '@/services/audioService';
+//
+// Development Plan:
+// - Add a dependency on user settings (e.g., mute or volume level) so the hook
+//   respects preferences stored in `settings.json`.
+// - Provide a way to fade music in and out rather than starting/stopping
+//   abruptly. This could reuse the Web Audio API for smoother transitions.
 
 /**
  * A custom React hook to manage background music for a component.

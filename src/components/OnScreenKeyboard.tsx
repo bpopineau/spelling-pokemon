@@ -8,6 +8,14 @@
 // config file so that different alphabets are supported.
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+//
+// Development Plan:
+// - Allow passing a custom keyboard layout through props so alternate language
+//   keyboards (e.g., AZERTY) can be supported in the future.
+// - Provide visual feedback when a key is pressed to make the input more
+//   satisfying on touch devices.
+// - Consider adding long-press support for accented characters if the word list
+//   expands to other languages.
 
 interface KeyboardProps {
   // Add a letter to the input

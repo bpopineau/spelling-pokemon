@@ -7,6 +7,15 @@ import { useState, useEffect } from "react";
 import words from "@/data/words.json";
 import pokemon from "@/data/pokemon.json";
 import scenes from "@/data/scenes.json";
+//
+// Development Plan:
+// - Split large pieces of logic (input handling, progress calculation,
+//   pronunciation lookup) into custom hooks to keep this component easier to
+//   maintain.
+// - Replace hard-coded XP values with constants configurable via `settings.json`
+//   so tuning the reward curve doesn't require code changes.
+// - Consider adding unit tests for the core functions here using React Testing
+//   Library once the project has a test runner.
 import Controls from "./Controls";
 import OnScreenKeyboard from "./OnScreenKeyboard";
 import ProgressBar from "./ProgressBar";

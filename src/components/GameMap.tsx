@@ -9,6 +9,14 @@
  * global game store to know which regions should be unlocked.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
+//
+// Development Plan:
+// - Add keyboard/focus navigation so players can move between regions using the
+//   arrow keys. This will also improve accessibility for screen reader users.
+// - Investigate lazy-loading map graphics for future alternative maps (e.g.,
+//   special events) without bloating the initial bundle.
+// - Consider showing brief tooltips or previews when hovering a locked region
+//   to hint at upcoming content.
 // Coordinates for each clickable region are defined in `regionHotspots.ts`.
 // Editing that file allows designers to tweak the layout without touching
 // component logic.

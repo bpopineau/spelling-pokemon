@@ -4,6 +4,14 @@
 // Router is used to map URLs to components so that navigation works both when
 // clicking links and when a player reloads the page with a deep link.
 import { Routes, Route } from "react-router-dom";
+//
+// Development Plan:
+// - Add a dedicated 404/NotFound component and route so unmatched URLs redirect
+//   players back to the map with a helpful message.
+// - When more regions are introduced consider code-splitting heavy screens with
+//   React.lazy to keep the initial bundle small.
+// - Evaluate whether nested routing would simplify future sub-pages (e.g., a
+//   settings menu) and restructure if needed.
 // Screen that displays the overworld map where scenes can be selected
 import GameMap from "./components/GameMap";
 // Screen where the actual spelling challenge for a scene takes place

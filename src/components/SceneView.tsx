@@ -3,6 +3,14 @@ import { useParams, useNavigate } from "react-router-dom";
 // Scene definitions (background image, music track and word range) are stored in
 // a JSON file so that new scenes can be created without touching React code.
 import scenes from "@/data/scenes.json";
+//
+// Development Plan:
+// - Provide graceful error handling if a scene ID is not found or the
+//   background image fails to load so players aren't stuck on a blank screen.
+// - Preload the next scene's assets while the current challenge is running to
+//   reduce wait times during navigation.
+// - Evaluate whether certain scene data (like background images) should be lazy
+//   loaded via dynamic imports once the asset folder grows.
 import SpellingChallenge from "./SpellingChallenge";
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
 import Icon from "@/components/Icon";

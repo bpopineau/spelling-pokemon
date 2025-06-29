@@ -3,6 +3,14 @@ import re
 from nltk.corpus import cmudict
 import nltk
 
+# Development Plan:
+# - Add command line arguments for input/output paths so the script can be used
+#   with alternative word lists.
+# - Cache the downloaded CMU dictionary in a project directory to avoid
+#   re-downloading when running in CI environments.
+# - Consider converting pronunciations to IPA instead of the simplified format
+#   if internationalization becomes a priority.
+
 # Utility script to augment `words.json` with phonetic pronunciations using the
 # CMU Pronouncing Dictionary. Run this whenever the word list changes to keep
 # `words_with_pronunciations.json` in sync.

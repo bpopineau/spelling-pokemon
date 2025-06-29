@@ -12,6 +12,14 @@ import {
   Typography,
 } from "@mui/material";
 import useBackgroundMusic from "@/hooks/useBackgroundMusic";
+//
+// Development Plan:
+// - Add pagination or lazy loading for the Pokémon grid to maintain performance
+//   when the collection grows large.
+// - Include a search/filter field so players can quickly find specific Pokémon
+//   by name or type.
+// - Display additional stats such as capture date or scene of capture once that
+//   data is tracked in the store.
 
 // --- Background Music Setup ---
 const musicTracks = [

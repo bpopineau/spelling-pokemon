@@ -4,6 +4,13 @@
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Icon from "@/components/Icon"; // Import our custom Icon component
+//
+// Development Plan:
+// - Make button labels configurable so translations/localization can swap text
+//   without editing this file.
+// - Expose a prop to hide the hint button for scenes where hints are disabled.
+// - Investigate using MUI's IconButton component for a more compact layout on
+//   small screens.
 
 interface ControlsProps {
   onSubmit: () => void;
