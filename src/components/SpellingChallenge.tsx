@@ -16,6 +16,10 @@ import scenes from "@/data/scenes.json";
 //   so tuning the reward curve doesn't require code changes.
 // - Consider adding unit tests for the core functions here using React Testing
 //   Library once the project has a test runner.
+// - Document how hints are awarded and consumed in gameState.ts so new gameplay
+//   modes can integrate with the same mechanics.
+// - Investigate persisting partially completed scenes so children can resume
+//   where they left off after closing the browser.
 import Controls from "./Controls";
 import OnScreenKeyboard from "./OnScreenKeyboard";
 import ProgressBar from "./ProgressBar";

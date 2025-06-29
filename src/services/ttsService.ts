@@ -15,6 +15,10 @@
 //   sequence of lines with proper timing.
 // - Consider falling back to a server-side TTS service for platforms without
 //   built-in speech synthesis.
+// - Document recommended voice names in assets.md along with notes on which
+//   browsers provide them by default.
+// - Explore caching generated audio clips with IndexedDB so frequently used
+//   phrases play instantly.
 
 // A variable to hold the voices once they are loaded.
 let voices: SpeechSynthesisVoice[] = [];

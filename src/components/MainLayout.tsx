@@ -10,6 +10,10 @@ import Header from "./Header";
 // - Introduce a Footer component for additional navigation or legal links.
 // - If modal dialogs become common, add a shared placeholder here so pages can
 //   open modals without rendering them individually.
+// - Consider wrapping the layout in an error boundary to gracefully handle
+//   unexpected issues in nested routes.
+// - Document the expected layout structure in DEVELOPMENT_NOTES.md so new pages
+//   follow the same conventions.
 
 // Wrapping pages with `MainLayout` ensures a consistent header. Additional
 // shared UI elements (like a footer or global modals) should be added here so

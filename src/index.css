@@ -8,6 +8,10 @@
     consistency issues appear.
   - Review font loading strategy; consider self-hosting fonts for offline
     support when packaging the game.
+  - Document expected class naming conventions in DEVELOPMENT_NOTES.md so new
+    styles remain consistent.
+  - Explore using CSS modules or a utility-first framework if the stylesheet
+    grows beyond simple overrides.
 */
 body {
   margin: 0;

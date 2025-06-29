@@ -7,6 +7,10 @@ import { NavLink } from "react-router-dom";
 // - Include an optional settings or help menu once those screens are built.
 // - Consider making the header sticky on mobile to keep navigation accessible
 //   during scrolling.
+// - Add highlighting for the active route using NavLink's styling so players
+//   always know which section they are in.
+// - Document the header structure in DEVELOPMENT_NOTES.md so theming changes are
+//   straightforward.
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";

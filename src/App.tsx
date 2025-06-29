@@ -12,6 +12,10 @@ import { Routes, Route } from "react-router-dom";
 //   React.lazy to keep the initial bundle small.
 // - Evaluate whether nested routing would simplify future sub-pages (e.g., a
 //   settings menu) and restructure if needed.
+// - Document all routes in README.md to keep navigation flows obvious for new
+//   developers.
+// - Provide sample unit tests for each top-level route component so behavior can
+//   be validated during refactors.
 // Screen that displays the overworld map where scenes can be selected
 import GameMap from "./components/GameMap";
 // Screen where the actual spelling challenge for a scene takes place

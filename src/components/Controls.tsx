@@ -11,6 +11,10 @@ import Icon from "@/components/Icon"; // Import our custom Icon component
 // - Expose a prop to hide the hint button for scenes where hints are disabled.
 // - Investigate using MUI's IconButton component for a more compact layout on
 //   small screens.
+// - Add aria-labels to all buttons and document them so screen reader support
+//   works consistently across platforms.
+// - Consider moving the control layout to a separate config so future mini-games
+//   can reuse this component with different button sets.
 
 interface ControlsProps {
   onSubmit: () => void;

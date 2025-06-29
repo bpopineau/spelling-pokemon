@@ -11,6 +11,10 @@ import scenes from "@/data/scenes.json";
 //   reduce wait times during navigation.
 // - Evaluate whether certain scene data (like background images) should be lazy
 //   loaded via dynamic imports once the asset folder grows.
+// - Document the data structure of scenes.json so writers can add new scenes
+//   without touching TypeScript.
+// - Add Cypress end-to-end tests that load each scene and verify that the
+//   challenge component mounts correctly.
 import SpellingChallenge from "./SpellingChallenge";
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
 import Icon from "@/components/Icon";
