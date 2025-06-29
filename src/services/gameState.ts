@@ -34,6 +34,7 @@ const initialState = {
   xpToNextLevel: LEVEL_UP_XP_BASE,
   hintCharges: HINT_MAX,
   wordsMastered: 0,
+  masteredWordIndices: [] as number[],
   collectedPokemonIds: [],
   completedScenes: [],
   earnedBadges: [],
@@ -48,12 +49,13 @@ export interface GameState {
   xpToNextLevel: number;
   hintCharges: number;
   wordsMastered: number;
+  masteredWordIndices: number[];
   collectedPokemonIds: number[];
   completedScenes: number[];
   earnedBadges: number[];
   addXp: (amount: number) => void;
   spendHint: () => void; // Renamed from useHint
-  incrementWordsMastered: () => void;
+  incrementWordsMastered: (index: number) => void;
   catchPokemon: (pokemonId: number) => void;
   completeScene: (sceneId: number) => void;
   resetProgress: () => void; // Add reset to the interface
@@ -102,15 +104,22 @@ export const useGameStore = create<GameState>()(
       },
 
       // Called whenever the player spells a word correctly.
-      // Every 5 words mastered the player earns an extra hint charge.
-      incrementWordsMastered: () => {
+      // Every 5 unique words mastered the player earns an extra hint charge.
+      incrementWordsMastered: (index) => {
         set((state) => {
+          if (state.masteredWordIndices.includes(index)) {
+            return state;
+          }
           const newCount = state.wordsMastered + 1;
           let newHints = state.hintCharges;
           if (newCount % 5 === 0 && newHints < HINT_MAX) {
             newHints += 1;
           }
-          return { wordsMastered: newCount, hintCharges: newHints };
+          return {
+            wordsMastered: newCount,
+            hintCharges: newHints,
+            masteredWordIndices: [...state.masteredWordIndices, index],
+          };
         });
       },
 
