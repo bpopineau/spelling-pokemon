@@ -1,3 +1,10 @@
+// ---------------------------------------------------------------------------
+// Icon Component (src/components/Icon.tsx)
+// ---------------------------------------------------------------------------
+// Utility component for rendering SVG icons from the `public/assets/icons`
+// directory. Keeping icon logic in one place makes it easier to update artwork
+// or swap to an inline SVG technique later on. Only the file name and optional
+// size/className need to be provided by consumers.
 import React from 'react';
 //
 // Development Plan:

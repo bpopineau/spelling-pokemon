@@ -1,4 +1,11 @@
-// SceneView shows a single scene background and the spelling challenge.
+// ---------------------------------------------------------------------------
+// SceneView Component (src/components/SceneView.tsx)
+// ---------------------------------------------------------------------------
+// Responsible for displaying a single scene, including its background art,
+// music and the embedded SpellingChallenge component. Scenes are defined in the
+// `scenes.json` data file so new areas can be added by writers without editing
+// this code. The component uses React Router parameters to look up the scene by
+// ID and then renders the appropriate assets.
 import { useParams, useNavigate } from "react-router-dom";
 // Scene definitions (background image, music track and word range) are stored in
 // a JSON file so that new scenes can be created without touching React code.

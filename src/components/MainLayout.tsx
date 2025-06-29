@@ -1,4 +1,11 @@
-// Layout wrapper that adds the header on top of pages.
+// ---------------------------------------------------------------------------
+// MainLayout Component (src/components/MainLayout.tsx)
+// ---------------------------------------------------------------------------
+// Provides the shared page chrome used by most routes. At the moment this is
+// just a header, but additional global UI (footers, modal containers, etc.)
+// should also be registered here. Using a layout component keeps our routing
+// tree small and ensures the same elements appear on every screen without
+// repetition.
 //
 // React Router allows routes to nest. `MainLayout` is used as a wrapper for
 // most pages so that they all display the same header component. The `<Outlet>`

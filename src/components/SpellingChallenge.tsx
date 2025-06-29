@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 
-// The main gameplay loop lives in this component. Given a slice of words it
-// guides the player through spelling each one, awarding XP and Pokémon along
-// the way. The logic here intentionally avoids side effects such as data
-// fetching so that it can be easily unit tested in the future.
+// ---------------------------------------------------------------------------
+// SpellingChallenge Component (src/components/SpellingChallenge.tsx)
+// ---------------------------------------------------------------------------
+// Contains the primary gameplay loop of the application. It receives a range of
+// word indices and walks the player through spelling them one by one. Correct
+// answers award XP, hints and Pokémon, while wrong answers give feedback and
+// allow retries. The component purposely keeps data fetching and persistence
+// logic outside so it can be easily unit tested and reused in potential future
+// game modes.
 import words from "@/data/words.json";
 import pokemon from "@/data/pokemon.json";
 import scenes from "@/data/scenes.json";

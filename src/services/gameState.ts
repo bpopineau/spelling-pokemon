@@ -1,8 +1,12 @@
-// Game state store using Zustand. It keeps track of XP, level and more.
-//
-// Zustand provides a minimal and lightweight state container similar to Redux
-// but with a much simpler API. All persistent player progress is stored here so
-// that any component can read or update it without prop drilling.
+// ---------------------------------------------------------------------------
+// gameState Store (src/services/gameState.ts)
+// ---------------------------------------------------------------------------
+// Centralized state management using the Zustand library. This store persists
+// player progress such as XP, collected Pokémon and completed scenes. Zustand's
+// API is intentionally minimal which keeps the logic here approachable while
+// still supporting advanced features like middleware and persistence. All UI
+// components should read from this store rather than maintaining their own
+// copies of progress data.
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 //

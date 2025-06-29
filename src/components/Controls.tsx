@@ -1,6 +1,11 @@
-// Buttons shown under the spelling input. Keeping this component small and
-// stateless makes it easy to swap icons or update the button layout without
-// affecting the spelling logic.
+// ---------------------------------------------------------------------------
+// Controls Component (src/components/Controls.tsx)
+// ---------------------------------------------------------------------------
+// Houses the primary action buttons displayed beneath the spelling input field.
+// The component is intentionally stateless and purely presentational so that it
+// can be reused in different contexts. By abstracting the controls we allow the
+// main game logic to focus solely on spelling interactions while layouts and
+// icons are managed here.
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Icon from "@/components/Icon"; // Import our custom Icon component

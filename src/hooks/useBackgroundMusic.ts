@@ -1,3 +1,10 @@
+// ---------------------------------------------------------------------------
+// useBackgroundMusic Hook (src/hooks/useBackgroundMusic.ts)
+// ---------------------------------------------------------------------------
+// Small React hook that starts playing a background music track when a
+// component mounts and stops it again when the component unmounts. By central
+// izing this logic we ensure that only one audio element is active at a time and
+// that pages clean up after themselves when users navigate.
 import { useEffect } from 'react';
 import { playBackgroundMusic, stopBackgroundMusic } from '@/services/audioService';
 //

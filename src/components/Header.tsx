@@ -1,4 +1,11 @@
-// The persistent header that appears on most screens.
+// ---------------------------------------------------------------------------
+// Header Component (src/components/Header.tsx)
+// ---------------------------------------------------------------------------
+// Renders the persistent top navigation bar used on nearly every screen. The
+// header currently displays the game title and a small set of navigation links.
+// Keeping the header logic simple makes it easy to theme or swap out later.
+// Future features such as account settings or help links should be introduced
+// here so they remain consistent across the entire application.
 import { NavLink } from "react-router-dom";
 //
 // Development Plan:

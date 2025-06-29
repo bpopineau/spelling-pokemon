@@ -1,4 +1,10 @@
-// Shows the Pokémon the player has collected so far.
+// ---------------------------------------------------------------------------
+// Pokedex Component (src/components/Pokedex.tsx)
+// ---------------------------------------------------------------------------
+// Displays a gallery of all Pokémon the player has collected. Data comes from
+// a master list in `pokedex.json` and is filtered against the IDs stored in the
+// global game state. The design aims to mimic the classic Pokédex while still
+// fitting a responsive web layout.
 import { useGameStore } from "@/services/gameState";
 import allPokemonData from "@/data/pokedex.json";
 import {

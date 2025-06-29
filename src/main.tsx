@@ -1,10 +1,13 @@
-// src/main.tsx
-// Entry point of the React application.
+// ---------------------------------------------------------------------------
+// Application Bootstrap (src/main.tsx)
+// ---------------------------------------------------------------------------
+// This file is the first code that runs in the browser. Its job is to mount the
+// React application into the DOM and configure any global providers. Vite points
+// to this module as the main entry when bundling the project.
 //
-// Vite uses this file as the bootstrap for the entire game. We locate the
-// `#root` element that exists in `index.html` and instruct React to render the
-// game inside that element. Keeping the bootstrapping logic here makes it easy
-// to change how React is mounted without touching the rest of the codebase.
+// By isolating the bootstrapping logic here we can easily swap out rendering
+// strategies (for example switching to server-side rendering or adding an error
+// boundary) without having to refactor the rest of the codebase.
 import { StrictMode } from "react";
 //
 // Development Plan:

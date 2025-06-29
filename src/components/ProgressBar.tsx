@@ -1,3 +1,10 @@
+// ---------------------------------------------------------------------------
+// ProgressBar Component (src/components/ProgressBar.tsx)
+// ---------------------------------------------------------------------------
+// A thin wrapper around MUI's LinearProgress component that also displays the
+// current and total XP values. The styling here is intentionally generic so the
+// bar can be reused in multiple screens with different labels.
+// ---------------------------------------------------------------------------
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
