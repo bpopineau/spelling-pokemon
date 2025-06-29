@@ -41,7 +41,7 @@ This file provides high-level guidance for developers working on the code base. 
 
 ### `App.tsx`
 - Defines routing only. Future screens should be added here.
-- TODO: Add NotFound route for unmatched URLs.
+- A NotFound route now handles unmatched URLs and redirects players back to the map.
 
 ### Components
 
