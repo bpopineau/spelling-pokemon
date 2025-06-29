@@ -22,6 +22,14 @@ npm run build
 
 The output is placed in the `dist/` directory. You can preview the build using `npm run preview`.
 
+## Running Tests
+
+Unit tests are written with [Vitest](https://vitest.dev/). Run all tests with:
+
+```bash
+npm test
+```
+
 ## Adding Assets
 
 Game images, sounds and data files live under `public/assets`. When adding new assets:

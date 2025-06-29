@@ -31,7 +31,7 @@ This file provides high-level guidance for developers working on the code base. 
 - Very small. May need additional config (e.g. asset base path, plugins) as the project grows.
 
 ### `package.json`
-- Contains standard dev scripts. Consider adding script for running unit tests once tests exist.
+- Contains standard dev scripts. A `test` script using `vitest` now runs unit tests with `npm test`.
 
 ## Source Code (`src`)
 
