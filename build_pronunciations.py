@@ -10,6 +10,10 @@ import nltk
 #   re-downloading when running in CI environments.
 # - Consider converting pronunciations to IPA instead of the simplified format
 #   if internationalization becomes a priority.
+# - Expose a flag to skip words that already have manual pronunciations so
+#   repeated runs don't overwrite curated data.
+# - Document usage examples directly in this file for quick reference when
+#   onboarding new contributors.
 
 # Utility script to augment `words.json` with phonetic pronunciations using the
 # CMU Pronouncing Dictionary. Run this whenever the word list changes to keep

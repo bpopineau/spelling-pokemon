@@ -17,6 +17,10 @@ import { useNavigate } from "react-router-dom"; // used to change screens
 //   special events) without bloating the initial bundle.
 // - Consider showing brief tooltips or previews when hovering a locked region
 //   to hint at upcoming content.
+// - Document the coordinate system for hotspots in regionHotspots.ts so team
+//   members can tweak map positions without guesswork.
+// - Add unit tests that verify locked/unlocked state logic to prevent
+//   regressions in progression rules.
 // Coordinates for each clickable region are defined in `regionHotspots.ts`.
 // Editing that file allows designers to tweak the layout without touching
 // component logic.

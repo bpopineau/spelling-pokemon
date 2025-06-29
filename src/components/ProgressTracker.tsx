@@ -21,6 +21,9 @@ import useBackgroundMusic from "@/hooks/useBackgroundMusic";
 //   them in a dedicated section.
 // - Provide a reset-progress button that calls `resetProgress()` from the game
 //   store (with confirmation) for parental control.
+// - Add export/import of progress data via JSON to make backups simple.
+// - Document badge requirements and XP formulas in README.md so progression
+//   tweaks can be made without searching through code.
 
 // --- Background Music Setup ---
 const musicTracks = [

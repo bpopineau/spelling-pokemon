@@ -16,6 +16,10 @@ import Stack from "@mui/material/Stack";
 //   satisfying on touch devices.
 // - Consider adding long-press support for accented characters if the word list
 //   expands to other languages.
+// - Expose a callback for key hover so accessibility tools can announce letters
+//   before they are pressed.
+// - Document how to customize layouts in README.md to make future localization
+//   efforts straightforward.
 
 interface KeyboardProps {
   // Add a letter to the input

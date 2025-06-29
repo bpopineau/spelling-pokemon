@@ -5,6 +5,10 @@ import React from 'react';
 //   file is missing.
 // - Investigate tree-shaking or bundling inline SVGs to reduce HTTP requests if
 //   the icon set grows large.
+// - Provide a script to batch optimize SVGs (e.g., with SVGO) so new icons stay
+//   lightweight and consistent.
+// - Document naming conventions for icons in assets.md so designers know how to
+//   add new artwork without code changes.
 
 // Central place for SVG icons. Placing them under `public/assets/icons` allows
 // designers to update artwork without rebuilding the TypeScript code.

@@ -20,6 +20,10 @@ import useBackgroundMusic from "@/hooks/useBackgroundMusic";
 //   by name or type.
 // - Display additional stats such as capture date or scene of capture once that
 //   data is tracked in the store.
+// - Provide an export/import option for the Pokédex data so progress can be
+//   backed up or transferred between devices.
+// - Document sprite and metadata requirements in assets.md so new Pokémon can be
+//   added without guesswork.
 
 // --- Background Music Setup ---
 const musicTracks = [

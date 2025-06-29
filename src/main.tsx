@@ -14,6 +14,10 @@ import { StrictMode } from "react";
 //   routing becomes more complex.
 // - This is also the ideal place to initialize service worker registration when
 //   offline support becomes a goal.
+// - Document environment variables used by Vite (e.g., API endpoints) so they
+//   are easy to configure in different deployments.
+// - Provide a small example of how to mount additional providers (theme,
+//   internationalization) to guide contributors adding new frameworks.
 // `createRoot` gives us full control over how React attaches to the DOM. This is
 // the modern replacement for `ReactDOM.render` and enables React 18 features
 // such as concurrent rendering.

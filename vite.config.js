@@ -10,6 +10,10 @@ import react from "@vitejs/plugin-react";
 //   gameplay loop is finalized.
 // - Add additional aliases for shared libraries if the project grows beyond the
 //   current small structure.
+// - Document common build commands in README.md so new contributors know how to
+//   create production bundles.
+// - Provide an example of enabling source maps in production for easier
+//   debugging of deployed builds.
 // https://vite.dev/config/
 export default defineConfig({
     // Enable React support

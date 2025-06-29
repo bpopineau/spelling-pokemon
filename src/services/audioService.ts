@@ -7,6 +7,10 @@ import settings from '@/data/settings.json';
 //   across sessions.
 // - When Service Workers are added, consider caching audio files for offline
 //   support.
+// - Document where audio assets live and recommended formats in assets.md so
+//   replacement or additional tracks follow the same conventions.
+// - Investigate adding fade-in/out helpers here so multiple components don't
+//   reimplement that logic.
 
 // A very small wrapper around the HTMLAudioElement used for background music.
 // By reusing a single audio element we avoid overlapping tracks when the user
