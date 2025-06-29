@@ -32,6 +32,16 @@ Game images, sounds and data files live under `public/assets`. When adding new a
 
 Keeping the asset list up to date helps others find files quickly and prevents missing resources at build time.
 
+## Navigation & Routes
+
+The game uses React Router for in-app navigation. The primary routes are:
+
+- `/` – world map where scenes can be selected
+- `/pokedex` – view the list of caught Pokémon
+- `/progress` – see player stats and earned badges
+- `/scene/:sceneId` – play the spelling challenge for a given scene
+- `*` – any unknown URL shows a friendly 404 page with a link back to the map
+
 ## Further Documentation
 
 - [`assets.md`](./assets.md) – complete asset reference

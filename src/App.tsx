@@ -15,10 +15,10 @@
 //    lightweight. Expensive code should be split into the individual screens
 //    and lazily loaded if necessary.
 import { Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
 //
 // Development Plan:
-// - Add a dedicated 404/NotFound component and route so unmatched URLs redirect
-//   players back to the map with a helpful message.
+// - Enhance the 404 page with custom artwork or tips once assets are ready.
 // - When more regions are introduced consider code-splitting heavy screens with
 //   React.lazy to keep the initial bundle small.
 // - Evaluate whether nested routing would simplify future sub-pages (e.g., a
@@ -63,14 +63,8 @@ function App() {
         for that scene.
       */}
       <Route path="/scene/:sceneId" element={<SceneView />} />
-      {
-        /*
-          TODO: Add a catch-all <Route> for unknown URLs. This ensures broken
-          links gracefully lead the player back to the main map. The 404 page
-          could reuse components from `shadcn/ui` to stay consistent with the
-          rest of the design.
-        */
-      }
+      {/* Catch-all route for unknown URLs */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
