@@ -6,7 +6,7 @@
 // the config short makes it easier for new contributors to understand the build
 // pipeline at a glance.
 import path from "path";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 //
 // Development Plan:
@@ -29,5 +29,9 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  // Vitest uses this section for unit test configuration
+  test: {
+    environment: "node",
   },
 });

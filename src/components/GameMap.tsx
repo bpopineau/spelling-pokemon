@@ -33,6 +33,7 @@ import { useNavigate } from "react-router-dom"; // used to change screens
 // component logic.
 import regionHotspots from "@/data/regionHotspots"; // clickable map spots
 import scenesData from "@/data/scenes.json"; // data about when scenes unlock
+import { isSceneUnlocked } from "@/utils/progression";
 import { useGameStore } from "@/services/gameState";
 import { Box, Tooltip, Paper } from "@mui/material";
 import useBackgroundMusic from "@/hooks/useBackgroundMusic";
@@ -74,17 +75,10 @@ export default function GameMap() {
     navigate(`/scene/${sceneId}`);
   };
 
-  // Determine whether a scene is unlocked by comparing the player's XP to the
-  // `unlock_xp` value from the scenes data.
-  const isUnlocked = (sceneId: number) => {
-    const scenes = scenesData as SceneUnlock[];
-    const scene = scenes.find((s) => s.id === sceneId);
-    if (!scene) return false;
-    // Scenes list the XP threshold required to play them. The comparison is
-    // kept simple so changes to the progression curve only require editing the
-    // JSON data, not this component.
-    return xp >= scene.unlock_xp;
-  };
+  // Determine whether a scene is unlocked using the helper from
+  // `src/utils/progression.ts` so the logic can be unit tested.
+  const isUnlocked = (sceneId: number) =>
+    isSceneUnlocked(scenesData as SceneUnlock[], sceneId, xp);
 
   return (
     // The main container holds the map image and the invisible buttons
