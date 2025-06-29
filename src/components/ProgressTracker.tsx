@@ -1,4 +1,6 @@
 // Shows the player's level, XP and earned badges.
+// Badge metadata (name, icon, etc.) comes from a JSON file so that new badges
+// can be introduced without editing this component.
 import badges from "@/data/badges.json";
 import { useGameStore } from "@/services/gameState";
 import {
@@ -38,7 +40,7 @@ export default function ProgressTracker() {
     wordsMastered,
     collectedPokemonIds,
     earnedBadges,
-  } = useGameStore();
+  } = useGameStore(); // Zustand store keeps progress persisted across sessions
 
   // Filter for earned badges
   const earned = badges.filter((b) => earnedBadges.includes(b.id));

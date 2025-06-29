@@ -3,8 +3,8 @@ import { playBackgroundMusic, stopBackgroundMusic } from '@/services/audioServic
 
 /**
  * A custom React hook to manage background music for a component.
- * It will play the specified music source when the component mounts
- * and stop it when the component unmounts.
+ * Keeping the audio logic here prevents duplication across pages and ensures
+ * that only one track is playing at a time.
  * @param src The path to the audio file to play. Can be null to play nothing.
  */
 const useBackgroundMusic = (src: string | null) => {

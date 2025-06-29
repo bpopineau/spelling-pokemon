@@ -44,9 +44,9 @@ export interface GameState {
 }
 // TODO: split persistence logic out so game actions can be unit tested more easily
 
-// Create the store with our initial state and actions. `persist` from Zustand
-// automatically stores the state in `localStorage` so progress is saved across
-// page reloads.
+// Create the store with our initial state and actions. The `persist` middleware
+// writes everything to `localStorage` so that progress isn't lost on refresh or
+// page close.
 export const useGameStore = create<GameState>()(
   // persist saves the store in localStorage so progress stays after refresh
   persist(
@@ -134,5 +134,7 @@ export const useGameStore = create<GameState>()(
 // --- For quick testing in the browser console ---
 // Expose the store to the window object, but only in development mode.
 if (import.meta.env.DEV) {
+  // This makes it easy to inspect and tweak progress from the browser dev
+  // console while building the game.
   (window as any).gameStore = useGameStore;
 }

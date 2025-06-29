@@ -17,6 +17,9 @@ import MainLayout from "./components/MainLayout";
 
 // `App` only contains the routing table. The heavy lifting for game logic lives
 // inside the individual components listed here.
+// The router is intentionally kept flat and simple. If new screens are added
+// later they should be registered here so navigation remains consistent across
+// the entire app.
 function App() {
   return (
     // Define the URL structure for the game. Each `<Route>` maps a path to the
@@ -25,15 +28,26 @@ function App() {
       {/* Routes that share the header */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<GameMap />} />
+        {/* The Pokédex and progress screens both reuse the global header */}
         <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/progress" element={<ProgressTracker />} />
       </Route>
 
-      {/* This screen hides the header so the scene fills the page */}
+      {/*
+        Scene pages do not include the persistent header so the challenge fills
+        the viewport. The sceneId parameter corresponds to an entry in
+        `scenes.json` which defines the background, music track and word range
+        for that scene.
+      */}
       <Route path="/scene/:sceneId" element={<SceneView />} />
-      {/* TODO: add a <Route> for unmatched URLs to show a 404 screen.
-          The 404 page could leverage shadcn/ui's `Alert` component to display
-          the error message. */}
+      {
+        /*
+          TODO: Add a catch-all <Route> for unknown URLs. This ensures broken
+          links gracefully lead the player back to the main map. The 404 page
+          could reuse components from `shadcn/ui` to stay consistent with the
+          rest of the design.
+        */
+      }
     </Routes>
   );
 }

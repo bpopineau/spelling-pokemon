@@ -1,5 +1,7 @@
 // SceneView shows a single scene background and the spelling challenge.
 import { useParams, useNavigate } from "react-router-dom";
+// Scene definitions (background image, music track and word range) are stored in
+// a JSON file so that new scenes can be created without touching React code.
 import scenes from "@/data/scenes.json";
 import SpellingChallenge from "./SpellingChallenge";
 import { Box, Button, Container, Paper, Typography } from "@mui/material";
@@ -30,6 +32,8 @@ export default function SceneView() {
     );
   }
 
+  // Construct the path to the scene's background image. All background assets
+  // live under `public/assets/images/backgrounds/` as documented in assets.md.
   const backgroundPath = `/assets/images/backgrounds/${scene.background}`;
 
   return (
@@ -83,7 +87,12 @@ export default function SceneView() {
           />
         </Paper>
 
-        {/* Spelling Challenge Component */}
+        {/*
+          The actual spelling gameplay is isolated in its own component. The
+          word range passed here ties directly to the scene definition so adding
+          a new scene is as simple as updating `scenes.json` with the correct
+          indices.
+        */}
         <Box component="main">
           <SpellingChallenge
             wordStart={scene.word_start}

@@ -15,6 +15,10 @@ interface ProgressBarProps {
 export default function ProgressBar({ current, total }: ProgressBarProps) {
   const percentage = total > 0 ? (current / total) * 100 : 0;
 
+  // This component is intentionally simple so that it can be reused anywhere we
+  // display XP or progress metrics. MUI's `LinearProgress` handles the heavy
+  // lifting of the actual bar rendering.
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', px: 2, width: '100%' }}>
       <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>

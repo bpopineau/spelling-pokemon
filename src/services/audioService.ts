@@ -1,10 +1,16 @@
 import settings from '@/data/settings.json';
 
+// A very small wrapper around the HTMLAudioElement used for background music.
+// By reusing a single audio element we avoid overlapping tracks when the user
+// navigates between pages.
+
 // This single audio element will be shared across the entire application.
 let audio: HTMLAudioElement | null = null;
 let currentSrc: string | null = null;
 
 const getAudioElement = (): HTMLAudioElement => {
+    // Lazily create the audio element the first time we need it. All further
+    // calls reuse this element so multiple tracks don't stack up.
     if (!audio) {
         audio = new Audio();
         audio.loop = true; // Ensure the music loops

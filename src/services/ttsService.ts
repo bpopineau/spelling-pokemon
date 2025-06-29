@@ -31,6 +31,10 @@ export const speak = (text: string) => {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
 
+    // Selecting a friendly voice can dramatically improve clarity for young
+    // players. The list below favors high-quality voices available on most
+    // platforms but gracefully falls back if none are found.
+
     // --- Voice Selection Logic ---
     // Define a list of preferred, high-quality voices.
     const preferredVoices = [

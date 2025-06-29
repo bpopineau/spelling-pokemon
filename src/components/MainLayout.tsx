@@ -6,6 +6,9 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 
+// Wrapping pages with `MainLayout` ensures a consistent header. Additional
+// shared UI elements (like a footer or global modals) should be added here so
+// they appear across all pages.
 export default function MainLayout() {
   // This component simply arranges the shared header and whatever page
   // component is currently active. React Router injects that page via

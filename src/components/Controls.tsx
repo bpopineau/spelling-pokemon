@@ -1,4 +1,6 @@
-// Buttons shown under the spelling input.
+// Buttons shown under the spelling input. Keeping this component small and
+// stateless makes it easy to swap icons or update the button layout without
+// affecting the spelling logic.
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Icon from "@/components/Icon"; // Import our custom Icon component

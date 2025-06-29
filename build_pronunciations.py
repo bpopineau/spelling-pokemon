@@ -3,6 +3,12 @@ import re
 from nltk.corpus import cmudict
 import nltk
 
+# Utility script to augment `words.json` with phonetic pronunciations using the
+# CMU Pronouncing Dictionary. Run this whenever the word list changes to keep
+# `words_with_pronunciations.json` in sync.
+
+# Ensure the dictionary is available. The first run will download it to the NLTK
+# data directory.
 nltk.download('cmudict')
 
 with open("src/data/words.json", "r") as f:
@@ -15,6 +21,9 @@ def cmu_to_simple(phonemes):
 
 output = []
 for word in words:
+    # Look up the word in the CMU dictionary (case insensitive). If it's not
+    # present we simply leave the pronunciation blank so the UI will fall back
+    # to the raw spelling when spoken.
     key = word.lower()
     if key in cmu:
         pronunciation = cmu_to_simple(cmu[key][0])
@@ -26,4 +35,6 @@ for word in words:
     })
 
 with open("src/data/words_with_pronunciations.json", "w") as f:
+    # Save the augmented list next to the original word file. This JSON is read
+    # at runtime to provide accurate TTS pronunciation.
     json.dump(output, f, indent=2)

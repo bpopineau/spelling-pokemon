@@ -5,6 +5,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
+// Navigation is centralized here so that new sections of the app can be added
+// by editing this single component.
 export default function Header() {
   return (
     <AppBar position="static">

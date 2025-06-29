@@ -9,6 +9,9 @@
  * global game store to know which regions should be unlocked.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
+// Coordinates for each clickable region are defined in `regionHotspots.ts`.
+// Editing that file allows designers to tweak the layout without touching
+// component logic.
 import regionHotspots from "@/data/regionHotspots"; // clickable map spots
 import scenesData from "@/data/scenes.json"; // data about when scenes unlock
 import { useGameStore } from "@/services/gameState";
@@ -58,6 +61,9 @@ export default function GameMap() {
     const scenes = scenesData as SceneUnlock[];
     const scene = scenes.find((s) => s.id === sceneId);
     if (!scene) return false;
+    // Scenes list the XP threshold required to play them. The comparison is
+    // kept simple so changes to the progression curve only require editing the
+    // JSON data, not this component.
     return xp >= scene.unlock_xp;
   };
 
@@ -90,6 +96,11 @@ export default function GameMap() {
         {/* The world map graphic should be placed at
             `public/assets/images/map/world-map.png` as noted in assets.md. */}
 
+        {/*
+          Render an invisible clickable box for each region. The hotspot
+          coordinates come from `regionHotspots.ts` which makes tweaking the map
+          layout a data-only change.
+        */}
         {regionHotspots.map((region) => {
           const unlocked = isUnlocked(region.sceneId);
           return (

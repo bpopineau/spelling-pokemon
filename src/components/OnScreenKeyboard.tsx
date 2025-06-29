@@ -3,6 +3,9 @@
 // It mirrors a simplified QWERTY layout so players on phones or tablets can
 // input letters without relying on their device's built-in keyboard. The parent
 // component supplies callbacks for both key presses and backspace events.
+//
+// If we ever support internationalization the layout could be generated from a
+// config file so that different alphabets are supported.
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
@@ -13,7 +16,8 @@ interface KeyboardProps {
   onBackspace: () => void;
 }
 
-// Each row of keys on the keyboard
+// Each row of keys on the keyboard. The layout intentionally omits symbols and
+// numbers to keep the challenge focused purely on spelling letters.
 const layout = [
   ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
   ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
