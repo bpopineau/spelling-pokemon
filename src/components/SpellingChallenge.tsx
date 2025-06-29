@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+
+// The main gameplay loop lives in this component. Given a slice of words it
+// guides the player through spelling each one, awarding XP and Pokémon along
+// the way. The logic here intentionally avoids side effects such as data
+// fetching so that it can be easily unit tested in the future.
 import words from "@/data/words.json";
 import pokemon from "@/data/pokemon.json";
 import scenes from "@/data/scenes.json";
@@ -22,7 +27,10 @@ import {
   Divider,
 } from "@mui/material";
 
-// Define the shape of our new word object
+// Each word in `words.json` can optionally have a custom pronunciation for the
+// text-to-speech service. Wrapping the data in this interface keeps the logic
+// explicit while still allowing words to be simple strings when the
+// pronunciation matches the spelling.
 interface WordEntry {
   word: string;
   pronunciation?: string;
@@ -85,7 +93,10 @@ export default function SpellingChallenge({
   const xpNeededForThisLevel = xpToNextLevel - xpForLastLevel;
 
   useEffect(() => {
-    // FIX: Convert the string array from words.json into an array of WordEntry objects.
+    // When the scene changes we slice out the relevant words. At build time the
+    // words array is simple strings so we convert them to `WordEntry` objects
+    // here. Later we may enhance `words.json` to include pronunciations directly
+    // which will plug into this mapping logic.
     const slicedWords: string[] = words.slice(wordStart, wordEnd + 1);
     const wordsForScene: WordEntry[] = slicedWords.map(word => ({
       word: word,
@@ -102,6 +113,8 @@ export default function SpellingChallenge({
   }, [wordStart, wordEnd]);
 
   useEffect(() => {
+    // Speak the current word every time it changes. This keeps the game
+    // accessible for younger players who may rely on auditory cues.
     if (currentWordObject) {
       speak(currentWordObject.pronunciation || currentWordObject.word);
     }
@@ -133,9 +146,12 @@ export default function SpellingChallenge({
 
   const handleSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
     if (e) e.preventDefault();
-    if (!currentInput || isAnswered) return; // Prevent submission if already answered
+    // Ignore submissions if the user has not typed anything or if the current
+    // word has already been marked as answered (prevents double rewards).
+    if (!currentInput || isAnswered) return;
 
     if (currentInput.toLowerCase() === currentWord?.toLowerCase()) {
+      // Correct answer: reward the player and move forward.
       setIsAnswered(true); // Disable form
       addXp(10);
       incrementWordsMastered();
@@ -157,8 +173,9 @@ export default function SpellingChallenge({
         setMessage("Correct! 🎉");
       }
     } else {
+      // Wrong answer feedback: briefly shake the input box and show a message.
       setMessage("Try again!");
-      setIsShaking(true); // Trigger shake animation
+      setIsShaking(true);
       setTimeout(() => setIsShaking(false), 820); // Reset shake after animation
     }
   };
@@ -187,6 +204,9 @@ export default function SpellingChallenge({
   };
 
   const handleHint = () => {
+    // Only provide a hint if we have charges remaining and the user has not
+    // already filled out the entire word. This prevents hints from going beyond
+    // the word's length.
     if (
       hintCharges <= 0 ||
       !currentWord ||
@@ -208,6 +228,11 @@ export default function SpellingChallenge({
       {currentInput[index] ? currentInput[index].toUpperCase() : "_"}
     </span>
   ));
+
+  // Rendering below is intentionally verbose so that the UI can be customized
+  // without digging into complex component abstractions. It is easier for new
+  // contributors to adjust spacing or styles when the markup is laid out here
+  // instead of hidden in a separate component tree.
 
   return (
     <>

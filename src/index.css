@@ -7,6 +7,7 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* A neutral background color that works well with MUI's paper/card components */
+  /* A neutral background color that works well with MUI's paper/card components
+     and keeps the focus on game content. */
   background-color: #f4f6f8;
 }

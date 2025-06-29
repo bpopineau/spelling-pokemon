@@ -18,6 +18,10 @@ import "./index.css";
 // The main App component that holds all screens
 import App from "./App.tsx";
 
+// Tip for future developers: if we ever introduce client side persistence
+// libraries (e.g. React Query or a global state sync), this is the ideal file
+// to initialize those providers so the entire app can access them.
+
 // Locate the `#root` element and render our React application into it. The
 // `StrictMode` wrapper enables additional checks and warnings in development
 // builds which help catch subtle bugs.
@@ -28,6 +32,8 @@ createRoot(document.getElementById("root")!).render(
       BrowserRouter provides the routing context so that components like
       `<Link>` and `<Route>` work. Without it the app would not know how to
       respond to URL changes.
+      If service workers or additional providers are needed they can also be
+      mounted inside this wrapper.
     */}
     <BrowserRouter>
       <App />
