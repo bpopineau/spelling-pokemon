@@ -68,6 +68,8 @@ The game uses React Router for in-app navigation. The primary routes are:
 - `/scene/:sceneId` – play the spelling challenge for a given scene
 - `*` – any unknown URL shows a friendly 404 page with a link back to the map
 
+The world map hotspots support arrow-key navigation in addition to mouse or touch.
+
 ## Further Documentation
 
 - [`assets.md`](./assets.md) – complete asset reference

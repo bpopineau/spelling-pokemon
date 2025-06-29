@@ -16,6 +16,7 @@
  * handled with Material UI components for flexibility.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
+import { useRef } from "react";
 //
 // Development Plan:
 // - Add keyboard/focus navigation so players can move between regions using the
@@ -63,6 +64,9 @@ export default function GameMap() {
   // Router navigation function used to change the URL programmatically
   const navigate = useNavigate();
 
+  // References to hotspot elements so keyboard navigation can move focus
+  const regionRefs = useRef<(HTMLElement | null)[]>([]);
+
   // Play a random background track.
   useBackgroundMusic(getRandomTrack());
 
@@ -73,6 +77,44 @@ export default function GameMap() {
   // Navigate to the scene page when a region hotspot is clicked.
   const handleRegionClick = (sceneId: number) => {
     navigate(`/scene/${sceneId}`);
+  };
+
+  // Handle keyboard input for focused hotspots
+  const handleKeyDown = (
+    e: React.KeyboardEvent<HTMLDivElement>,
+    index: number,
+    sceneId: number,
+    unlocked: boolean,
+  ) => {
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+
+    switch (e.key) {
+      case "Enter":
+      case " ":
+        if (unlocked) handleRegionClick(sceneId);
+        break;
+      case "ArrowRight": {
+        const next = col === 2 ? index : index + 1;
+        regionRefs.current[next]?.focus();
+        break;
+      }
+      case "ArrowLeft": {
+        const prev = col === 0 ? index : index - 1;
+        regionRefs.current[prev]?.focus();
+        break;
+      }
+      case "ArrowUp": {
+        const up = row === 0 ? index : index - 3;
+        regionRefs.current[up]?.focus();
+        break;
+      }
+      case "ArrowDown": {
+        const down = row === 2 ? index : index + 3;
+        regionRefs.current[down]?.focus();
+        break;
+      }
+    }
   };
 
   // Determine whether a scene is unlocked using the helper from
@@ -114,20 +156,31 @@ export default function GameMap() {
           coordinates come from `regionHotspots.ts` which makes tweaking the map
           layout a data-only change.
         */}
-        {regionHotspots.map((region) => {
+        {regionHotspots.map((region, index) => {
           const unlocked = isUnlocked(region.sceneId);
           return (
             <Tooltip title={region.name} key={region.id} arrow>
               <Box
+                ref={(el) => {
+                  regionRefs.current[index] = el as HTMLElement | null;
+                }}
+                tabIndex={unlocked ? 0 : -1}
+                role="button"
+                aria-label={region.name}
                 style={region.style}
                 onClick={() => unlocked && handleRegionClick(region.sceneId)}
+                onKeyDown={(e) => handleKeyDown(e, index, region.sceneId, unlocked)}
                 sx={{
                   position: "absolute",
+                  outline: "none",
                   cursor: unlocked ? "pointer" : "not-allowed",
                   "&:hover": {
                     backgroundColor: unlocked
                       ? "rgba(255, 255, 255, 0.2)"
                       : "transparent",
+                  },
+                  "&:focus-visible": {
+                    boxShadow: "0 0 0 2px #1976d2",
                   },
                 }}
               />

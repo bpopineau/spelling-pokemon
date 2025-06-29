@@ -55,7 +55,7 @@ This file provides high-level guidance for developers working on the code base. 
 #### `GameMap.tsx`
 - Renders map with clickable regions.
 - Unlock logic uses XP stored in `scenes.json`.
-- TODO: Add keyboard navigation/accessibility for the region buttons.
+- Keyboard navigation now lets players move between regions using arrow keys.
 
 #### `SceneView.tsx`
 - Loads scene by ID from the URL and displays `SpellingChallenge`.
