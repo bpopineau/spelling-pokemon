@@ -1,12 +1,19 @@
 /**
- * GameMap Component
+ * ---------------------------------------------------------------------------
+ * GameMap Component (src/components/GameMap.tsx)
+ * ---------------------------------------------------------------------------
+ * The world map acts as the central hub of the game. Each region is represented
+ * by an invisible clickable hotspot positioned over the map graphic. Regions
+ * unlock as the player gains XP which encourages a sense of progression.
  *
- * Displays the large interactive map that acts as the hub for all scenes. Each
- * region on the map is represented by a transparent button positioned over the
- * background image. A region becomes clickable when the player has earned
- * enough XP. Clicking a region navigates to the spelling challenge for that
- * area. This component is intentionally stateless and simply reads from the
- * global game store to know which regions should be unlocked.
+ * The map image itself lives under `public/assets/images/map/world-map.png`.
+ * Designers can swap out that file without touching the React code as long as
+ * the hotspot coordinates remain valid. All hotspot coordinates are maintained
+ * in `src/data/regionHotspots.ts`, so layout tweaks are a simple data change.
+ *
+ * This component purposely avoids local state and instead reads from the global
+ * `gameState` store so that any scene can influence progression. Rendering is
+ * handled with Material UI components for flexibility.
  */
 import { useNavigate } from "react-router-dom"; // used to change screens
 //

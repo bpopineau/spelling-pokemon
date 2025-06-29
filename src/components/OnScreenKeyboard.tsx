@@ -1,8 +1,10 @@
-// Small on-screen keyboard for touch devices.
-//
-// It mirrors a simplified QWERTY layout so players on phones or tablets can
-// input letters without relying on their device's built-in keyboard. The parent
-// component supplies callbacks for both key presses and backspace events.
+// ---------------------------------------------------------------------------
+// OnScreenKeyboard Component (src/components/OnScreenKeyboard.tsx)
+// ---------------------------------------------------------------------------
+// Provides a simplified QWERTY keyboard optimized for touch interfaces. The
+// main SpellingChallenge component supplies the callbacks that update the input
+// field. Keeping the keyboard logic here allows us to reuse it across different
+// mini-games should more spelling modes be introduced in the future.
 //
 // If we ever support internationalization the layout could be generated from a
 // config file so that different alphabets are supported.

@@ -1,3 +1,11 @@
+// ---------------------------------------------------------------------------
+// audioService (src/services/audioService.ts)
+// ---------------------------------------------------------------------------
+// Minimal helper functions for managing background music playback. All logic
+// funnels through a single `<audio>` element so that only one track plays at a
+// time even when navigating between pages. Volume settings are read from
+// `settings.json` but in the future should come from the persistent game store
+// to allow in-game adjustments.
 import settings from '@/data/settings.json';
 //
 // Development Plan:

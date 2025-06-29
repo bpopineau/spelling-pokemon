@@ -1,4 +1,10 @@
-// Vite configuration file. This tells Vite how to build the project.
+// ---------------------------------------------------------------------------
+// Vite Configuration (vite.config.ts)
+// ---------------------------------------------------------------------------
+// Defines how Vite should build and serve the project. Additional plugins or
+// configuration settings should be added here as the project evolves. Keeping
+// the config short makes it easier for new contributors to understand the build
+// pipeline at a glance.
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";

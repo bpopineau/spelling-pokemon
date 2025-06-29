@@ -1,8 +1,19 @@
-// The main application component.
+// ---------------------------------------------------------------------------
+// Application Root (src/App.tsx)
+// ---------------------------------------------------------------------------
+// This file contains the central routing table for the entire application. It
+// imports each high level screen component and assigns it to a URL using React
+// Router. Navigation should always originate from here so contributors have a
+// single place to check when adding new pages.
 //
-// This file wires together all of the high level screens in the game. React
-// Router is used to map URLs to components so that navigation works both when
-// clicking links and when a player reloads the page with a deep link.
+// Philosophy:
+//  - Keep this file small: it should only describe *what* routes exist, not
+//    the heavy business logic of those screens.
+//  - All navigation should work via links as well as by manually entering a URL
+//    in the browser. Deep linking is critical for sharing progress or scenes.
+//  - Because this component renders immediately on page load it must remain
+//    lightweight. Expensive code should be split into the individual screens
+//    and lazily loaded if necessary.
 import { Routes, Route } from "react-router-dom";
 //
 // Development Plan:

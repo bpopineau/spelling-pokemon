@@ -1,6 +1,10 @@
-// Describes the clickable area for a region on the world map. The `style`
-// object contains percentage-based positioning so the hotspot scales with the
-// size of the map image.
+// ---------------------------------------------------------------------------
+// Region Hotspot Data (src/data/regionHotspots.ts)
+// ---------------------------------------------------------------------------
+// Defines the clickable areas on the world map. Each hotspot corresponds to a
+// scene and is positioned using percentage-based coordinates so that the layout
+// scales with different screen sizes. Designers should adjust this file when the
+// map artwork changes or new scenes are introduced.
 export interface Hotspot {
   id: number;
   name: string;

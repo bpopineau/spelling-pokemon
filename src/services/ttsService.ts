@@ -1,5 +1,10 @@
-// src/services/ttsService.ts
-// Use the browser's speech synthesis to read a word aloud.
+// ---------------------------------------------------------------------------
+// ttsService (src/services/ttsService.ts)
+// ---------------------------------------------------------------------------
+// Thin wrapper around the Web SpeechSynthesis API. The service exposes a single
+// `speak()` function that other components can call to read text aloud. All
+// voice selection logic and browser compatibility quirks are contained here so
+// the rest of the codebase can remain agnostic about how speech works.
 //
 // The web SpeechSynthesis API is widely supported in modern browsers and lets
 // us provide auditory feedback without needing any external libraries. This

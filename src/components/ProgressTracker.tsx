@@ -1,6 +1,11 @@
-// Shows the player's level, XP and earned badges.
-// Badge metadata (name, icon, etc.) comes from a JSON file so that new badges
-// can be introduced without editing this component.
+// ---------------------------------------------------------------------------
+// ProgressTracker Component (src/components/ProgressTracker.tsx)
+// ---------------------------------------------------------------------------
+// Displays an overview of the player's accomplishments including level, XP and
+// badges. Badge data is pulled from `badges.json` so that designers can add new
+// rewards without modifying the React code. This screen is meant to be a central
+// hub for progress related features such as exporting saves or viewing high
+// level stats.
 import badges from "@/data/badges.json";
 import { useGameStore } from "@/services/gameState";
 import {
