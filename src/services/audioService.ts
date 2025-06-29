@@ -72,3 +72,23 @@ export const stopBackgroundMusic = () => {
         currentSrc = null; // Clear the current source
     }
 };
+
+/**
+ * Temporarily pause the current background music without clearing the source.
+ */
+export const pauseBackgroundMusic = () => {
+    const audioElement = getAudioElement();
+    if (!audioElement.paused) {
+        audioElement.pause();
+    }
+};
+
+/**
+ * Resume playback if a track was previously paused.
+ */
+export const resumeBackgroundMusic = () => {
+    const audioElement = getAudioElement();
+    if (audioElement.paused && currentSrc) {
+        audioElement.play().catch(error => console.error("Audio play failed:", error));
+    }
+};
