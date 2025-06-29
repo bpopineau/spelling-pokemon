@@ -104,6 +104,8 @@ This file provides high-level guidance for developers working on the code base. 
 #### `ttsService.ts`
 - Wrapper around `SpeechSynthesis` API.
 - Could allow selecting different voices or languages via options.
+- Now accepts an optional ARPAbet pronunciation string which is converted to IPA
+  and injected via SSML for clearer speech output.
 
 ## Scripts
 

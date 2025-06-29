@@ -28,6 +28,60 @@
 // A variable to hold the voices once they are loaded.
 let voices: SpeechSynthesisVoice[] = [];
 
+// Map ARPAbet phonemes to the International Phonetic Alphabet. This allows us
+// to generate SSML that improves pronunciation across browsers.
+const ARPABET_TO_IPA: Record<string, string> = {
+  AA: "ɑ",
+  AE: "æ",
+  AH: "ʌ",
+  AO: "ɔ",
+  AW: "aʊ",
+  AY: "aɪ",
+  B: "b",
+  CH: "tʃ",
+  D: "d",
+  DH: "ð",
+  EH: "ɛ",
+  ER: "ɝ",
+  EY: "eɪ",
+  F: "f",
+  G: "ɡ",
+  HH: "h",
+  IH: "ɪ",
+  IY: "i",
+  JH: "dʒ",
+  K: "k",
+  L: "l",
+  M: "m",
+  N: "n",
+  NG: "ŋ",
+  OW: "oʊ",
+  OY: "ɔɪ",
+  P: "p",
+  R: "r",
+  S: "s",
+  SH: "ʃ",
+  T: "t",
+  TH: "θ",
+  UH: "ʊ",
+  UW: "u",
+  V: "v",
+  W: "w",
+  Y: "j",
+  Z: "z",
+  ZH: "ʒ",
+};
+
+/**
+ * Convert an ARPAbet string like "DH-AH" to an IPA string used in SSML.
+ */
+const arpabetToIpa = (phonetic: string): string => {
+  return phonetic
+    .split("-")
+    .map((p) => ARPABET_TO_IPA[p] || "")
+    .join("");
+};
+
 // This function will be called when the voices are loaded.
 const loadVoices = () => {
   voices = window.speechSynthesis.getVoices();
@@ -42,11 +96,16 @@ if ("speechSynthesis" in window) {
   }
 }
 
-export const speak = (text: string) => {
+/**
+ * Speak the given text using the Web Speech API. When a phonetic
+ * representation is provided it will be converted to IPA and wrapped in
+ * SSML so the word is pronounced more clearly.
+ */
+export const speak = (text: string, phonetic?: string) => {
   if ("speechSynthesis" in window) {
     // Stop any previous speech so words don't overlap
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
+    const utterance = new SpeechSynthesisUtterance();
 
     // Selecting a friendly voice can dramatically improve clarity for young
     // players. The list below favors high-quality voices available on most
@@ -79,6 +138,14 @@ export const speak = (text: string) => {
     utterance.lang = "en-US";
     utterance.rate = 0.85; // Slowed down slightly more for clarity
     utterance.pitch = 1.0; // Default pitch is usually best
+
+    if (phonetic) {
+      const ipa = arpabetToIpa(phonetic);
+      utterance.text = `<speak><phoneme alphabet="ipa" ph="${ipa}">${text}</phoneme></speak>`;
+    } else {
+      utterance.text = text;
+    }
+
     window.speechSynthesis.speak(utterance);
   } else {
     // Most modern browsers support this API, but in case a user is on an
@@ -87,3 +154,4 @@ export const speak = (text: string) => {
   }
 };
 // TODO: expose voice and language selection options for international players
+
