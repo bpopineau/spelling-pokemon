@@ -16,7 +16,8 @@ This file provides high-level guidance for developers working on the code base. 
 
 ### `index.html`
 - Only hosts the React root element. Simple and fine as is.
-- TODO: Update `<title>` and icons to match the game name instead of "Vite + React + TS".
+- Title now reflects the game name and the favicon uses `pokeball_icon.svg` from
+  the `assets/icons` directory.
 
 ### `eslint.config.js`, `prettierrc.json`
 - Provide linting and formatting rules. Keep in sync with team style preferences.

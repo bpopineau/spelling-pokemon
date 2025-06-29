@@ -56,6 +56,9 @@ Game images, sounds and data files live under `public/assets`. When adding new a
 2. Use the recommended formats (PNG for images, SVG for icons, WAV/OGG for audio).
 3. Update `assets.md` to keep the inventory current.
 
+The site favicon now uses `pokeball_icon.svg` from the `public/assets/icons`
+directory to match the game's theme.
+
 Keeping the asset list up to date helps others find files quickly and prevents missing resources at build time.
 
 ## Navigation & Routes

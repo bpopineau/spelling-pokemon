@@ -67,7 +67,8 @@ This document serves as the definitive, up-to-date reference for all assets and 
 - **Location:** `public/assets/icons/`
 - **Format:** SVG (preferred) or PNG, 128×128 px, transparent
 - **Filenames:**
-  `submit_icon.svg`, `clear_icon.svg`, `backspace_icon.svg`, `repeat_icon.svg`, `hint_icon.svg`, `xp_icon.svg`, `badge_icon.svg`, `menu_icon.svg`, `pokeball_icon.svg`, `crystal_icon.svg`
+`submit_icon.svg`, `clear_icon.svg`, `backspace_icon.svg`, `repeat_icon.svg`, `hint_icon.svg`, `xp_icon.svg`, `badge_icon.svg`, `menu_icon.svg`, `pokeball_icon.svg`, `crystal_icon.svg`
+  - The `pokeball_icon.svg` file also serves as the site's favicon.
 
 #### **Sound Effects**
 
