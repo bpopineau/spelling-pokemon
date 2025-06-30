@@ -284,6 +284,8 @@ export default function SpellingChallenge({
               <ProgressBar
                 current={xpGainedThisLevel}
                 total={xpNeededForThisLevel}
+                label="XP"
+                color="secondary"
               />
             </Box>
             <Box sx={{ textAlign: "center" }}>

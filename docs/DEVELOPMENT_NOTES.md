@@ -84,7 +84,8 @@ This file provides high-level guidance for developers working on the code base. 
 - Added reset button allowing players to clear progress.
 
 #### `ProgressBar.tsx`
-- Generic progress bar. Could be reused in other screens.
+ - Generic progress bar. Now accepts optional `label` and `color` props so it
+   can be themed and reused in different contexts.
 
 ### Assets (`src/assets`)
 - Only contains `react.svg`. Actual game assets live in `public/` but are not committed here.
