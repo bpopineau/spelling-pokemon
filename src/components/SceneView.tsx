@@ -7,6 +7,7 @@
 // this code. The component uses React Router parameters to look up the scene by
 // ID and then renders the appropriate assets.
 import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 // Scene definitions (background image, music track and word range) are stored in
 // a JSON file so that new scenes can be created without touching React code.
 import scenes from "@/data/scenes.json";
@@ -37,6 +38,8 @@ export default function SceneView() {
   // The hook will handle starting and stopping the music automatically.
   const backgroundMusic = scene ? `/assets/sounds/${scene.music}` : null;
   useBackgroundMusic(backgroundMusic);
+
+  const [bgError, setBgError] = useState(false);
 
   if (!scene) {
     return (
@@ -99,11 +102,29 @@ export default function SceneView() {
           </Box>
 
           {/* Scene Image */}
-          <img
-            src={backgroundPath}
-            alt={scene.name}
-            style={{ width: "100%", display: "block" }}
-          />
+          {bgError ? (
+            <Box
+              sx={{
+                width: "100%",
+                height: 300,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                bgcolor: "grey.200",
+              }}
+            >
+              <Typography color="text.secondary">
+                Background image failed to load
+              </Typography>
+            </Box>
+          ) : (
+            <img
+              src={backgroundPath}
+              alt={scene.name}
+              onError={() => setBgError(true)}
+              style={{ width: "100%", display: "block" }}
+            />
+          )}
         </Paper>
 
         {/*
