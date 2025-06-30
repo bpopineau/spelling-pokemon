@@ -60,8 +60,8 @@ This file provides high-level guidance for developers working on the code base. 
 
 #### `SceneView.tsx`
 - Loads scene by ID from the URL and displays `SpellingChallenge`.
-- Uses inline styles for background image.
-- TODO: Add error handling for missing background assets.
+- Uses inline styles for background image and shows a fallback message if the
+  background image fails to load.
 
 #### `SpellingChallenge.tsx`
 - Core game logic. Uses Zustand store for XP, hints and Pokémon capture.
