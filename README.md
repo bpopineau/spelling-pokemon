@@ -32,6 +32,12 @@ Unit tests are written with [Vitest](https://vitest.dev/). Run all tests with:
 npx vitest run
 ```
 
+Install Python dependencies for the pronunciation script:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Generating Pronunciation Data
 
 If you update the word list, run `build_pronunciations.py` to generate
