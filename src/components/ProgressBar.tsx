@@ -20,16 +20,34 @@ import LinearProgress from "@mui/material/LinearProgress";
 //   meters can reuse it without duplicating math.
 
 interface ProgressBarProps {
-  /** Current XP gained within the level */
+  /** Current XP or progress value */
   current: number;
-  /** XP required to reach the next level */
+  /** Maximum value to complete the bar */
   total: number;
+  /** Optional label displayed above the bar */
+  label?: string;
+  /**
+   * Color for the bar. Matches MUI's `LinearProgress` color prop so themes
+   * remain consistent across components.
+   */
+  color?:
+    | "primary"
+    | "secondary"
+    | "error"
+    | "warning"
+    | "info"
+    | "success";
 }
 
 /**
  * Visual progress bar showing XP progress toward the next level.
  */
-export default function ProgressBar({ current, total }: ProgressBarProps) {
+export default function ProgressBar({
+  current,
+  total,
+  label = "PROGRESS",
+  color = "primary",
+}: ProgressBarProps) {
   const percentage = total > 0 ? (current / total) * 100 : 0;
 
   // This component is intentionally simple so that it can be reused anywhere we
@@ -39,10 +57,10 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', px: 2, width: '100%' }}>
       <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 'bold' }}>
-        PROGRESS
+        {label.toUpperCase()}
       </Typography>
       <Box sx={{ width: '100%', mt: 0.5 }}>
-        <LinearProgress variant="determinate" value={percentage} />
+        <LinearProgress variant="determinate" value={percentage} color={color} />
       </Box>
       <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, fontWeight: 'medium' }}>
         {current} / {total} XP
